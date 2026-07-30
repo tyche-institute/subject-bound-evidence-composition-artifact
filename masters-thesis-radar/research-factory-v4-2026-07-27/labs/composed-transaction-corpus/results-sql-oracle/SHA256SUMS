@@ -1,0 +1,5 @@
+3e1a837dddce733d682463bc13daee30390c04d4faa4960d9d19d2d50f988b5a  verdicts.jsonl
+1e8cb2c7ab3498be862e312c3693e29dbbcc04df91b9e0544638dd58b72fe5f8  summary.json
+2c9bf49477096e10c60aa55a429f0d16a2bbb23468eefab223bbeeef54e0df71  ../results/verdicts.jsonl
+d62aa690a10f13d6dc07faf37d58ad6facd640d082cceccfc8caf124ae6dc502  ../oracle.sql
+21df78849732b37e6e80e36d0e37836bc232efbc69b3815d5929111015ef2c1a  ../run_sql_oracle.py

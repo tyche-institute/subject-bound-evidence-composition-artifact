@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="386.496pt" height="353.344pt" viewBox="0 0 386.496 353.344" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>tyche-preprint03-r1</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 353.344 
+L 386.496 353.344 
+L 386.496 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 67.68 56.656 
+L 172.752 56.656 
+L 172.752 18.352 
+L 67.68 18.352 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 172.752 56.656 
+L 277.824 56.656 
+L 277.824 18.352 
+L 172.752 18.352 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 277.824 56.656 
+L 382.896 56.656 
+L 382.896 18.352 
+L 277.824 18.352 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 67.68 94.96 
+L 172.752 94.96 
+L 172.752 56.656 
+L 67.68 56.656 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 71.64 66.736 
+L 77.76 66.736 
+L 77.76 60.616 
+L 71.64 60.616 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 172.752 94.96 
+L 277.824 94.96 
+L 277.824 56.656 
+L 172.752 56.656 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 277.824 94.96 
+L 382.896 94.96 
+L 382.896 56.656 
+L 277.824 56.656 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 67.68 133.264 
+L 172.752 133.264 
+L 172.752 94.96 
+L 67.68 94.96 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 71.64 105.04 
+L 77.76 105.04 
+L 77.76 98.92 
+L 71.64 98.92 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 172.752 133.264 
+L 277.824 133.264 
+L 277.824 94.96 
+L 172.752 94.96 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 277.824 133.264 
+L 382.896 133.264 
+L 382.896 94.96 
+L 277.824 94.96 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 67.68 171.568 
+L 172.752 171.568 
+L 172.752 133.264 
+L 67.68 133.264 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 71.64 143.344 
+L 77.76 143.344 
+L 77.76 137.224 
+L 71.64 137.224 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 172.752 171.568 
+L 277.824 171.568 
+L 277.824 133.264 
+L 172.752 133.264 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 277.824 171.568 
+L 382.896 171.568 
+L 382.896 133.264 
+L 277.824 133.264 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 3.6 219.652 
+L 9.72 219.652 
+L 9.72 213.532 
+L 3.6 213.532 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 3.6 236.644 
+L 9.72 236.644 
+L 9.72 230.524 
+L 3.6 230.524 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 3.6 253.636 
+L 9.72 253.636 
+L 9.72 247.516 
+L 3.6 247.516 
+z
+" clip-path="url(#p0e208f9940)" style="fill: #ffffff; stroke: #000000; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="120.216" y="14.906398" transform="rotate(-0 120.216 14.906398)">good</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="225.288" y="14.906398" transform="rotate(-0 225.288 14.906398)">tampered</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: middle" x="330.36" y="14.906398" transform="rotate(-0 330.36 14.906398)">replayed</text>
+   </g>
+   <g id="text_4">
+    <text style="font-style: italic; font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: start" x="3.6" y="14.646594" transform="rotate(-0 3.6 14.646594)">policy \ evidence</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="60.48" y="39.634078" transform="rotate(-0 60.48 39.634078)">correct</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(105.939188 35.228688)">ALLOW</text>
+    <text style="font-weight: 700; font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(104.730938 45.08425)">verified</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(215.349188 35.232625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(192.605625 44.38675)">evidence.integrity</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(320.421188 35.232625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(301.655062 44.38675)">evidence.replay</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="60.48" y="77.938398" transform="rotate(-0 60.48 77.938398)">missing</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(110.277188 73.536625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(95.161688 82.69075)">policy.missing</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(215.349188 73.536625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(200.233688 82.69075)">policy.missing</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(320.421188 73.536625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(305.305688 82.69075)">policy.missing</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="60.48" y="116.242398" transform="rotate(-0 60.48 116.242398)">stale</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(110.277188 111.840625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(100.278188 120.99475)">policy.stale</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(215.349188 111.840625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(205.350188 120.99475)">policy.stale</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(320.421188 111.840625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(310.422188 120.99475)">policy.stale</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 8.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="60.48" y="154.546398" transform="rotate(-0 60.48 154.546398)">substituted</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(110.277188 150.144625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(88.652438 159.29875)">policy.substituted</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(215.349188 150.144625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(193.724438 159.29875)">policy.substituted</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(320.421188 150.144625)">DENY</text>
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'" transform="translate(298.796438 159.29875)">policy.substituted</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 7.8px; font-family: 'DejaVu Sans'; text-anchor: start" x="3.6" y="200.498477" transform="rotate(-0 3.6 200.498477)">gate-isolation vectors (each fails exactly one strict policy gate):</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans Mono'; text-anchor: start" x="15.12" y="218.481719" transform="rotate(-0 15.12 218.481719)">version_only (good evidence)</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="382.896" y="218.462594" transform="rotate(-0 382.896 218.462594)">DENY  policy.stale</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans Mono'; text-anchor: start" x="15.12" y="235.473719" transform="rotate(-0 15.12 235.473719)">freshness_only (good evidence)</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="382.896" y="235.454594" transform="rotate(-0 382.896 235.454594)">DENY  policy.stale</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans Mono'; text-anchor: start" x="15.12" y="252.465719" transform="rotate(-0 15.12 252.465719)">digest_only (good evidence)</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="382.896" y="252.446594" transform="rotate(-0 382.896 252.446594)">DENY  policy.substituted</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans Mono'; text-anchor: start" x="15.12" y="269.457719" transform="rotate(-0 15.12 269.457719)">policy_sig_invalid (good evidence)</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 7.2px; font-family: 'DejaVu Sans'; text-anchor: end" x="382.896" y="269.438594" transform="rotate(-0 382.896 269.438594)">DENY  policy.signature</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="3.6" y="298.482633" transform="rotate(-0 3.6 298.482633)">Strict typed verdicts. 16/16 agreement with author-written expected labels; the relational re-composition</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="3.6" y="308.002633" transform="rotate(-0 3.6 308.002633)">agrees 16/16 on verdict and rejecting gate, which is a second composition code path, not independent</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="3.6" y="317.522633" transform="rotate(-0 3.6 317.522633)">validation. This is reproduction of a frozen specification on designed vectors, not detection performance on</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="3.6" y="327.042633" transform="rotate(-0 3.6 327.042633)">any external workload.</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="3.6" y="336.562633" transform="rotate(-0 3.6 336.562633)">□ marks a strict deny that a weaker ablation profile falsely allows: signed-policy presence 5 of 15 denies,</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 7px; font-family: 'DejaVu Sans'; text-anchor: start" x="3.6" y="346.082633" transform="rotate(-0 3.6 346.082633)">missing-policy fail-open 6. Ablations are author-defined experimental profiles, not named external products.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0e208f9940">
+   <rect x="0" y="0" width="386.496" height="353.344"/>
+  </clipPath>
+ </defs>
+</svg>

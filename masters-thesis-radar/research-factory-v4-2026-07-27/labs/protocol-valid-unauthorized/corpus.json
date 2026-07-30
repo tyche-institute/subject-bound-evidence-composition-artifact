@@ -1,0 +1,284 @@
+{
+  "profile": "tyche-protocol-valid-unauthorized-v0",
+  "base": {
+    "protocol": {
+      "schema": "a2a-like-transaction-v0",
+      "schema_valid": true,
+      "signature_valid": true,
+      "message_id": "msg-001",
+      "task_id": "task-001",
+      "context_id": "ctx-001",
+      "extension_uri": "https://tyche.institute/a2a/extensions/authority-seam/v0"
+    },
+    "appraisal": {
+      "decision_time": "2026-07-25T12:30:00Z"
+    },
+    "mandate": {
+      "native_valid": true,
+      "grant_id": "grant-read-001",
+      "issuer": "principal-a",
+      "subject": "delegate-a",
+      "tenant": "tenant-alpha",
+      "audience": "ledger-service",
+      "operations": ["READ"],
+      "resources": ["invoice-17"],
+      "tools": ["ledger.read"],
+      "effects": ["invoice.viewed"],
+      "not_before": "2026-07-25T12:00:00Z",
+      "expires_at": "2026-07-25T13:00:00Z",
+      "revoked_at": null,
+      "permitted_subdelegates": [],
+      "max_amount_minor": 10000,
+      "currency": "EUR",
+      "canonicalization_profile": "tyche-sorted-json-v0",
+      "max_uses": 1,
+      "prior_uses": 0,
+      "committed_action": {
+        "operation": "READ",
+        "resource": "invoice-17",
+        "tool": "ledger.read",
+        "effect": "invoice.viewed",
+        "amount_minor": 1000,
+        "currency": "EUR"
+      }
+    },
+    "edge": {
+      "edge_id": "root-to-terminal",
+      "delegator": "delegate-a",
+      "delegate": "delegate-a"
+    },
+    "action": {
+      "subject": "delegate-a",
+      "tenant": "tenant-alpha",
+      "audience": "ledger-service",
+      "operation": "READ",
+      "resource": "invoice-17",
+      "tool": "ledger.read",
+      "effect": "invoice.viewed",
+      "amount_minor": 1000,
+      "currency": "EUR",
+      "canonicalization_profile": "tyche-sorted-json-v0",
+      "executed_at": "2026-07-25T12:40:00Z"
+    },
+    "evidence": {
+      "native_valid": true,
+      "receipt_id": "receipt-001",
+      "receipt_action": {
+        "subject": "delegate-a",
+        "tenant": "tenant-alpha",
+        "audience": "ledger-service",
+        "operation": "READ",
+        "resource": "invoice-17",
+        "tool": "ledger.read",
+        "effect": "invoice.viewed",
+        "amount_minor": 1000,
+        "currency": "EUR"
+      },
+      "observed_at": "2026-07-25T12:40:01Z"
+    },
+    "runtime_state": {
+      "valid": true
+    }
+  },
+  "vectors": [
+    {
+      "id": "P00_exact_clean",
+      "description": "Exact authorized READ and matching receipt.",
+      "patch": {},
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "ALLOW", "gate": "verified"}
+    },
+    {
+      "id": "P01_benign_resource_narrowing",
+      "description": "Mandate permits two resources; action uses one.",
+      "patch": {"mandate": {"resources": ["invoice-17", "invoice-18"]}},
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "ALLOW", "gate": "verified"}
+    },
+    {
+      "id": "P02_explicit_reauthorization_write",
+      "description": "A new independently appraised WRITE grant starts a new segment.",
+      "patch": {
+        "mandate": {
+          "grant_id": "grant-write-002",
+          "operations": ["WRITE"],
+          "tools": ["ledger.write"],
+          "effects": ["invoice.modified"],
+          "committed_action": {
+            "operation": "WRITE",
+            "resource": "invoice-17",
+            "tool": "ledger.write",
+            "effect": "invoice.modified",
+            "amount_minor": 1000,
+            "currency": "EUR"
+          }
+        },
+        "action": {"operation": "WRITE", "tool": "ledger.write", "effect": "invoice.modified"},
+        "evidence": {
+          "receipt_action": {
+            "operation": "WRITE",
+            "tool": "ledger.write",
+            "effect": "invoice.modified"
+          }
+        }
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "ALLOW", "gate": "verified"}
+    },
+    {
+      "id": "P03_exact_not_before_boundary",
+      "description": "Half-open validity interval accepts exact not_before.",
+      "patch": {
+        "appraisal": {"decision_time": "2026-07-25T12:00:00Z"},
+        "action": {"executed_at": "2026-07-25T12:00:00Z"},
+        "evidence": {"observed_at": "2026-07-25T12:00:01Z"}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "ALLOW", "gate": "verified"}
+    },
+    {
+      "id": "D00_operation_substitution",
+      "description": "Valid WRITE receipt paired with READ-only mandate.",
+      "patch": {
+        "action": {"operation": "WRITE"},
+        "evidence": {"receipt_action": {"operation": "WRITE"}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.operation"}
+    },
+    {
+      "id": "D01_resource_substitution",
+      "description": "Same operation, unauthorized resource.",
+      "patch": {
+        "action": {"resource": "invoice-18"},
+        "evidence": {"receipt_action": {"resource": "invoice-18"}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.resource"}
+    },
+    {
+      "id": "D02_tool_substitution",
+      "description": "Schema-valid but unapproved tool.",
+      "patch": {
+        "action": {"tool": "ledger.export"},
+        "evidence": {"receipt_action": {"tool": "ledger.export"}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.tool"}
+    },
+    {
+      "id": "D03_effect_substitution",
+      "description": "Action and receipt agree on an unauthorized terminal effect.",
+      "patch": {
+        "action": {"effect": "invoice.modified"},
+        "evidence": {"receipt_action": {"effect": "invoice.modified"}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.effect"}
+    },
+    {
+      "id": "D04_wrong_tenant",
+      "description": "Valid action occurs in another tenant.",
+      "patch": {
+        "action": {"tenant": "tenant-beta"},
+        "evidence": {"receipt_action": {"tenant": "tenant-beta"}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.tenant"}
+    },
+    {
+      "id": "D05_wrong_audience",
+      "description": "Valid action targets another relying service.",
+      "patch": {
+        "action": {"audience": "payment-service"},
+        "evidence": {"receipt_action": {"audience": "payment-service"}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.audience"}
+    },
+    {
+      "id": "D06_unbound_subdelegate",
+      "description": "Delegate-a forwards to delegate-b without permission.",
+      "patch": {
+        "edge": {"edge_id": "delegate-a-to-delegate-b", "delegate": "delegate-b"},
+        "action": {"subject": "delegate-b"},
+        "evidence": {"receipt_action": {"subject": "delegate-b"}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.subdelegation"}
+    },
+    {
+      "id": "D07_expired_at_effect",
+      "description": "Authorization was valid at appraisal but effect occurs at expires_at.",
+      "patch": {
+        "action": {"executed_at": "2026-07-25T13:00:00Z"},
+        "evidence": {"observed_at": "2026-07-25T13:00:01Z"}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.freshness_status"}
+    },
+    {
+      "id": "D08_revoked_between_proof_and_effect",
+      "description": "Mandate is valid at appraisal then revoked before execution.",
+      "patch": {
+        "mandate": {"revoked_at": "2026-07-25T12:35:00Z"},
+        "action": {"executed_at": "2026-07-25T12:40:00Z"},
+        "evidence": {"observed_at": "2026-07-25T12:40:01Z"}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.freshness_status"}
+    },
+    {
+      "id": "D09_one_time_replay",
+      "description": "One-use authorization is replayed after its first use.",
+      "patch": {"mandate": {"prior_uses": 1}},
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.replay"}
+    },
+    {
+      "id": "D10_amount_exceeds_limit",
+      "description": "Authorized operation exceeds the amount ceiling.",
+      "patch": {
+        "action": {"amount_minor": 10001},
+        "evidence": {"receipt_action": {"amount_minor": 10001}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.amount_currency"}
+    },
+    {
+      "id": "D11_currency_mismatch",
+      "description": "Amount uses incompatible currency semantics.",
+      "patch": {
+        "action": {"currency": "USD"},
+        "evidence": {"receipt_action": {"currency": "USD"}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.amount_currency"}
+    },
+    {
+      "id": "D12_canonicalization_profile_mismatch",
+      "description": "Action is represented under another canonicalization profile.",
+      "patch": {"action": {"canonicalization_profile": "rfc8785-unpinned"}},
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.canonicalization"}
+    },
+    {
+      "id": "D13_changed_request_after_allow",
+      "description": "Mandate covers READ and WRITE, but committed READ is changed after ALLOW.",
+      "patch": {
+        "mandate": {
+          "operations": ["READ", "WRITE"],
+          "tools": ["ledger.read", "ledger.write"],
+          "effects": ["invoice.viewed", "invoice.modified"]
+        },
+        "action": {"operation": "WRITE", "tool": "ledger.write", "effect": "invoice.modified"},
+        "evidence": {
+          "receipt_action": {
+            "operation": "WRITE",
+            "tool": "ledger.write",
+            "effect": "invoice.modified"
+          }
+        }
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "action.commitment"}
+    },
+    {
+      "id": "D14_receipt_action_mismatch",
+      "description": "Receipt is valid for a different resource than the executed request.",
+      "patch": {
+        "mandate": {"resources": ["invoice-17", "invoice-18"]},
+        "evidence": {"receipt_action": {"resource": "invoice-18"}}
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "outcome.binding"}
+    },
+    {
+      "id": "D15_good_state_absent_mandate",
+      "description": "Favourable runtime state does not create authority.",
+      "patch": {"mandate": null, "runtime_state": {"valid": true}},
+      "expected": {"a0": "ABSENT", "e0": "VALID", "c1": "DENY", "gate": "authorization.present"}
+    }
+  ]
+}

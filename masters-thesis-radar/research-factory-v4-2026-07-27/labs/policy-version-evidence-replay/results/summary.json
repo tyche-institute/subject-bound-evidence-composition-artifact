@@ -1,0 +1,45 @@
+{
+  "baseline_expected_matches": {
+    "fail_open": 10,
+    "presence_only": 11
+  },
+  "baseline_false_allows": {
+    "fail_open": 6,
+    "presence_only": 5
+  },
+  "corpus_sha256": "8d1925bfe0459dc9f42e554cf63d01adbe801b6c628ff61908bde5f9d9dd45da",
+  "disclaimers": [
+    "All expected labels are author-written programme-internal expectations; agreement measures reproduction of those expectations, not external ground truth.",
+    "False-allow counts are counts on a designed corpus; they are not rates and do not estimate prevalence in any deployed system.",
+    "Structural appraisal of signed test objects is not cryptographic attestation of any runtime.",
+    "The SQL oracle in results-sql-oracle recomposes layer results produced by this evaluator; it is a second composition code path, not independent validation."
+  ],
+  "evidence_result_counts": {
+    "PASS": 8,
+    "REPLAY": 4,
+    "TAMPERED": 4
+  },
+  "families": {
+    "factorial_4x3": 12,
+    "gate_isolation": 4
+  },
+  "gate_isolation_ids": [
+    "PSR_version_only_good",
+    "PSR_freshness_only_good",
+    "PSR_digest_only_good",
+    "PSR_policy_sig_invalid_good"
+  ],
+  "policy_result_counts": {
+    "INVALID_SIGNATURE": 1,
+    "MISSING": 3,
+    "PASS": 3,
+    "STALE": 5,
+    "SUBSTITUTED": 4
+  },
+  "profile": "tyche-policy-version-evidence-replay-v2",
+  "runner_sha256": "d751a2a32f3480424981de768271cbf9ed3d6ad1b18d87d974ac1b488e97c11a",
+  "strict_allows": 1,
+  "strict_denies": 15,
+  "strict_expected_matches": 16,
+  "vectors": 16
+}

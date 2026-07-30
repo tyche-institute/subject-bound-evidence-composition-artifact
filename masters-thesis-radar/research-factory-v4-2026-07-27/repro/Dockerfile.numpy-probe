@@ -1,0 +1,33 @@
+# SECONDARY sensitivity probe — NOT part of the pinned reproduction.
+#
+# The pinned reproduction installs the same numpy 2.5.0 manylinux wheel that
+# the host has installed, so the compiled numpy binary is identical on both
+# sides and the run cannot say anything about whether the SAFE bootstrap
+# lower bound moves across NumPy *builds*. This image swaps in a different
+# NumPy release so that question gets an actual measurement instead of a
+# shrug. Everything else is held fixed.
+FROM python:3.12-slim@sha256:57cd7c3a7a273101a6485ba99423ee568157882804b1124b4dd04266317710de
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONHASHSEED=0 \
+    PYTHONUNBUFFERED=1 \
+    LC_ALL=C.UTF-8 \
+    LANG=C.UTF-8 \
+    TZ=UTC \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /opt/repro
+
+COPY wheelhouse/ /opt/repro/wheelhouse/
+COPY requirements.txt /opt/repro/requirements.txt
+
+RUN pip install --no-index --find-links=/opt/repro/wheelhouse \
+        -r /opt/repro/requirements.txt \
+ && python -c "import numpy, cryptography; \
+print('probe numpy', numpy.__version__, '| cryptography', cryptography.__version__)"
+
+COPY probe-entry.sh /opt/repro/probe-entry.sh
+RUN chmod 0755 /opt/repro/probe-entry.sh
+
+ENTRYPOINT ["/opt/repro/probe-entry.sh"]

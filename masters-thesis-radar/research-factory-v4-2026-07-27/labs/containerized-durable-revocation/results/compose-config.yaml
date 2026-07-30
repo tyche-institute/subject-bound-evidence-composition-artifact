@@ -1,0 +1,217 @@
+name: tyche-container-revocation-v1
+services:
+  effect-a:
+    entrypoint:
+      - python
+      - /lab/container_service.py
+      - --service
+      - effect
+      - --instance-id
+      - effect-a
+      - --database
+      - /state/revocation.sqlite
+      - --port
+      - "8081"
+    hostname: effect-a
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8081/health', timeout=2).read()
+      timeout: 3s
+      interval: 1s
+      retries: 30
+    image: tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173
+    networks:
+      evidence: null
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - type: bind
+        source: <LAB>
+        target: /lab
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: volume
+        source: durable-state
+        target: /state
+        volume: {}
+  effect-b:
+    entrypoint:
+      - python
+      - /lab/container_service.py
+      - --service
+      - effect
+      - --instance-id
+      - effect-b
+      - --database
+      - /state/revocation.sqlite
+      - --port
+      - "8082"
+    hostname: effect-b
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8082/health', timeout=2).read()
+      timeout: 3s
+      interval: 1s
+      retries: 30
+    image: tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173
+    networks:
+      evidence: null
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - type: bind
+        source: <LAB>
+        target: /lab
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: volume
+        source: durable-state
+        target: /state
+        volume: {}
+  fault-proxy:
+    depends_on:
+      effect-a:
+        condition: service_healthy
+        required: true
+    entrypoint:
+      - python
+      - /lab/fault_proxy.py
+      - --upstream
+      - http://effect-a:8081
+      - --port
+      - "8090"
+    hostname: fault-proxy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8090/health', timeout=2).read()
+      timeout: 3s
+      interval: 1s
+      retries: 30
+    image: tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173
+    networks:
+      evidence: null
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - type: bind
+        source: <LAB>
+        target: /lab
+        read_only: true
+        bind:
+          create_host_path: true
+  runner:
+    depends_on:
+      effect-a:
+        condition: service_healthy
+        required: true
+      effect-b:
+        condition: service_healthy
+        required: true
+      fault-proxy:
+        condition: service_healthy
+        required: true
+      status:
+        condition: service_healthy
+        required: true
+    entrypoint:
+      - python
+      - /lab/run_matrix.py
+      - --status-url
+      - http://status:8080
+      - --effect-a-url
+      - http://effect-a:8081
+      - --effect-b-url
+      - http://effect-b:8082
+      - --proxy-url
+      - http://fault-proxy:8090
+      - --database
+      - /state/revocation.sqlite
+      - --output
+      - /out/results.json
+      - --trials
+      - "64"
+    environment:
+      TYCHE_RUNTIME_IMAGE: tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173
+    hostname: experiment-runner
+    image: tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173
+    networks:
+      evidence: null
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - type: bind
+        source: <LAB>
+        target: /lab
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: bind
+        source: <LAB>/results
+        target: /out
+        bind:
+          create_host_path: true
+      - type: volume
+        source: durable-state
+        target: /state
+        volume: {}
+  status:
+    entrypoint:
+      - python
+      - /lab/container_service.py
+      - --service
+      - status
+      - --instance-id
+      - status-a
+      - --database
+      - /state/revocation.sqlite
+      - --port
+      - "8080"
+    hostname: status-a
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2).read()
+      timeout: 3s
+      interval: 1s
+      retries: 30
+    image: tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173
+    networks:
+      evidence: null
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - type: bind
+        source: <LAB>
+        target: /lab
+        read_only: true
+        bind:
+          create_host_path: true
+      - type: volume
+        source: durable-state
+        target: /state
+        volume: {}
+networks:
+  evidence:
+    name: tyche-container-revocation-v1_evidence
+    internal: true
+volumes:
+  durable-state:
+    name: tyche-container-revocation-v1_durable-state

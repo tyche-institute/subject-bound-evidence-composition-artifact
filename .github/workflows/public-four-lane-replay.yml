@@ -1,0 +1,102 @@
+name: Public four-lane x64-arm64 replay
+
+"on":
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  execute:
+    name: public-replay-${{ matrix.arch }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x64
+            runner: ubuntu-24.04
+            python_arch: x64
+          - arch: arm64
+            runner: ubuntu-24.04-arm
+            python_arch: arm64
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 45
+    steps:
+      - name: Check out the public source tree
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Select architecture-matched CPython 3.12
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
+        with:
+          python-version: "3.12"
+          architecture: ${{ matrix.python_arch }}
+
+      - name: Install the exact four-lane dependency closure
+        run: |
+          python -m pip install \
+            --disable-pip-version-check \
+            --only-binary=:all: \
+            --no-deps \
+            numpy==2.5.0 \
+            cryptography==49.0.0 \
+            cffi==2.0.0 \
+            pycparser==3.0
+          python -m pip check
+
+      - name: Execute the public four-lane contract
+        run: |
+          chmod +x scripts/run_public_tree_on_runner.sh
+          scripts/run_public_tree_on_runner.sh \
+            "public-replay-evidence/${{ matrix.arch }}"
+
+      - name: Preserve complete public replay evidence
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: public-replay-evidence-${{ matrix.arch }}
+          path: public-replay-evidence/${{ matrix.arch }}
+          if-no-files-found: error
+          retention-days: 30
+
+  compare:
+    name: compare-public-x64-arm64
+    needs: execute
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - name: Check out comparison code
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Download x64 evidence
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: public-replay-evidence-x64
+          path: public-replay-evidence/x64
+
+      - name: Download ARM64 evidence
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: public-replay-evidence-arm64
+          path: public-replay-evidence/arm64
+
+      - name: Compare exact architecture-neutral semantics
+        run: |
+          python scripts/compare_public_semantics.py \
+            --x64 public-replay-evidence/x64 \
+            --arm64 public-replay-evidence/arm64 \
+            --output public-replay-evidence/comparison.json
+
+      - name: Preserve the comparison
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: public-replay-x64-arm64-comparison
+          path: public-replay-evidence/comparison.json
+          if-no-files-found: error
+          retention-days: 30

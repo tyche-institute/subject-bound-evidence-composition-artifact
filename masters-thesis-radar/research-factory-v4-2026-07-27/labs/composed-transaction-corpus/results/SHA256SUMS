@@ -1,0 +1,15 @@
+2c9bf49477096e10c60aa55a429f0d16a2bbb23468eefab223bbeeef54e0df71  verdicts.jsonl
+20b2dacd2b460510d52443601fd59ee87742a565508a260358435d5be24eb91a  summary.json
+2018986be53d900071a406226d55445c9ae27f2486419e9bec54be804e689cf5  run-metadata.json
+1ba6d40d07e62a862b98ec52ab5c189eb491f19e4e1e69a411fba73bbb9a43a8  ../corpus.json
+721e1fa9b49c3bf19d5252fd0192f37ed4de75b144ac3a94784f19c9ddb4ef12  ../verify_transactions.py
+c4f5410f4a81143884cfb7c1a4d6148c5802a2359314d341d51f0b8252f22733  ../build_corpus.py
+ac430575a00e0090434202d41c430e9fb9818924fc435ea766c64759fe93e61d  ../composition_rule.py
+9c19d3f969c1be83e03329b46f69cd2b07586222548cfb42b26babcd744f9bb3  ../state_adapter.py
+e48c9df137c44ff8b501cc7745c45fc62e6674a843b84797a5955e8dea691721  ../test_state_adapter.py
+1e5edd28fc8e556e53bed7f95b3be41a7ee0ba0d2c1ef0afe0acdc9243f923e0  ../test_cross_layer_binding.py
+86feb7501b432fefb2cc55abfd843c738693db4e91bc40a5334136f8ef7c0810  ../state-fixtures.json
+d751a2a32f3480424981de768271cbf9ed3d6ad1b18d87d974ac1b488e97c11a  ../../policy-version-evidence-replay/run.py
+a95628f8e803a3c8ff1dfff65067d2de37350865b9610f658e145fe627b6b51d  ../../policy-version-evidence-replay/build_corpus.py
+6149eab6a925a4a03dcbc968d1b69c66d2970c95b0b9f1bb9138711b3c09ba40  ../../protocol-valid-unauthorized/verify_delegation_paths.py
+49df03d61b9ba2b6ea2dd8b9db84977de9fc6643f243b0db10884d424a20e277  ../../../../research-factory-v3-2026-07-25/labs/safe-metric-metamorphics/run.py

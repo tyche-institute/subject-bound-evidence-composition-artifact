@@ -1,0 +1,11 @@
+{
+  "cases": 16,
+  "disclaimer": "issuer_signature_valid, native_evidence_valid and protocol_valid are corpus-supplied experimental flags; neither implementation performs any cryptographic verification.",
+  "expanded_cases_sha256": "b6a47b40ea77f7a3d63f8382cf7fcca9b9f97ffe0e2406f036d985b91427fa73",
+  "expected_matches": 16,
+  "independence_note": "the relational oracle re-derives verdicts from the raw case objects in expanded-cases.json, not from the Python evaluator's verdict stream; case expansion (build_case plus mutations) and the expected labels are shared with the Python entry point, so agreement is implementation diversity over verdict derivation, not independent validation of the labels.",
+  "profile": "tyche-delegation-path-sql-oracle-v0",
+  "python_implementation_matches": 16,
+  "runner_sha256": "ed494f18c14d5b6f693cfef6ad06e59f6a9376e1a88997c90b427fe27ae68ad2",
+  "sql_sha256": "233ff51fb00281f8d850187d3da78acdafde177321c065cfd1c3f4c04192775d"
+}

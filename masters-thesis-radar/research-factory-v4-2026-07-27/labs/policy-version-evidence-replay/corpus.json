@@ -1,0 +1,558 @@
+{
+  "decision_time": "2026-07-25T21:30:00Z",
+  "external_labels": false,
+  "generation": {
+    "evidence_states": [
+      "good",
+      "tampered",
+      "replayed"
+    ],
+    "gate_isolation_note": "Added in v2 per review items C-16/E5: each vector carries good evidence and fails exactly one policy gate (version, freshness, digest, signature), closing the fused-STALE and dead digest/INVALID_SIGNATURE branches of the v1 corpus.",
+    "gate_isolation_vectors": [
+      "PSR_version_only_good",
+      "PSR_freshness_only_good",
+      "PSR_digest_only_good",
+      "PSR_policy_sig_invalid_good"
+    ],
+    "key_derivation": "sha256('tyche-policy-state-replay-test-key-v1')",
+    "key_derivation_note": "v1 derivation string retained so the 12 factorial vectors remain byte-identical to the v1 corpus",
+    "policy_states": [
+      "correct",
+      "missing",
+      "stale",
+      "substituted"
+    ],
+    "test_key_only": true
+  },
+  "label_provenance": "All expected labels are author-written programme-internal expectations, not external ground truth.",
+  "policy_anchor": {
+    "required_policy_digest": "sha256:ed430e971d05ed00ccfe34cf9230b3ca101918a2375dd1ac16ea20e37b6b6830",
+    "required_policy_id": "policy-main",
+    "required_policy_version": 2
+  },
+  "preseen_nonces": [
+    "nonce-preseen-correct",
+    "nonce-preseen-missing",
+    "nonce-preseen-stale",
+    "nonce-preseen-substituted"
+  ],
+  "profile": "tyche-policy-version-evidence-replay-v2",
+  "public_key_raw_b64": "o1yZBtnhJDRe4PZHHJzW0IPWZUhXmkeHsw9Zp/e4wVM=",
+  "vectors": [
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-correct-good",
+        "payload_digest": "sha256:1e02b237d09e38c35231fe0f5cdea13fe822a50ccc600eefeae209768ec494d2",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "xgtNmq7Q361S74ne0ehmeXkpIAYjYd1JIq3VirtAiBMPNPOs+i2TIKpl3EQNsIV1FZy1gcb+paCW7iIgV7XnAA==",
+        "transaction_id": "psr-correct-good"
+      },
+      "evidence_state": "good",
+      "expected": {
+        "evidence_result": "PASS",
+        "first_rejecting_gate": "verified",
+        "policy_result": "PASS",
+        "verdict": "ALLOW"
+      },
+      "id": "PSR_correct_good",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.read",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "EJP+NFvtORXcTUvBy8agCaJ3LHTQSbl2ZrVTewXyyQCxOeLN94jZimewL4/qQJ7tUxKDx+Wh/C90GHddz4QaAQ==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-26T00:00:00Z",
+        "version": 2
+      },
+      "policy_state": "correct"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.export",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-correct-tampered",
+        "payload_digest": "sha256:6fd6de928b0089e7b9405c334745e8c2a68953aaa244ef5ea8630e0de15a2362",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "Q7CBp/cCo0MxATgrmDFwbQyjh/89vUAFbG+qUTvmL9uw5vmxbE72oMS50j00sZKftxvMDN8Kge8tB92msNFCDg==",
+        "transaction_id": "psr-correct-tampered"
+      },
+      "evidence_state": "tampered",
+      "expected": {
+        "evidence_result": "TAMPERED",
+        "first_rejecting_gate": "evidence.integrity",
+        "policy_result": "PASS",
+        "verdict": "DENY"
+      },
+      "id": "PSR_correct_tampered",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.read",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "EJP+NFvtORXcTUvBy8agCaJ3LHTQSbl2ZrVTewXyyQCxOeLN94jZimewL4/qQJ7tUxKDx+Wh/C90GHddz4QaAQ==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-26T00:00:00Z",
+        "version": 2
+      },
+      "policy_state": "correct"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-preseen-correct",
+        "payload_digest": "sha256:7d37ed8c93ed26e9a7f09f454bc50fa0016748fec4bb30ef77244498fd610693",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "UhtO2yU48PXPuuN5ejmuafLEaJ52h6cfdC1AOB5ZwM3zdfNFHF3OoVIBmpeikFfwjYvgezOlKlRrOYGmmE19BA==",
+        "transaction_id": "psr-correct-replayed"
+      },
+      "evidence_state": "replayed",
+      "expected": {
+        "evidence_result": "REPLAY",
+        "first_rejecting_gate": "evidence.replay",
+        "policy_result": "PASS",
+        "verdict": "DENY"
+      },
+      "id": "PSR_correct_replayed",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.read",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "EJP+NFvtORXcTUvBy8agCaJ3LHTQSbl2ZrVTewXyyQCxOeLN94jZimewL4/qQJ7tUxKDx+Wh/C90GHddz4QaAQ==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-26T00:00:00Z",
+        "version": 2
+      },
+      "policy_state": "correct"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-missing-good",
+        "payload_digest": "sha256:d124d112a2106792d9a257316af0f28657cd23c9e6be1c73cf49c59700f25f07",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "QvbJsI6PSHL1ixGJYeS6fcc2xnH5/V5UP+KpviTpNre5kCxXnjbmnYEa/2OR0Hzu53fSQEnasBbWBjHG5zA3BQ==",
+        "transaction_id": "psr-missing-good"
+      },
+      "evidence_state": "good",
+      "expected": {
+        "evidence_result": "PASS",
+        "first_rejecting_gate": "policy.missing",
+        "policy_result": "MISSING",
+        "verdict": "DENY"
+      },
+      "id": "PSR_missing_good",
+      "policy": null,
+      "policy_state": "missing"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.export",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-missing-tampered",
+        "payload_digest": "sha256:86f7a10d72c4314285410f0d8c17ad6912636fffd74327c90a93401918f2a757",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "l7RRFDHBuZhZWGnviCQgWnLXl2baniFTUpsGxXHlWPTRrKw1WUrmfyadcYY12R8YP1MmjTKobRETOMOx1/gdBg==",
+        "transaction_id": "psr-missing-tampered"
+      },
+      "evidence_state": "tampered",
+      "expected": {
+        "evidence_result": "TAMPERED",
+        "first_rejecting_gate": "policy.missing",
+        "policy_result": "MISSING",
+        "verdict": "DENY"
+      },
+      "id": "PSR_missing_tampered",
+      "policy": null,
+      "policy_state": "missing"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-preseen-missing",
+        "payload_digest": "sha256:91a9e025a7c4742deb45bf5cf245b59925635c67091c4240ef7a76217d6f7ee1",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "WMb9BML6TG1Sei+B0wsxpOC89qSpmsiJLC4HxIy/kNcoxWck1RWE1vL4r+2/NEYXZNFXXcxQSFodv4cCW4oVCw==",
+        "transaction_id": "psr-missing-replayed"
+      },
+      "evidence_state": "replayed",
+      "expected": {
+        "evidence_result": "REPLAY",
+        "first_rejecting_gate": "policy.missing",
+        "policy_result": "MISSING",
+        "verdict": "DENY"
+      },
+      "id": "PSR_missing_replayed",
+      "policy": null,
+      "policy_state": "missing"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-stale-good",
+        "payload_digest": "sha256:e5a4536e3488994f68855963ad2507da606d6084d14f1b41728f81db75afa3eb",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "ja1JnINL61xLdQOpEQzvCCRshtp4URBpP4EkBRu/9x8xAjNyizMFDY5cgldTlsay30m0QGLODXQu7dQ4gF6OBw==",
+        "transaction_id": "psr-stale-good"
+      },
+      "evidence_state": "good",
+      "expected": {
+        "evidence_result": "PASS",
+        "first_rejecting_gate": "policy.stale",
+        "policy_result": "STALE",
+        "verdict": "DENY"
+      },
+      "id": "PSR_stale_good",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.read",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "Rcs5a/iNwGiiSmRYDVARrzVQP81/uxxUwmBAwYfQNzLRPN8tPx3fAdgdQfIBJkFc7HCgArb9q9O04wu+Qih3Bg==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-25T20:00:00Z",
+        "version": 1
+      },
+      "policy_state": "stale"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.export",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-stale-tampered",
+        "payload_digest": "sha256:1cadd839c103f1493b4963ef2d7ab95f0e1792482bffb9a1be7f926d2b30e787",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "4SgWT+03XkCh4BA+51s0N1BE2LU/n3czPGw9jXyO3oWZuKuG8SCAMTzVKIEIFGofa46WuyYIrvKee9ZKXPErAg==",
+        "transaction_id": "psr-stale-tampered"
+      },
+      "evidence_state": "tampered",
+      "expected": {
+        "evidence_result": "TAMPERED",
+        "first_rejecting_gate": "policy.stale",
+        "policy_result": "STALE",
+        "verdict": "DENY"
+      },
+      "id": "PSR_stale_tampered",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.read",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "Rcs5a/iNwGiiSmRYDVARrzVQP81/uxxUwmBAwYfQNzLRPN8tPx3fAdgdQfIBJkFc7HCgArb9q9O04wu+Qih3Bg==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-25T20:00:00Z",
+        "version": 1
+      },
+      "policy_state": "stale"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-preseen-stale",
+        "payload_digest": "sha256:166439c552f2b19fff89f69bf7576a0bf3d2cad0dc8750f9ae2f4002a5944a09",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "wqx/J5DFtJ8ImNELgdzOVDoi+aGqQDOx/hcwtFz/qvEcvWk/a2D6SNI9ZHxvaLmKcewx++52d7lwRhEOATsSAQ==",
+        "transaction_id": "psr-stale-replayed"
+      },
+      "evidence_state": "replayed",
+      "expected": {
+        "evidence_result": "REPLAY",
+        "first_rejecting_gate": "policy.stale",
+        "policy_result": "STALE",
+        "verdict": "DENY"
+      },
+      "id": "PSR_stale_replayed",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.read",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "Rcs5a/iNwGiiSmRYDVARrzVQP81/uxxUwmBAwYfQNzLRPN8tPx3fAdgdQfIBJkFc7HCgArb9q9O04wu+Qih3Bg==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-25T20:00:00Z",
+        "version": 1
+      },
+      "policy_state": "stale"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-substituted-good",
+        "payload_digest": "sha256:679ef1685f5f93417771ec3f1091ab247946b09868a08c6b3238272b2f5e2350",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "U44NCQH2I7JRBTDRKoCRF+EN5qb1s7P1ckzlMEelqn9wnAWLTuZfRmtJKgPP4IU45bZ6v8QjuzHqK7mOenXvBw==",
+        "transaction_id": "psr-substituted-good"
+      },
+      "evidence_state": "good",
+      "expected": {
+        "evidence_result": "PASS",
+        "first_rejecting_gate": "policy.substituted",
+        "policy_result": "SUBSTITUTED",
+        "verdict": "DENY"
+      },
+      "id": "PSR_substituted_good",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-other",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.export",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "FPJVP81qQVB71jxtftiLyiXaK4O/Aaoe8lPve6Gw1nvKV6o1bRddqOnM+q0O+L3pFel/Qzv5qCOJlhpQZed0Aw==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-26T00:00:00Z",
+        "version": 2
+      },
+      "policy_state": "substituted"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.export",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-substituted-tampered",
+        "payload_digest": "sha256:4611eb97e0d45ea7b87fb6de8790ae865a591476cef7cb67951e5d1e1d3d9ba4",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "FO3us1T+xj6owpXkq5w+ZGt7Yb+lisPnfqGBWfE0n4b8UtWeTqAQyCE6e5tGAYpfalcgvh4th2BvowBpWDRZAQ==",
+        "transaction_id": "psr-substituted-tampered"
+      },
+      "evidence_state": "tampered",
+      "expected": {
+        "evidence_result": "TAMPERED",
+        "first_rejecting_gate": "policy.substituted",
+        "policy_result": "SUBSTITUTED",
+        "verdict": "DENY"
+      },
+      "id": "PSR_substituted_tampered",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-other",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.export",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "FPJVP81qQVB71jxtftiLyiXaK4O/Aaoe8lPve6Gw1nvKV6o1bRddqOnM+q0O+L3pFel/Qzv5qCOJlhpQZed0Aw==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-26T00:00:00Z",
+        "version": 2
+      },
+      "policy_state": "substituted"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-preseen-substituted",
+        "payload_digest": "sha256:3dc79b6e30de5e20a767529f7610fe7c5b6c940861459019d731c79f7c860f4e",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "o80/kD+kCs1hIzv+vcHHKPCYaDR0JyUEvAG5FaGLFx1eFrzmJpWxsb+HP9R3C7m1J3zEAEbZRJ1YVXuaH+J7AQ==",
+        "transaction_id": "psr-substituted-replayed"
+      },
+      "evidence_state": "replayed",
+      "expected": {
+        "evidence_result": "REPLAY",
+        "first_rejecting_gate": "policy.substituted",
+        "policy_result": "SUBSTITUTED",
+        "verdict": "DENY"
+      },
+      "id": "PSR_substituted_replayed",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-other",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.export",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "FPJVP81qQVB71jxtftiLyiXaK4O/Aaoe8lPve6Gw1nvKV6o1bRddqOnM+q0O+L3pFel/Qzv5qCOJlhpQZed0Aw==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-26T00:00:00Z",
+        "version": 2
+      },
+      "policy_state": "substituted"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-version_only-good",
+        "payload_digest": "sha256:b1e9d9823ccba7f0f92f67792470d0d9680c6c96cc9f2068ecbfd50443550391",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "vrhSu3ac4UsLCIt9OVoPgdkx2fjcyg1U4lE71R0wG4emBngtJrYVhf0G02i8DRPjmgE4Df0eFpT/Ziv1Xm2YBg==",
+        "transaction_id": "psr-version_only-good"
+      },
+      "evidence_state": "good",
+      "expected": {
+        "evidence_result": "PASS",
+        "first_rejecting_gate": "policy.stale",
+        "policy_result": "STALE",
+        "verdict": "DENY"
+      },
+      "id": "PSR_version_only_good",
+      "isolated_gate": "policy.version",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.read",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "z1KULuD8qlsqAR5lmqENdzDik0hXnaPkspbGVXlRkuIOaTY/WQaTouu+erRZix5nN5c7imaayR3KmHbPO+GSBg==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-26T00:00:00Z",
+        "version": 1
+      },
+      "policy_state": "version_only"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-freshness_only-good",
+        "payload_digest": "sha256:7689b7d39d08cda36659effa4a975f8831b0a0a3bf246d1eeff1c8203e7057b9",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "Vx2yj3vNQtxFS/CvkoMcdab/at3QUuUlswVjGG+K1PXZE4Zq6PmVoghQkVWzxdAPmWkgQq2o6VBMVXhSInCxAQ==",
+        "transaction_id": "psr-freshness_only-good"
+      },
+      "evidence_state": "good",
+      "expected": {
+        "evidence_result": "PASS",
+        "first_rejecting_gate": "policy.stale",
+        "policy_result": "STALE",
+        "verdict": "DENY"
+      },
+      "id": "PSR_freshness_only_good",
+      "isolated_gate": "policy.freshness",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.read",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "irjSdboRWEUwyi2NUEDR1Q7pmYGNJn5wxohJTJjp/4S8Ba/pXXKMT3TSgr71aB4Rp+36FN6pJDxz1T+TCmt+AQ==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-25T20:00:00Z",
+        "version": 2
+      },
+      "policy_state": "freshness_only"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-digest_only-good",
+        "payload_digest": "sha256:5d400b88cb8dd6419949344aecec8d89a4a30ffd44a64bac46db2058fa5cb39c",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "RDu5+tWYqBKhiWzgD21MSvYlf9glOSLYgBU4GVTsFbp+39zgrRyACUPgb8Tcc1aO8fEuYS5QJ1wNYJnHAJK4BA==",
+        "transaction_id": "psr-digest_only-good"
+      },
+      "evidence_state": "good",
+      "expected": {
+        "evidence_result": "PASS",
+        "first_rejecting_gate": "policy.substituted",
+        "policy_result": "SUBSTITUTED",
+        "verdict": "DENY"
+      },
+      "id": "PSR_digest_only_good",
+      "isolated_gate": "policy.digest",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.read",
+        "required_measurement_profile": "safe-profile-alt-v1",
+        "signature": "H82nO+yiwRFFd9LsVTNkA+4Ehx/XzsrDpyh0iJYYz09LKEEtWMtUiclYJSOWXsiPYpqNfbz8r6TIeXF+zshHBg==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-26T00:00:00Z",
+        "version": 2
+      },
+      "policy_state": "digest_only"
+    },
+    {
+      "evidence": {
+        "effect": "ledger.read",
+        "issued_at": "2026-07-25T21:29:30Z",
+        "issuer": "tyche-test-evidence-producer",
+        "nonce": "nonce-policy_sig_invalid-good",
+        "payload_digest": "sha256:9267553a1ee81637701eba903849c4b71928ec5510f129245c1786d2edadb693",
+        "profile": "tyche-signed-effect-v1",
+        "resource": "invoice-123",
+        "signature": "vbiTeJWH05kMTnvDKYYMGr0cjNYhM1qe4G31Dxw1DHZgKRVQcdOufxva+Z17GJPVck2t9goamT2Sk8eSuaRWBA==",
+        "transaction_id": "psr-policy_sig_invalid-good"
+      },
+      "evidence_state": "good",
+      "expected": {
+        "evidence_result": "PASS",
+        "first_rejecting_gate": "policy.signature",
+        "policy_result": "INVALID_SIGNATURE",
+        "verdict": "DENY"
+      },
+      "id": "PSR_policy_sig_invalid_good",
+      "isolated_gate": "policy.signature",
+      "policy": {
+        "evidence_profile": "tyche-signed-effect-v1",
+        "issuer": "tyche-test-policy-authority",
+        "policy_id": "policy-main",
+        "profile": "tyche-policy-snapshot-v1",
+        "required_effect": "ledger.write",
+        "required_measurement_profile": "safe-profile-main-v1",
+        "signature": "EJP+NFvtORXcTUvBy8agCaJ3LHTQSbl2ZrVTewXyyQCxOeLN94jZimewL4/qQJ7tUxKDx+Wh/C90GHddz4QaAQ==",
+        "valid_from": "2026-07-25T00:00:00Z",
+        "valid_until": "2026-07-26T00:00:00Z",
+        "version": 2
+      },
+      "policy_state": "policy_sig_invalid"
+    }
+  ]
+}

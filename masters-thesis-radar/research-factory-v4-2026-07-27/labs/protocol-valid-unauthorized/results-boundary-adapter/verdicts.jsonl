@@ -1,0 +1,7 @@
+{"a0": "VALID", "c1": "ALLOW", "e0": "VALID", "expected": {"a0": "VALID", "c1": "ALLOW", "e0": "VALID", "gate": "verified"}, "expected_match": true, "gate": "verified", "id": "BA0_exact_recorded_a2a_effect"}
+{"a0": "VALID", "c1": "DENY", "e0": "VALID", "expected": {"a0": "VALID", "c1": "DENY", "e0": "VALID", "gate": "seam.task"}, "expected_match": true, "gate": "seam.task", "id": "BA1_wrong_task"}
+{"a0": "VALID", "c1": "DENY", "e0": "VALID", "expected": {"a0": "VALID", "c1": "DENY", "e0": "VALID", "gate": "seam.context"}, "expected_match": true, "gate": "seam.context", "id": "BA2_wrong_context"}
+{"a0": "VALID", "c1": "DENY", "e0": "VALID", "expected": {"a0": "VALID", "c1": "DENY", "e0": "VALID", "gate": "seam.origin"}, "expected_match": true, "gate": "seam.origin", "id": "BA3_wrong_originating_message"}
+{"a0": "VALID", "c1": "DENY", "e0": "VALID", "expected": {"a0": "VALID", "c1": "DENY", "e0": "VALID", "gate": "seam.effect"}, "expected_match": true, "gate": "seam.effect", "id": "BA4_wrong_terminal_effect"}
+{"a0": "VALID", "c1": "DENY", "e0": "VALID", "expected": {"a0": "VALID", "c1": "DENY", "e0": "VALID", "gate": "seam.freshness"}, "expected_match": true, "gate": "seam.freshness", "id": "BA5_expired_before_recorded_effect"}
+{"a0": "ABSENT", "c1": "DENY", "e0": "VALID", "expected": {"a0": "ABSENT", "c1": "DENY", "e0": "VALID", "gate": "authorization.present"}, "expected_match": true, "gate": "authorization.present", "id": "BA6_good_evidence_absent_mandate"}

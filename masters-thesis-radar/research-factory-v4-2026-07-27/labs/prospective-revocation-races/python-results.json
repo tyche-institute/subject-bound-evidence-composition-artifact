@@ -1,0 +1,158 @@
+[
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "ALLOW",
+      "timestamp_only": "ALLOW"
+    },
+    "case_id": "RR-001",
+    "expected_gate": "verified",
+    "expected_verdict": "ALLOW",
+    "first_rejecting_gate": "verified",
+    "verdict": "ALLOW"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "DENY",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    },
+    "case_id": "RR-002",
+    "expected_gate": "appraisal.status.active",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "appraisal.status.active",
+    "verdict": "DENY"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    },
+    "case_id": "RR-003",
+    "expected_gate": "commit.status.active",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "commit.status.active",
+    "verdict": "DENY"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    },
+    "case_id": "RR-004",
+    "expected_gate": "commit.status.active",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "commit.status.active",
+    "verdict": "DENY"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "ALLOW",
+      "timestamp_only": "ALLOW"
+    },
+    "case_id": "RR-005",
+    "expected_gate": "verified",
+    "expected_verdict": "ALLOW",
+    "first_rejecting_gate": "verified",
+    "verdict": "ALLOW"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "DENY",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    },
+    "case_id": "RR-006",
+    "expected_gate": "appraisal.status.freshness",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "appraisal.status.freshness",
+    "verdict": "DENY"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    },
+    "case_id": "RR-007",
+    "expected_gate": "commit.status.freshness",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "commit.status.freshness",
+    "verdict": "DENY"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "ALLOW"
+    },
+    "case_id": "RR-008",
+    "expected_gate": "commit.status.monotonic",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "commit.status.monotonic",
+    "verdict": "DENY"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "DENY",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    },
+    "case_id": "RR-009",
+    "expected_gate": "appraisal.status.binding",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "appraisal.status.binding",
+    "verdict": "DENY"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "ALLOW",
+      "timestamp_only": "DENY"
+    },
+    "case_id": "RR-010",
+    "expected_gate": "commit.status.available",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "commit.status.available",
+    "verdict": "DENY"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "ALLOW",
+      "timestamp_only": "ALLOW"
+    },
+    "case_id": "RR-011",
+    "expected_gate": "verified",
+    "expected_verdict": "ALLOW",
+    "first_rejecting_gate": "verified",
+    "verdict": "ALLOW"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    },
+    "case_id": "RR-012",
+    "expected_gate": "credential.window",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "credential.window",
+    "verdict": "DENY"
+  },
+  {
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    },
+    "case_id": "RR-013",
+    "expected_gate": "commit.status.signature",
+    "expected_verdict": "DENY",
+    "first_rejecting_gate": "commit.status.signature",
+    "verdict": "DENY"
+  }
+]

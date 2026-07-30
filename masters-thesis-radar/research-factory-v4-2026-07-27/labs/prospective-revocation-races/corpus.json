@@ -1,0 +1,591 @@
+{
+  "cases": [
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "ALUFQFTL6SeOD28WpEZdX3yIJK4vx37/nBGy90gZtXfXHDAA9QtR8+AF78UE4WLfJzY5prde5evhlkWawpkJDg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-001",
+      "commit_snapshot": {
+        "issued_at": 108,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "eq7O8BzNGZ5yvbeEv+gKk/3OtMAor66Oc86/M0z1z8SMhNPZKRKr39xDl5DtZIcHLWLRFgZKZKU9zLR0WsB5Ag==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "credential remains active through commit",
+      "expected": {
+        "first_rejecting_gate": "verified",
+        "verdict": "ALLOW"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "l3cg9T6CKK6XywtrmdHptxFRzYmyk5DQ9jzYK6hDH3j1+lot+dQX5giO6TlZBU+8CKX5nYjE03Y8HQSM+BoUBA==",
+        "states": {
+          "cred-primary": "revoked"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-002",
+      "commit_snapshot": {
+        "issued_at": 108,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "rvQYRovMXoXysqV8SczSAqdtJ+qMSx+8dpEy+0k8bf6l8IK7vZevjF6JLhhpf2Qlxb5F9mO29jBv8EgMXndfAQ==",
+        "states": {
+          "cred-primary": "revoked"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "credential revoked before appraisal",
+      "expected": {
+        "first_rejecting_gate": "appraisal.status.active",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "ALUFQFTL6SeOD28WpEZdX3yIJK4vx37/nBGy90gZtXfXHDAA9QtR8+AF78UE4WLfJzY5prde5evhlkWawpkJDg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-003",
+      "commit_snapshot": {
+        "issued_at": 105,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "R6hYdiXzxQfRg1HjMb8DEGDUjt9xDhb9qMSzR8QIXvRPg7T9BXF3xH3I0CM2KROearMhTb285cjhidnTNkR2Dg==",
+        "states": {
+          "cred-primary": "revoked"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "revocation occurs between appraisal and commit",
+      "expected": {
+        "first_rejecting_gate": "commit.status.active",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "ALUFQFTL6SeOD28WpEZdX3yIJK4vx37/nBGy90gZtXfXHDAA9QtR8+AF78UE4WLfJzY5prde5evhlkWawpkJDg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-004",
+      "commit_snapshot": {
+        "issued_at": 110,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "63avpbxsS00ZbCUOpdw7YwLoesmtUZLWDh2WIFKCEEWM9RIqy8AZzLSu843tQ4jiNPMkouwBKdem2KLPukxVAQ==",
+        "states": {
+          "cred-primary": "revoked"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "revocation becomes effective exactly at commit",
+      "expected": {
+        "first_rejecting_gate": "commit.status.active",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "ALUFQFTL6SeOD28WpEZdX3yIJK4vx37/nBGy90gZtXfXHDAA9QtR8+AF78UE4WLfJzY5prde5evhlkWawpkJDg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-005",
+      "commit_snapshot": {
+        "issued_at": 108,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "eq7O8BzNGZ5yvbeEv+gKk/3OtMAor66Oc86/M0z1z8SMhNPZKRKr39xDl5DtZIcHLWLRFgZKZKU9zLR0WsB5Ag==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "revocation occurs after the committed effect",
+      "expected": {
+        "first_rejecting_gate": "verified",
+        "verdict": "ALLOW"
+      },
+      "max_snapshot_age": 30,
+      "post_commit_snapshot": {
+        "issued_at": 111,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 12,
+        "signature_b64": "dT5Gk543+oYm8NVgr3cP/VdQeJPGlATNiwxsXdY9LSYoN9jdWXdeCMIMTIoVgj4gDfBP8jkC/Cf6sVmSLZ/aBQ==",
+        "states": {
+          "cred-primary": "revoked"
+        }
+      }
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 60,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "RYVvUxBBdhY5NXxvAUuuN9dNcxXrJhFmx7988KczejdAZcbSS2tg3NX1jxywdKP1QWDXw3f0vCrymB7aoDWHCg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-006",
+      "commit_snapshot": {
+        "issued_at": 108,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "eq7O8BzNGZ5yvbeEv+gKk/3OtMAor66Oc86/M0z1z8SMhNPZKRKr39xDl5DtZIcHLWLRFgZKZKU9zLR0WsB5Ag==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "appraisal receives a correctly signed but stale snapshot",
+      "expected": {
+        "first_rejecting_gate": "appraisal.status.freshness",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "ALUFQFTL6SeOD28WpEZdX3yIJK4vx37/nBGy90gZtXfXHDAA9QtR8+AF78UE4WLfJzY5prde5evhlkWawpkJDg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-007",
+      "commit_snapshot": {
+        "issued_at": 70,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "9n6TRTipjeFLDssyT9uIMbI6TuFlZdW3TZRtACl2hYsAcvuxc0oIFM0B0I+M63/w2STQlBZyZ8ZspXf8QIdmAg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "commit receives a correctly signed but stale snapshot",
+      "expected": {
+        "first_rejecting_gate": "commit.status.freshness",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 20,
+        "signature_b64": "sbOIzqZju/lK7z2iGZ7CZuUBBddquyA29m3OZYs44uT7RUSAjKbBswEn2X/thZ2NJCxxF5OZ5KGI1+gGAbncBg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-008",
+      "commit_snapshot": {
+        "issued_at": 108,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 19,
+        "signature_b64": "dO27YTLImREVfdE1SECJ/oIDdevQVdwfr93NhZodwszUAJF9wfGkzAOlcvdEK9RGmq84lGwQipAM24W3f7KfBQ==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "commit replays a lower status sequence with a newer timestamp",
+      "expected": {
+        "first_rejecting_gate": "commit.status.monotonic",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "13Tjt2GFAjfjyD3EuriyFqLps18zq3zyLGZdqy/TndQAf4m1YR59J32MNzC4RBuLFD4fQf4529orfIKy0YeZCg==",
+        "states": {
+          "cred-other": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-009",
+      "commit_snapshot": {
+        "issued_at": 108,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "nf+1LtO27aowlX7K1+JRRHaV1zCmhTDpB+1jxMwAsgolBHUjlHvS61LUOXHmPc1f7CrqP/QmzOxZTYSqRy1XBQ==",
+        "states": {
+          "cred-other": "active"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "status snapshots are valid but omit the presented credential id",
+      "expected": {
+        "first_rejecting_gate": "appraisal.status.binding",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "ALUFQFTL6SeOD28WpEZdX3yIJK4vx37/nBGy90gZtXfXHDAA9QtR8+AF78UE4WLfJzY5prde5evhlkWawpkJDg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-010",
+      "commit_snapshot": null,
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "commit-time status service is unavailable",
+      "expected": {
+        "first_rejecting_gate": "commit.status.available",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 30,
+        "signature_b64": "rEZFDRa2TUgFiYDHMWy0TjNAyk/nfXpS7ycjx94HoJHo3VPScbgMsPzfJhkd9b+qfMQJxNchFmlhuIg/V54sCg==",
+        "states": {
+          "cred-primary": "revoked",
+          "cred-reissued": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-011",
+      "commit_snapshot": {
+        "issued_at": 108,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 31,
+        "signature_b64": "I4R/6a8evlR9H6Jphzv2XNwv24cAh2Fvple6zAnT2j4D/r4fNeoiTy74rURLVsmkq8IyL5fvwYqQDf1LB2/4Ag==",
+        "states": {
+          "cred-primary": "revoked",
+          "cred-reissued": "active"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-reissued",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "OBCCP/viaeOr7Wnm4gHpNhs5bUR35sUESJtzN5BZk7q0B4PV8TTPaJNWIWYqCdqlc2UPvtb+c+GWl3JYdEmBDg==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "new credential is active while predecessor remains revoked",
+      "expected": {
+        "first_rejecting_gate": "verified",
+        "verdict": "ALLOW"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "ALUFQFTL6SeOD28WpEZdX3yIJK4vx37/nBGy90gZtXfXHDAA9QtR8+AF78UE4WLfJzY5prde5evhlkWawpkJDg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-012",
+      "commit_snapshot": {
+        "issued_at": 108,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "eq7O8BzNGZ5yvbeEv+gKk/3OtMAor66Oc86/M0z1z8SMhNPZKRKr39xDl5DtZIcHLWLRFgZKZKU9zLR0WsB5Ag==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "0aLQZJj+GU9e2X14JUOXPski+IJbUkmWWH6yNnWQf6Z5Fx7VSybx/NewEk+2E3FASWW/mr7tQgzQuB38KzOTBA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 110
+      },
+      "description": "credential validity ends at the commit instant",
+      "expected": {
+        "first_rejecting_gate": "credential.window",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    },
+    {
+      "appraisal_snapshot": {
+        "issued_at": 95,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 10,
+        "signature_b64": "ALUFQFTL6SeOD28WpEZdX3yIJK4vx37/nBGy90gZtXfXHDAA9QtR8+AF78UE4WLfJzY5prde5evhlkWawpkJDg==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "appraisal_time": 100,
+      "case_id": "RR-013",
+      "commit_snapshot": {
+        "issued_at": 108,
+        "issuer": "status-authority",
+        "profile": "tyche-signed-status-snapshot-v0.2",
+        "sequence": 11,
+        "signature_b64": "e67O8BzNGZ5yvbeEv+gKk/3OtMAor66Oc86/M0z1z8SMhNPZKRKr39xDl5DtZIcHLWLRFgZKZKU9zLR0WsB5Ag==",
+        "states": {
+          "cred-primary": "active"
+        }
+      },
+      "commit_time": 110,
+      "credential": {
+        "credential_id": "cred-primary",
+        "issuer": "authority-root",
+        "profile": "tyche-signed-authority-credential-v0.2",
+        "scope": {
+          "operation": "ledger.read",
+          "resource": "invoice-123"
+        },
+        "signature_b64": "bdyAdjitNgvgrVF5eO0c4lYH0hFj1tZ0/RurUmlSWIrYCdiYShYiaEGujI6dpn3xm0ReG7mX/4HkZJZeGhA7CA==",
+        "subject": "agent-alpha",
+        "valid_from": 0,
+        "valid_until": 1000
+      },
+      "description": "commit snapshot signature is corrupted",
+      "expected": {
+        "first_rejecting_gate": "commit.status.signature",
+        "verdict": "DENY"
+      },
+      "max_snapshot_age": 30
+    }
+  ],
+  "claim_boundary": "Internal designed scheduled-event evidence with real Ed25519 verification; not a live race, external label, deployed-system validation, or standards-conformance result.",
+  "profile": "tyche-prospective-revocation-races-v1",
+  "public_keys": {
+    "credential_authority_spki_b64": "MCowBQYDK2VwAyEAH92zos6eg6Hrwk+EbaprmNAmYKp5wbXAXlD8vTF8SQ4=",
+    "status_authority_spki_b64": "MCowBQYDK2VwAyEAcUZniMjauStaGpUFWgxj2rgjgWTUPVUeYYHfXM5tlIk="
+  },
+  "semantics": {
+    "credential_window": "valid_from <= t < valid_until at appraisal and commit",
+    "revocation_boundary": "revoked at issued_at, inclusive",
+    "sequence_rule": "commit.sequence >= appraisal.sequence",
+    "snapshot_freshness": "0 <= decision_time - issued_at <= max_snapshot_age"
+  }
+}

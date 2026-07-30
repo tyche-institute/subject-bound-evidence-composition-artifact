@@ -1,0 +1,44 @@
+{
+  "all_passed": true,
+  "architecture_neutral_counts": {
+    "binding_denials": 8,
+    "composed_transactions": 104,
+    "eatf_rows": 21,
+    "policy_vectors": 16,
+    "revocation_cases": 372,
+    "revocation_fault_cases": 96,
+    "transfer_transaction_rows": 104
+  },
+  "checks": {
+    "composed_all_source_hashes_match": true,
+    "composed_binding_denials_8": true,
+    "composed_exact_104": true,
+    "composed_subject_match_104": true,
+    "composed_transactions_104": true,
+    "policy_baselines_expose_false_allow": true,
+    "policy_exact_16": true,
+    "policy_vectors_16": true,
+    "revocation_all_passed": true,
+    "revocation_atomic_invariant": true,
+    "revocation_cases_372": true,
+    "revocation_claim_boundary_same_host": true,
+    "revocation_fault_recovery_96": true,
+    "revocation_no_duplicate_effects": true,
+    "revocation_signatures_372": true,
+    "revocation_weak_counterexamples": true,
+    "transfer_codes_total": true,
+    "transfer_eatf_21": true,
+    "transfer_source_pins_verified": true,
+    "transfer_transactions_104": true
+  },
+  "checks_passed": 20,
+  "checks_total": 20,
+  "contract": "tyche-second-host-semantic-contract-v1",
+  "rate_boundary": "revocation race exposure counts are intentionally excluded from cross-architecture equality; invariant and exact-case assertions are compared",
+  "result_hashes": {
+    "labs/composed-transaction-corpus/results/summary.json": "20b2dacd2b460510d52443601fd59ee87742a565508a260358435d5be24eb91a",
+    "labs/cross-ecosystem-typed-transfer/results.json": "7bb3896fdf324405917e2ff7d76d76dd22de2bf43240e7a17f4b63a8006e0c90",
+    "labs/distributed-revocation-service/results.json": "afbb7d2c505e9a362d6abfe7481098b69b1969a8375a8b4aed49009143397668",
+    "labs/policy-version-evidence-replay/results/summary.json": "e8abc71129a2ac299eb29049e87b1fc8f80bb550c2218e6add3cf08ddaf011f7"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "all_native_codes_mapped": true,
+  "all_source_pins_verified": true,
+  "boolean_scalarization": {
+    "interpretation": "count of within-ecosystem pairs of distinct native rejection labels mapped to the same Boolean REJECT value",
+    "native_pairwise_rejection_distinctions_erased": 498
+  },
+  "claim_boundary": "representational transfer over two first-party executable corpora; not semantic equivalence, interoperability, or external replication",
+  "composed_transaction": {
+    "best_native_state_guess_from_reject_only": {
+      "accuracy": 0.15730337078651685,
+      "correct": 14,
+      "total": 89
+    },
+    "cases": 104,
+    "distinct_native_rejection_states": 28,
+    "native_state_entropy_bits": 4.119069296279377,
+    "oracle_matches": 104,
+    "pairwise_state_distinctions_erased_by_boolean": 378,
+    "rejected_cases": 89
+  },
+  "eatf": {
+    "best_native_state_guess_from_reject_only": {
+      "accuracy": 0.21052631578947367,
+      "correct": 4,
+      "total": 19
+    },
+    "cases": 21,
+    "distinct_native_rejection_states": 16,
+    "native_state_entropy_bits": 3.826874881864638,
+    "oracle_and_cross_implementation_matches": 21,
+    "pairwise_state_distinctions_erased_by_boolean": 120,
+    "rejected_cases": 19
+  },
+  "lab": "cross-ecosystem-typed-transfer",
+  "shared_ontology": {
+    "eatf_classes": [
+      "cryptographic_integrity",
+      "representation",
+      "subject_binding",
+      "temporal_freshness",
+      "trust_or_authority"
+    ],
+    "overlap": [
+      "cryptographic_integrity",
+      "representation",
+      "subject_binding",
+      "temporal_freshness",
+      "trust_or_authority"
+    ],
+    "overlap_count": 5,
+    "transaction_classes": [
+      "cryptographic_integrity",
+      "measurement_confidence",
+      "policy_compatibility",
+      "representation",
+      "runtime_state",
+      "subject_binding",
+      "temporal_freshness",
+      "trust_or_authority"
+    ],
+    "union_count": 8
+  }
+}
+{
+  "all_passed": true,
+  "baseline_exact_matches": 125,
+  "baseline_rows": 125,
+  "claim_boundary": "independent relational execution and sensitivity audit of an author-defined analytic mapping; not external semantic validation or interoperability",
+  "class_mutations_detected": 46,
+  "engine": "SQLite 3.45.1",
+  "lab": "crosswalk-independent-sql-audit",
+  "leave_one_out_gaps_detected": 46,
+  "mapping_entries": 46
+}
+README.md: OK
+NOTICE.source: OK
+build_transfer.py: OK
+verify_crosswalk_sql.py: OK
+source-eatf-results.json: OK
+source-transaction-gates.json: OK
+crosswalk.json: OK
+results.json: OK
+independent-sql-results.json: OK
+SUMMARY.md: OK

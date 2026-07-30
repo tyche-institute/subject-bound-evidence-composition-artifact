@@ -1,0 +1,16 @@
+{"id": "PSR_correct_good", "implementation_match": true, "oracle_gate": "verified", "oracle_verdict": "ALLOW", "python_gate": "verified", "python_verdict": "ALLOW"}
+{"id": "PSR_correct_tampered", "implementation_match": true, "oracle_gate": "evidence.integrity", "oracle_verdict": "DENY", "python_gate": "evidence.integrity", "python_verdict": "DENY"}
+{"id": "PSR_correct_replayed", "implementation_match": true, "oracle_gate": "evidence.replay", "oracle_verdict": "DENY", "python_gate": "evidence.replay", "python_verdict": "DENY"}
+{"id": "PSR_missing_good", "implementation_match": true, "oracle_gate": "policy.missing", "oracle_verdict": "DENY", "python_gate": "policy.missing", "python_verdict": "DENY"}
+{"id": "PSR_missing_tampered", "implementation_match": true, "oracle_gate": "policy.missing", "oracle_verdict": "DENY", "python_gate": "policy.missing", "python_verdict": "DENY"}
+{"id": "PSR_missing_replayed", "implementation_match": true, "oracle_gate": "policy.missing", "oracle_verdict": "DENY", "python_gate": "policy.missing", "python_verdict": "DENY"}
+{"id": "PSR_stale_good", "implementation_match": true, "oracle_gate": "policy.stale", "oracle_verdict": "DENY", "python_gate": "policy.stale", "python_verdict": "DENY"}
+{"id": "PSR_stale_tampered", "implementation_match": true, "oracle_gate": "policy.stale", "oracle_verdict": "DENY", "python_gate": "policy.stale", "python_verdict": "DENY"}
+{"id": "PSR_stale_replayed", "implementation_match": true, "oracle_gate": "policy.stale", "oracle_verdict": "DENY", "python_gate": "policy.stale", "python_verdict": "DENY"}
+{"id": "PSR_substituted_good", "implementation_match": true, "oracle_gate": "policy.substituted", "oracle_verdict": "DENY", "python_gate": "policy.substituted", "python_verdict": "DENY"}
+{"id": "PSR_substituted_tampered", "implementation_match": true, "oracle_gate": "policy.substituted", "oracle_verdict": "DENY", "python_gate": "policy.substituted", "python_verdict": "DENY"}
+{"id": "PSR_substituted_replayed", "implementation_match": true, "oracle_gate": "policy.substituted", "oracle_verdict": "DENY", "python_gate": "policy.substituted", "python_verdict": "DENY"}
+{"id": "PSR_version_only_good", "implementation_match": true, "oracle_gate": "policy.stale", "oracle_verdict": "DENY", "python_gate": "policy.stale", "python_verdict": "DENY"}
+{"id": "PSR_freshness_only_good", "implementation_match": true, "oracle_gate": "policy.stale", "oracle_verdict": "DENY", "python_gate": "policy.stale", "python_verdict": "DENY"}
+{"id": "PSR_digest_only_good", "implementation_match": true, "oracle_gate": "policy.substituted", "oracle_verdict": "DENY", "python_gate": "policy.substituted", "python_verdict": "DENY"}
+{"id": "PSR_policy_sig_invalid_good", "implementation_match": true, "oracle_gate": "policy.signature", "oracle_verdict": "DENY", "python_gate": "policy.signature", "python_verdict": "DENY"}

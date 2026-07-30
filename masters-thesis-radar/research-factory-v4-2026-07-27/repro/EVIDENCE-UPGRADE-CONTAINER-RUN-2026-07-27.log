@@ -1,0 +1,27 @@
+===== ENVIRONMENT =====
+Python 3.12.13 (main, Jul 14 2026, 02:09:00) [GCC 14.2.0]
+{"cryptography": "49.0.0", "numpy": "2.5.0", "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.41", "python": "3.12.13 (main, Jul 14 2026, 02:09:00) [GCC 14.2.0]", "sqlite": "3.46.1"}
+===== NETWORK ISOLATION =====
+interfaces=lo
+routes:
+Iface	Destination	Gateway 	Flags	RefCnt	Use	Metric	Mask		MTU	Window	IRTT                                                       
+outbound_connect=FAILED errno=101 name=ENETUNREACH
+===== STAGE READ-ONLY INPUTS INTO TMPFS =====
+===== CURRENT 104-TRANSACTION COMPOSITION =====
+{"all_five_pass_but_denied": 8, "allows": 15, "baseline_false_allows": {"artifact_validity_only": 48, "four_of_five_majority": 31, "point_only_measurement": 2}, "binding_gate_counts": {"binding.effect": 3, "binding.measurement_profile": 1, "binding.resource": 2, "binding.time": 2, "binding.undetermined": 0}, "denies": 89, "transactions": 104}
+===== NATIVE SIGNED AUTHORITY ADAPTER =====
+{"cases": 8, "exact_verdict_and_gate": 8, "fixtures_sha256": "09c868dc0efd4cad69f4c0cc569ca35f07d800cf0fabd745665a503e846583c8", "mismatch_count": 0, "verifier_sha256": "1b465ea38f3e28fcf76adee46bc4a3f62dee8ac9fa205b6a084809f25bceeae1"}
+===== SINGLE-FAULT MUTATION CORPUS =====
+{"js_python_layer_field_agreement": 570, "js_python_layer_field_total": 570, "mismatch_count": 0, "oracle_exact_verdict_and_gate": 38, "oracle_total": 38, "single_fault_cases": 37, "transactions": 38}
+===== MULTI-FAULT MUTATION CORPUS =====
+{"cases": 12, "container_python_matches_frozen_javascript": 12}
+===== PROSPECTIVE SIGNED REVOCATION RACES =====
+{"cases": 13, "container_python_equals_frozen_javascript": 13, "strict_exact_verdict_and_gate": 13}
+===== REGENERATED HASHES =====
+1ba6d40d07e62a862b98ec52ab5c189eb491f19e4e1e69a411fba73bbb9a43a8  /scratch/masters-thesis-radar/research-factory-v4-2026-07-27/labs/composed-transaction-corpus/corpus.json
+09c868dc0efd4cad69f4c0cc569ca35f07d800cf0fabd745665a503e846583c8  /scratch/zeus-followup-2026-07-27/native-signed-authority-adapters/fixtures.json
+3ce82a8cdab121dd00b52d873e3f6bad7ec3a74bcbd1bd33fb526a38d53492e0  /scratch/zeus-followup-2026-07-27/thesis-v4-mutation-tests/python-results.json
+8596cb1d076875738f259e0f5bb405ec9bd17ab52b16635a1c81f5261d350541  /scratch/zeus-followup-2026-07-27/thesis-v4-multifault-tests/python-results.json
+33625c8dfd7b36da53a49b9306a0034b5529447a2e35e66d3a2c21eae385c563  /scratch/masters-thesis-radar/research-factory-v4-2026-07-27/labs/prospective-revocation-races/corpus.json
+58aa693c52d94b7178faab1597c549a6b29449079c695a74731e27efca130da4  /scratch/masters-thesis-radar/research-factory-v4-2026-07-27/labs/prospective-revocation-races/python-results.json
+===== DONE =====

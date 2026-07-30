@@ -1,0 +1,12 @@
+This experiment derives a field-minimized snapshot from the public EATF Agent
+Evidence Package toolkit decision-path results.
+
+Source: https://github.com/tyche-institute/eatf-verifier
+Source result commit recorded by the experiment: 1a6329495e6e1235c388f72d209f23eefa38fe38
+Copyright 2026 Tyche Institute
+Licence: Apache License 2.0
+
+The crosswalk, scalarization analysis, and transaction-corpus comparison in
+this directory are modifications/additions and are not claims made by the
+source toolkit.
+

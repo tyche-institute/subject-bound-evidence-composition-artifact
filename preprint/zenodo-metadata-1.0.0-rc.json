@@ -1,0 +1,39 @@
+{
+  "_status": "READY FOR FINAL SANITIZED ARCHIVE HASH; ZENODO TOKEN/DEPOSIT NOT YET AVAILABLE",
+  "title": "Subject-Bound Evidence Composition for Delegated AI Actions",
+  "upload_type": "dataset",
+  "description": "Executable benchmark, frozen synthetic corpora, test vectors, source, figures, hosted x86-64 and ARM64 evidence, identified zeus2 VM/OS and Microsoft-vTPM evidence, and reproducibility materials for typed evidence composition and commit-time revocation in delegated AI actions.",
+  "creators": [
+    {
+      "name": "Sokolov, Anton",
+      "affiliation": "Tyche Institute, Tallinn, Estonia",
+      "orcid": "0000-0003-2452-7096"
+    }
+  ],
+  "version": "0.2.0-rc2",
+  "publication_date": "2026-07-30",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "delegated AI",
+    "evidence composition",
+    "authorization",
+    "runtime attestation",
+    "metamorphic testing",
+    "commit-time revocation",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/tyche-institute/subject-bound-evidence-composition-artifact",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://orcid.org/0000-0003-2452-7096",
+      "relation": "isIdenticalTo",
+      "resource_type": "other"
+    }
+  ],
+  "notes": "The archive has a component-level licence split: original code and schemas are Apache-2.0; original prose, figures, synthetic corpora, fixtures, and generated data are CC-BY-4.0; preserved upstream notices govern named exceptions. Add the final archive SHA-256 and remove _status only when an immutable deposit is actually created."
+}

@@ -1,0 +1,40 @@
+{
+  "boot_id_sha256": "8f7a59df1ffa876365b39321e65a4267e455e2e65d7d30145bb14b1972b5320d",
+  "claim_boundary": "identified second virtual-machine OS instance reached through the configured zeus2 SSH identity; Microsoft vTPM device present; underlying physical host identity and discrete hardware TPM are not attested",
+  "dmi": {
+    "product_name": "Virtual Machine",
+    "product_version": "Hyper-V UEFI Release v4.1",
+    "sys_vendor": "Microsoft Corporation"
+  },
+  "dmi_product_uuid_sha256": null,
+  "execution_label": "zeus2",
+  "hostname_sha256": "a63ebc85bf68d4510c75c94f8651413cec6ab515ac1d6172e3190551294beb6c",
+  "kernel": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "machine_id_sha256": "8d692ece902411254578d948d34a15daf4c6083dc2aa86034ff735133c97f905",
+  "observed_at_utc": "2026-07-30T07:56:22.210117+00:00",
+  "python": "3.12.3",
+  "schema": "tyche-identified-second-vm-provenance-v1",
+  "source_archive_sha256": "b0d8b487b74924fe90d9c8296977595463c0604bc523ef6104ac0d228da10eb3",
+  "source_git_commit": "ee2831a7eba9f171526059bb2dd03f4ae1b0809a",
+  "tpm2_tools": "tool=\"tpm2_getcap\" version=\"5.6\" tctis=\"libtss2-tctildr\" tcti-default=tcti-device",
+  "tpm_devices": [
+    {
+      "major": 252,
+      "minor": 65536,
+      "mode": "0o660",
+      "path": "/dev/tpmrm0"
+    },
+    {
+      "major": 10,
+      "minor": 224,
+      "mode": "0o660",
+      "path": "/dev/tpm0"
+    }
+  ],
+  "tpm_firmware_raw": "0x20150113",
+  "tpm_manufacturer_ascii": "MSFT",
+  "tpm_manufacturer_raw": "0x4D534654",
+  "tpm_properties_fixed_sha256": "1e23e2535a06de804b56908bcd8d65a14612d1e73204047d0a45a80a0fa6cc49",
+  "virtualization": "microsoft"
+}

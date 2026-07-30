@@ -1,0 +1,37 @@
+{
+  "lab": "formal-composition-modelcheck",
+  "implementation": "standalone Java finite-state enumeration",
+  "imports_author_oracle": false,
+  "all_passed": true,
+"boolean_indistinguishability": {
+  "local_vector": [1, 1, 1, 1, 1],
+  "composer_output_cases": 2,
+  "cases_with_unavoidable_error": 2,
+  "minimum_errors_across_matched_mismatch_pair": 1,
+  "passed": true
+},
+  "binding_refinement": {
+    "coordinates": ["effect", "resource", "time", "profile"],
+    "agreement_states_exhausted": 16,
+    "false_allows_over_all_15_mismatch_states": {
+        "boolean_only": 15,
+        "effect_resource": 3,
+        "effect_resource_profile": 1,
+        "effect_resource_time": 1,
+        "full_effect_resource_time_profile": 0
+  },
+  "strict_subset_relations_checked": 4,
+  "passed": true
+},
+"revocation_model": {
+  "three_event_schedules_exhausted": 6,
+  "atomic_guard_oracle_mismatches": 0,
+  "single_read_false_allow_schedules": 1,
+  "single_read_counterexamples": ["R<X<C"],
+  "double_read_topological_schedules": 4,
+  "double_read_false_allow_schedules": 1,
+  "canonical_double_read_counterexample": "R1<R2<X<C",
+  "passed": true
+},
+  "claim_boundary": "Finite exhaustive check of the declared Boolean, four-coordinate binding, and bounded revocation models; not a proof of every deployed implementation."
+}

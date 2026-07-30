@@ -1,0 +1,26 @@
+{
+  "profile": "subject-bound-hardware-quote-mutations-v1",
+  "claim_boundary": "predeclared offline mutations; expected rejection is an author-written oracle, not external ground truth",
+  "representative_sorted_transaction_indices": [
+    0,
+    13,
+    26,
+    39,
+    52,
+    65,
+    78,
+    91
+  ],
+  "mutations": [
+    "quote_message_flip",
+    "signature_flip",
+    "pcr_blob_flip",
+    "challenge_replay",
+    "transaction_substitution",
+    "corpus_hash_substitution",
+    "capsule_hash_substitution",
+    "qualifying_data_representation"
+  ],
+  "expected_cases": 64,
+  "expected_result": "NATIVE_QUOTE_REJECTED"
+}

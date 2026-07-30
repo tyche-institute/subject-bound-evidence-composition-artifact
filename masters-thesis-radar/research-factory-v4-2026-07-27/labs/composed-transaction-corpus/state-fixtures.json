@@ -1,0 +1,135 @@
+{
+  "profile": "state-fixtures-v1",
+  "disclaimer": "These attestation-result objects are author-designed corpus fixtures appraised structurally by state_adapter.py. No cryptographic verification is performed, no TPM and no Veraison are involved, and nothing here is remote attestation. Expected labels are author-written, not external ground truth; adapter agreement with them measures the specification, not the world. Counts over these fixtures are corpus-design coverage, not rates.",
+  "decision_time": "2026-07-25T21:30:00Z",
+  "decision_time_note": "Fixed constant shared with policy-version-evidence-replay/corpus.json; timestamps compare lexicographically in fixed-width UTC Z form; both window boundaries are inclusive.",
+  "appraisal_order": [
+    "1 status contraindicated (or any non-affirming value, fail-closed) -> CONTRAINDICATED / state.contraindicated",
+    "2 not (issued_at <= decision_time <= expires_at) -> STALE / state.stale",
+    "3 observed_digest != reference_digest (or missing reference, fail-closed) -> REFERENCE_MISMATCH / state.reference",
+    "4 otherwise -> PASS / state.verified"
+  ],
+  "reference_digest_note": "Digests are sha256 of the fixed strings 'runtime-measurement:v1' (reference) and 'runtime-measurement:tampered' (mismatch); they identify corpus constants, not any real runtime.",
+  "fixtures": {
+    "affirming-fresh-match": {
+      "attestation_result": {
+        "profile": "state-fixtures-v1",
+        "status": "affirming",
+        "reference_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "observed_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "issued_at": "2026-07-25T21:00:00Z",
+        "expires_at": "2026-07-25T22:00:00Z"
+      },
+      "expected": {
+        "result": "PASS",
+        "gate": "state.verified"
+      },
+      "note": "All gates pass; decision_time strictly inside the window."
+    },
+    "contraindicated": {
+      "attestation_result": {
+        "profile": "state-fixtures-v1",
+        "status": "contraindicated",
+        "reference_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "observed_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "issued_at": "2026-07-25T21:00:00Z",
+        "expires_at": "2026-07-25T22:00:00Z"
+      },
+      "expected": {
+        "result": "CONTRAINDICATED",
+        "gate": "state.contraindicated"
+      },
+      "note": "Status gate fires although window and digest would both pass."
+    },
+    "stale-match": {
+      "attestation_result": {
+        "profile": "state-fixtures-v1",
+        "status": "affirming",
+        "reference_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "observed_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "issued_at": "2026-07-25T20:00:00Z",
+        "expires_at": "2026-07-25T21:15:00Z"
+      },
+      "expected": {
+        "result": "STALE",
+        "gate": "state.stale"
+      },
+      "note": "Matching digest but expired 15 minutes before decision_time — the matching-but-stale case the former binary literal could not express."
+    },
+    "fresh-mismatch": {
+      "attestation_result": {
+        "profile": "state-fixtures-v1",
+        "status": "affirming",
+        "reference_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "observed_digest": "sha256:96657a329a4aa6323d70f58a3a0d8920af4cfe04dd48be7b2b10c45014743ccb",
+        "issued_at": "2026-07-25T21:00:00Z",
+        "expires_at": "2026-07-25T22:00:00Z"
+      },
+      "expected": {
+        "result": "REFERENCE_MISMATCH",
+        "gate": "state.reference"
+      },
+      "note": "Fresh window but observed digest differs from reference — the fresh-but-mismatched case the former binary literal could not express."
+    },
+    "stale-mismatch": {
+      "attestation_result": {
+        "profile": "state-fixtures-v1",
+        "status": "affirming",
+        "reference_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "observed_digest": "sha256:96657a329a4aa6323d70f58a3a0d8920af4cfe04dd48be7b2b10c45014743ccb",
+        "issued_at": "2026-07-25T20:00:00Z",
+        "expires_at": "2026-07-25T21:15:00Z"
+      },
+      "expected": {
+        "result": "STALE",
+        "gate": "state.stale"
+      },
+      "note": "Precedence fixture: rule 2 (stale) fires before rule 3 (mismatch)."
+    },
+    "boundary-fresh": {
+      "attestation_result": {
+        "profile": "state-fixtures-v1",
+        "status": "affirming",
+        "reference_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "observed_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "issued_at": "2026-07-25T21:30:00Z",
+        "expires_at": "2026-07-25T22:00:00Z"
+      },
+      "expected": {
+        "result": "PASS",
+        "gate": "state.verified"
+      },
+      "note": "decision_time == issued_at exactly; the lower window boundary is inclusive."
+    },
+    "boundary-expiry": {
+      "attestation_result": {
+        "profile": "state-fixtures-v1",
+        "status": "affirming",
+        "reference_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "observed_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "issued_at": "2026-07-25T21:00:00Z",
+        "expires_at": "2026-07-25T21:30:00Z"
+      },
+      "expected": {
+        "result": "PASS",
+        "gate": "state.verified"
+      },
+      "note": "decision_time == expires_at exactly; the upper window boundary is inclusive."
+    },
+    "contraindicated-stale-mismatch": {
+      "attestation_result": {
+        "profile": "state-fixtures-v1",
+        "status": "contraindicated",
+        "reference_digest": "sha256:c1ff2499c12c61315bc784a6475864dcc882682232af29e1a87a96746d0633cd",
+        "observed_digest": "sha256:96657a329a4aa6323d70f58a3a0d8920af4cfe04dd48be7b2b10c45014743ccb",
+        "issued_at": "2026-07-25T20:00:00Z",
+        "expires_at": "2026-07-25T21:15:00Z"
+      },
+      "expected": {
+        "result": "CONTRAINDICATED",
+        "gate": "state.contraindicated"
+      },
+      "note": "Triple-fault precedence fixture: rule 1 wins over rules 2 and 3."
+    }
+  }
+}

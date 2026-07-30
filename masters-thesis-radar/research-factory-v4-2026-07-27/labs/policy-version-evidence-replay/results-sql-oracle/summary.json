@@ -1,0 +1,21 @@
+{
+  "disclaimers": [
+    "This oracle recomposes per-layer typed results already produced by the Python evaluator; agreement validates only the conjunction and the first-rejecting-gate labelling, not signatures, layer semantics, or the author-written expected labels. It is NOT independent validation.",
+    "All expected labels in the source corpus are author-written."
+  ],
+  "implementation_matches": 16,
+  "oracle_gate_counts": {
+    "evidence.integrity": 1,
+    "evidence.replay": 1,
+    "policy.missing": 3,
+    "policy.signature": 1,
+    "policy.stale": 5,
+    "policy.substituted": 4,
+    "verified": 1
+  },
+  "profile": "tyche-policy-version-evidence-replay-sql-oracle-v2",
+  "runner_sha256": "5837cddcd7d88c3bb7f4757446b7753ef990f9a99a2cc11c936a8f8b681b44c3",
+  "source_verdicts_sha256": "cfc8bcdf6645f3fa6877333f9ff1814d664a4a4517e46612b53092adbe22210b",
+  "sql_sha256": "615be3a47c0c995e995c2be6a87edb6b34661b76abaad50603568a4b8db99887",
+  "vectors": 16
+}

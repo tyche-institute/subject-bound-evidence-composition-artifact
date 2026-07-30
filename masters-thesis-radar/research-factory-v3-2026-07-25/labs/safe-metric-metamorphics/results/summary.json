@@ -1,0 +1,23 @@
+{
+  "checks": 15,
+  "checks_failed": 0,
+  "checks_passed": 15,
+  "corpus_sha256": "e5a09eab9a7e48bb8060a73a26583c2ad0cd1fd0f13e15a86cb3e15d1b253689",
+  "dynamic_topsis_rank_reversal": true,
+  "fixed_topsis_rank_invariant": true,
+  "formula_values": {
+    "arithmetic": 0.7691666666666667,
+    "geometric": 0.7665940655604425,
+    "rms": 0.7716991532704787
+  },
+  "measurement_fixture_matches": 4,
+  "measurement_fixtures": 4,
+  "overlap_decision_differs": true,
+  "point_only_false_allows": 2,
+  "profile": "tyche-safe-metric-metamorphics-v1",
+  "profile_digest_changes": 6,
+  "profile_digest_mutations": 6,
+  "reference_impl_sha256": "f93be74b05d124e25eccbb042745a02bf53e22d1dec72c296ede5040800adbc2",
+  "runner_sha256": "49df03d61b9ba2b6ea2dd8b9db84977de9fc6643f243b0db10884d424a20e277",
+  "vector_impl_sha256": "1e8a4a99378284f628289f718504ae19fee8081b59bfe353dba86eab9834d31a"
+}

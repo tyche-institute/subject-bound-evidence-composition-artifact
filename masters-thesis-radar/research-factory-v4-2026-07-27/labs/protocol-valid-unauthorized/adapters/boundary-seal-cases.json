@@ -1,0 +1,54 @@
+{
+  "profile": "tyche-a2a-boundary-seal-authority-adapter-v0",
+  "base_mandate": {
+    "native_valid": true,
+    "agent_name": "Tyche A2A Boundary Seal",
+    "provider_organization": "Tyche Institute",
+    "task_id": "c5ea5f62-f3bc-4197-bbc9-42e8d965b93b",
+    "context_id": "5dc505c0-3f84-4d5e-af6d-507f49f019f4",
+    "originating_message_id": "tyche-boundary-seal-enabled-snapshot",
+    "terminal_state": "TASK_STATE_COMPLETED",
+    "effect_sha256": "51cd1c82141eb45b57d43b4ad7ed6ea6f0d670d3a2f9775a45329b0979acb3c5",
+    "not_before": "2026-07-22T19:00:00Z",
+    "expires_at": "2026-07-22T20:00:00Z"
+  },
+  "cases": [
+    {
+      "id": "BA0_exact_recorded_a2a_effect",
+      "patch": {},
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "ALLOW", "gate": "verified"}
+    },
+    {
+      "id": "BA1_wrong_task",
+      "patch": {"task_id": "task-not-authorized"},
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.task"}
+    },
+    {
+      "id": "BA2_wrong_context",
+      "patch": {"context_id": "context-not-authorized"},
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.context"}
+    },
+    {
+      "id": "BA3_wrong_originating_message",
+      "patch": {"originating_message_id": "message-not-authorized"},
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.origin"}
+    },
+    {
+      "id": "BA4_wrong_terminal_effect",
+      "patch": {
+        "effect_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.effect"}
+    },
+    {
+      "id": "BA5_expired_before_recorded_effect",
+      "patch": {"expires_at": "2026-07-22T19:43:00Z"},
+      "expected": {"a0": "VALID", "e0": "VALID", "c1": "DENY", "gate": "seam.freshness"}
+    },
+    {
+      "id": "BA6_good_evidence_absent_mandate",
+      "patch": null,
+      "expected": {"a0": "ABSENT", "e0": "VALID", "c1": "DENY", "gate": "authorization.present"}
+    }
+  ]
+}

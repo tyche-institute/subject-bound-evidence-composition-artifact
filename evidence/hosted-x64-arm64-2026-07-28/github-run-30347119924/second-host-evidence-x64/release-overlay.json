@@ -1,0 +1,29 @@
+{
+  "executable_mode_repairs": [
+    {
+      "content_sha256": "b471e3484f4a8664701a6c2fdad3bc6fd56961a074056b378ac669afe710c381",
+      "path": "workspace/masters-thesis-radar/research-factory-v4-2026-07-27/labs/policy-version-evidence-replay/run.sh",
+      "prior_mode": "0644",
+      "run_mode": "0755"
+    },
+    {
+      "content_sha256": "797f7dd456f8c341c47676caf20ae504796d3d43539da9f838a42be8e77bb425",
+      "path": "workspace/masters-thesis-radar/research-factory-v4-2026-07-27/labs/composed-transaction-corpus/run.sh",
+      "prior_mode": "0644",
+      "run_mode": "0755"
+    },
+    {
+      "content_sha256": "eabc768f45bc24b2c5c0d9e3be43aa39b864cf7a4b03793b5ab22dd2b17a84ed",
+      "path": "workspace/masters-thesis-radar/research-factory-v4-2026-07-27/labs/distributed-revocation-service/run.sh",
+      "prior_mode": "0644",
+      "run_mode": "0755"
+    }
+  ],
+  "modified_sha256": "684be766cab6091e2d849f25349af7d0e2a7e58e594831577707f653943d7f3d",
+  "modified_source": "workspace/masters-thesis-radar/research-factory-v4-2026-07-27/labs/distributed-revocation-service/run_experiment.py",
+  "original_sha256": "9bb0e0b5b31b3a349e9e4eda988201c14ef4c96c924dee4454b2931c40a735e4",
+  "overlay": "tyche-second-host-release-overlay-v1",
+  "reason": "the frozen runner hard-coded x86_64 and would emit a false environment label on the ARM64 job",
+  "replacement_count": 1,
+  "semantic_scope": "claim-boundary environment label only; experiment logic, fixtures, assertions, and event processing are unchanged"
+}

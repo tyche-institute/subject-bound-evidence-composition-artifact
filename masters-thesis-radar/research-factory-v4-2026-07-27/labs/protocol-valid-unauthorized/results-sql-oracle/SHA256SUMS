@@ -1,0 +1,5 @@
+8d846c5a754b970fa94d0209a716e4a50acfea4af09943c3e92c992fae2f7735  verdicts.jsonl
+e8a06d8cb9e094b91dbe44d99cbe30529a46a1930bdbaebbfacdbe16a128973a  summary.json
+b6a47b40ea77f7a3d63f8382cf7fcca9b9f97ffe0e2406f036d985b91427fa73  ../results-delegation-paths/expanded-cases.json
+233ff51fb00281f8d850187d3da78acdafde177321c065cfd1c3f4c04192775d  ../oracle_delegation_paths.sql
+ed494f18c14d5b6f693cfef6ad06e59f6a9376e1a88997c90b427fe27ae68ad2  ../run_sql_oracle.py

@@ -1,0 +1,23 @@
+# Exact dependency pins for the V4 laboratory entry points.
+#
+# Provenance of the three version numbers that the laboratories actually
+# record:
+#   numpy 2.5.0        labs/composed-transaction-corpus/results/run-metadata.json
+#                      (reported via the SAFE measurement module in
+#                      research-factory-v3-2026-07-25/labs/safe-metric-metamorphics)
+#   cryptography 49.0.0 labs/composed-transaction-corpus/results/run-metadata.json
+#                      labs/policy-version-evidence-replay/results/run-metadata.json
+#
+# cffi and pycparser are not named in any run-metadata.json; they are the
+# runtime dependency closure of cryptography 49.0.0
+# (Requires-Dist: cffi>=2.0.0). They are pinned to the versions installed on
+# the host interpreter so the closure is fixed rather than floating.
+#
+# All four are installed with --no-index from a local wheelhouse, so this
+# file is a declaration of intent that is checked against the wheelhouse at
+# build time; it is never resolved against a network index.
+
+numpy==2.5.0
+cryptography==49.0.0
+cffi==2.0.0
+pycparser==3.0

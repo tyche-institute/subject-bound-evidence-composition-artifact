@@ -1,0 +1,759 @@
+wrote=/tmp/tyche-zeus2-r6.2TUbai/extracted/subject-bound-evidence-composition-public-2026-07-28/masters-thesis-radar/research-factory-v4-2026-07-27/labs/policy-version-evidence-replay/corpus.json
+vectors=16
+corpus_sha256=8d1925bfe0459dc9f42e554cf63d01adbe801b6c628ff61908bde5f9d9dd45da
+{
+  "baseline_expected_matches": {
+    "fail_open": 10,
+    "presence_only": 11
+  },
+  "baseline_false_allows": {
+    "fail_open": 6,
+    "presence_only": 5
+  },
+  "corpus_sha256": "8d1925bfe0459dc9f42e554cf63d01adbe801b6c628ff61908bde5f9d9dd45da",
+  "disclaimers": [
+    "All expected labels are author-written programme-internal expectations; agreement measures reproduction of those expectations, not external ground truth.",
+    "False-allow counts are counts on a designed corpus; they are not rates and do not estimate prevalence in any deployed system.",
+    "Structural appraisal of signed test objects is not cryptographic attestation of any runtime.",
+    "The SQL oracle in results-sql-oracle recomposes layer results produced by this evaluator; it is a second composition code path, not independent validation."
+  ],
+  "evidence_result_counts": {
+    "PASS": 8,
+    "REPLAY": 4,
+    "TAMPERED": 4
+  },
+  "families": {
+    "factorial_4x3": 12,
+    "gate_isolation": 4
+  },
+  "gate_isolation_ids": [
+    "PSR_version_only_good",
+    "PSR_freshness_only_good",
+    "PSR_digest_only_good",
+    "PSR_policy_sig_invalid_good"
+  ],
+  "policy_result_counts": {
+    "INVALID_SIGNATURE": 1,
+    "MISSING": 3,
+    "PASS": 3,
+    "STALE": 5,
+    "SUBSTITUTED": 4
+  },
+  "profile": "tyche-policy-version-evidence-replay-v2",
+  "runner_sha256": "d751a2a32f3480424981de768271cbf9ed3d6ad1b18d87d974ac1b488e97c11a",
+  "strict_allows": 1,
+  "strict_denies": 15,
+  "strict_expected_matches": 16,
+  "vectors": 16
+}
+{
+  "disclaimers": [
+    "This oracle recomposes per-layer typed results already produced by the Python evaluator; agreement validates only the conjunction and the first-rejecting-gate labelling, not signatures, layer semantics, or the author-written expected labels. It is NOT independent validation.",
+    "All expected labels in the source corpus are author-written."
+  ],
+  "implementation_matches": 16,
+  "oracle_gate_counts": {
+    "evidence.integrity": 1,
+    "evidence.replay": 1,
+    "policy.missing": 3,
+    "policy.signature": 1,
+    "policy.stale": 5,
+    "policy.substituted": 4,
+    "verified": 1
+  },
+  "profile": "tyche-policy-version-evidence-replay-sql-oracle-v2",
+  "runner_sha256": "5837cddcd7d88c3bb7f4757446b7753ef990f9a99a2cc11c936a8f8b681b44c3",
+  "source_verdicts_sha256": "cfc8bcdf6645f3fa6877333f9ff1814d664a4a4517e46612b53092adbe22210b",
+  "sql_sha256": "615be3a47c0c995e995c2be6a87edb6b34661b76abaad50603568a4b8db99887",
+  "vectors": 16
+}
+verdicts.jsonl: OK
+summary.json: OK
+run-metadata.json: OK
+../corpus.json: OK
+../run.py: OK
+../build_corpus.py: OK
+verdicts.jsonl: OK
+summary.json: OK
+../results/verdicts.jsonl: OK
+../oracle.sql: OK
+../run_sql_oracle.py: OK
+ok   pass_fresh_match: got (PASS, state.verified) want (PASS, state.verified)
+ok   contraindicated: got (CONTRAINDICATED, state.contraindicated) want (CONTRAINDICATED, state.contraindicated)
+ok   stale_match: got (STALE, state.stale) want (STALE, state.stale)
+ok   fresh_mismatch: got (REFERENCE_MISMATCH, state.reference) want (REFERENCE_MISMATCH, state.reference)
+ok   boundary_decision_equals_issued: got (PASS, state.verified) want (PASS, state.verified)
+ok   boundary_decision_equals_expires: got (PASS, state.verified) want (PASS, state.verified)
+ok   just_before_issued: got (STALE, state.stale) want (STALE, state.stale)
+ok   just_after_expires: got (STALE, state.stale) want (STALE, state.stale)
+ok   precedence_contraindicated_and_stale: got (CONTRAINDICATED, state.contraindicated) want (CONTRAINDICATED, state.contraindicated)
+ok   precedence_stale_and_mismatch: got (STALE, state.stale) want (STALE, state.stale)
+ok   precedence_triple_fault: got (CONTRAINDICATED, state.contraindicated) want (CONTRAINDICATED, state.contraindicated)
+ok   fail_closed_unknown_status: got (CONTRAINDICATED, state.contraindicated) want (CONTRAINDICATED, state.contraindicated)
+ok   fail_closed_missing_status: got (CONTRAINDICATED, state.contraindicated) want (CONTRAINDICATED, state.contraindicated)
+ok   fail_closed_missing_expires_at: got (STALE, state.stale) want (STALE, state.stale)
+ok   fail_closed_missing_reference_digest: got (REFERENCE_MISMATCH, state.reference) want (REFERENCE_MISMATCH, state.reference)
+ok   fail_closed_both_digests_missing: got (REFERENCE_MISMATCH, state.reference) want (REFERENCE_MISMATCH, state.reference)
+ok   fixture affirming-fresh-match: got (PASS, state.verified) want (PASS, state.verified)
+ok   fixture boundary-expiry: got (PASS, state.verified) want (PASS, state.verified)
+ok   fixture boundary-fresh: got (PASS, state.verified) want (PASS, state.verified)
+ok   fixture contraindicated: got (CONTRAINDICATED, state.contraindicated) want (CONTRAINDICATED, state.contraindicated)
+ok   fixture contraindicated-stale-mismatch: got (CONTRAINDICATED, state.contraindicated) want (CONTRAINDICATED, state.contraindicated)
+ok   fixture fresh-mismatch: got (REFERENCE_MISMATCH, state.reference) want (REFERENCE_MISMATCH, state.reference)
+ok   fixture stale-match: got (STALE, state.stale) want (STALE, state.stale)
+ok   fixture stale-mismatch: got (STALE, state.stale) want (STALE, state.stale)
+{
+  "checks_failed": 0,
+  "checks_passed": 24,
+  "decision_time": "2026-07-25T21:30:00Z",
+  "disclaimer": "structural appraisal tests over author-designed fixtures; no cryptographic verification, no TPM, no Veraison, not remote attestation; author-written expected labels, not external ground truth",
+  "fixtures_count": 8,
+  "fixtures_file": "state-fixtures.json"
+}
+transactions=104
+families={"authority_path_reuse":16,"cross_layer_binding":14,"cross_layer_joins":30,"policy_evidence_measurement_factorial":36,"state_authority_measurement_cube":8}
+binding_outcomes={"EFFECT_MISMATCH":28,"PASS":50,"PROFILE_MISMATCH":9,"RESOURCE_MISMATCH":3,"TIME_MISMATCH":3,"UNDETERMINED":11}
+cross_layer_denies=8
+corpus_sha256=1ba6d40d07e62a862b98ec52ab5c189eb491f19e4e1e69a411fba73bbb9a43a8
+========================================================================
+ACCEPTANCE TEST: article section-1 counterexample
+  'an evidence receipt can correctly describe a WRITE effect
+   when the valid delegation path permits only READ'
+========================================================================
+
+COUNTEREXAMPLE  effect=ledger.write  resource=invoice-999
+  policy required_effect             : ledger.read
+  terminal granted tools             : ["ledger.read"]
+  terminal granted resources         : ["invoice-123"]
+  shipped evidence evaluator says    : PASS
+  layer results                      : {"authority": "ALLOW", "evidence": "PASS", "measurement": "PASS", "policy": "PASS", "state": "PASS"}
+  failed layers                      : []
+  binding result                     : EFFECT_MISMATCH
+  VERDICT                            : DENY
+  first rejecting gate               : binding.effect
+
+LOOKALIKE       effect=ledger.read   resource=invoice-123
+  layer results                      : {"authority": "ALLOW", "evidence": "PASS", "measurement": "PASS", "policy": "PASS", "state": "PASS"}
+  binding result                     : PASS
+  VERDICT                            : ALLOW
+  first rejecting gate               : verified
+
+CHECKS
+  ok   shipped evidence evaluator still passes the WRITE receipt
+  ok   all five artefact verifiers pass on the counterexample
+  ok   counterexample binding result is EFFECT_MISMATCH
+  ok   counterexample composed verdict is DENY
+  ok   counterexample first rejecting gate is binding.effect
+  ok   lookalike binding result is PASS
+  ok   lookalike composed verdict is ALLOW
+  ok   lookalike first rejecting gate is verified
+  ok   the two transactions differ ONLY in the observed subject
+  ok   determinism: recomposing the counterexample is identical
+
+========================================================================
+ACCEPTANCE TEST PASSED: the counterexample the article names is denied at the binding gate with every component verifier passing, and its matched lookalike is allowed.
+========================================================================
+{
+  "allows": 15,
+  "analytic_identities": {
+    "four_of_five_equals_single_fault_denies": {
+      "four_of_five_false_allow_count": 31,
+      "holds": false,
+      "note": "In corpus v2 this identity held. It does NOT hold in v3, and the reason is the point of the v3 rebuild: a four-of-five majority allows a transaction iff at most one of the five artefact verifiers fails, so once cross-layer denials exist (zero failing verifiers, DENY verdict) the majority's false allows are the single-fault denies UNION the cross-layer denials. The counts measure how many such transactions the corpus contains, not a property of any deployed system",
+      "set_equality_on_ids": false,
+      "single_fault_deny_count": 23,
+      "single_fault_layer_distribution": {
+        "authority": 14,
+        "evidence": 2,
+        "measurement": 3,
+        "policy": 3,
+        "state": 1
+      }
+    },
+    "four_of_five_equals_single_fault_or_cross_layer": {
+      "cross_layer_denial_count": 8,
+      "four_of_five_false_allow_count": 31,
+      "holds": true,
+      "note": "the refined identity that replaces the v2 one, verified as set equality on transaction identifiers",
+      "single_fault_deny_count": 23
+    }
+  },
+  "baseline_expected_matches": {
+    "artifact_validity_only": 56,
+    "effect_resource_binding": 101,
+    "effect_resource_profile_binding": 102,
+    "effect_resource_time_binding": 103,
+    "four_of_five_majority": 73,
+    "point_only_measurement": 102
+  },
+  "baseline_false_allows": {
+    "artifact_validity_only": 48,
+    "effect_resource_binding": 3,
+    "effect_resource_profile_binding": 2,
+    "effect_resource_time_binding": 1,
+    "four_of_five_majority": 31,
+    "point_only_measurement": 2
+  },
+  "baseline_false_allows_by_family": {
+    "authority_path_reuse": {
+      "artifact_validity_only": 13,
+      "effect_resource_binding": 0,
+      "effect_resource_profile_binding": 0,
+      "effect_resource_time_binding": 0,
+      "four_of_five_majority": 13,
+      "point_only_measurement": 0
+    },
+    "cross_layer_binding": {
+      "artifact_validity_only": 8,
+      "effect_resource_binding": 3,
+      "effect_resource_profile_binding": 2,
+      "effect_resource_time_binding": 1,
+      "four_of_five_majority": 8,
+      "point_only_measurement": 0
+    },
+    "cross_layer_joins": {
+      "artifact_validity_only": 12,
+      "effect_resource_binding": 0,
+      "effect_resource_profile_binding": 0,
+      "effect_resource_time_binding": 0,
+      "four_of_five_majority": 0,
+      "point_only_measurement": 0
+    },
+    "policy_evidence_measurement_factorial": {
+      "artifact_validity_only": 8,
+      "effect_resource_binding": 0,
+      "effect_resource_profile_binding": 0,
+      "effect_resource_time_binding": 0,
+      "four_of_five_majority": 7,
+      "point_only_measurement": 1
+    },
+    "state_authority_measurement_cube": {
+      "artifact_validity_only": 7,
+      "effect_resource_binding": 0,
+      "effect_resource_profile_binding": 0,
+      "effect_resource_time_binding": 0,
+      "four_of_five_majority": 3,
+      "point_only_measurement": 1
+    }
+  },
+  "baseline_note": "baselines are experimental ablations defined by the authors; they are not representations of named external products. The point-only ablation replaces only the measurement criterion and keeps the binding stage; the four-of-five majority is an ablation OF the binding stage as well, since it votes over the five artefact verifiers only. The three partial-binding baselines require all five local verifiers and effect/resource agreement, then add either neither, time, or measurement-profile agreement; each therefore omits at least one implemented binding dimension",
+  "binding_stage": {
+    "binding_gate_counts": {
+      "binding.effect": 3,
+      "binding.measurement_profile": 1,
+      "binding.resource": 2,
+      "binding.time": 2,
+      "binding.undetermined": 0
+    },
+    "binding_result_counts": {
+      "EFFECT_MISMATCH": 28,
+      "PASS": 50,
+      "PROFILE_MISMATCH": 9,
+      "RESOURCE_MISMATCH": 3,
+      "TIME_MISMATCH": 3,
+      "UNDETERMINED": 11
+    },
+    "binding_result_counts_by_family": {
+      "authority_path_reuse": {
+        "EFFECT_MISMATCH": 0,
+        "PASS": 14,
+        "PROFILE_MISMATCH": 0,
+        "RESOURCE_MISMATCH": 1,
+        "TIME_MISMATCH": 1,
+        "UNDETERMINED": 0
+      },
+      "cross_layer_binding": {
+        "EFFECT_MISMATCH": 3,
+        "PASS": 6,
+        "PROFILE_MISMATCH": 1,
+        "RESOURCE_MISMATCH": 2,
+        "TIME_MISMATCH": 2,
+        "UNDETERMINED": 0
+      },
+      "cross_layer_joins": {
+        "EFFECT_MISMATCH": 10,
+        "PASS": 14,
+        "PROFILE_MISMATCH": 4,
+        "RESOURCE_MISMATCH": 0,
+        "TIME_MISMATCH": 0,
+        "UNDETERMINED": 2
+      },
+      "policy_evidence_measurement_factorial": {
+        "EFFECT_MISMATCH": 15,
+        "PASS": 8,
+        "PROFILE_MISMATCH": 4,
+        "RESOURCE_MISMATCH": 0,
+        "TIME_MISMATCH": 0,
+        "UNDETERMINED": 9
+      },
+      "state_authority_measurement_cube": {
+        "EFFECT_MISMATCH": 0,
+        "PASS": 8,
+        "PROFILE_MISMATCH": 0,
+        "RESOURCE_MISMATCH": 0,
+        "TIME_MISMATCH": 0,
+        "UNDETERMINED": 0
+      }
+    },
+    "cross_layer_denial_ids": [
+      "XLB_effect_export_four_hop",
+      "XLB_effect_write_other_resource_two_hop",
+      "XLB_effect_write_two_hop",
+      "XLB_issued_after_window_two_hop",
+      "XLB_issued_before_window_two_hop",
+      "XLB_measurement_profile_two_hop",
+      "XLB_resource_other_one_hop",
+      "XLB_resource_other_two_hop"
+    ],
+    "cross_layer_denials": 8,
+    "cross_layer_denials_by_family": {
+      "authority_path_reuse": 0,
+      "cross_layer_binding": 8,
+      "cross_layer_joins": 0,
+      "policy_evidence_measurement_factorial": 0,
+      "state_authority_measurement_cube": 0
+    },
+    "definition": "a cross-layer denial is a transaction whose five artefact verifiers all passed and whose composed verdict is DENY; before the binding stage existed no such transaction could be represented, so this count was structurally zero",
+    "method": "deterministic string-agreement and interval-containment condition over subject fields read out of corpus-supplied artefacts; the binding stage verifies no signature, takes no measurement and is not attestation of any runtime"
+  },
+  "co_failure_matrix": {
+    "authority": {
+      "authority": 30,
+      "evidence": 6,
+      "measurement": 6,
+      "policy": 5,
+      "state": 8
+    },
+    "evidence": {
+      "authority": 6,
+      "evidence": 36,
+      "measurement": 19,
+      "policy": 23,
+      "state": 5
+    },
+    "measurement": {
+      "authority": 6,
+      "evidence": 19,
+      "measurement": 39,
+      "policy": 22,
+      "state": 7
+    },
+    "policy": {
+      "authority": 5,
+      "evidence": 23,
+      "measurement": 22,
+      "policy": 39,
+      "state": 5
+    },
+    "state": {
+      "authority": 8,
+      "evidence": 5,
+      "measurement": 7,
+      "policy": 5,
+      "state": 17
+    }
+  },
+  "co_failure_min_offdiagonal": 5,
+  "co_failure_no_zero_offdiagonal": true,
+  "composition_rule_sha256": "ac430575a00e0090434202d41c430e9fb9818924fc435ea766c64759fe93e61d",
+  "corpus_sha256": "1ba6d40d07e62a862b98ec52ab5c189eb491f19e4e1e69a411fba73bbb9a43a8",
+  "coverage": {
+    "authority_case_usage": {
+      "D1_protocol_invalid": 2,
+      "D1_receipt_effect_time_outside_window": 2,
+      "D1_receipt_native_invalid": 2,
+      "D1_wrong_role_transition": 3,
+      "D2_first_edge_expired": 2,
+      "D2_lineage_break_at_second_edge": 2,
+      "D2_parent_forbids_second_delegation": 2,
+      "D2_scope_amplification_at_second_edge": 6,
+      "D2_signature_invalid_second_edge": 2,
+      "D4_action_outside_terminal_scope": 2,
+      "D4_multi_fault_returns_earliest_edge": 2,
+      "D4_native_valid_receipt_for_other_action": 1,
+      "D4_revoked_third_edge": 2,
+      "P1_exact_one_hop": 8,
+      "P2_exact_two_hop": 59,
+      "P4_exact_four_hop": 7
+    },
+    "evidence_variant_usage": {
+      "(policy vector evidence)": 90,
+      "EVB_export_invoice123": 1,
+      "EVB_read_after_window": 1,
+      "EVB_read_before_window": 1,
+      "EVB_read_invoice123": 5,
+      "EVB_read_invoice999": 2,
+      "EVB_read_window_lower": 1,
+      "EVB_read_window_upper": 1,
+      "EVB_write_invoice123": 1,
+      "EVB_write_invoice999": 1
+    },
+    "measurement_fixture_usage": {
+      "measurement_binding_alt_profile": 1,
+      "measurement_binding_main_profile": 13,
+      "measurement_point_only": 19,
+      "measurement_profile_mismatch": 15,
+      "measurement_supported": 51,
+      "measurement_unsupported": 5
+    },
+    "state_fixture_usage": {
+      "affirming-fresh-match": 85,
+      "boundary-expiry": 1,
+      "boundary-fresh": 1,
+      "contraindicated": 8,
+      "contraindicated-stale-mismatch": 1,
+      "fresh-mismatch": 4,
+      "stale-match": 3,
+      "stale-mismatch": 1
+    },
+    "state_result_counts": {
+      "CONTRAINDICATED": 9,
+      "PASS": 87,
+      "REFERENCE_MISMATCH": 4,
+      "STALE": 4
+    }
+  },
+  "denies": 89,
+  "disclaimers": [
+    "All expected labels are author-written programme-internal expectations; agreement measures reproduction of those expectations, not external ground truth.",
+    "All counts (including baseline false allows and the co-failure matrix) are counts on a designed corpus; they are not rates and do not estimate prevalence in any deployed system.",
+    "The state layer is a structural appraisal of corpus-supplied attestation-result objects (state_adapter.py); it is not cryptographic attestation of any runtime.",
+    "The authority layer consumes corpus-supplied experimental flags (issuer_signature_valid, native_evidence_valid, protocol_valid); it performs no cryptographic verification.",
+    "The binding stage is a deterministic string-agreement and interval-containment condition over subject fields read out of corpus-supplied artefacts; it verifies no signature, takes no measurement and is not attestation of any runtime.",
+    "The SQL oracle in results-sql-oracle recomposes layer results and subject strings produced by this evaluator; it is a second composition code path, not independent validation."
+  ],
+  "distinct_nonempty_failure_sets": 22,
+  "expected_matches": 104,
+  "failed_layer_occurrences": {
+    "authority": 30,
+    "evidence": 36,
+    "measurement": 39,
+    "policy": 39,
+    "state": 17
+  },
+  "failure_set_distribution": {
+    "authority": 14,
+    "authority+measurement": 3,
+    "evidence": 2,
+    "evidence+authority": 2,
+    "evidence+measurement": 6,
+    "evidence+state": 2,
+    "evidence+state+authority": 1,
+    "measurement": 3,
+    "none": 23,
+    "policy": 3,
+    "policy+authority": 2,
+    "policy+evidence": 8,
+    "policy+evidence+authority": 1,
+    "policy+evidence+measurement": 12,
+    "policy+evidence+state+authority": 1,
+    "policy+evidence+state+authority+measurement": 1,
+    "policy+measurement": 8,
+    "policy+state": 2,
+    "policy+state+measurement": 1,
+    "state": 1,
+    "state+authority": 3,
+    "state+authority+measurement": 2,
+    "state+measurement": 3
+  },
+  "family_counts": {
+    "authority_path_reuse": 16,
+    "cross_layer_binding": 14,
+    "cross_layer_joins": 30,
+    "policy_evidence_measurement_factorial": 36,
+    "state_authority_measurement_cube": 8
+  },
+  "family_verdicts": {
+    "authority_path_reuse": {
+      "allows": 3,
+      "denies": 13
+    },
+    "cross_layer_binding": {
+      "allows": 6,
+      "denies": 8
+    },
+    "cross_layer_joins": {
+      "allows": 4,
+      "denies": 26
+    },
+    "policy_evidence_measurement_factorial": {
+      "allows": 1,
+      "denies": 35
+    },
+    "state_authority_measurement_cube": {
+      "allows": 1,
+      "denies": 7
+    }
+  },
+  "label_provenance": "expected labels are generated by build_corpus.py using the same composition rule module the verifier imports; composition-level agreement is analytic; the substantive check is per-layer agreement; labels are not externally independent.",
+  "per_layer_expected_matches": 104,
+  "profile": "tyche-evidence-carrying-decision-transaction-v3",
+  "runner_sha256": "721e1fa9b49c3bf19d5252fd0192f37ed4de75b144ac3a94784f19c9ddb4ef12",
+  "source_hashes_match_corpus": true,
+  "state_adapter_sha256": "9c19d3f969c1be83e03329b46f69cd2b07586222548cfb42b26babcd744f9bb3",
+  "subject_matches": 104,
+  "transactions": 104
+}
+{
+  "binding_result_matches": 104,
+  "disclaimers": [
+    "This oracle recomposes per-layer typed results and subject records produced by the Python evaluator; it is a second composition code path, not independent validation. It verifies no signature, no bootstrap replicate, no delegation edge and no attestation object.",
+    "The binding outcome IS re-derived here rather than echoed, so SQL/Python divergence in the binding rules is detectable; the subject strings it compares still come from the Python evaluator, so this is a transcription check between two same-author implementations.",
+    "Expected labels are author-written programme-internal expectations generated by build_corpus.py with the same composition rule module the Python verifier imports; agreement is not external ground truth."
+  ],
+  "expected_matches": 104,
+  "implementation_matches": 104,
+  "oracle_binding_result_counts": {
+    "EFFECT_MISMATCH": 28,
+    "PASS": 50,
+    "PROFILE_MISMATCH": 9,
+    "RESOURCE_MISMATCH": 3,
+    "TIME_MISMATCH": 3,
+    "UNDETERMINED": 11
+  },
+  "oracle_gate_counts": {
+    "action.resource": 1,
+    "binding.effect": 3,
+    "binding.measurement_profile": 1,
+    "binding.resource": 2,
+    "binding.time": 2,
+    "edge.freshness": 1,
+    "edge.lineage": 2,
+    "edge.parent_delegable": 1,
+    "edge.role_transition": 1,
+    "edge.scope.amount_max": 1,
+    "edge.scope.operations": 3,
+    "edge.signature": 1,
+    "edge.status": 1,
+    "effect.action_binding": 1,
+    "effect.native_validity": 1,
+    "effect.time_binding": 2,
+    "evidence.integrity": 7,
+    "evidence.replay": 6,
+    "measurement.confidence": 2,
+    "measurement.profile": 1,
+    "policy.missing": 11,
+    "policy.signature": 1,
+    "policy.stale": 14,
+    "policy.substituted": 13,
+    "protocol.valid": 1,
+    "state.contraindicated": 5,
+    "state.reference": 2,
+    "state.stale": 2,
+    "verified": 15
+  },
+  "profile": "tyche-evidence-carrying-decision-sql-oracle-v3",
+  "runner_sha256": "21df78849732b37e6e80e36d0e37836bc232efbc69b3815d5929111015ef2c1a",
+  "source_verdicts_sha256": "2c9bf49477096e10c60aa55a429f0d16a2bbb23468eefab223bbeeef54e0df71",
+  "sql_sha256": "d62aa690a10f13d6dc07faf37d58ad6facd640d082cceccfc8caf124ae6dc502",
+  "transactions": 104
+}
+verdicts.jsonl: OK
+summary.json: OK
+run-metadata.json: OK
+../corpus.json: OK
+../verify_transactions.py: OK
+../build_corpus.py: OK
+../composition_rule.py: OK
+../state_adapter.py: OK
+../test_state_adapter.py: OK
+../test_cross_layer_binding.py: OK
+../state-fixtures.json: OK
+../../policy-version-evidence-replay/run.py: OK
+../../policy-version-evidence-replay/build_corpus.py: OK
+../../protocol-valid-unauthorized/verify_delegation_paths.py: OK
+../../../../research-factory-v3-2026-07-25/labs/safe-metric-metamorphics/run.py: OK
+verdicts.jsonl: OK
+summary.json: OK
+../results/verdicts.jsonl: OK
+../oracle.sql: OK
+../run_sql_oracle.py: OK
+{
+  "all_native_codes_mapped": true,
+  "all_source_pins_verified": true,
+  "boolean_scalarization": {
+    "interpretation": "count of within-ecosystem pairs of distinct native rejection labels mapped to the same Boolean REJECT value",
+    "native_pairwise_rejection_distinctions_erased": 498
+  },
+  "claim_boundary": "representational transfer over two first-party executable corpora; not semantic equivalence, interoperability, or external replication",
+  "composed_transaction": {
+    "best_native_state_guess_from_reject_only": {
+      "accuracy": 0.15730337078651685,
+      "correct": 14,
+      "total": 89
+    },
+    "cases": 104,
+    "distinct_native_rejection_states": 28,
+    "native_state_entropy_bits": 4.119069296279377,
+    "oracle_matches": 104,
+    "pairwise_state_distinctions_erased_by_boolean": 378,
+    "rejected_cases": 89
+  },
+  "eatf": {
+    "best_native_state_guess_from_reject_only": {
+      "accuracy": 0.21052631578947367,
+      "correct": 4,
+      "total": 19
+    },
+    "cases": 21,
+    "distinct_native_rejection_states": 16,
+    "native_state_entropy_bits": 3.826874881864638,
+    "oracle_and_cross_implementation_matches": 21,
+    "pairwise_state_distinctions_erased_by_boolean": 120,
+    "rejected_cases": 19
+  },
+  "lab": "cross-ecosystem-typed-transfer",
+  "shared_ontology": {
+    "eatf_classes": [
+      "cryptographic_integrity",
+      "representation",
+      "subject_binding",
+      "temporal_freshness",
+      "trust_or_authority"
+    ],
+    "overlap": [
+      "cryptographic_integrity",
+      "representation",
+      "subject_binding",
+      "temporal_freshness",
+      "trust_or_authority"
+    ],
+    "overlap_count": 5,
+    "transaction_classes": [
+      "cryptographic_integrity",
+      "measurement_confidence",
+      "policy_compatibility",
+      "representation",
+      "runtime_state",
+      "subject_binding",
+      "temporal_freshness",
+      "trust_or_authority"
+    ],
+    "union_count": 8
+  }
+}
+{
+  "all_passed": true,
+  "baseline_exact_matches": 125,
+  "baseline_rows": 125,
+  "claim_boundary": "independent relational execution and sensitivity audit of an author-defined analytic mapping; not external semantic validation or interoperability",
+  "class_mutations_detected": 46,
+  "engine": "SQLite 3.45.1",
+  "lab": "crosswalk-independent-sql-audit",
+  "leave_one_out_gaps_detected": 46,
+  "mapping_entries": 46
+}
+README.md: OK
+NOTICE.source: OK
+build_transfer.py: OK
+verify_crosswalk_sql.py: OK
+source-eatf-results.json: OK
+source-transaction-gates.json: OK
+crosswalk.json: OK
+results.json: OK
+independent-sql-results.json: OK
+SUMMARY.md: OK
+{
+  "all_passed": true,
+  "atomic_guard_invariant": true,
+  "cases": 372,
+  "claim_boundary": "one local OS instance reporting x86_64; separate status/effect services and client contender processes over loopback TCP with durable SQLite linearization, signed responses, disconnect/retry and service restart; not multi-host or deployment evidence",
+  "distinct_service_pids": 34,
+  "duplicate_effects": 0,
+  "durable_effects": 298,
+  "durable_events": 1478,
+  "fault_cases": 96,
+  "fault_recoveries": 96,
+  "lab": "distributed-revocation-service",
+  "profiles": {
+    "atomic_guard": {
+      "cases": 93,
+      "duplicate_effects": 0,
+      "false_allows": 0,
+      "false_denies": 0
+    },
+    "double_read": {
+      "cases": 93,
+      "duplicate_effects": 0,
+      "false_allows": 63,
+      "false_denies": 0
+    },
+    "single_read": {
+      "cases": 93,
+      "duplicate_effects": 0,
+      "false_allows": 67,
+      "false_denies": 0
+    },
+    "ttl_cache": {
+      "cases": 93,
+      "duplicate_effects": 0,
+      "false_allows": 66,
+      "false_denies": 0
+    }
+  },
+  "runner_pid": 3304118,
+  "service_instances": 34,
+  "signed_responses_verified": 372,
+  "weak_counterexamples_observed": true
+}
+{
+  "contiguous_linearization_indices": true,
+  "effects_reference_events": true,
+  "public_key_bytes": 32,
+  "stored_summary_consistent": true,
+  "unique_idempotency_keys": true
+}
+README.md: OK
+services.py: OK
+run_experiment.py: OK
+run.sh: OK
+results.json: OK
+SUMMARY.md: OK
+{
+  "all_passed": true,
+  "architecture_neutral_counts": {
+    "binding_denials": 8,
+    "composed_transactions": 104,
+    "eatf_rows": 21,
+    "policy_vectors": 16,
+    "revocation_cases": 372,
+    "revocation_fault_cases": 96,
+    "transfer_transaction_rows": 104
+  },
+  "checks": {
+    "composed_all_source_hashes_match": true,
+    "composed_binding_denials_8": true,
+    "composed_exact_104": true,
+    "composed_subject_match_104": true,
+    "composed_transactions_104": true,
+    "policy_baselines_expose_false_allow": true,
+    "policy_exact_16": true,
+    "policy_vectors_16": true,
+    "revocation_all_passed": true,
+    "revocation_atomic_invariant": true,
+    "revocation_boundary_calibrated": true,
+    "revocation_cases_372": true,
+    "revocation_fault_recovery_96": true,
+    "revocation_no_duplicate_effects": true,
+    "revocation_signatures_372": true,
+    "revocation_weak_counterexamples": true,
+    "transfer_codes_total": true,
+    "transfer_eatf_21": true,
+    "transfer_source_pins_verified": true,
+    "transfer_transactions_104": true
+  },
+  "checks_passed": 20,
+  "checks_total": 20,
+  "contract": "tyche-public-four-lane-semantic-contract-v1",
+  "rate_boundary": "race-exposure counts are excluded from cross-architecture equality; exact cases and safety invariants are compared",
+  "result_hashes": {
+    "labs/composed-transaction-corpus/results/summary.json": "20b2dacd2b460510d52443601fd59ee87742a565508a260358435d5be24eb91a",
+    "labs/cross-ecosystem-typed-transfer/results.json": "7bb3896fdf324405917e2ff7d76d76dd22de2bf43240e7a17f4b63a8006e0c90",
+    "labs/distributed-revocation-service/results.json": "20d5dcb92b463a5639419ee710f397fd12d395523adbea16f0eb4b270b018785",
+    "labs/policy-version-evidence-replay/results/summary.json": "e8abc71129a2ac299eb29049e87b1fc8f80bb550c2218e6add3cf08ddaf011f7"
+  }
+}
+environment.json: OK
+semantic-contract.json: OK
+result-sha256.txt: OK
+CLAIM-BOUNDARY.txt: OK

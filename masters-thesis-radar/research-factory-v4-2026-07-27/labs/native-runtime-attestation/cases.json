@@ -1,0 +1,74 @@
+{
+  "profile": "tyche-native-runtime-attestation-cases-v1",
+  "claim_boundary": "author-written cases frozen before the recorded r4 rerun; not external ground truth",
+  "cases": [
+    {
+      "case_id": "NRA-00",
+      "injected_fault": "none",
+      "mutation": "none",
+      "change": null,
+      "expected_accept": true,
+      "expected_gate": "PASS"
+    },
+    {
+      "case_id": "NRA-01",
+      "injected_fault": "outcome substitution",
+      "mutation": "none",
+      "change": {
+        "field": "outcome_digest",
+        "value": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      "expected_accept": false,
+      "expected_gate": "MEASUREMENT_BINDING"
+    },
+    {
+      "case_id": "NRA-02",
+      "injected_fault": "replayed quote under a fresh challenge",
+      "mutation": "none",
+      "change": {
+        "field": "verifier_challenge",
+        "value": "22222222222222222222222222222222"
+      },
+      "expected_accept": false,
+      "expected_gate": "NATIVE_ATTESTATION_REJECTED"
+    },
+    {
+      "case_id": "NRA-03",
+      "injected_fault": "capsule substitution",
+      "mutation": "none",
+      "change": {
+        "field": "capsule_id",
+        "value": "3333333333333333333333333333333333333333333333333333333333333333"
+      },
+      "expected_accept": false,
+      "expected_gate": "NATIVE_ATTESTATION_REJECTED"
+    },
+    {
+      "case_id": "NRA-04",
+      "injected_fault": "declared PCR substitution",
+      "mutation": "none",
+      "change": {
+        "field": "pcr_value",
+        "value": "4444444444444444444444444444444444444444444444444444444444444444"
+      },
+      "expected_accept": false,
+      "expected_gate": "MEASUREMENT_BINDING"
+    },
+    {
+      "case_id": "NRA-05",
+      "injected_fault": "quote-message tampering",
+      "mutation": "quote-message",
+      "change": null,
+      "expected_accept": false,
+      "expected_gate": "NATIVE_ATTESTATION_REJECTED"
+    },
+    {
+      "case_id": "NRA-06",
+      "injected_fault": "quote-signature tampering",
+      "mutation": "quote-signature",
+      "change": null,
+      "expected_accept": false,
+      "expected_gate": "NATIVE_ATTESTATION_REJECTED"
+    }
+  ]
+}

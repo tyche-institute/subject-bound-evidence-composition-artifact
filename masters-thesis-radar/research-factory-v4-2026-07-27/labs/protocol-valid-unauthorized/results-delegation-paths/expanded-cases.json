@@ -1,0 +1,1863 @@
+{
+  "base": {
+    "action": {
+      "amount": 100,
+      "audience": "ledger-service",
+      "currency": "EUR",
+      "operation": "READ",
+      "purpose": "audit",
+      "resource": "invoice-123",
+      "tool": "ledger.read"
+    },
+    "allowed_role_transitions": {
+      "broker": [
+        "executor"
+      ],
+      "executor": [
+        "evidence_producer"
+      ],
+      "owner": [
+        "planner"
+      ],
+      "planner": [
+        "broker"
+      ]
+    },
+    "role_path": [
+      "planner",
+      "broker",
+      "executor",
+      "evidence_producer"
+    ],
+    "root_principal": "principal-anton",
+    "root_role": "owner",
+    "scope": {
+      "amount_max": 1000,
+      "audiences": [
+        "ledger-service"
+      ],
+      "currency": "EUR",
+      "delegable": true,
+      "operations": [
+        "READ"
+      ],
+      "purposes": [
+        "audit"
+      ],
+      "resources": [
+        "invoice-123"
+      ],
+      "tools": [
+        "ledger.read"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "planner",
+          "subject": "agent-1",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "planner",
+            "subject": "agent-1",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": null,
+        "first_bad_edge_index": null,
+        "gate": "verified",
+        "verdict": "ALLOW"
+      },
+      "hops": 1,
+      "id": "P1_exact_one_hop"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "planner",
+          "subject": "agent-1",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "executor"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "planner",
+            "subject": "agent-1",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "edge-0",
+        "first_bad_edge_index": 0,
+        "gate": "edge.role_transition",
+        "verdict": "DENY"
+      },
+      "hops": 1,
+      "id": "D1_wrong_role_transition"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "broker",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "broker",
+            "subject": "agent-2",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": null,
+        "first_bad_edge_index": null,
+        "gate": "verified",
+        "verdict": "ALLOW"
+      },
+      "hops": 2,
+      "id": "P2_exact_two_hop"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "broker",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ",
+                "WRITE"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "broker",
+            "subject": "agent-2",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "edge-1",
+        "first_bad_edge_index": 1,
+        "gate": "edge.scope.operations",
+        "verdict": "DENY"
+      },
+      "hops": 2,
+      "id": "D2_scope_amplification_at_second_edge"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "broker",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-intruder",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "broker",
+            "subject": "agent-2",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "edge-1",
+        "first_bad_edge_index": 1,
+        "gate": "edge.lineage",
+        "verdict": "DENY"
+      },
+      "hops": 2,
+      "id": "D2_lineage_break_at_second_edge"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "evidence_producer",
+          "subject": "agent-4",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          },
+          {
+            "delegate": "agent-3",
+            "delegator": "agent-2",
+            "edge_id": "edge-2",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "broker",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "executor"
+          },
+          {
+            "delegate": "agent-4",
+            "delegator": "agent-3",
+            "edge_id": "edge-3",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "executor",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "evidence_producer"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "evidence_producer",
+            "subject": "agent-4",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": null,
+        "first_bad_edge_index": null,
+        "gate": "verified",
+        "verdict": "ALLOW"
+      },
+      "hops": 4,
+      "id": "P4_exact_four_hop"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "evidence_producer",
+          "subject": "agent-4",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          },
+          {
+            "delegate": "agent-3",
+            "delegator": "agent-2",
+            "edge_id": "edge-2",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "broker",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "revoked",
+            "to_role": "executor"
+          },
+          {
+            "delegate": "agent-4",
+            "delegator": "agent-3",
+            "edge_id": "edge-3",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "executor",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "evidence_producer"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "evidence_producer",
+            "subject": "agent-4",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "edge-2",
+        "first_bad_edge_index": 2,
+        "gate": "edge.status",
+        "verdict": "DENY"
+      },
+      "hops": 4,
+      "id": "D4_revoked_third_edge"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "DELETE",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "evidence_producer",
+          "subject": "agent-4",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 2000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          },
+          {
+            "delegate": "agent-3",
+            "delegator": "agent-2",
+            "edge_id": "edge-2",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "broker",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "executor"
+          },
+          {
+            "delegate": "agent-4",
+            "delegator": "agent-3",
+            "edge_id": "edge-3",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "executor",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "revoked",
+            "to_role": "evidence_producer"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "evidence_producer",
+            "subject": "agent-4",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "edge-1",
+        "first_bad_edge_index": 1,
+        "gate": "edge.scope.amount_max",
+        "verdict": "DENY"
+      },
+      "hops": 4,
+      "id": "D4_multi_fault_returns_earliest_edge"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-999",
+          "role": "evidence_producer",
+          "subject": "agent-4",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          },
+          {
+            "delegate": "agent-3",
+            "delegator": "agent-2",
+            "edge_id": "edge-2",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "broker",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "executor"
+          },
+          {
+            "delegate": "agent-4",
+            "delegator": "agent-3",
+            "edge_id": "edge-3",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "executor",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "evidence_producer"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "evidence_producer",
+            "subject": "agent-4",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "action",
+        "first_bad_edge_index": 4,
+        "gate": "action.resource",
+        "verdict": "DENY"
+      },
+      "hops": 4,
+      "id": "D4_action_outside_terminal_scope"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "evidence_producer",
+          "subject": "agent-4",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          },
+          {
+            "delegate": "agent-3",
+            "delegator": "agent-2",
+            "edge_id": "edge-2",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "broker",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "executor"
+          },
+          {
+            "delegate": "agent-4",
+            "delegator": "agent-3",
+            "edge_id": "edge-3",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "executor",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "evidence_producer"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "WRITE",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "evidence_producer",
+            "subject": "agent-4",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "effect",
+        "first_bad_edge_index": 5,
+        "gate": "effect.action_binding",
+        "verdict": "DENY"
+      },
+      "hops": 4,
+      "id": "D4_native_valid_receipt_for_other_action"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "broker",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": false,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "broker",
+            "subject": "agent-2",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "edge-1",
+        "first_bad_edge_index": 1,
+        "gate": "edge.parent_delegable",
+        "verdict": "DENY"
+      },
+      "hops": 2,
+      "id": "D2_parent_forbids_second_delegation"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "broker",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-25T19:59:59Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "broker",
+            "subject": "agent-2",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "edge-0",
+        "first_bad_edge_index": 0,
+        "gate": "edge.freshness",
+        "verdict": "DENY"
+      },
+      "hops": 2,
+      "id": "D2_first_edge_expired"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "planner",
+          "subject": "agent-1",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          }
+        ],
+        "protocol_valid": false,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "planner",
+            "subject": "agent-1",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "edge-0",
+        "first_bad_edge_index": 0,
+        "gate": "protocol.valid",
+        "verdict": "DENY"
+      },
+      "hops": 1,
+      "id": "D1_protocol_invalid"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "broker",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          },
+          {
+            "delegate": "agent-2",
+            "delegator": "agent-1",
+            "edge_id": "edge-1",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "planner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": false,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "broker"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "broker",
+            "subject": "agent-2",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "edge-1",
+        "first_bad_edge_index": 1,
+        "gate": "edge.signature",
+        "verdict": "DENY"
+      },
+      "hops": 2,
+      "id": "D2_signature_invalid_second_edge"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "planner",
+          "subject": "agent-1",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "planner",
+            "subject": "agent-1",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-25T20:00:00Z",
+          "native_evidence_valid": false
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "effect",
+        "first_bad_edge_index": 2,
+        "gate": "effect.native_validity",
+        "verdict": "DENY"
+      },
+      "hops": 1,
+      "id": "D1_receipt_native_invalid"
+    },
+    {
+      "case": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "planner",
+          "subject": "agent-1",
+          "tool": "ledger.read"
+        },
+        "edges": [
+          {
+            "delegate": "agent-1",
+            "delegator": "principal-anton",
+            "edge_id": "edge-0",
+            "expires_at": "2026-07-26T00:00:00Z",
+            "from_role": "owner",
+            "grant": {
+              "amount_max": 1000,
+              "audiences": [
+                "ledger-service"
+              ],
+              "currency": "EUR",
+              "delegable": true,
+              "operations": [
+                "READ"
+              ],
+              "purposes": [
+                "audit"
+              ],
+              "resources": [
+                "invoice-123"
+              ],
+              "tools": [
+                "ledger.read"
+              ]
+            },
+            "issuer_signature_valid": true,
+            "not_before": "2026-07-25T00:00:00Z",
+            "status": "active",
+            "to_role": "planner"
+          }
+        ],
+        "protocol_valid": true,
+        "receipt": {
+          "action": {
+            "amount": 100,
+            "audience": "ledger-service",
+            "currency": "EUR",
+            "operation": "READ",
+            "purpose": "audit",
+            "resource": "invoice-123",
+            "role": "planner",
+            "subject": "agent-1",
+            "tool": "ledger.read"
+          },
+          "effect_time": "2026-07-26T01:00:00Z",
+          "native_evidence_valid": true
+        }
+      },
+      "expected": {
+        "first_bad_edge_id": "effect",
+        "first_bad_edge_index": 2,
+        "gate": "effect.time_binding",
+        "verdict": "DENY"
+      },
+      "hops": 1,
+      "id": "D1_receipt_effect_time_outside_window"
+    }
+  ],
+  "effect_time": "2026-07-25T20:00:00Z",
+  "profile": "tyche-typed-delegation-path-v0"
+}

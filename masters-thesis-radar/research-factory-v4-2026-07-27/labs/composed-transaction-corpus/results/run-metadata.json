@@ -1,0 +1,17 @@
+{
+  "binding_stage_position": "after the five artefact layers; consulted by the first-rejecting-gate ladder only when all five have passed",
+  "cryptography": "49.0.0",
+  "evaluation_order": [
+    "policy",
+    "evidence",
+    "state",
+    "authority",
+    "measurement"
+  ],
+  "network_used": false,
+  "network_used_note": "declared property of the entry points, not an enforced sandbox measurement",
+  "numpy": "2.5.0",
+  "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "state_decision_time": "2026-07-25T21:30:00Z"
+}

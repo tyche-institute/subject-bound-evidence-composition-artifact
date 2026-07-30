@@ -1,0 +1,216 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tyche.institute/schemas/subject-bound-tpm-run-v2.json",
+  "title": "Subject-bound TPM companion run manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "run_status",
+    "claim_boundary",
+    "source",
+    "configuration",
+    "public_provenance",
+    "counts",
+    "cleanup",
+    "environment",
+    "artifacts",
+    "all_passed"
+  ],
+  "properties": {
+    "schema": {
+      "const": "subject-bound-tpm-run-manifest-v2"
+    },
+    "run_status": {
+      "const": "tpm-executed"
+    },
+    "claim_boundary": {
+      "type": "string",
+      "minLength": 20
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "corpus_path",
+        "corpus_sha256",
+        "capsule_sha256",
+        "transactions"
+      ],
+      "properties": {
+        "corpus_path": {"type": "string"},
+        "corpus_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "capsule_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "transactions": {"const": 104}
+      }
+    },
+    "configuration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tcti_kind",
+        "tcti_sha256",
+        "pcr_bank",
+        "pcr_index",
+        "primary_hierarchy",
+        "primary_algorithm",
+        "ak_algorithm",
+        "ak_creation_profile",
+        "hash_algorithm",
+        "qualifying_data_profile"
+      ],
+      "properties": {
+        "tcti_kind": {"type": "string"},
+        "tcti_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "pcr_bank": {"type": "string"},
+        "pcr_index": {"type": "integer", "minimum": 0, "maximum": 31},
+        "primary_hierarchy": {"enum": ["endorsement", "owner"]},
+        "primary_algorithm": {"enum": ["rsa", "ecc"]},
+        "ak_algorithm": {"enum": ["rsa", "ecc"]},
+        "ak_creation_profile": {"enum": ["createak", "create-load"]},
+        "hash_algorithm": {"const": "sha256"},
+        "qualifying_data_profile": {
+          "const": "subject-bound.hardware-quote.v1"
+        }
+      }
+    },
+    "public_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "transient_primary_public_sha256",
+        "transient_primary_name_sha256",
+        "ak_public_sha256",
+        "ak_name_sha256",
+        "manufacturer_certificate_present"
+      ],
+      "properties": {
+        "transient_primary_public_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "transient_primary_name_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "ak_public_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "ak_name_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "manufacturer_certificate_present": {"const": false}
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "baseline_quotes",
+        "baseline_verified",
+        "unique_transactions",
+        "unique_challenges",
+        "unique_qualifying_data",
+        "mutation_cases",
+        "mutation_rejections"
+      ],
+      "properties": {
+        "baseline_quotes": {"const": 104},
+        "baseline_verified": {"const": 104},
+        "unique_transactions": {"const": 104},
+        "unique_challenges": {"const": 104},
+        "unique_qualifying_data": {"const": 104},
+        "mutation_cases": {"const": 64},
+        "mutation_rejections": {"const": 64}
+      }
+    },
+    "cleanup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ak_flush_attempted",
+        "primary_flush_attempted",
+        "transient_handles_before",
+        "transient_handles_after",
+        "run_transient_handles_remaining",
+        "persistent_handles_before",
+        "persistent_handles_after",
+        "handle_census_returncodes",
+        "persistent_handles_created",
+        "pcr_writes",
+        "nv_writes",
+        "private_state_files_exported",
+        "cleanup_verified"
+      ],
+      "properties": {
+        "ak_flush_attempted": {"const": true},
+        "primary_flush_attempted": {"const": true},
+        "transient_handles_before": {"type": "integer", "minimum": 0},
+        "transient_handles_after": {"type": "integer", "minimum": 0},
+        "run_transient_handles_remaining": {"const": 0},
+        "persistent_handles_before": {"type": "integer", "minimum": 0},
+        "persistent_handles_after": {"type": "integer", "minimum": 0},
+        "handle_census_returncodes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["transient", "persistent"],
+          "properties": {
+            "transient": {"const": 0},
+            "persistent": {"const": 0}
+          }
+        },
+        "persistent_handles_created": {"const": 0},
+        "pcr_writes": {"const": 0},
+        "nv_writes": {"const": 0},
+        "private_state_files_exported": {"const": 0},
+        "cleanup_verified": {"const": true}
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "hostname_sha256",
+        "platform",
+        "machine",
+        "python",
+        "tpm2_tools"
+      ],
+      "properties": {
+        "hostname_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256", "bytes"],
+        "properties": {
+          "path": {"type": "string"},
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "bytes": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "all_passed": {"const": true}
+  }
+}

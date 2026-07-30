@@ -1,0 +1,158 @@
+[
+  {
+    "case_id": "RR-001",
+    "verdict": "ALLOW",
+    "first_rejecting_gate": "verified",
+    "expected_verdict": "ALLOW",
+    "expected_gate": "verified",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "ALLOW",
+      "timestamp_only": "ALLOW"
+    }
+  },
+  {
+    "case_id": "RR-002",
+    "verdict": "DENY",
+    "first_rejecting_gate": "appraisal.status.active",
+    "expected_verdict": "DENY",
+    "expected_gate": "appraisal.status.active",
+    "baselines": {
+      "appraisal_only": "DENY",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    }
+  },
+  {
+    "case_id": "RR-003",
+    "verdict": "DENY",
+    "first_rejecting_gate": "commit.status.active",
+    "expected_verdict": "DENY",
+    "expected_gate": "commit.status.active",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    }
+  },
+  {
+    "case_id": "RR-004",
+    "verdict": "DENY",
+    "first_rejecting_gate": "commit.status.active",
+    "expected_verdict": "DENY",
+    "expected_gate": "commit.status.active",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    }
+  },
+  {
+    "case_id": "RR-005",
+    "verdict": "ALLOW",
+    "first_rejecting_gate": "verified",
+    "expected_verdict": "ALLOW",
+    "expected_gate": "verified",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "ALLOW",
+      "timestamp_only": "ALLOW"
+    }
+  },
+  {
+    "case_id": "RR-006",
+    "verdict": "DENY",
+    "first_rejecting_gate": "appraisal.status.freshness",
+    "expected_verdict": "DENY",
+    "expected_gate": "appraisal.status.freshness",
+    "baselines": {
+      "appraisal_only": "DENY",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    }
+  },
+  {
+    "case_id": "RR-007",
+    "verdict": "DENY",
+    "first_rejecting_gate": "commit.status.freshness",
+    "expected_verdict": "DENY",
+    "expected_gate": "commit.status.freshness",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    }
+  },
+  {
+    "case_id": "RR-008",
+    "verdict": "DENY",
+    "first_rejecting_gate": "commit.status.monotonic",
+    "expected_verdict": "DENY",
+    "expected_gate": "commit.status.monotonic",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "ALLOW"
+    }
+  },
+  {
+    "case_id": "RR-009",
+    "verdict": "DENY",
+    "first_rejecting_gate": "appraisal.status.binding",
+    "expected_verdict": "DENY",
+    "expected_gate": "appraisal.status.binding",
+    "baselines": {
+      "appraisal_only": "DENY",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    }
+  },
+  {
+    "case_id": "RR-010",
+    "verdict": "DENY",
+    "first_rejecting_gate": "commit.status.available",
+    "expected_verdict": "DENY",
+    "expected_gate": "commit.status.available",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "ALLOW",
+      "timestamp_only": "DENY"
+    }
+  },
+  {
+    "case_id": "RR-011",
+    "verdict": "ALLOW",
+    "first_rejecting_gate": "verified",
+    "expected_verdict": "ALLOW",
+    "expected_gate": "verified",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "ALLOW",
+      "timestamp_only": "ALLOW"
+    }
+  },
+  {
+    "case_id": "RR-012",
+    "verdict": "DENY",
+    "first_rejecting_gate": "credential.window",
+    "expected_verdict": "DENY",
+    "expected_gate": "credential.window",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    }
+  },
+  {
+    "case_id": "RR-013",
+    "verdict": "DENY",
+    "first_rejecting_gate": "commit.status.signature",
+    "expected_verdict": "DENY",
+    "expected_gate": "commit.status.signature",
+    "baselines": {
+      "appraisal_only": "ALLOW",
+      "commit_fail_open": "DENY",
+      "timestamp_only": "DENY"
+    }
+  }
+]

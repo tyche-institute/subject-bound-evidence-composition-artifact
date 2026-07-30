@@ -1,0 +1,7 @@
+{
+  "decision_differs": true,
+  "fixture": "point_only",
+  "independence_assumed_lcb": 0.7407809858600979,
+  "joint_lcb": 0.73208839734107,
+  "threshold": 0.737
+}

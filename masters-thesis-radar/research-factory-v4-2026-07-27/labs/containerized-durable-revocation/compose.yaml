@@ -1,0 +1,174 @@
+services:
+  status:
+    image: ${TYCHE_RUNTIME_IMAGE:-tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173}
+    hostname: status-a
+    entrypoint:
+      - python
+      - /lab/container_service.py
+      - --service
+      - status
+      - --instance-id
+      - status-a
+      - --database
+      - /state/revocation.sqlite
+      - --port
+      - "8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./:/lab:ro
+      - durable-state:/state
+    networks:
+      - evidence
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2).read()"
+      interval: 1s
+      timeout: 3s
+      retries: 30
+
+  effect-a:
+    image: ${TYCHE_RUNTIME_IMAGE:-tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173}
+    hostname: effect-a
+    entrypoint:
+      - python
+      - /lab/container_service.py
+      - --service
+      - effect
+      - --instance-id
+      - effect-a
+      - --database
+      - /state/revocation.sqlite
+      - --port
+      - "8081"
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./:/lab:ro
+      - durable-state:/state
+    networks:
+      - evidence
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8081/health', timeout=2).read()"
+      interval: 1s
+      timeout: 3s
+      retries: 30
+
+  effect-b:
+    image: ${TYCHE_RUNTIME_IMAGE:-tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173}
+    hostname: effect-b
+    entrypoint:
+      - python
+      - /lab/container_service.py
+      - --service
+      - effect
+      - --instance-id
+      - effect-b
+      - --database
+      - /state/revocation.sqlite
+      - --port
+      - "8082"
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./:/lab:ro
+      - durable-state:/state
+    networks:
+      - evidence
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8082/health', timeout=2).read()"
+      interval: 1s
+      timeout: 3s
+      retries: 30
+
+  fault-proxy:
+    image: ${TYCHE_RUNTIME_IMAGE:-tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173}
+    hostname: fault-proxy
+    entrypoint:
+      - python
+      - /lab/fault_proxy.py
+      - --upstream
+      - http://effect-a:8081
+      - --port
+      - "8090"
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./:/lab:ro
+    networks:
+      - evidence
+    depends_on:
+      effect-a:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8090/health', timeout=2).read()"
+      interval: 1s
+      timeout: 3s
+      retries: 30
+
+  runner:
+    image: ${TYCHE_RUNTIME_IMAGE:-tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173}
+    hostname: experiment-runner
+    entrypoint:
+      - python
+      - /lab/run_matrix.py
+      - --status-url
+      - http://status:8080
+      - --effect-a-url
+      - http://effect-a:8081
+      - --effect-b-url
+      - http://effect-b:8082
+      - --proxy-url
+      - http://fault-proxy:8090
+      - --database
+      - /state/revocation.sqlite
+      - --output
+      - /out/results.json
+      - --trials
+      - "64"
+    environment:
+      TYCHE_RUNTIME_IMAGE: ${TYCHE_RUNTIME_IMAGE:-tyche-v4-repro@sha256:e9d09e11129b6b53734d780c21fa90d1d92cf7e5f508357704c5fd34e319a173}
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./:/lab:ro
+      - ./results:/out
+      - durable-state:/state
+    networks:
+      - evidence
+    depends_on:
+      status:
+        condition: service_healthy
+      effect-a:
+        condition: service_healthy
+      effect-b:
+        condition: service_healthy
+      fault-proxy:
+        condition: service_healthy
+
+networks:
+  evidence:
+    internal: true
+
+volumes:
+  durable-state:

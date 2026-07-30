@@ -1,0 +1,36 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Subject-Bound Evidence Composition for Delegated AI Actions",
+  "version": "0.2.0-rc2",
+  "dateModified": "2026-07-30",
+  "developmentStatus": "active",
+  "description": "Executable empirical benchmark for typed evidence composition and commit-time revocation in delegated AI actions.",
+  "codeRepository": "https://github.com/tyche-institute/subject-bound-evidence-composition-artifact",
+  "license": [
+    "https://spdx.org/licenses/Apache-2.0.html",
+    "https://spdx.org/licenses/CC-BY-4.0.html"
+  ],
+  "author": {
+    "@type": "Person",
+    "givenName": "Anton",
+    "familyName": "Sokolov",
+    "@id": "https://orcid.org/0000-0003-2452-7096",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Tyche Institute"
+    }
+  },
+  "programmingLanguage": [
+    "Python 3.12",
+    "Java",
+    "JavaScript",
+    "SQL",
+    "Bash"
+  ],
+  "runtimePlatform": [
+    "Linux/x86-64",
+    "Linux/ARM64",
+    "CPython 3.12"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "cpu_count": 32,
+  "cryptography": "49.0.0",
+  "machine": "x86_64",
+  "numpy": "2.5.0",
+  "openssl": "OpenSSL 3.0.13 30 Jan 2024",
+  "phase": "before-execution",
+  "platform": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "privacy_note": "hostname, network addresses, machine-id, account names, and environment variables outside the allowlist are not recorded",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "python_implementation": "CPython",
+  "release": "6.17.0-35-generic",
+  "runner": {
+    "arch": null,
+    "environment": null,
+    "image_os": null,
+    "image_version": null,
+    "os": null
+  },
+  "sqlite": "3.45.1",
+  "system": "Linux",
+  "tool_versions": {
+    "git": "git version 2.43.0",
+    "node": "v18.19.1",
+    "uname": "Linux anton-Virtual-Machine 6.17.0-35-generic #35~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May 26 19:30:42 UTC 2 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "workflow": {
+    "checkout_sha": "fatal: not a git repository (or any of the parent directories): .git",
+    "repository": null,
+    "run_attempt": null,
+    "run_id": null,
+    "sha": null,
+    "workflow_ref": null
+  }
+}

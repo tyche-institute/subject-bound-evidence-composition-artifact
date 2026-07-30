@@ -1,0 +1,136 @@
+{
+  "profile": "tyche-typed-delegation-path-v0",
+  "effect_time": "2026-07-25T20:00:00Z",
+  "base": {
+    "root_principal": "principal-anton",
+    "root_role": "owner",
+    "role_path": ["planner", "broker", "executor", "evidence_producer"],
+    "allowed_role_transitions": {
+      "owner": ["planner"],
+      "planner": ["broker"],
+      "broker": ["executor"],
+      "executor": ["evidence_producer"]
+    },
+    "scope": {
+      "operations": ["READ"],
+      "resources": ["invoice-123"],
+      "tools": ["ledger.read"],
+      "audiences": ["ledger-service"],
+      "purposes": ["audit"],
+      "amount_max": 1000,
+      "currency": "EUR",
+      "delegable": true
+    },
+    "action": {
+      "operation": "READ",
+      "resource": "invoice-123",
+      "tool": "ledger.read",
+      "audience": "ledger-service",
+      "purpose": "audit",
+      "amount": 100,
+      "currency": "EUR"
+    }
+  },
+  "cases": [
+    {
+      "id": "P1_exact_one_hop",
+      "hops": 1,
+      "mutations": [],
+      "expected": {"verdict": "ALLOW", "gate": "verified", "first_bad_edge_id": null, "first_bad_edge_index": null}
+    },
+    {
+      "id": "D1_wrong_role_transition",
+      "hops": 1,
+      "mutations": [{"path": "edges.0.to_role", "value": "executor"}],
+      "expected": {"verdict": "DENY", "gate": "edge.role_transition", "first_bad_edge_id": "edge-0", "first_bad_edge_index": 0}
+    },
+    {
+      "id": "P2_exact_two_hop",
+      "hops": 2,
+      "mutations": [],
+      "expected": {"verdict": "ALLOW", "gate": "verified", "first_bad_edge_id": null, "first_bad_edge_index": null}
+    },
+    {
+      "id": "D2_scope_amplification_at_second_edge",
+      "hops": 2,
+      "mutations": [{"path": "edges.1.grant.operations", "value": ["READ", "WRITE"]}],
+      "expected": {"verdict": "DENY", "gate": "edge.scope.operations", "first_bad_edge_id": "edge-1", "first_bad_edge_index": 1}
+    },
+    {
+      "id": "D2_lineage_break_at_second_edge",
+      "hops": 2,
+      "mutations": [{"path": "edges.1.delegator", "value": "agent-intruder"}],
+      "expected": {"verdict": "DENY", "gate": "edge.lineage", "first_bad_edge_id": "edge-1", "first_bad_edge_index": 1}
+    },
+    {
+      "id": "P4_exact_four_hop",
+      "hops": 4,
+      "mutations": [],
+      "expected": {"verdict": "ALLOW", "gate": "verified", "first_bad_edge_id": null, "first_bad_edge_index": null}
+    },
+    {
+      "id": "D4_revoked_third_edge",
+      "hops": 4,
+      "mutations": [{"path": "edges.2.status", "value": "revoked"}],
+      "expected": {"verdict": "DENY", "gate": "edge.status", "first_bad_edge_id": "edge-2", "first_bad_edge_index": 2}
+    },
+    {
+      "id": "D4_multi_fault_returns_earliest_edge",
+      "hops": 4,
+      "mutations": [
+        {"path": "edges.1.grant.amount_max", "value": 2000},
+        {"path": "edges.3.status", "value": "revoked"},
+        {"path": "action.operation", "value": "DELETE"}
+      ],
+      "expected": {"verdict": "DENY", "gate": "edge.scope.amount_max", "first_bad_edge_id": "edge-1", "first_bad_edge_index": 1}
+    },
+    {
+      "id": "D4_action_outside_terminal_scope",
+      "hops": 4,
+      "mutations": [{"path": "action.resource", "value": "invoice-999"}],
+      "expected": {"verdict": "DENY", "gate": "action.resource", "first_bad_edge_id": "action", "first_bad_edge_index": 4}
+    },
+    {
+      "id": "D4_native_valid_receipt_for_other_action",
+      "hops": 4,
+      "mutations": [{"path": "receipt.action.operation", "value": "WRITE"}],
+      "expected": {"verdict": "DENY", "gate": "effect.action_binding", "first_bad_edge_id": "effect", "first_bad_edge_index": 5}
+    },
+    {
+      "id": "D2_parent_forbids_second_delegation",
+      "hops": 2,
+      "mutations": [{"path": "edges.0.grant.delegable", "value": false}],
+      "expected": {"verdict": "DENY", "gate": "edge.parent_delegable", "first_bad_edge_id": "edge-1", "first_bad_edge_index": 1}
+    },
+    {
+      "id": "D2_first_edge_expired",
+      "hops": 2,
+      "mutations": [{"path": "edges.0.expires_at", "value": "2026-07-25T19:59:59Z"}],
+      "expected": {"verdict": "DENY", "gate": "edge.freshness", "first_bad_edge_id": "edge-0", "first_bad_edge_index": 0}
+    },
+    {
+      "id": "D1_protocol_invalid",
+      "hops": 1,
+      "mutations": [{"path": "protocol_valid", "value": false}],
+      "expected": {"verdict": "DENY", "gate": "protocol.valid", "first_bad_edge_id": "edge-0", "first_bad_edge_index": 0}
+    },
+    {
+      "id": "D2_signature_invalid_second_edge",
+      "hops": 2,
+      "mutations": [{"path": "edges.1.issuer_signature_valid", "value": false}],
+      "expected": {"verdict": "DENY", "gate": "edge.signature", "first_bad_edge_id": "edge-1", "first_bad_edge_index": 1}
+    },
+    {
+      "id": "D1_receipt_native_invalid",
+      "hops": 1,
+      "mutations": [{"path": "receipt.native_evidence_valid", "value": false}],
+      "expected": {"verdict": "DENY", "gate": "effect.native_validity", "first_bad_edge_id": "effect", "first_bad_edge_index": 2}
+    },
+    {
+      "id": "D1_receipt_effect_time_outside_window",
+      "hops": 1,
+      "mutations": [{"path": "receipt.effect_time", "value": "2026-07-26T01:00:00Z"}],
+      "expected": {"verdict": "DENY", "gate": "effect.time_binding", "first_bad_edge_id": "effect", "first_bad_edge_index": 2}
+    }
+  ]
+}

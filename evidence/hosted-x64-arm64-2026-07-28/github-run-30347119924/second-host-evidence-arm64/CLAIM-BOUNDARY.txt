@@ -1,0 +1,1 @@
+Hosted-runner evidence boundary: VM environment, not physical-host identity.

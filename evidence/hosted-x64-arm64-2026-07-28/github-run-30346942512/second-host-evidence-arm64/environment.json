@@ -1,0 +1,34 @@
+{
+  "cpu_count": 2,
+  "cryptography": "49.0.0",
+  "machine": "aarch64",
+  "numpy": "2.5.0",
+  "openssl": "OpenSSL 3.0.13 30 Jan 2024",
+  "phase": "before-execution",
+  "platform": "Linux-6.17.0-1020-azure-aarch64-with-glibc2.39",
+  "privacy_note": "hostname, network addresses, machine-id, account names, and environment variables outside the allowlist are not recorded",
+  "python": "3.12.13 (main, Jun 16 2026, 22:06:26) [GCC 13.3.0]",
+  "python_implementation": "CPython",
+  "release": "6.17.0-1020-azure",
+  "runner": {
+    "arch": "ARM64",
+    "environment": "github-hosted",
+    "image_os": "ubuntu24-arm64",
+    "image_version": "20260719.67.1",
+    "os": "Linux"
+  },
+  "sqlite": "3.45.1",
+  "system": "Linux",
+  "tool_versions": {
+    "git": "git version 2.54.0",
+    "node": "v22.23.1",
+    "uname": "Linux runnervma9114 6.17.0-1020-azure #20~24.04.1-Ubuntu SMP Fri Jun 19 20:26:28 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux"
+  },
+  "workflow": {
+    "repository": "tyche-institute/subject-bound-evidence-composition",
+    "run_attempt": "1",
+    "run_id": "30346942512",
+    "sha": "428ce24b6d77b4b9691d5e42a94f0f39eacea918",
+    "workflow_ref": "tyche-institute/subject-bound-evidence-composition/.github/workflows/second-host-matrix.yml@refs/heads/main"
+  }
+}

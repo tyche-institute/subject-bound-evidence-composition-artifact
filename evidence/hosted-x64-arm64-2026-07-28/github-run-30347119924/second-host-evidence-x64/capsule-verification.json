@@ -1,0 +1,15 @@
+{
+  "archive": "tyche-second-host-source-capsule-2026-07-28.tar.gz",
+  "archive_bytes": 22096805,
+  "archive_sha256": "8c8919f9826381da289b73dfd35721938ad5aafea5cd3687b23187589a2d0386",
+  "capsule_second_architecture_claimed": false,
+  "capsule_second_host_claimed": false,
+  "capsule_status": "prepared-not-externally-run",
+  "exact_member_set": true,
+  "extraction_boundary": "verified source extraction only; this report is not execution or second-host evidence",
+  "manifest_sha256": "b9337580a20421da6b4fc6c3856cb39c2f9c0930cdc2a2b4fa24838e1de46a19",
+  "member_hashes_match": true,
+  "members": 210,
+  "safe_regular_members_only": true,
+  "verification": "tyche-capsule-bootstrap-v1"
+}

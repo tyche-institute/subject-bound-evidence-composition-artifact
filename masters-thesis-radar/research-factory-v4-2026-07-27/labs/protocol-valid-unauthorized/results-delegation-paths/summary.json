@@ -1,0 +1,22 @@
+{
+  "cases": 16,
+  "corpus_sha256": "2b93fe67c3199e5e15f80254b3377411edeff4045aa8b8014519f2365baab45e",
+  "delegation_edge_cases": 8,
+  "delegation_edge_matches": 8,
+  "disclaimer": "issuer_signature_valid, native_evidence_valid and protocol_valid are corpus-supplied experimental flags; this laboratory performs no cryptographic verification.",
+  "expected_matches": 16,
+  "first_invalid_stage_matches": 13,
+  "hop_lengths": [
+    1,
+    2,
+    4
+  ],
+  "labels_note": "expected labels are author-written within the same research programme; agreement counts on a designed corpus are coverage checks, not rates.",
+  "native_object_flags_true": 14,
+  "negative": 13,
+  "positive": 3,
+  "profile": "tyche-typed-delegation-path-v0",
+  "protocol_flags_true": 15,
+  "trace_order_matches": 16,
+  "verifier_sha256": "6149eab6a925a4a03dcbc968d1b69c66d2970c95b0b9f1bb9138711b3c09ba40"
+}

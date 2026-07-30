@@ -1,0 +1,47 @@
+{
+  "dynamic_augmented_original_order": [
+    0,
+    1,
+    2
+  ],
+  "dynamic_augmented_scores": [
+    0.6497697509185534,
+    0.4344275946693473,
+    0.3549011710133365,
+    0.4371140934169198
+  ],
+  "dynamic_base_order": [
+    0,
+    2,
+    1
+  ],
+  "dynamic_base_scores": [
+    0.8169655014632327,
+    0.2909213164012613,
+    0.3264812140200398
+  ],
+  "dynamic_rank_reversal": true,
+  "fixed_augmented_original_order": [
+    0,
+    1,
+    2
+  ],
+  "fixed_augmented_scores": [
+    0.6451186991268621,
+    0.48695634199849863,
+    0.4584376264655433,
+    0.49553913040976155
+  ],
+  "fixed_base_order": [
+    0,
+    1,
+    2
+  ],
+  "fixed_base_scores": [
+    0.6451186991268621,
+    0.48695634199849863,
+    0.4584376264655433
+  ],
+  "fixed_rank_invariant": true,
+  "two_implementation_agreement": true
+}

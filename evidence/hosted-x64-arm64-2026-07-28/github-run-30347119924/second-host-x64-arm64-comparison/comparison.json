@@ -1,0 +1,98 @@
+{
+  "all_passed": true,
+  "architecture_neutral_counts": {
+    "binding_denials": 8,
+    "composed_transactions": 104,
+    "eatf_rows": 21,
+    "policy_vectors": 16,
+    "revocation_cases": 372,
+    "revocation_fault_cases": 96,
+    "transfer_transaction_rows": 104
+  },
+  "arm64_environment": {
+    "cpu_count": 2,
+    "cryptography": "49.0.0",
+    "machine": "aarch64",
+    "numpy": "2.5.0",
+    "openssl": "OpenSSL 3.0.13 30 Jan 2024",
+    "phase": "before-execution",
+    "platform": "Linux-6.17.0-1020-azure-aarch64-with-glibc2.39",
+    "privacy_note": "hostname, network addresses, machine-id, account names, and environment variables outside the allowlist are not recorded",
+    "python": "3.12.13 (main, Jun 16 2026, 22:06:26) [GCC 13.3.0]",
+    "python_implementation": "CPython",
+    "release": "6.17.0-1020-azure",
+    "runner": {
+      "arch": "ARM64",
+      "environment": "github-hosted",
+      "image_os": "ubuntu24-arm64",
+      "image_version": "20260719.67.1",
+      "os": "Linux"
+    },
+    "sqlite": "3.45.1",
+    "system": "Linux",
+    "tool_versions": {
+      "git": "git version 2.54.0",
+      "node": "v22.23.1",
+      "uname": "Linux runnervma9114 6.17.0-1020-azure #20~24.04.1-Ubuntu SMP Fri Jun 19 20:26:28 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux"
+    },
+    "workflow": {
+      "repository": "tyche-institute/subject-bound-evidence-composition",
+      "run_attempt": "1",
+      "run_id": "30347119924",
+      "sha": "c85bc3aa5769a2e94386b2d43e40ef16fafe16ed",
+      "workflow_ref": "tyche-institute/subject-bound-evidence-composition/.github/workflows/second-host-matrix.yml@refs/heads/main"
+    }
+  },
+  "checks": {
+    "arm64_contract_passed": true,
+    "arm64_reported": true,
+    "exact_architecture_neutral_counts": true,
+    "exact_boolean_contract": true,
+    "exact_dependency_versions": true,
+    "exact_release_overlay": true,
+    "reported_architectures_differ": true,
+    "same_source_capsule": true,
+    "same_source_manifest": true,
+    "x64_contract_passed": true,
+    "x64_reported": true
+  },
+  "checks_passed": 11,
+  "checks_total": 11,
+  "claim_boundary": "successful comparison establishes fresh GitHub-hosted VM runs on reported x64 and ARM64 architectures over one sealed source; it does not identify or attest underlying physical machines",
+  "comparison": "tyche-release-build-x64-arm64-comparison-v1",
+  "source_capsule_sha256": "8c8919f9826381da289b73dfd35721938ad5aafea5cd3687b23187589a2d0386",
+  "x64_environment": {
+    "cpu_count": 2,
+    "cryptography": "49.0.0",
+    "machine": "x86_64",
+    "numpy": "2.5.0",
+    "openssl": "OpenSSL 3.0.13 30 Jan 2024",
+    "phase": "before-execution",
+    "platform": "Linux-6.17.0-1020-azure-x86_64-with-glibc2.39",
+    "privacy_note": "hostname, network addresses, machine-id, account names, and environment variables outside the allowlist are not recorded",
+    "python": "3.12.13 (main, Jun 16 2026, 22:05:08) [GCC 13.3.0]",
+    "python_implementation": "CPython",
+    "release": "6.17.0-1020-azure",
+    "runner": {
+      "arch": "X64",
+      "environment": "github-hosted",
+      "image_os": "ubuntu24",
+      "image_version": "20260720.247.2",
+      "os": "Linux"
+    },
+    "sqlite": "3.45.1",
+    "system": "Linux",
+    "tool_versions": {
+      "git": "git version 2.54.0",
+      "node": "v22.23.1",
+      "uname": "Linux runnervmvrwv9 6.17.0-1020-azure #20~24.04.1-Ubuntu SMP Fri Jun 19 20:09:14 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux"
+    },
+    "workflow": {
+      "repository": "tyche-institute/subject-bound-evidence-composition",
+      "run_attempt": "1",
+      "run_id": "30347119924",
+      "sha": "c85bc3aa5769a2e94386b2d43e40ef16fafe16ed",
+      "workflow_ref": "tyche-institute/subject-bound-evidence-composition/.github/workflows/second-host-matrix.yml@refs/heads/main"
+    }
+  }
+}

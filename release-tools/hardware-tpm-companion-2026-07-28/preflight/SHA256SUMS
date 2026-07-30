@@ -1,0 +1,6 @@
+0d62762ab210e794a4d852634b4e616e7a6ceab35aa0948e5824d074d0e21e08  ../README.md
+0a5060b9fe007acad26ecc0ab2696a830c45ad3ebd43fa1766e56fb84561d983  ../hardware_tpm_companion.py
+86ae6b219e711360efc16f2e375d1ae86bfe640d9524689a564c21be99d17730  ../run.sh
+0338ceaea4b25198a6b37593ce1fda36e63d1c5f332fa722707c9732be622fc4  ../mutation-plan.json
+cbc8991b0deb373cf2f4e13b95f8d94cba2c5f4965617a0f981bf858736b13ae  ../hardware-run-manifest.schema.json
+5371d4de7a3566ebbd80b3dae10e90e9c2a708af0b1e7814356e46d056f2873c  preflight-report.json

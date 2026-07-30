@@ -1,0 +1,19 @@
+{
+  "binary_only_install_requested": true,
+  "expected": {
+    "cffi": "2.0.0",
+    "cryptography": "49.0.0",
+    "numpy": "2.5.0",
+    "pycparser": "3.0"
+  },
+  "machine": "aarch64",
+  "observed": {
+    "cffi": "2.0.0",
+    "cryptography": "49.0.0",
+    "numpy": "2.5.0",
+    "pycparser": "3.0"
+  },
+  "openssl": "OpenSSL 3.0.13 30 Jan 2024",
+  "python": "3.12.13 (main, Jun 16 2026, 22:06:26) [GCC 13.3.0]",
+  "sqlite": "3.45.1"
+}

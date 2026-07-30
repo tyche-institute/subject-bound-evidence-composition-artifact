@@ -1,0 +1,25 @@
+{
+  "claim_boundary": "identified second VM/OS execution and Microsoft vTPM evidence only; no underlying physical-host identity, hardware TPM, manufacturer-certified EK, or deployed-system claim",
+  "execution_label": "zeus2",
+  "final_run": "vtpm-run-owner-rsa-final",
+  "original_source": {
+    "archive_sha256": "b0d8b487b74924fe90d9c8296977595463c0604bc523ef6104ac0d228da10eb3",
+    "git_commit": "ee2831a7eba9f171526059bb2dd03f4ae1b0809a"
+  },
+  "overlay": {
+    "purpose": "add a fail-closed create-load compatibility profile and before/after TPM handle census after the Microsoft vTPM rejected createak below a generic transient endorsement primary",
+    "files": {
+      "release-tools/hardware-tpm-companion-2026-07-28/README.md": "0d62762ab210e794a4d852634b4e616e7a6ceab35aa0948e5824d074d0e21e08",
+      "release-tools/hardware-tpm-companion-2026-07-28/hardware-run-manifest.schema.json": "cbc8991b0deb373cf2f4e13b95f8d94cba2c5f4965617a0f981bf858736b13ae",
+      "release-tools/hardware-tpm-companion-2026-07-28/hardware_tpm_companion.py": "0a5060b9fe007acad26ecc0ab2696a830c45ad3ebd43fa1766e56fb84561d983",
+      "release-tools/hardware-tpm-companion-2026-07-28/mutation-plan.json": "0338ceaea4b25198a6b37593ce1fda36e63d1c5f332fa722707c9732be622fc4",
+      "release-tools/hardware-tpm-companion-2026-07-28/run.sh": "86ae6b219e711360efc16f2e375d1ae86bfe640d9524689a564c21be99d17730"
+    }
+  },
+  "schema": "tyche-zeus2-run-overlay-v1",
+  "ssh_host_key_fingerprints": {
+    "ecdsa": "SHA256:kLSD2fRmNAkF+agZUl3x5WOhLcDJ10vSaOHx+HXK9yg",
+    "ed25519": "SHA256:ofZEGW9VnwYHEhOBU4sUZRU7lDoMFRFTICXf0aH9Yps",
+    "rsa": "SHA256:+w2UTBmcmteXkPqnWVe4qwMKZlqLg7WL918FKF/erF0"
+  }
+}

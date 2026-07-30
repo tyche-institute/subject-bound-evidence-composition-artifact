@@ -1,0 +1,1696 @@
+{
+  "all_passed": true,
+  "baseline": {
+    "composed_transaction": [
+      {
+        "exact_match": true,
+        "expected_shared_class": "runtime_state",
+        "id": "CUBE_000",
+        "native_first_state": "state.contraindicated",
+        "sql_shared_class": "runtime_state"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "runtime_state",
+        "id": "CUBE_001",
+        "native_first_state": "state.contraindicated",
+        "sql_shared_class": "runtime_state"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "runtime_state",
+        "id": "CUBE_010",
+        "native_first_state": "state.contraindicated",
+        "sql_shared_class": "runtime_state"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "runtime_state",
+        "id": "CUBE_011",
+        "native_first_state": "state.contraindicated",
+        "sql_shared_class": "runtime_state"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "CUBE_100",
+        "native_first_state": "edge.scope.operations",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "CUBE_101",
+        "native_first_state": "edge.scope.operations",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "measurement_confidence",
+        "id": "CUBE_110",
+        "native_first_state": "measurement.confidence",
+        "sql_shared_class": "measurement_confidence"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "CUBE_111",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "measurement_confidence",
+        "id": "F_correct_good_point_only",
+        "native_first_state": "measurement.confidence",
+        "sql_shared_class": "measurement_confidence"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "measurement_confidence",
+        "id": "F_correct_good_profile_mismatch",
+        "native_first_state": "measurement.profile",
+        "sql_shared_class": "measurement_confidence"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "F_correct_good_supported",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "F_correct_replayed_point_only",
+        "native_first_state": "evidence.replay",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "F_correct_replayed_profile_mismatch",
+        "native_first_state": "evidence.replay",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "F_correct_replayed_supported",
+        "native_first_state": "evidence.replay",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "F_correct_tampered_point_only",
+        "native_first_state": "evidence.integrity",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "F_correct_tampered_profile_mismatch",
+        "native_first_state": "evidence.integrity",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "F_correct_tampered_supported",
+        "native_first_state": "evidence.integrity",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_missing_good_point_only",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_missing_good_profile_mismatch",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_missing_good_supported",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_missing_replayed_point_only",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_missing_replayed_profile_mismatch",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_missing_replayed_supported",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_missing_tampered_point_only",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_missing_tampered_profile_mismatch",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_missing_tampered_supported",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_stale_good_point_only",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_stale_good_profile_mismatch",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_stale_good_supported",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_stale_replayed_point_only",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_stale_replayed_profile_mismatch",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_stale_replayed_supported",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_stale_tampered_point_only",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_stale_tampered_profile_mismatch",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_stale_tampered_supported",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_substituted_good_point_only",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_substituted_good_profile_mismatch",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_substituted_good_supported",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_substituted_replayed_point_only",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_substituted_replayed_profile_mismatch",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_substituted_replayed_supported",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_substituted_tampered_point_only",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_substituted_tampered_profile_mismatch",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "F_substituted_tampered_supported",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "representation",
+        "id": "PATH_D1_protocol_invalid",
+        "native_first_state": "protocol.valid",
+        "sql_shared_class": "representation"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "PATH_D1_receipt_effect_time_outside_window",
+        "native_first_state": "effect.time_binding",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "PATH_D1_receipt_native_invalid",
+        "native_first_state": "effect.native_validity",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "PATH_D1_wrong_role_transition",
+        "native_first_state": "edge.role_transition",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "PATH_D2_first_edge_expired",
+        "native_first_state": "edge.freshness",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "PATH_D2_lineage_break_at_second_edge",
+        "native_first_state": "edge.lineage",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "PATH_D2_parent_forbids_second_delegation",
+        "native_first_state": "edge.parent_delegable",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "PATH_D2_scope_amplification_at_second_edge",
+        "native_first_state": "edge.scope.operations",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "PATH_D2_signature_invalid_second_edge",
+        "native_first_state": "edge.signature",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "PATH_D4_action_outside_terminal_scope",
+        "native_first_state": "action.resource",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "PATH_D4_multi_fault_returns_earliest_edge",
+        "native_first_state": "edge.scope.amount_max",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "PATH_D4_native_valid_receipt_for_other_action",
+        "native_first_state": "effect.action_binding",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "PATH_D4_revoked_third_edge",
+        "native_first_state": "edge.status",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "PATH_P1_exact_one_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "PATH_P2_exact_two_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "PATH_P4_exact_four_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLB_CONTROL_main_profile_two_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLB_CONTROL_read_four_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLB_CONTROL_read_one_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLB_CONTROL_read_two_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLB_CONTROL_window_lower_two_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLB_CONTROL_window_upper_two_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "XLB_effect_export_four_hop",
+        "native_first_state": "binding.effect",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "XLB_effect_write_other_resource_two_hop",
+        "native_first_state": "binding.effect",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "XLB_effect_write_two_hop",
+        "native_first_state": "binding.effect",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "XLB_issued_after_window_two_hop",
+        "native_first_state": "binding.time",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "XLB_issued_before_window_two_hop",
+        "native_first_state": "binding.time",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "XLB_measurement_profile_two_hop",
+        "native_first_state": "binding.measurement_profile",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "XLB_resource_other_one_hop",
+        "native_first_state": "binding.resource",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "XLB_resource_other_two_hop",
+        "native_first_state": "binding.resource",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "XLJ_AM_effect_time_unsupported",
+        "native_first_state": "effect.time_binding",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "XLJ_AM_lineage_break_profile_mismatch",
+        "native_first_state": "edge.lineage",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "XLJ_EA_replayed_revoked_edge",
+        "native_first_state": "evidence.replay",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "XLJ_EA_tampered_edge_signature",
+        "native_first_state": "evidence.integrity",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "XLJ_EM_replayed_point_only",
+        "native_first_state": "evidence.replay",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "XLJ_EM_tampered_unsupported",
+        "native_first_state": "evidence.integrity",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "XLJ_ES_replayed_reference_mismatch",
+        "native_first_state": "evidence.replay",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "XLJ_ES_tampered_stale_state",
+        "native_first_state": "evidence.integrity",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLJ_LOOKALIKE_four_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLJ_LOOKALIKE_four_hop_boundary_expiry",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLJ_LOOKALIKE_one_hop",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "XLJ_LOOKALIKE_two_hop_boundary_fresh",
+        "native_first_state": "verified",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "XLJ_PA_sig_invalid_protocol_invalid",
+        "native_first_state": "policy.signature",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_PA_substituted_scope_amplification",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_PE_stale_tampered",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_PE_substituted_replayed",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_PM_freshness_only_profile_mismatch",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_PM_version_only_unsupported",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_PS_digest_only_contraindicated",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_PS_stale_policy_reference_mismatch",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_QUAD_policy_evidence_state_authority",
+        "native_first_state": "policy.substituted",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_QUINT_all_layers_fail",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "runtime_state",
+        "id": "XLJ_SA_contraindicated_role_transition",
+        "native_first_state": "state.contraindicated",
+        "sql_shared_class": "runtime_state"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "XLJ_SA_stale_state_receipt_invalid",
+        "native_first_state": "state.stale",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "runtime_state",
+        "id": "XLJ_SM_reference_mismatch_profile_mismatch",
+        "native_first_state": "state.reference",
+        "sql_shared_class": "runtime_state"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "XLJ_SM_stale_state_point_only",
+        "native_first_state": "state.stale",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "XLJ_TRIPLE_evidence_state_authority",
+        "native_first_state": "evidence.integrity",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_TRIPLE_policy_evidence_authority",
+        "native_first_state": "policy.stale",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "policy_compatibility",
+        "id": "XLJ_TRIPLE_policy_state_measurement",
+        "native_first_state": "policy.missing",
+        "sql_shared_class": "policy_compatibility"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "runtime_state",
+        "id": "XLJ_TRIPLE_state_authority_measurement",
+        "native_first_state": "state.reference",
+        "sql_shared_class": "runtime_state"
+      }
+    ],
+    "eatf": [
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "accept-profile",
+        "native_first_state": "PASS",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "pass",
+        "id": "accept-profile-with-signer-pin",
+        "native_first_state": "PASS",
+        "sql_shared_class": "pass"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "representation",
+        "id": "canonical-mismatch",
+        "native_first_state": "CANONICAL_FORM_MISMATCH",
+        "sql_shared_class": "representation"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "hash-mismatch",
+        "native_first_state": "HASH_MISMATCH",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "representation",
+        "id": "metadata-invalid-json",
+        "native_first_state": "METADATA_INVALID_JSON",
+        "sql_shared_class": "representation"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "representation",
+        "id": "metadata-not-object",
+        "native_first_state": "METADATA_NOT_OBJECT",
+        "sql_shared_class": "representation"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "representation",
+        "id": "missing-canonical",
+        "native_first_state": "REQUIRED_ENTRY_MISSING",
+        "sql_shared_class": "representation"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "overt-content-hash-mismatch",
+        "native_first_state": "OVERT_INVALID",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "overt-signature-invalid",
+        "native_first_state": "OVERT_SIGNATURE_INVALID",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "overt-signature-missing",
+        "native_first_state": "OVERT_SIGNATURE_REQUIRED",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "pqc-half-pair",
+        "native_first_state": "PQC_PAIR_INCOMPLETE",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "cryptographic_integrity",
+        "id": "rsa-signature-invalid",
+        "native_first_state": "RSA_SIGNATURE_INVALID",
+        "sql_shared_class": "cryptographic_integrity"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "trust_or_authority",
+        "id": "signer-pin-mismatch",
+        "native_first_state": "SIGNER_NOT_TRUSTED",
+        "sql_shared_class": "trust_or_authority"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "timestamp-cert-missing",
+        "native_first_state": "TSA_CERT_MISSING",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "timestamp-empty",
+        "native_first_state": "TSA_MISSING_OR_INVALID",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "subject_binding",
+        "id": "timestamp-imprint-mismatch",
+        "native_first_state": "TSA_IMPRINT_MISMATCH",
+        "sql_shared_class": "subject_binding"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "temporal_freshness",
+        "id": "timestamp-signature-invalid",
+        "native_first_state": "TSA_SIGNATURE_INVALID",
+        "sql_shared_class": "temporal_freshness"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "representation",
+        "id": "zip-duplicate-entry",
+        "native_first_state": "ZIP_INVALID_OR_UNSAFE",
+        "sql_shared_class": "representation"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "representation",
+        "id": "zip-not-an-archive",
+        "native_first_state": "ZIP_INVALID_OR_UNSAFE",
+        "sql_shared_class": "representation"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "representation",
+        "id": "zip-too-many-entries",
+        "native_first_state": "ZIP_INVALID_OR_UNSAFE",
+        "sql_shared_class": "representation"
+      },
+      {
+        "exact_match": true,
+        "expected_shared_class": "representation",
+        "id": "zip-unsafe-name",
+        "native_first_state": "ZIP_INVALID_OR_UNSAFE",
+        "sql_shared_class": "representation"
+      }
+    ]
+  },
+  "baseline_exact_matches": 125,
+  "baseline_rows": 125,
+  "claim_boundary": "independent relational execution and sensitivity audit of an author-defined analytic mapping; not external semantic validation or interoperability",
+  "class_mutations_detected": 46,
+  "engine": "SQLite 3.45.1",
+  "lab": "crosswalk-independent-sql-audit",
+  "leave_one_out_gaps_detected": 46,
+  "mapping_entries": 46,
+  "mutations": [
+    {
+      "class_mutation_affected_rows": [
+        "canonical-mismatch"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "canonical-mismatch"
+      ],
+      "native_state": "CANONICAL_FORM_MISMATCH",
+      "original_class": "representation",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "hash-mismatch"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "hash-mismatch"
+      ],
+      "native_state": "HASH_MISMATCH",
+      "original_class": "cryptographic_integrity",
+      "replacement_class": "measurement_confidence"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "metadata-invalid-json"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "metadata-invalid-json"
+      ],
+      "native_state": "METADATA_INVALID_JSON",
+      "original_class": "representation",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "metadata-not-object"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "metadata-not-object"
+      ],
+      "native_state": "METADATA_NOT_OBJECT",
+      "original_class": "representation",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "overt-content-hash-mismatch"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "overt-content-hash-mismatch"
+      ],
+      "native_state": "OVERT_INVALID",
+      "original_class": "subject_binding",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "overt-signature-invalid"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "overt-signature-invalid"
+      ],
+      "native_state": "OVERT_SIGNATURE_INVALID",
+      "original_class": "cryptographic_integrity",
+      "replacement_class": "measurement_confidence"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "overt-signature-missing"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "overt-signature-missing"
+      ],
+      "native_state": "OVERT_SIGNATURE_REQUIRED",
+      "original_class": "cryptographic_integrity",
+      "replacement_class": "measurement_confidence"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "accept-profile",
+        "accept-profile-with-signer-pin"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "accept-profile",
+        "accept-profile-with-signer-pin"
+      ],
+      "native_state": "PASS",
+      "original_class": "pass",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "pqc-half-pair"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "pqc-half-pair"
+      ],
+      "native_state": "PQC_PAIR_INCOMPLETE",
+      "original_class": "cryptographic_integrity",
+      "replacement_class": "measurement_confidence"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "missing-canonical"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "missing-canonical"
+      ],
+      "native_state": "REQUIRED_ENTRY_MISSING",
+      "original_class": "representation",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "rsa-signature-invalid"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "rsa-signature-invalid"
+      ],
+      "native_state": "RSA_SIGNATURE_INVALID",
+      "original_class": "cryptographic_integrity",
+      "replacement_class": "measurement_confidence"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "signer-pin-mismatch"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "signer-pin-mismatch"
+      ],
+      "native_state": "SIGNER_NOT_TRUSTED",
+      "original_class": "trust_or_authority",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "timestamp-cert-missing"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "timestamp-cert-missing"
+      ],
+      "native_state": "TSA_CERT_MISSING",
+      "original_class": "temporal_freshness",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "timestamp-imprint-mismatch"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "timestamp-imprint-mismatch"
+      ],
+      "native_state": "TSA_IMPRINT_MISMATCH",
+      "original_class": "subject_binding",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "timestamp-empty"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "timestamp-empty"
+      ],
+      "native_state": "TSA_MISSING_OR_INVALID",
+      "original_class": "temporal_freshness",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "timestamp-signature-invalid"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "timestamp-signature-invalid"
+      ],
+      "native_state": "TSA_SIGNATURE_INVALID",
+      "original_class": "temporal_freshness",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "zip-duplicate-entry",
+        "zip-not-an-archive",
+        "zip-too-many-entries",
+        "zip-unsafe-name"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "eatf",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "zip-duplicate-entry",
+        "zip-not-an-archive",
+        "zip-too-many-entries",
+        "zip-unsafe-name"
+      ],
+      "native_state": "ZIP_INVALID_OR_UNSAFE",
+      "original_class": "representation",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D4_action_outside_terminal_scope"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D4_action_outside_terminal_scope"
+      ],
+      "native_state": "action.resource",
+      "original_class": "subject_binding",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "XLB_effect_export_four_hop",
+        "XLB_effect_write_other_resource_two_hop",
+        "XLB_effect_write_two_hop"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "XLB_effect_export_four_hop",
+        "XLB_effect_write_other_resource_two_hop",
+        "XLB_effect_write_two_hop"
+      ],
+      "native_state": "binding.effect",
+      "original_class": "subject_binding",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "XLB_measurement_profile_two_hop"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "XLB_measurement_profile_two_hop"
+      ],
+      "native_state": "binding.measurement_profile",
+      "original_class": "subject_binding",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "XLB_resource_other_one_hop",
+        "XLB_resource_other_two_hop"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "XLB_resource_other_one_hop",
+        "XLB_resource_other_two_hop"
+      ],
+      "native_state": "binding.resource",
+      "original_class": "subject_binding",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "XLB_issued_after_window_two_hop",
+        "XLB_issued_before_window_two_hop"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "XLB_issued_after_window_two_hop",
+        "XLB_issued_before_window_two_hop"
+      ],
+      "native_state": "binding.time",
+      "original_class": "temporal_freshness",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D2_first_edge_expired"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D2_first_edge_expired"
+      ],
+      "native_state": "edge.freshness",
+      "original_class": "temporal_freshness",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D2_lineage_break_at_second_edge",
+        "XLJ_AM_lineage_break_profile_mismatch"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D2_lineage_break_at_second_edge",
+        "XLJ_AM_lineage_break_profile_mismatch"
+      ],
+      "native_state": "edge.lineage",
+      "original_class": "trust_or_authority",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D2_parent_forbids_second_delegation"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D2_parent_forbids_second_delegation"
+      ],
+      "native_state": "edge.parent_delegable",
+      "original_class": "trust_or_authority",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D1_wrong_role_transition"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D1_wrong_role_transition"
+      ],
+      "native_state": "edge.role_transition",
+      "original_class": "trust_or_authority",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D4_multi_fault_returns_earliest_edge"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D4_multi_fault_returns_earliest_edge"
+      ],
+      "native_state": "edge.scope.amount_max",
+      "original_class": "trust_or_authority",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "CUBE_100",
+        "CUBE_101",
+        "PATH_D2_scope_amplification_at_second_edge"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "CUBE_100",
+        "CUBE_101",
+        "PATH_D2_scope_amplification_at_second_edge"
+      ],
+      "native_state": "edge.scope.operations",
+      "original_class": "trust_or_authority",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D2_signature_invalid_second_edge"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D2_signature_invalid_second_edge"
+      ],
+      "native_state": "edge.signature",
+      "original_class": "cryptographic_integrity",
+      "replacement_class": "measurement_confidence"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D4_revoked_third_edge"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D4_revoked_third_edge"
+      ],
+      "native_state": "edge.status",
+      "original_class": "trust_or_authority",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D4_native_valid_receipt_for_other_action"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D4_native_valid_receipt_for_other_action"
+      ],
+      "native_state": "effect.action_binding",
+      "original_class": "subject_binding",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D1_receipt_native_invalid"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D1_receipt_native_invalid"
+      ],
+      "native_state": "effect.native_validity",
+      "original_class": "cryptographic_integrity",
+      "replacement_class": "measurement_confidence"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D1_receipt_effect_time_outside_window",
+        "XLJ_AM_effect_time_unsupported"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D1_receipt_effect_time_outside_window",
+        "XLJ_AM_effect_time_unsupported"
+      ],
+      "native_state": "effect.time_binding",
+      "original_class": "temporal_freshness",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "F_correct_tampered_point_only",
+        "F_correct_tampered_profile_mismatch",
+        "F_correct_tampered_supported",
+        "XLJ_EA_tampered_edge_signature",
+        "XLJ_EM_tampered_unsupported",
+        "XLJ_ES_tampered_stale_state",
+        "XLJ_TRIPLE_evidence_state_authority"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "F_correct_tampered_point_only",
+        "F_correct_tampered_profile_mismatch",
+        "F_correct_tampered_supported",
+        "XLJ_EA_tampered_edge_signature",
+        "XLJ_EM_tampered_unsupported",
+        "XLJ_ES_tampered_stale_state",
+        "XLJ_TRIPLE_evidence_state_authority"
+      ],
+      "native_state": "evidence.integrity",
+      "original_class": "cryptographic_integrity",
+      "replacement_class": "measurement_confidence"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "F_correct_replayed_point_only",
+        "F_correct_replayed_profile_mismatch",
+        "F_correct_replayed_supported",
+        "XLJ_EA_replayed_revoked_edge",
+        "XLJ_EM_replayed_point_only",
+        "XLJ_ES_replayed_reference_mismatch"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "F_correct_replayed_point_only",
+        "F_correct_replayed_profile_mismatch",
+        "F_correct_replayed_supported",
+        "XLJ_EA_replayed_revoked_edge",
+        "XLJ_EM_replayed_point_only",
+        "XLJ_ES_replayed_reference_mismatch"
+      ],
+      "native_state": "evidence.replay",
+      "original_class": "temporal_freshness",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "CUBE_110",
+        "F_correct_good_point_only"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "CUBE_110",
+        "F_correct_good_point_only"
+      ],
+      "native_state": "measurement.confidence",
+      "original_class": "measurement_confidence",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "F_correct_good_profile_mismatch"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "F_correct_good_profile_mismatch"
+      ],
+      "native_state": "measurement.profile",
+      "original_class": "measurement_confidence",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "F_missing_good_point_only",
+        "F_missing_good_profile_mismatch",
+        "F_missing_good_supported",
+        "F_missing_replayed_point_only",
+        "F_missing_replayed_profile_mismatch",
+        "F_missing_replayed_supported",
+        "F_missing_tampered_point_only",
+        "F_missing_tampered_profile_mismatch",
+        "F_missing_tampered_supported",
+        "XLJ_QUINT_all_layers_fail",
+        "XLJ_TRIPLE_policy_state_measurement"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "F_missing_good_point_only",
+        "F_missing_good_profile_mismatch",
+        "F_missing_good_supported",
+        "F_missing_replayed_point_only",
+        "F_missing_replayed_profile_mismatch",
+        "F_missing_replayed_supported",
+        "F_missing_tampered_point_only",
+        "F_missing_tampered_profile_mismatch",
+        "F_missing_tampered_supported",
+        "XLJ_QUINT_all_layers_fail",
+        "XLJ_TRIPLE_policy_state_measurement"
+      ],
+      "native_state": "policy.missing",
+      "original_class": "policy_compatibility",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "XLJ_PA_sig_invalid_protocol_invalid"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "XLJ_PA_sig_invalid_protocol_invalid"
+      ],
+      "native_state": "policy.signature",
+      "original_class": "cryptographic_integrity",
+      "replacement_class": "measurement_confidence"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "F_stale_good_point_only",
+        "F_stale_good_profile_mismatch",
+        "F_stale_good_supported",
+        "F_stale_replayed_point_only",
+        "F_stale_replayed_profile_mismatch",
+        "F_stale_replayed_supported",
+        "F_stale_tampered_point_only",
+        "F_stale_tampered_profile_mismatch",
+        "F_stale_tampered_supported",
+        "XLJ_PE_stale_tampered",
+        "XLJ_PM_freshness_only_profile_mismatch",
+        "XLJ_PM_version_only_unsupported",
+        "XLJ_PS_stale_policy_reference_mismatch",
+        "XLJ_TRIPLE_policy_evidence_authority"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "F_stale_good_point_only",
+        "F_stale_good_profile_mismatch",
+        "F_stale_good_supported",
+        "F_stale_replayed_point_only",
+        "F_stale_replayed_profile_mismatch",
+        "F_stale_replayed_supported",
+        "F_stale_tampered_point_only",
+        "F_stale_tampered_profile_mismatch",
+        "F_stale_tampered_supported",
+        "XLJ_PE_stale_tampered",
+        "XLJ_PM_freshness_only_profile_mismatch",
+        "XLJ_PM_version_only_unsupported",
+        "XLJ_PS_stale_policy_reference_mismatch",
+        "XLJ_TRIPLE_policy_evidence_authority"
+      ],
+      "native_state": "policy.stale",
+      "original_class": "policy_compatibility",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "F_substituted_good_point_only",
+        "F_substituted_good_profile_mismatch",
+        "F_substituted_good_supported",
+        "F_substituted_replayed_point_only",
+        "F_substituted_replayed_profile_mismatch",
+        "F_substituted_replayed_supported",
+        "F_substituted_tampered_point_only",
+        "F_substituted_tampered_profile_mismatch",
+        "F_substituted_tampered_supported",
+        "XLJ_PA_substituted_scope_amplification",
+        "XLJ_PE_substituted_replayed",
+        "XLJ_PS_digest_only_contraindicated",
+        "XLJ_QUAD_policy_evidence_state_authority"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "F_substituted_good_point_only",
+        "F_substituted_good_profile_mismatch",
+        "F_substituted_good_supported",
+        "F_substituted_replayed_point_only",
+        "F_substituted_replayed_profile_mismatch",
+        "F_substituted_replayed_supported",
+        "F_substituted_tampered_point_only",
+        "F_substituted_tampered_profile_mismatch",
+        "F_substituted_tampered_supported",
+        "XLJ_PA_substituted_scope_amplification",
+        "XLJ_PE_substituted_replayed",
+        "XLJ_PS_digest_only_contraindicated",
+        "XLJ_QUAD_policy_evidence_state_authority"
+      ],
+      "native_state": "policy.substituted",
+      "original_class": "policy_compatibility",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "PATH_D1_protocol_invalid"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "PATH_D1_protocol_invalid"
+      ],
+      "native_state": "protocol.valid",
+      "original_class": "representation",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "CUBE_000",
+        "CUBE_001",
+        "CUBE_010",
+        "CUBE_011",
+        "XLJ_SA_contraindicated_role_transition"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "CUBE_000",
+        "CUBE_001",
+        "CUBE_010",
+        "CUBE_011",
+        "XLJ_SA_contraindicated_role_transition"
+      ],
+      "native_state": "state.contraindicated",
+      "original_class": "runtime_state",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "XLJ_SM_reference_mismatch_profile_mismatch",
+        "XLJ_TRIPLE_state_authority_measurement"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "XLJ_SM_reference_mismatch_profile_mismatch",
+        "XLJ_TRIPLE_state_authority_measurement"
+      ],
+      "native_state": "state.reference",
+      "original_class": "runtime_state",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "XLJ_SA_stale_state_receipt_invalid",
+        "XLJ_SM_stale_state_point_only"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "XLJ_SA_stale_state_receipt_invalid",
+        "XLJ_SM_stale_state_point_only"
+      ],
+      "native_state": "state.stale",
+      "original_class": "temporal_freshness",
+      "replacement_class": "cryptographic_integrity"
+    },
+    {
+      "class_mutation_affected_rows": [
+        "CUBE_111",
+        "F_correct_good_supported",
+        "PATH_P1_exact_one_hop",
+        "PATH_P2_exact_two_hop",
+        "PATH_P4_exact_four_hop",
+        "XLB_CONTROL_main_profile_two_hop",
+        "XLB_CONTROL_read_four_hop",
+        "XLB_CONTROL_read_one_hop",
+        "XLB_CONTROL_read_two_hop",
+        "XLB_CONTROL_window_lower_two_hop",
+        "XLB_CONTROL_window_upper_two_hop",
+        "XLJ_LOOKALIKE_four_hop",
+        "XLJ_LOOKALIKE_four_hop_boundary_expiry",
+        "XLJ_LOOKALIKE_one_hop",
+        "XLJ_LOOKALIKE_two_hop_boundary_fresh"
+      ],
+      "class_mutation_detected": true,
+      "ecosystem": "composed_transaction",
+      "leave_one_out_detected": true,
+      "leave_one_out_unmapped_rows": [
+        "CUBE_111",
+        "F_correct_good_supported",
+        "PATH_P1_exact_one_hop",
+        "PATH_P2_exact_two_hop",
+        "PATH_P4_exact_four_hop",
+        "XLB_CONTROL_main_profile_two_hop",
+        "XLB_CONTROL_read_four_hop",
+        "XLB_CONTROL_read_one_hop",
+        "XLB_CONTROL_read_two_hop",
+        "XLB_CONTROL_window_lower_two_hop",
+        "XLB_CONTROL_window_upper_two_hop",
+        "XLJ_LOOKALIKE_four_hop",
+        "XLJ_LOOKALIKE_four_hop_boundary_expiry",
+        "XLJ_LOOKALIKE_one_hop",
+        "XLJ_LOOKALIKE_two_hop_boundary_fresh"
+      ],
+      "native_state": "verified",
+      "original_class": "pass",
+      "replacement_class": "cryptographic_integrity"
+    }
+  ]
+}

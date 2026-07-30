@@ -1,0 +1,14 @@
+{
+  "a0_valid_e0_valid_c1_deny": 15,
+  "corpus_sha256": "sha256:ddd770ddf19043d2c3f9cf2527b3743e46b089f67aa0f1d7eb52e3668fa8d2c6",
+  "disclaimer": "schema_valid, signature_valid and native_valid are corpus-supplied experimental flags; this laboratory performs no cryptographic verification. first_bad_edge copies the single case edge id and is a gate rejection marker, not edge-level localization; expected labels are author-written and counts on a designed corpus are not rates.",
+  "expected_matches": 20,
+  "negative": 16,
+  "negative_gate_rejections": 16,
+  "ordered_not_evaluated": true,
+  "positive": 4,
+  "profile": "tyche-protocol-valid-unauthorized-v0",
+  "protocol_valid": 20,
+  "vectors": 20,
+  "verifier_sha256": "sha256:9ff1feed2a1088de0bbeab3b1c8249b59b04eda7d233615ebc85bbe3de951077"
+}

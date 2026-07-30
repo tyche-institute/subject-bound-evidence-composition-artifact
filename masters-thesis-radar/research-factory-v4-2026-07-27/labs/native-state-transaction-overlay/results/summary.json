@@ -1,0 +1,23 @@
+{
+  "all_passed": true,
+  "claim_boundary": "104 transaction-bound native TPM2 quotes from eight fresh software-TPM roots on one x86_64 host; not hardware-rooted, remote-runtime, or independent-host evidence",
+  "composed_cases": 104,
+  "composed_exact_matches": 104,
+  "distinct_ak_public_keys": 8,
+  "distinct_quote_messages": 104,
+  "ecc_roots": 4,
+  "fresh_roots": 8,
+  "lab": "native-state-transaction-overlay",
+  "mutation_cases": 64,
+  "mutation_rejections": 64,
+  "native_oracle_matches": 104,
+  "rsa_roots": 4,
+  "source_vectors": 104,
+  "state_class_counts": {
+    "CONTRAINDICATED": 9,
+    "PASS": 87,
+    "REFERENCE_MISMATCH": 4,
+    "STALE": 4
+  },
+  "unique_challenges": 104
+}

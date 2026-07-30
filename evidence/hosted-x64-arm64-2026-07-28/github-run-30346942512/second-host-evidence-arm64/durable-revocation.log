@@ -1,0 +1,56 @@
+{
+  "all_passed": true,
+  "atomic_guard_invariant": true,
+  "cases": 372,
+  "claim_boundary": "same physical aarch64 host; separate status/effect services and client contender processes over loopback TCP with durable SQLite linearization, signed responses, disconnect/retry and service restart; not multi-host or deployment evidence",
+  "distinct_service_pids": 34,
+  "duplicate_effects": 0,
+  "durable_effects": 314,
+  "durable_events": 1478,
+  "fault_cases": 96,
+  "fault_recoveries": 96,
+  "lab": "distributed-revocation-service",
+  "profiles": {
+    "atomic_guard": {
+      "cases": 93,
+      "duplicate_effects": 0,
+      "false_allows": 0,
+      "false_denies": 0
+    },
+    "double_read": {
+      "cases": 93,
+      "duplicate_effects": 0,
+      "false_allows": 47,
+      "false_denies": 0
+    },
+    "single_read": {
+      "cases": 93,
+      "duplicate_effects": 0,
+      "false_allows": 62,
+      "false_denies": 0
+    },
+    "ttl_cache": {
+      "cases": 93,
+      "duplicate_effects": 0,
+      "false_allows": 52,
+      "false_denies": 0
+    }
+  },
+  "runner_pid": 2077,
+  "service_instances": 34,
+  "signed_responses_verified": 372,
+  "weak_counterexamples_observed": true
+}
+{
+  "contiguous_linearization_indices": true,
+  "effects_reference_events": true,
+  "public_key_bytes": 32,
+  "stored_summary_consistent": true,
+  "unique_idempotency_keys": true
+}
+README.md: OK
+services.py: OK
+run_experiment.py: OK
+run.sh: OK
+results.json: OK
+SUMMARY.md: OK
