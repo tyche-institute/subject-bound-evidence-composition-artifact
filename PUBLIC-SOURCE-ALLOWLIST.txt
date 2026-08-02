@@ -6,6 +6,7 @@ PRIVACY-METADATA-CORRECTION-2026-08-02.md
 PUBLIC-SOURCE-ALLOWLIST.txt
 README.md
 SUBMISSION-ARTIFACT-CORRECTION-2026-08-02.md
+ZENODO-METADATA-CORRECTION-2026-08-02.md
 a2a-boundary-seal/results/extension-enabled/agent-card.json
 a2a-boundary-seal/results/extension-enabled/send-message.json
 codemeta.json

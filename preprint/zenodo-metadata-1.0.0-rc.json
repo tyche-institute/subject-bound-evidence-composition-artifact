@@ -1,5 +1,5 @@
 {
-  "_status": "READY FOR FINAL SANITIZED ARCHIVE HASH; ZENODO TOKEN/DEPOSIT NOT YET AVAILABLE",
+  "_status": "DRAFT ONLY; AUTHORIZED ZENODO DEPOSIT AND EXACT UPLOAD DIGEST NOT YET AVAILABLE",
   "title": "Subject-Bound Evidence Composition for Delegated AI Actions",
   "upload_type": "dataset",
   "description": "Executable benchmark, frozen synthetic corpora, test vectors, source, figures, hosted x86-64 and ARM64 evidence, identified zeus2 VM/OS and Microsoft-vTPM evidence, and reproducibility materials for typed evidence composition and commit-time revocation in delegated AI actions.",
@@ -10,8 +10,8 @@
       "orcid": "0000-0003-2452-7096"
     }
   ],
-  "version": "0.2.0-rc2",
-  "publication_date": "2026-07-30",
+  "version": "0.2.0-rc5",
+  "publication_date": "2026-08-02",
   "license": "cc-by-4.0",
   "access_right": "open",
   "keywords": [

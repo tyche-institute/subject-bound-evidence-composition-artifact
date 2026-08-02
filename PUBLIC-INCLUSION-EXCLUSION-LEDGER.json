@@ -25,10 +25,10 @@
       "mode": "0644",
       "path": "CITATION.cff",
       "public_bytes": 845,
-      "public_sha256": "786514ddd18b122e7bb09559264f6f983239e464f081525c2b4d8028564461ef",
+      "public_sha256": "74175f7b27c74252b4e755c3199c575c51158dd58e6f5c5023d91aba9351df48",
       "reason": "exact_public_allowlist",
       "source_bytes": 845,
-      "source_sha256": "786514ddd18b122e7bb09559264f6f983239e464f081525c2b4d8028564461ef"
+      "source_sha256": "74175f7b27c74252b4e755c3199c575c51158dd58e6f5c5023d91aba9351df48"
     },
     {
       "decision": "include_verbatim",
@@ -64,21 +64,21 @@
       "decision": "include_verbatim",
       "mode": "0644",
       "path": "PUBLIC-SOURCE-ALLOWLIST.txt",
-      "public_bytes": 41424,
-      "public_sha256": "66df202fbf3ea9562f303ba90517c477e0a7b142e8babc7ecd62201d70830e1d",
+      "public_bytes": 41465,
+      "public_sha256": "b5a1ce2ff087acf66ece18e954e94bf92c201d65f4345cb088380a11ee7412dc",
       "reason": "exact_public_allowlist",
-      "source_bytes": 41424,
-      "source_sha256": "66df202fbf3ea9562f303ba90517c477e0a7b142e8babc7ecd62201d70830e1d"
+      "source_bytes": 41465,
+      "source_sha256": "b5a1ce2ff087acf66ece18e954e94bf92c201d65f4345cb088380a11ee7412dc"
     },
     {
       "decision": "include_verbatim",
       "mode": "0644",
       "path": "README.md",
-      "public_bytes": 5642,
-      "public_sha256": "85ab76eebccdd935abdb2444a21d06222829be22a11a22922445932deec8e71c",
+      "public_bytes": 5802,
+      "public_sha256": "5d48a9bdf8d16298180a0283f98361a0cb4c560e5114b8cbfe7f9e933a4f964d",
       "reason": "exact_public_allowlist",
-      "source_bytes": 5642,
-      "source_sha256": "85ab76eebccdd935abdb2444a21d06222829be22a11a22922445932deec8e71c"
+      "source_bytes": 5802,
+      "source_sha256": "5d48a9bdf8d16298180a0283f98361a0cb4c560e5114b8cbfe7f9e933a4f964d"
     },
     {
       "decision": "include_verbatim",
@@ -89,6 +89,16 @@
       "reason": "exact_public_allowlist",
       "source_bytes": 1700,
       "source_sha256": "54982dd495d0c0adf3d68536ad6838e5110e56e1071ac1f8e9a436c26693efca"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "ZENODO-METADATA-CORRECTION-2026-08-02.md",
+      "public_bytes": 585,
+      "public_sha256": "34d0081b11e613ade11807af83a274b77e4e894cace093315084a7facbabe571",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 585,
+      "source_sha256": "34d0081b11e613ade11807af83a274b77e4e894cace093315084a7facbabe571"
     },
     {
       "decision": "include_verbatim",
@@ -125,10 +135,10 @@
       "mode": "0644",
       "path": "codemeta.json",
       "public_bytes": 1027,
-      "public_sha256": "f1efd72410640f8190a0e46a0a7ac204865c56a38b0880c2806fbdb4b0d281bd",
+      "public_sha256": "7403d428a7f7a0f05d1d9182ed10231c04a2ba4dede905fd9a6921f0041254d4",
       "reason": "exact_public_allowlist",
       "source_bytes": 1027,
-      "source_sha256": "f1efd72410640f8190a0e46a0a7ac204865c56a38b0880c2806fbdb4b0d281bd"
+      "source_sha256": "7403d428a7f7a0f05d1d9182ed10231c04a2ba4dede905fd9a6921f0041254d4"
     },
     {
       "decision": "include_verbatim",
@@ -4364,11 +4374,11 @@
       "decision": "include_verbatim",
       "mode": "0644",
       "path": "preprint/zenodo-metadata-1.0.0-rc.json",
-      "public_bytes": 1670,
-      "public_sha256": "45de539ebbeed327dd58efe3a196b089d66d4fc871a3e7fe7e41f6a0dafff243",
+      "public_bytes": 1671,
+      "public_sha256": "766e79a25f51a8021189eb93a74ded7209d0c3e0ed74a40aa648da0a3d5817ff",
       "reason": "exact_public_allowlist",
-      "source_bytes": 1670,
-      "source_sha256": "45de539ebbeed327dd58efe3a196b089d66d4fc871a3e7fe7e41f6a0dafff243"
+      "source_bytes": 1671,
+      "source_sha256": "766e79a25f51a8021189eb93a74ded7209d0c3e0ed74a40aa648da0a3d5817ff"
     },
     {
       "decision": "include_verbatim",
@@ -4747,18 +4757,18 @@
     }
   ],
   "exact_allowlist_path": "PUBLIC-SOURCE-ALLOWLIST.txt",
-  "exact_allowlist_sha256": "66df202fbf3ea9562f303ba90517c477e0a7b142e8babc7ecd62201d70830e1d",
+  "exact_allowlist_sha256": "b5a1ce2ff087acf66ece18e954e94bf92c201d65f4345cb088380a11ee7412dc",
   "excluded_source_files": 71,
   "generated_public_files": [
     "PUBLIC-INCLUSION-EXCLUSION-LEDGER.json",
     "SHA256SUMS"
   ],
-  "included_source_files": 435,
+  "included_source_files": 436,
   "ledger": "tyche-public-inclusion-exclusion-ledger-v1",
-  "policy_sha256": "73d929b5b2fa4723d22c6811efbe701d52f0f968146340166d063751704eca87",
+  "policy_sha256": "cf063f40d95230cbca9f47a5a10f1567fdeeea4274255220737777ac6a9db51c",
   "release_date": "2026-08-02",
   "source_enumeration": "git ls-files at the exact clean commit",
-  "source_files_considered": 506,
-  "source_git_commit": "3cf64ba429dd7ab2bd0b812b14965322bf0fad78",
+  "source_files_considered": 507,
+  "source_git_commit": "f77a631b74251411a94e388bf1bf79d08021fc23",
   "source_root_label": "private-release-candidate"
 }

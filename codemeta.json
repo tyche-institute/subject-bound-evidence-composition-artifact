@@ -2,7 +2,7 @@
   "@context": "https://w3id.org/codemeta/3.0",
   "@type": "SoftwareSourceCode",
   "name": "Subject-Bound Evidence Composition for Delegated AI Actions",
-  "version": "0.2.0-rc4",
+  "version": "0.2.0-rc5",
   "dateModified": "2026-08-02",
   "developmentStatus": "active",
   "description": "Executable empirical benchmark for typed evidence composition and commit-time revocation in delegated AI actions.",

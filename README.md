@@ -6,7 +6,7 @@ measurement, subject-binding, and commit-time revocation.
 
 ## Current state
 
-Version `0.2.0-rc4` is a **blind-preserving, sanitized public artifact
+Version `0.2.0-rc5` is a **blind-preserving, sanitized public artifact
 release**.
 The public artifact repository is
 <https://github.com/tyche-institute/subject-bound-evidence-composition-artifact>;
@@ -25,6 +25,10 @@ submission. The exact PDF is preserved unchanged; see
 `SUBMISSION-ARTIFACT-CORRECTION-2026-08-02.md`. This release also commits the
 downloaded evidence from public replay run 30767663171 so that it does not
 depend only on workflow-artifact retention.
+
+Release rc5 also corrects a stale, unused Zenodo metadata draft retained by
+rc4; see `ZENODO-METADATA-CORRECTION-2026-08-02.md`. No DOI or deposit is
+claimed.
 
 The private hosted-evidence workflow uses the exact frozen r5 source package
 and its SAFE Metric Metamorphics dependency carried in:
