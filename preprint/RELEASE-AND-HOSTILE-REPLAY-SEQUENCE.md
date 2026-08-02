@@ -1,5 +1,10 @@
 # Blind-safe public release and hostile-replay sequence
 
+> **Historical pre-release plan.** Phase B was subsequently executed and is
+> recorded in `CLOSURE-STATUS-R7-2026-07-30.md` and
+> `SOFTWARE-HERITAGE-SAVE-2026-07-30.json`. Pending statements below are
+> preserved only as the original protocol.
+
 Version: 1.0-rc1
 Status: prepared; public deposit intentionally held pending response seals
 

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "frozen-js-evaluator": "66b06680cb3626f102e983822127dfa19b3fa3bd296ec9aeca1f44d5fe6c99ba",
+    "frozen-python-evaluator": "7f7ef74bfcb42390c310eb411a3b71fedc652e0c85a026697aafc0864c7c804a",
+    "generation-manifest.json": "61d139b96562ee528ee4551cfe1cbfea4bfd382e1058de964fa17286d0645833",
+    "js-layer-results.json": "77776bf151f6cd82f8a499ec9897a790b106f2269b18a4dfdbb15eaf66f459a1",
+    "js-results.json": "951405899e489542107264f7259ac6a7042c32743481fad882d6342f138d589f",
+    "multifault-packet.json": "5233577ad02101f17911cc646a30d5a02d910fc6e8588db212bf6ed7123efc0a",
+    "python-layer-results.json": "791c91823429d1a338d3fe08fe42e1131c1cfa2fb68c89e505b43ed4b25bd944",
+    "python-results.json": "8596cb1d076875738f259e0f5bb405ec9bd17ab52b16635a1c81f5261d350541",
+    "run_js.mjs": "272c7971aca13ac87a02e612ea1178bba8b1b80ff635e99bdaab6cbb9b536d66",
+    "run_python.py": "9f621e0aa99efc172513307bb57884efc3a4b7b8c3567bf70b41da64075a8592"
+  },
+  "freeze_id": "thesis-v4-multifault-preoracle-v1",
+  "frozen_at": "2026-07-27T09:39:19.787572+00:00",
+  "oracle_read_by_evaluators": false
+}

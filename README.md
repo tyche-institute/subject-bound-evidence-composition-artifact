@@ -1,19 +1,22 @@
 # Subject-Bound Evidence Composition for Delegated AI Actions
 
-This repository is the executable release candidate for Anton Sokolov's
+This repository is the executable public artifact for Anton Sokolov's
 empirical study of typed policy, evidence, runtime-state, authority,
 measurement, subject-binding, and commit-time revocation.
 
 ## Current state
 
-Version `0.2.0-rc2` is the source repository for a **blind-preserving,
-sanitized public artifact candidate**.
+Version `0.2.0-rc3` is a **blind-preserving, sanitized public artifact
+release**.
 The public artifact repository is
 <https://github.com/tyche-institute/subject-bound-evidence-composition-artifact>;
 blind study coordination and expected-label material are excluded from it.
-It is used to obtain fresh x86-64 and ARM64 hosted-runner evidence without
-publishing the sealed expected labels before the independent human studies.
-It is not yet the immutable public release or the DOI-bearing record.
+The release carries the exact 44-page PDF submitted to JAIR on 2026-08-01
+(SHA-256 `8336906cc984c578e9d6fcd160dc45a1b92ad0329e9c666e7cffffa316de73da`)
+and can obtain fresh x86-64 and ARM64 hosted-runner evidence without
+publishing sealed expected labels before independent human studies. No DOI
+has been minted; the Git tag, release archive digest, and Software Heritage
+snapshot are the current content anchors.
 
 The private hosted-evidence workflow uses the exact frozen r5 source package
 and its SAFE Metric Metamorphics dependency carried in:
@@ -49,12 +52,14 @@ rejects 64/64 predeclared quote mutations, and leaves no new transient or
 persistent TPM handle. Its evidence and explicit non-hardware claim boundary
 are under `evidence/zeus2-vtpm-2026-07-30/`.
 
-The r7 evidence manuscript and reproducibility/readiness records are under
-`preprint/`. The JAIR-formatted r7 submission-candidate PDF is 51 US-letter
-pages; it suppresses production-only Associate Editor, volume, article, and
-DOI placeholders rather than fabricating publication metadata.
+The r8 evidence manuscript and reproducibility/readiness records are under
+`preprint/`. The JAIR-formatted submitted PDF is 44 US-letter pages; it
+suppresses production-only Associate Editor, volume, article, and DOI
+placeholders rather than fabricating publication metadata. The Markdown and
+build-audit status lines remain the frozen pre-submission record; the PDF
+digest above identifies the submitted bytes.
 
-The sanitized public candidate does not advertise or depend on that private
+The sanitized public release does not advertise or depend on that private
 capsule. It carries the four executable lanes directly, together with
 `.github/workflows/public-four-lane-replay.yml` and
 `scripts/run_public_tree_on_runner.sh`. Thus an extracted public archive can
@@ -91,13 +96,13 @@ figures, corpora, and generated research data are released under CC-BY-4.0.
 Files carrying an adjacent upstream licence or notice remain under those
 terms. See `LICENSE.md` and the per-component notices.
 
-The working repository may remain private while a separate public repository
+The working repository remains private while this separate public repository
 is built from the explicit sanitized allowlist. The sanitizer excludes blind
 study coordination and expected-label material. Public visibility is not
 itself a licence grant for any material marked `HOLD` or `NOASSERTION`.
 
 ## Citation
 
-Use `CITATION.cff`. The DOI field will be added only after an immutable
-deposit exists; the Git tag, Git commit, deterministic archive hash, and
-Software Heritage snapshot identifier provide the interim content anchors.
+Use `CITATION.cff`. A DOI field will be added only after a DOI-bearing deposit
+exists; the Git tag, Git commit, deterministic archive hash, and Software
+Heritage snapshot identifier provide the current content anchors.

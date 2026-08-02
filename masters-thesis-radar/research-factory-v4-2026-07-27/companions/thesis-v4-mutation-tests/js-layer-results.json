@@ -1,0 +1,1521 @@
+[
+  {
+    "transaction_id": "M001",
+    "verdict": "ALLOW",
+    "first_rejecting_gate": "verified",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M002",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.missing",
+    "layers": {
+      "policy": {
+        "result": "MISSING",
+        "gate": "policy.missing",
+        "rule": "P1",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M003",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.signature",
+    "layers": {
+      "policy": {
+        "result": "INVALID_SIGNATURE",
+        "gate": "policy.signature",
+        "rule": "P2",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M004",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.substituted",
+    "layers": {
+      "policy": {
+        "result": "SUBSTITUTED",
+        "gate": "policy.substituted",
+        "rule": "P3",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M005",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.stale",
+    "layers": {
+      "policy": {
+        "result": "STALE",
+        "gate": "policy.stale",
+        "rule": "P4",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M006",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.substituted",
+    "layers": {
+      "policy": {
+        "result": "SUBSTITUTED",
+        "gate": "policy.substituted",
+        "rule": "P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M007",
+    "verdict": "DENY",
+    "first_rejecting_gate": "evidence.integrity",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "TAMPERED",
+        "gate": "evidence.integrity",
+        "rule": "E1",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M008",
+    "verdict": "DENY",
+    "first_rejecting_gate": "evidence.replay",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "REPLAY",
+        "gate": "evidence.replay",
+        "rule": "E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M009",
+    "verdict": "DENY",
+    "first_rejecting_gate": "state.contraindicated",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "CONTRAINDICATED",
+        "gate": "state.contraindicated",
+        "rule": "S1",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M010",
+    "verdict": "DENY",
+    "first_rejecting_gate": "state.stale",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "STALE",
+        "gate": "state.stale",
+        "rule": "S2",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M011",
+    "verdict": "DENY",
+    "first_rejecting_gate": "state.reference",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "REFERENCE_MISMATCH",
+        "gate": "state.reference",
+        "rule": "S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M012",
+    "verdict": "DENY",
+    "first_rejecting_gate": "protocol.valid",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "protocol.valid",
+        "rule": "A0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M013",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.lineage",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.lineage",
+        "rule": "A1:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M014",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.signature",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.signature",
+        "rule": "A2:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M015",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.parent_delegable",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.parent_delegable",
+        "rule": "A3:1",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M016",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.role_transition",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.role_transition",
+        "rule": "A4:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M017",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.status",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.status",
+        "rule": "A5:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M018",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.freshness",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.freshness",
+        "rule": "A6:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M019",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.operations",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.scope.operations",
+        "rule": "A7:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M020",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.resources",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.scope.resources",
+        "rule": "A7:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M021",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.tools",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.scope.tools",
+        "rule": "A7:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M022",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.audiences",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.scope.audiences",
+        "rule": "A7:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M023",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.purposes",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.scope.purposes",
+        "rule": "A7:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M024",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.currency",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.scope.currency",
+        "rule": "A8:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M025",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.amount_max",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "edge.scope.amount_max",
+        "rule": "A9:0",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M026",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.subject_role",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "action.subject_role",
+        "rule": "A10",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M027",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.operation",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "action.operation",
+        "rule": "A11",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M028",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.resource",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "action.resource",
+        "rule": "A12",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M029",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.tool",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "action.tool",
+        "rule": "A13",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M030",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.audience",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "action.audience",
+        "rule": "A14",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M031",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.purpose",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "action.purpose",
+        "rule": "A15",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M032",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.amount_currency",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "action.amount_currency",
+        "rule": "A16",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M033",
+    "verdict": "DENY",
+    "first_rejecting_gate": "effect.native_validity",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "effect.native_validity",
+        "rule": "A17",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M034",
+    "verdict": "DENY",
+    "first_rejecting_gate": "effect.time_binding",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "effect.time_binding",
+        "rule": "A18",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M035",
+    "verdict": "DENY",
+    "first_rejecting_gate": "effect.action_binding",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "DENY",
+        "gate": "effect.action_binding",
+        "rule": "A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "M1-M3",
+        "diagnostics": {
+          "point": 0.8253772595808534,
+          "lcb": 0.8111117803875512
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M036",
+    "verdict": "DENY",
+    "first_rejecting_gate": "measurement.profile",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "PROFILE_MISMATCH",
+        "gate": "measurement.profile",
+        "rule": "M1",
+        "diagnostics": {
+          "profile_digest": "sha256:9099c6323fc014910170cab4bd97ca011a11a8eb008015de0f0420a9cd41685e"
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M037",
+    "verdict": "DENY",
+    "first_rejecting_gate": "measurement.point",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "FAIL_POINT",
+        "gate": "measurement.point",
+        "rule": "M2",
+        "diagnostics": {
+          "point": 0.6822630893412698,
+          "lcb": 0.6662807126011173
+        }
+      }
+    }
+  },
+  {
+    "transaction_id": "M038",
+    "verdict": "DENY",
+    "first_rejecting_gate": "measurement.confidence",
+    "layers": {
+      "policy": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "P1-P5",
+        "diagnostics": null
+      },
+      "evidence": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "E1-E2",
+        "diagnostics": null
+      },
+      "state": {
+        "result": "PASS",
+        "gate": null,
+        "rule": "S1-S3",
+        "diagnostics": null
+      },
+      "authority": {
+        "result": "ALLOW",
+        "gate": null,
+        "rule": "A0-A19",
+        "diagnostics": null
+      },
+      "measurement": {
+        "result": "FAIL_LCB",
+        "gate": "measurement.confidence",
+        "rule": "M3",
+        "diagnostics": {
+          "point": 0.7645366504492258,
+          "lcb": 0.733196749334449
+        }
+      }
+    }
+  }
+]

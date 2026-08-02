@@ -1,0 +1,15 @@
+{
+  "base_transaction_id": "T006",
+  "corpus_id": "thesis-v4-single-fault-mutations-v1",
+  "files": {
+    "mutation-operator-registry.json": "5c6bb5afb6b6b06ec4d068e2936f2423bb6bf66fffbffcd45f89ef1c3db10d36",
+    "mutation-oracle.json": "9ae611a9101432364d1df5280cd5ab0ddf9e98b669a7b01571906591363bd10b",
+    "mutation-packet.json": "af226bac2a7223cb607a2eea075fc93831185c225c25dfcb2c717c99df2f63ab"
+  },
+  "sealed_labels_used": false,
+  "source_independent_results": "${REDACTED_HOME}/tyche-research-vault/zeus-followup-2026-07-27/thesis-v4-independent-evaluator/independent-layer-results-unsealed.json",
+  "source_independent_results_sha256": "af8efca9d3fb48fbb9fec0c77696b6d33c46fe0f5f8d9351709ef25e86688b2d",
+  "source_packet": "${REDACTED_HOME}/tyche-research-vault/masters-thesis-radar/research-factory-v4-2026-07-27/external-label-packet/transactions-for-labelling.json",
+  "source_packet_sha256": "6ade4b6ea6be5daa5cb6fd59a44dd0e7ec530bba21acb4ad7fc55f1508c46e67",
+  "transaction_count": 38
+}

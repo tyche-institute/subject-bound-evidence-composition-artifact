@@ -27,7 +27,7 @@ mpl.rcParams.update(
         "figure.facecolor": "white",
         "savefig.facecolor": "white",
         "savefig.edgecolor": "white",
-        "svg.hashsalt": "tyche-r7-zeus2-evidence",
+        "svg.hashsalt": "tyche-r8-identified-vm-evidence",
     }
 )
 
@@ -48,7 +48,7 @@ rows = [
         "four-lane contract 20/20; reported architecture; physical host unknown",
     ),
     (
-        "zeus2 x86-64\nHyper-V VM",
+        "identified VM (zeus2)\nHyper-V x86-64",
         ["16", "104", "104", "372", "104/104", "64/64"],
         "four-lane contract 20/20; identified VM/OS; Microsoft vTPM",
     ),

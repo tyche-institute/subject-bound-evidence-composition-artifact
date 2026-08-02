@@ -1,0 +1,306 @@
+[
+  {
+    "description": "Unmodified fully passing transaction selected without sealed labels.",
+    "expected_first_rejecting_gate": "verified",
+    "expected_rule": "all-pass",
+    "operator": "baseline",
+    "single_fault": false,
+    "target_layer": "all"
+  },
+  {
+    "description": "Replace only policy with an observed P1 fixture.",
+    "expected_first_rejecting_gate": "policy.missing",
+    "expected_rule": "P1",
+    "operator": "policy_splice_p1",
+    "single_fault": true,
+    "target_layer": "policy"
+  },
+  {
+    "description": "Replace only policy with an observed P2 fixture.",
+    "expected_first_rejecting_gate": "policy.signature",
+    "expected_rule": "P2",
+    "operator": "policy_splice_p2",
+    "single_fault": true,
+    "target_layer": "policy"
+  },
+  {
+    "description": "Replace only policy with an observed P3 fixture.",
+    "expected_first_rejecting_gate": "policy.substituted",
+    "expected_rule": "P3",
+    "operator": "policy_splice_p3",
+    "single_fault": true,
+    "target_layer": "policy"
+  },
+  {
+    "description": "Replace only policy with an observed P4 fixture.",
+    "expected_first_rejecting_gate": "policy.stale",
+    "expected_rule": "P4",
+    "operator": "policy_splice_p4",
+    "single_fault": true,
+    "target_layer": "policy"
+  },
+  {
+    "description": "Replace only policy with an observed P5 fixture.",
+    "expected_first_rejecting_gate": "policy.substituted",
+    "expected_rule": "P5",
+    "operator": "policy_splice_p5",
+    "single_fault": true,
+    "target_layer": "policy"
+  },
+  {
+    "description": "Replace only evidence with an observed E1 fixture.",
+    "expected_first_rejecting_gate": "evidence.integrity",
+    "expected_rule": "E1",
+    "operator": "evidence_splice_e1",
+    "single_fault": true,
+    "target_layer": "evidence"
+  },
+  {
+    "description": "Replace only evidence with an observed E2 fixture.",
+    "expected_first_rejecting_gate": "evidence.replay",
+    "expected_rule": "E2",
+    "operator": "evidence_splice_e2",
+    "single_fault": true,
+    "target_layer": "evidence"
+  },
+  {
+    "description": "Set attestation status to a non-affirming value.",
+    "expected_first_rejecting_gate": "state.contraindicated",
+    "expected_rule": "S1",
+    "operator": "state_status_negative",
+    "single_fault": true,
+    "target_layer": "state"
+  },
+  {
+    "description": "Move issued_at beyond the fixed decision time.",
+    "expected_first_rejecting_gate": "state.stale",
+    "expected_rule": "S2",
+    "operator": "state_issued_after_decision",
+    "single_fault": true,
+    "target_layer": "state"
+  },
+  {
+    "description": "Change only the observed reference digest.",
+    "expected_first_rejecting_gate": "state.reference",
+    "expected_rule": "S3",
+    "operator": "state_observed_digest_mismatch",
+    "single_fault": true,
+    "target_layer": "state"
+  },
+  {
+    "description": "Invalidate the protocol-native verification flag.",
+    "expected_first_rejecting_gate": "protocol.valid",
+    "expected_rule": "A0",
+    "operator": "authority_protocol_invalid",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Break the first delegator lineage link.",
+    "expected_first_rejecting_gate": "edge.lineage",
+    "expected_rule": "A1:0",
+    "operator": "authority_lineage_break",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Invalidate the first delegation signature flag.",
+    "expected_first_rejecting_gate": "edge.signature",
+    "expected_rule": "A2:0",
+    "operator": "authority_issuer_signature_invalid",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Remove delegation permission before the second edge.",
+    "expected_first_rejecting_gate": "edge.parent_delegable",
+    "expected_rule": "A3:1",
+    "operator": "authority_parent_not_delegable",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Use a role transition absent from the fixed transition table.",
+    "expected_first_rejecting_gate": "edge.role_transition",
+    "expected_rule": "A4:0",
+    "operator": "authority_role_transition_invalid",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Revoke the first delegation edge.",
+    "expected_first_rejecting_gate": "edge.status",
+    "expected_rule": "A5:0",
+    "operator": "authority_edge_revoked",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Move the first edge validity window after effect time.",
+    "expected_first_rejecting_gate": "edge.freshness",
+    "expected_rule": "A6:0",
+    "operator": "authority_edge_not_yet_valid",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Add one value outside the parent operations scope.",
+    "expected_first_rejecting_gate": "edge.scope.operations",
+    "expected_rule": "A7:0",
+    "operator": "authority_scope_operations_widened",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Add one value outside the parent resources scope.",
+    "expected_first_rejecting_gate": "edge.scope.resources",
+    "expected_rule": "A7:0",
+    "operator": "authority_scope_resources_widened",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Add one value outside the parent tools scope.",
+    "expected_first_rejecting_gate": "edge.scope.tools",
+    "expected_rule": "A7:0",
+    "operator": "authority_scope_tools_widened",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Add one value outside the parent audiences scope.",
+    "expected_first_rejecting_gate": "edge.scope.audiences",
+    "expected_rule": "A7:0",
+    "operator": "authority_scope_audiences_widened",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Add one value outside the parent purposes scope.",
+    "expected_first_rejecting_gate": "edge.scope.purposes",
+    "expected_rule": "A7:0",
+    "operator": "authority_scope_purposes_widened",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Change first-edge currency away from the root currency.",
+    "expected_first_rejecting_gate": "edge.scope.currency",
+    "expected_rule": "A8:0",
+    "operator": "authority_currency_widened",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Raise first-edge amount_max above the root maximum.",
+    "expected_first_rejecting_gate": "edge.scope.amount_max",
+    "expected_rule": "A9:0",
+    "operator": "authority_amount_max_widened",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Change the action subject while preserving the terminal role.",
+    "expected_first_rejecting_gate": "action.subject_role",
+    "expected_rule": "A10",
+    "operator": "authority_action_subject_changed",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Set action operation outside the terminal grant.",
+    "expected_first_rejecting_gate": "action.operation",
+    "expected_rule": "A11",
+    "operator": "authority_action_operation_out_of_scope",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Set action resource outside the terminal grant.",
+    "expected_first_rejecting_gate": "action.resource",
+    "expected_rule": "A12",
+    "operator": "authority_action_resource_out_of_scope",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Set action tool outside the terminal grant.",
+    "expected_first_rejecting_gate": "action.tool",
+    "expected_rule": "A13",
+    "operator": "authority_action_tool_out_of_scope",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Set action audience outside the terminal grant.",
+    "expected_first_rejecting_gate": "action.audience",
+    "expected_rule": "A14",
+    "operator": "authority_action_audience_out_of_scope",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Set action purpose outside the terminal grant.",
+    "expected_first_rejecting_gate": "action.purpose",
+    "expected_rule": "A15",
+    "operator": "authority_action_purpose_out_of_scope",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Raise action amount above the terminal grant.",
+    "expected_first_rejecting_gate": "action.amount_currency",
+    "expected_rule": "A16",
+    "operator": "authority_action_amount_exceeded",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Invalidate the native effect evidence flag.",
+    "expected_first_rejecting_gate": "effect.native_validity",
+    "expected_rule": "A17",
+    "operator": "authority_native_effect_invalid",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Change the receipt effect time.",
+    "expected_first_rejecting_gate": "effect.time_binding",
+    "expected_rule": "A18",
+    "operator": "authority_effect_time_changed",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Change one field in the receipt-bound action.",
+    "expected_first_rejecting_gate": "effect.action_binding",
+    "expected_rule": "A19",
+    "operator": "authority_receipt_action_changed",
+    "single_fault": true,
+    "target_layer": "authority"
+  },
+  {
+    "description": "Change the profile while retaining the required digest.",
+    "expected_first_rejecting_gate": "measurement.profile",
+    "expected_rule": "M1",
+    "operator": "measurement_profile_changed",
+    "single_fault": true,
+    "target_layer": "measurement"
+  },
+  {
+    "description": "Select the fixed dataset whose point estimate is below 0.75.",
+    "expected_first_rejecting_gate": "measurement.point",
+    "expected_rule": "M2",
+    "operator": "measurement_point_below_threshold",
+    "single_fault": true,
+    "target_layer": "measurement"
+  },
+  {
+    "description": "Select the fixed dataset whose point passes but LCB fails 0.75.",
+    "expected_first_rejecting_gate": "measurement.confidence",
+    "expected_rule": "M3",
+    "operator": "measurement_lcb_below_threshold",
+    "single_fault": true,
+    "target_layer": "measurement"
+  }
+]

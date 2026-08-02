@@ -1,0 +1,1143 @@
+{
+  "case_count": 8,
+  "cases": [
+    {
+      "action": {
+        "amount": 100,
+        "audience": "ledger-service",
+        "currency": "EUR",
+        "operation": "READ",
+        "purpose": "audit",
+        "resource": "invoice-123",
+        "role": "executor",
+        "subject": "agent-2",
+        "tool": "ledger.read"
+      },
+      "case_id": "NATIVE-001",
+      "delegations": [
+        {
+          "delegation_id": "delegation-1",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "owner",
+          "grant": {
+            "amount_max": 1000,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": true,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "principal-anton",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:abababababababababababababababababababababababababababababababab",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "S+XZJ/XLyFCtdpHeP6ucKmBSfe78wDGe1R8awzPNInw5FDH3QkDPePEjc816qIu+3bLLOaIeEE6XWUqavrmPBA==",
+          "status": "active",
+          "subject": "agent-1",
+          "to_role": "planner"
+        },
+        {
+          "delegation_id": "delegation-2",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "planner",
+          "grant": {
+            "amount_max": 500,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": false,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "agent-1",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:9e4337a18d904c08e0fe9e1b923b5e2b6ca55e0dc7ebead5127e792b4dd7803c",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "jGByUhmLS6FKbDkZRN0nKP+TuqrmUK+fH4YOeaMqTgAOx6a0JfPV5oHX1gER0Pb/SqPpMYqJLxsIPBybDKUsCg==",
+          "status": "active",
+          "subject": "agent-2",
+          "to_role": "executor"
+        }
+      ],
+      "receipt": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "executor",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "authority_chain_digest": "sha256:3e95e9505d5115a8eb629ab9ebfd3b0548a00cc5950b0ff07a4568419ca01b41",
+        "effect_time": "2026-07-27T10:00:00Z",
+        "issuer": "agent-2",
+        "profile": "tyche-native-effect-v0.1",
+        "receipt_id": "effect-1",
+        "signature": "vXXtKo/wtSjMQiWI/sTwz3plyOkmQUl7YJbiMT9bcSXrbS97HvGpIOKMaf+3bGfMirGoTxRZb40gaUUc0QiLDw=="
+      },
+      "shared": {
+        "allowed_role_transitions": {
+          "executor": [],
+          "owner": [
+            "planner"
+          ],
+          "planner": [
+            "executor"
+          ]
+        },
+        "effect_time": "2026-07-27T10:00:00Z",
+        "profile": "tyche-native-authority-context-v0.1",
+        "public_keys_ed25519_raw_b64": {
+          "agent-1": "UVkMyjVGX/fnu09lZl++cw2ezhmGQ89O9MIyxOWz+vw=",
+          "agent-2": "njVdqO278T4wsG56XlbYkVRNYJetGkpURogROLGcjHU=",
+          "principal-anton": "Ol6s0IdwtVdx9VnBDEWWH5HsEn7QmA72AVsBLdUrDbg="
+        },
+        "root_anchor_digest": "sha256:abababababababababababababababababababababababababababababababab",
+        "root_principal": "principal-anton",
+        "root_role": "owner",
+        "root_scope": {
+          "amount_max": 1000,
+          "audiences": [
+            "ledger-service"
+          ],
+          "currency": "EUR",
+          "delegable": true,
+          "operations": [
+            "READ"
+          ],
+          "purposes": [
+            "audit"
+          ],
+          "resources": [
+            "invoice-123"
+          ],
+          "tools": [
+            "ledger.read"
+          ]
+        }
+      }
+    },
+    {
+      "action": {
+        "amount": 100,
+        "audience": "ledger-service",
+        "currency": "EUR",
+        "operation": "READ",
+        "purpose": "audit",
+        "resource": "invoice-123",
+        "role": "executor",
+        "subject": "agent-2",
+        "tool": "ledger.read"
+      },
+      "case_id": "NATIVE-002",
+      "delegations": [
+        {
+          "delegation_id": "delegation-1",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "owner",
+          "grant": {
+            "amount_max": 1000,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": true,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "principal-anton",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:abababababababababababababababababababababababababababababababab",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "S+XZJ/XLyFCtdpHeP6ucKmBSfe78wDGe1R8awzPNInw5FDH3QkDPePEjc816qIu+3bLLOaIeEE6XWUqavrmPBA==",
+          "status": "active",
+          "subject": "agent-1",
+          "to_role": "planner"
+        },
+        {
+          "delegation_id": "delegation-2",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "planner",
+          "grant": {
+            "amount_max": 500,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": false,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "agent-1",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:9e4337a18d904c08e0fe9e1b923b5e2b6ca55e0dc7ebead5127e792b4dd7803c",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "jWByUhmLS6FKbDkZRN0nKP+TuqrmUK+fH4YOeaMqTgAOx6a0JfPV5oHX1gER0Pb/SqPpMYqJLxsIPBybDKUsCg==",
+          "status": "active",
+          "subject": "agent-2",
+          "to_role": "executor"
+        }
+      ],
+      "receipt": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "executor",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "authority_chain_digest": "sha256:3e95e9505d5115a8eb629ab9ebfd3b0548a00cc5950b0ff07a4568419ca01b41",
+        "effect_time": "2026-07-27T10:00:00Z",
+        "issuer": "agent-2",
+        "profile": "tyche-native-effect-v0.1",
+        "receipt_id": "effect-1",
+        "signature": "vXXtKo/wtSjMQiWI/sTwz3plyOkmQUl7YJbiMT9bcSXrbS97HvGpIOKMaf+3bGfMirGoTxRZb40gaUUc0QiLDw=="
+      },
+      "shared": {
+        "allowed_role_transitions": {
+          "executor": [],
+          "owner": [
+            "planner"
+          ],
+          "planner": [
+            "executor"
+          ]
+        },
+        "effect_time": "2026-07-27T10:00:00Z",
+        "profile": "tyche-native-authority-context-v0.1",
+        "public_keys_ed25519_raw_b64": {
+          "agent-1": "UVkMyjVGX/fnu09lZl++cw2ezhmGQ89O9MIyxOWz+vw=",
+          "agent-2": "njVdqO278T4wsG56XlbYkVRNYJetGkpURogROLGcjHU=",
+          "principal-anton": "Ol6s0IdwtVdx9VnBDEWWH5HsEn7QmA72AVsBLdUrDbg="
+        },
+        "root_anchor_digest": "sha256:abababababababababababababababababababababababababababababababab",
+        "root_principal": "principal-anton",
+        "root_role": "owner",
+        "root_scope": {
+          "amount_max": 1000,
+          "audiences": [
+            "ledger-service"
+          ],
+          "currency": "EUR",
+          "delegable": true,
+          "operations": [
+            "READ"
+          ],
+          "purposes": [
+            "audit"
+          ],
+          "resources": [
+            "invoice-123"
+          ],
+          "tools": [
+            "ledger.read"
+          ]
+        }
+      }
+    },
+    {
+      "action": {
+        "amount": 100,
+        "audience": "ledger-service",
+        "currency": "EUR",
+        "operation": "READ",
+        "purpose": "audit",
+        "resource": "invoice-123",
+        "role": "executor",
+        "subject": "agent-2",
+        "tool": "ledger.read"
+      },
+      "case_id": "NATIVE-003",
+      "delegations": [
+        {
+          "delegation_id": "delegation-1",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "owner",
+          "grant": {
+            "amount_max": 1000,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": true,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "principal-anton",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:abababababababababababababababababababababababababababababababab",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "S+XZJ/XLyFCtdpHeP6ucKmBSfe78wDGe1R8awzPNInw5FDH3QkDPePEjc816qIu+3bLLOaIeEE6XWUqavrmPBA==",
+          "status": "active",
+          "subject": "agent-1",
+          "to_role": "planner"
+        },
+        {
+          "delegation_id": "delegation-2",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "planner",
+          "grant": {
+            "amount_max": 500,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": false,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "agent-1",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:9e4337a18d904c08e0fe9e1b923b5e2b6ca55e0dc7ebead5127e792b4dd7803c",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "jGByUhmLS6FKbDkZRN0nKP+TuqrmUK+fH4YOeaMqTgAOx6a0JfPV5oHX1gER0Pb/SqPpMYqJLxsIPBybDKUsCg==",
+          "status": "active",
+          "subject": "agent-2",
+          "to_role": "executor"
+        }
+      ],
+      "receipt": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "executor",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "authority_chain_digest": "sha256:3e95e9505d5115a8eb629ab9ebfd3b0548a00cc5950b0ff07a4568419ca01b41",
+        "effect_time": "2026-07-27T10:00:00Z",
+        "issuer": "agent-2",
+        "profile": "tyche-native-effect-v0.1",
+        "receipt_id": "effect-1",
+        "signature": "vHXtKo/wtSjMQiWI/sTwz3plyOkmQUl7YJbiMT9bcSXrbS97HvGpIOKMaf+3bGfMirGoTxRZb40gaUUc0QiLDw=="
+      },
+      "shared": {
+        "allowed_role_transitions": {
+          "executor": [],
+          "owner": [
+            "planner"
+          ],
+          "planner": [
+            "executor"
+          ]
+        },
+        "effect_time": "2026-07-27T10:00:00Z",
+        "profile": "tyche-native-authority-context-v0.1",
+        "public_keys_ed25519_raw_b64": {
+          "agent-1": "UVkMyjVGX/fnu09lZl++cw2ezhmGQ89O9MIyxOWz+vw=",
+          "agent-2": "njVdqO278T4wsG56XlbYkVRNYJetGkpURogROLGcjHU=",
+          "principal-anton": "Ol6s0IdwtVdx9VnBDEWWH5HsEn7QmA72AVsBLdUrDbg="
+        },
+        "root_anchor_digest": "sha256:abababababababababababababababababababababababababababababababab",
+        "root_principal": "principal-anton",
+        "root_role": "owner",
+        "root_scope": {
+          "amount_max": 1000,
+          "audiences": [
+            "ledger-service"
+          ],
+          "currency": "EUR",
+          "delegable": true,
+          "operations": [
+            "READ"
+          ],
+          "purposes": [
+            "audit"
+          ],
+          "resources": [
+            "invoice-123"
+          ],
+          "tools": [
+            "ledger.read"
+          ]
+        }
+      }
+    },
+    {
+      "action": {
+        "amount": 100,
+        "audience": "ledger-service",
+        "currency": "EUR",
+        "operation": "READ",
+        "purpose": "audit",
+        "resource": "invoice-123",
+        "role": "executor",
+        "subject": "agent-2",
+        "tool": "ledger.read"
+      },
+      "case_id": "NATIVE-004",
+      "delegations": [
+        {
+          "delegation_id": "delegation-1",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "owner",
+          "grant": {
+            "amount_max": 1000,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": true,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "principal-anton",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:abababababababababababababababababababababababababababababababab",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "S+XZJ/XLyFCtdpHeP6ucKmBSfe78wDGe1R8awzPNInw5FDH3QkDPePEjc816qIu+3bLLOaIeEE6XWUqavrmPBA==",
+          "status": "active",
+          "subject": "agent-1",
+          "to_role": "planner"
+        },
+        {
+          "delegation_id": "delegation-2",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "planner",
+          "grant": {
+            "amount_max": 500,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": false,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "agent-1",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:9e4337a18d904c08e0fe9e1b923b5e2b6ca55e0dc7ebead5127e792b4dd7803c",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "jGByUhmLS6FKbDkZRN0nKP+TuqrmUK+fH4YOeaMqTgAOx6a0JfPV5oHX1gER0Pb/SqPpMYqJLxsIPBybDKUsCg==",
+          "status": "active",
+          "subject": "agent-2",
+          "to_role": "executor"
+        }
+      ],
+      "receipt": {
+        "action": {
+          "amount": 99,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "executor",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "authority_chain_digest": "sha256:3e95e9505d5115a8eb629ab9ebfd3b0548a00cc5950b0ff07a4568419ca01b41",
+        "effect_time": "2026-07-27T10:00:00Z",
+        "issuer": "agent-2",
+        "profile": "tyche-native-effect-v0.1",
+        "receipt_id": "effect-1",
+        "signature": "IFy/8x9orqQJ+XevJXaEYOylzzaN7KTS3zcFvgWplham5TWHPe+gHQg6U5DF8TtSAxawhLsmKfCp7Q9KpFVtAA=="
+      },
+      "shared": {
+        "allowed_role_transitions": {
+          "executor": [],
+          "owner": [
+            "planner"
+          ],
+          "planner": [
+            "executor"
+          ]
+        },
+        "effect_time": "2026-07-27T10:00:00Z",
+        "profile": "tyche-native-authority-context-v0.1",
+        "public_keys_ed25519_raw_b64": {
+          "agent-1": "UVkMyjVGX/fnu09lZl++cw2ezhmGQ89O9MIyxOWz+vw=",
+          "agent-2": "njVdqO278T4wsG56XlbYkVRNYJetGkpURogROLGcjHU=",
+          "principal-anton": "Ol6s0IdwtVdx9VnBDEWWH5HsEn7QmA72AVsBLdUrDbg="
+        },
+        "root_anchor_digest": "sha256:abababababababababababababababababababababababababababababababab",
+        "root_principal": "principal-anton",
+        "root_role": "owner",
+        "root_scope": {
+          "amount_max": 1000,
+          "audiences": [
+            "ledger-service"
+          ],
+          "currency": "EUR",
+          "delegable": true,
+          "operations": [
+            "READ"
+          ],
+          "purposes": [
+            "audit"
+          ],
+          "resources": [
+            "invoice-123"
+          ],
+          "tools": [
+            "ledger.read"
+          ]
+        }
+      }
+    },
+    {
+      "action": {
+        "amount": 100,
+        "audience": "ledger-service",
+        "currency": "EUR",
+        "operation": "READ",
+        "purpose": "audit",
+        "resource": "invoice-123",
+        "role": "executor",
+        "subject": "agent-2",
+        "tool": "ledger.read"
+      },
+      "case_id": "NATIVE-005",
+      "delegations": [
+        {
+          "delegation_id": "delegation-1",
+          "expires_at": "2026-07-26T00:00:00Z",
+          "from_role": "owner",
+          "grant": {
+            "amount_max": 1000,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": true,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "principal-anton",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:abababababababababababababababababababababababababababababababab",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "EMonyWxsDsfAa+D9MlEClzHLcUjdKLaQYAZK+ZGRpFFK8BE0wod7QJ2AntISb+6QN4qXbXG/pOqgPXlDB8neAw==",
+          "status": "active",
+          "subject": "agent-1",
+          "to_role": "planner"
+        },
+        {
+          "delegation_id": "delegation-2",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "planner",
+          "grant": {
+            "amount_max": 500,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": false,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "agent-1",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:9e4337a18d904c08e0fe9e1b923b5e2b6ca55e0dc7ebead5127e792b4dd7803c",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "jGByUhmLS6FKbDkZRN0nKP+TuqrmUK+fH4YOeaMqTgAOx6a0JfPV5oHX1gER0Pb/SqPpMYqJLxsIPBybDKUsCg==",
+          "status": "active",
+          "subject": "agent-2",
+          "to_role": "executor"
+        }
+      ],
+      "receipt": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "executor",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "authority_chain_digest": "sha256:3e95e9505d5115a8eb629ab9ebfd3b0548a00cc5950b0ff07a4568419ca01b41",
+        "effect_time": "2026-07-27T10:00:00Z",
+        "issuer": "agent-2",
+        "profile": "tyche-native-effect-v0.1",
+        "receipt_id": "effect-1",
+        "signature": "vXXtKo/wtSjMQiWI/sTwz3plyOkmQUl7YJbiMT9bcSXrbS97HvGpIOKMaf+3bGfMirGoTxRZb40gaUUc0QiLDw=="
+      },
+      "shared": {
+        "allowed_role_transitions": {
+          "executor": [],
+          "owner": [
+            "planner"
+          ],
+          "planner": [
+            "executor"
+          ]
+        },
+        "effect_time": "2026-07-27T10:00:00Z",
+        "profile": "tyche-native-authority-context-v0.1",
+        "public_keys_ed25519_raw_b64": {
+          "agent-1": "UVkMyjVGX/fnu09lZl++cw2ezhmGQ89O9MIyxOWz+vw=",
+          "agent-2": "njVdqO278T4wsG56XlbYkVRNYJetGkpURogROLGcjHU=",
+          "principal-anton": "Ol6s0IdwtVdx9VnBDEWWH5HsEn7QmA72AVsBLdUrDbg="
+        },
+        "root_anchor_digest": "sha256:abababababababababababababababababababababababababababababababab",
+        "root_principal": "principal-anton",
+        "root_role": "owner",
+        "root_scope": {
+          "amount_max": 1000,
+          "audiences": [
+            "ledger-service"
+          ],
+          "currency": "EUR",
+          "delegable": true,
+          "operations": [
+            "READ"
+          ],
+          "purposes": [
+            "audit"
+          ],
+          "resources": [
+            "invoice-123"
+          ],
+          "tools": [
+            "ledger.read"
+          ]
+        }
+      }
+    },
+    {
+      "action": {
+        "amount": 100,
+        "audience": "ledger-service",
+        "currency": "EUR",
+        "operation": "READ",
+        "purpose": "audit",
+        "resource": "invoice-123",
+        "role": "executor",
+        "subject": "agent-2",
+        "tool": "ledger.read"
+      },
+      "case_id": "NATIVE-006",
+      "delegations": [
+        {
+          "delegation_id": "delegation-1",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "owner",
+          "grant": {
+            "amount_max": 1000,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": true,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "principal-anton",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:abababababababababababababababababababababababababababababababab",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "S+XZJ/XLyFCtdpHeP6ucKmBSfe78wDGe1R8awzPNInw5FDH3QkDPePEjc816qIu+3bLLOaIeEE6XWUqavrmPBA==",
+          "status": "active",
+          "subject": "agent-1",
+          "to_role": "planner"
+        },
+        {
+          "delegation_id": "delegation-2",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "planner",
+          "grant": {
+            "amount_max": 500,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": false,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "principal-anton",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:9e4337a18d904c08e0fe9e1b923b5e2b6ca55e0dc7ebead5127e792b4dd7803c",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "pZQBYP1p5eOpolEzucxpbmdS9BTn1vs2gRuUxWUIGZGiQEXur6L+H64RGL2RTR3K+4LA3CAfbsVmoUxO8z5KDg==",
+          "status": "active",
+          "subject": "agent-2",
+          "to_role": "executor"
+        }
+      ],
+      "receipt": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "executor",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "authority_chain_digest": "sha256:3e95e9505d5115a8eb629ab9ebfd3b0548a00cc5950b0ff07a4568419ca01b41",
+        "effect_time": "2026-07-27T10:00:00Z",
+        "issuer": "agent-2",
+        "profile": "tyche-native-effect-v0.1",
+        "receipt_id": "effect-1",
+        "signature": "vXXtKo/wtSjMQiWI/sTwz3plyOkmQUl7YJbiMT9bcSXrbS97HvGpIOKMaf+3bGfMirGoTxRZb40gaUUc0QiLDw=="
+      },
+      "shared": {
+        "allowed_role_transitions": {
+          "executor": [],
+          "owner": [
+            "planner"
+          ],
+          "planner": [
+            "executor"
+          ]
+        },
+        "effect_time": "2026-07-27T10:00:00Z",
+        "profile": "tyche-native-authority-context-v0.1",
+        "public_keys_ed25519_raw_b64": {
+          "agent-1": "UVkMyjVGX/fnu09lZl++cw2ezhmGQ89O9MIyxOWz+vw=",
+          "agent-2": "njVdqO278T4wsG56XlbYkVRNYJetGkpURogROLGcjHU=",
+          "principal-anton": "Ol6s0IdwtVdx9VnBDEWWH5HsEn7QmA72AVsBLdUrDbg="
+        },
+        "root_anchor_digest": "sha256:abababababababababababababababababababababababababababababababab",
+        "root_principal": "principal-anton",
+        "root_role": "owner",
+        "root_scope": {
+          "amount_max": 1000,
+          "audiences": [
+            "ledger-service"
+          ],
+          "currency": "EUR",
+          "delegable": true,
+          "operations": [
+            "READ"
+          ],
+          "purposes": [
+            "audit"
+          ],
+          "resources": [
+            "invoice-123"
+          ],
+          "tools": [
+            "ledger.read"
+          ]
+        }
+      }
+    },
+    {
+      "action": {
+        "amount": 100,
+        "audience": "ledger-service",
+        "currency": "EUR",
+        "operation": "READ",
+        "purpose": "audit",
+        "resource": "invoice-123",
+        "role": "executor",
+        "subject": "agent-2",
+        "tool": "ledger.read"
+      },
+      "case_id": "NATIVE-007",
+      "delegations": [
+        {
+          "delegation_id": "delegation-1",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "owner",
+          "grant": {
+            "amount_max": 1000,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": true,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "principal-anton",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:abababababababababababababababababababababababababababababababab",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "S+XZJ/XLyFCtdpHeP6ucKmBSfe78wDGe1R8awzPNInw5FDH3QkDPePEjc816qIu+3bLLOaIeEE6XWUqavrmPBA==",
+          "status": "active",
+          "subject": "agent-1",
+          "to_role": "planner"
+        },
+        {
+          "delegation_id": "delegation-2",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "planner",
+          "grant": {
+            "amount_max": 500,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": false,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123",
+              "invoice-999"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "agent-1",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:9e4337a18d904c08e0fe9e1b923b5e2b6ca55e0dc7ebead5127e792b4dd7803c",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "L5dqYqxkMlz/RII85xRydoRKYV35NBhgPXeuqlvVyLEife7Pcvv3b7bYybluxo/E8l32qiV5d6c+OF9RhmcwBw==",
+          "status": "active",
+          "subject": "agent-2",
+          "to_role": "executor"
+        }
+      ],
+      "receipt": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "executor",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "authority_chain_digest": "sha256:3e95e9505d5115a8eb629ab9ebfd3b0548a00cc5950b0ff07a4568419ca01b41",
+        "effect_time": "2026-07-27T10:00:00Z",
+        "issuer": "agent-2",
+        "profile": "tyche-native-effect-v0.1",
+        "receipt_id": "effect-1",
+        "signature": "vXXtKo/wtSjMQiWI/sTwz3plyOkmQUl7YJbiMT9bcSXrbS97HvGpIOKMaf+3bGfMirGoTxRZb40gaUUc0QiLDw=="
+      },
+      "shared": {
+        "allowed_role_transitions": {
+          "executor": [],
+          "owner": [
+            "planner"
+          ],
+          "planner": [
+            "executor"
+          ]
+        },
+        "effect_time": "2026-07-27T10:00:00Z",
+        "profile": "tyche-native-authority-context-v0.1",
+        "public_keys_ed25519_raw_b64": {
+          "agent-1": "UVkMyjVGX/fnu09lZl++cw2ezhmGQ89O9MIyxOWz+vw=",
+          "agent-2": "njVdqO278T4wsG56XlbYkVRNYJetGkpURogROLGcjHU=",
+          "principal-anton": "Ol6s0IdwtVdx9VnBDEWWH5HsEn7QmA72AVsBLdUrDbg="
+        },
+        "root_anchor_digest": "sha256:abababababababababababababababababababababababababababababababab",
+        "root_principal": "principal-anton",
+        "root_role": "owner",
+        "root_scope": {
+          "amount_max": 1000,
+          "audiences": [
+            "ledger-service"
+          ],
+          "currency": "EUR",
+          "delegable": true,
+          "operations": [
+            "READ"
+          ],
+          "purposes": [
+            "audit"
+          ],
+          "resources": [
+            "invoice-123"
+          ],
+          "tools": [
+            "ledger.read"
+          ]
+        }
+      }
+    },
+    {
+      "action": {
+        "amount": 100,
+        "audience": "ledger-service",
+        "currency": "EUR",
+        "operation": "READ",
+        "purpose": "audit",
+        "resource": "invoice-123",
+        "role": "executor",
+        "subject": "agent-2",
+        "tool": "ledger.read"
+      },
+      "case_id": "NATIVE-008",
+      "delegations": [
+        {
+          "delegation_id": "delegation-1",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "owner",
+          "grant": {
+            "amount_max": 1000,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": true,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "principal-anton",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:abababababababababababababababababababababababababababababababab",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "S+XZJ/XLyFCtdpHeP6ucKmBSfe78wDGe1R8awzPNInw5FDH3QkDPePEjc816qIu+3bLLOaIeEE6XWUqavrmPBA==",
+          "status": "active",
+          "subject": "agent-1",
+          "to_role": "planner"
+        },
+        {
+          "delegation_id": "delegation-2",
+          "expires_at": "2026-07-28T00:00:00Z",
+          "from_role": "planner",
+          "grant": {
+            "amount_max": 500,
+            "audiences": [
+              "ledger-service"
+            ],
+            "currency": "EUR",
+            "delegable": false,
+            "operations": [
+              "READ"
+            ],
+            "purposes": [
+              "audit"
+            ],
+            "resources": [
+              "invoice-123"
+            ],
+            "tools": [
+              "ledger.read"
+            ]
+          },
+          "issuer": "agent-1",
+          "not_before": "2026-07-27T00:00:00Z",
+          "parent_digest": "sha256:9e4337a18d904c08e0fe9e1b923b5e2b6ca55e0dc7ebead5127e792b4dd7803c",
+          "profile": "tyche-native-delegation-v0.1",
+          "signature": "jGByUhmLS6FKbDkZRN0nKP+TuqrmUK+fH4YOeaMqTgAOx6a0JfPV5oHX1gER0Pb/SqPpMYqJLxsIPBybDKUsCg==",
+          "status": "active",
+          "subject": "agent-2",
+          "to_role": "executor"
+        }
+      ],
+      "receipt": {
+        "action": {
+          "amount": 100,
+          "audience": "ledger-service",
+          "currency": "EUR",
+          "operation": "READ",
+          "purpose": "audit",
+          "resource": "invoice-123",
+          "role": "executor",
+          "subject": "agent-2",
+          "tool": "ledger.read"
+        },
+        "authority_chain_digest": "sha256:3e95e9505d5115a8eb629ab9ebfd3b0548a00cc5950b0ff07a4568419ca01b41",
+        "effect_time": "2026-07-27T10:00:01Z",
+        "issuer": "agent-2",
+        "profile": "tyche-native-effect-v0.1",
+        "receipt_id": "effect-1",
+        "signature": "uqV7tOZQiYS5mBcHlxpEfu/EhmarJZulR1/7A2dccDRHGHnWUFqE9PBTWZ0kSmz5FqStZIfXzRlu83MCytxoDQ=="
+      },
+      "shared": {
+        "allowed_role_transitions": {
+          "executor": [],
+          "owner": [
+            "planner"
+          ],
+          "planner": [
+            "executor"
+          ]
+        },
+        "effect_time": "2026-07-27T10:00:00Z",
+        "profile": "tyche-native-authority-context-v0.1",
+        "public_keys_ed25519_raw_b64": {
+          "agent-1": "UVkMyjVGX/fnu09lZl++cw2ezhmGQ89O9MIyxOWz+vw=",
+          "agent-2": "njVdqO278T4wsG56XlbYkVRNYJetGkpURogROLGcjHU=",
+          "principal-anton": "Ol6s0IdwtVdx9VnBDEWWH5HsEn7QmA72AVsBLdUrDbg="
+        },
+        "root_anchor_digest": "sha256:abababababababababababababababababababababababababababababababab",
+        "root_principal": "principal-anton",
+        "root_role": "owner",
+        "root_scope": {
+          "amount_max": 1000,
+          "audiences": [
+            "ledger-service"
+          ],
+          "currency": "EUR",
+          "delegable": true,
+          "operations": [
+            "READ"
+          ],
+          "purposes": [
+            "audit"
+          ],
+          "resources": [
+            "invoice-123"
+          ],
+          "tools": [
+            "ledger.read"
+          ]
+        }
+      }
+    }
+  ],
+  "profile": "tyche-native-signed-authority-fixtures-v0.1"
+}

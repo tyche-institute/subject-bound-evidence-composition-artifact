@@ -1,0 +1,16 @@
+{
+  "artifact_id": "tyche-native-signed-authority-fixtures-v0.1",
+  "created_at": "2026-07-27T09:39:32.790042+00:00",
+  "files": {
+    "README.md": "16207497f0c23ae9862465c22981e30882bf6dcb46fd8ba3a0f6c4953244767d",
+    "actual-results.json": "2092fc39b7a83c9e31d8b795bfc0a9012de407e51846487ffb7c578e9ed219fe",
+    "build_fixtures.py": "a7e1d28d72f3a72dbd5da7b6c1143b99406f462c462a68d485740c8563e777d4",
+    "compare_results.py": "c0a388fe1f0b14f26c0f17cd7f119bac21c39015361b5689fa1dbeaede320302",
+    "comparison-results.json": "ee734a707a2e0bf2b8b4b7825b3451671113aae2430c5438509b8bb142735574",
+    "expected-results.json": "18a50f79f84a59efb3db212d7046978c943a7425bb098ca188b79b4a5af04239",
+    "fixtures.json": "09c868dc0efd4cad69f4c0cc569ca35f07d800cf0fabd745665a503e846583c8",
+    "profile.schema.json": "a1db2193c84916023812404e068f93e28fafff2b1f9102558357ece0121c41b9",
+    "verify_fixtures.py": "1b465ea38f3e28fcf76adee46bc4a3f62dee8ac9fa205b6a084809f25bceeae1"
+  },
+  "private_keys_persisted": false
+}

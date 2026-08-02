@@ -2,111 +2,60 @@
 title: "Subject-Bound Evidence Composition for Delegated AI Actions"
 subtitle: "Executable Indistinguishability Witnesses and Commit-Time Revocation"
 author: "Anton Sokolov — Tyche Institute, Tallinn, Estonia — ORCID 0000-0003-2452-7096"
-date: "2026-07-30"
-status: "JAIR submission-candidate evidence update r7; no journal submission has been sent"
+date: "2026-07-31"
+status: "JAIR submission candidate (r8); no journal submission has been sent"
 ---
 
 ## Abstract
 
-Delegated AI workflows may contain individually valid policy documents,
+Delegated AI workflows can contain individually valid policy documents,
 signed evidence, runtime-state results, authorization paths, measurement
-scores, and effect receipts while still lacking an end-to-end basis for one
-action. We study a typed, non-compensable composition rule: exact policy
-state, evidence integrity/freshness, acceptable runtime state,
-authority-to-effect validity, measurement support, and the implemented
-cross-artifact effect/resource/report-time/profile binding must all pass. The
-scientific spine is a systems proposition: local validity is insufficient
-whenever a required global relation is not observable from local verdicts;
-that relation must be exposed to the composer.
+scores, and effect receipts and still provide no end-to-end basis for the one
+action they are meant to authorize. We show constructively that this failure
+class is representable, localizable, and repairable at the composition
+boundary. The study evaluates a typed, non-compensable decision rule
+$\operatorname{Allow}(x)=P\land E\land S\land A\land M\land B$ over five
+artifact predicates — exact policy state, evidence integrity/freshness,
+runtime state, authority-to-effect validity, and measurement support — plus an
+explicit cross-artifact binding stage $B$ over the implemented effect,
+resource, report-time, and measurement-profile coordinates.
 
-Three laboratories execute the core rule. A signed Policy-Version × Evidence
-Replay corpus covers 16 vectors and isolates version, freshness, digest, and
-signature gates. A SAFE-metric metamorphic suite exercises arithmetic,
-geometric, RMS, and TOPSIS integration; severity direction; perturbations;
-bootstrap uncertainty; overlap dependence; and reference-set poisoning. A
-frozen 104-transaction corpus joins these mechanisms with typed 1/2/4-hop
-authority paths, explicit canonical-action and signed reported-effect
-records, and a state layer whose source fixtures are structurally encoded.
-A native overlay re-evaluates that state predicate through transaction-bound
-TPM2 quotes without changing the other four layer results. The corpus fills
-every off-diagonal cell of the
-five-layer co-failure matrix and contains eight cross-layer counterexamples:
-all five local verifiers pass but the partial coordinate binding denies. The motivating
-WRITE-receipt/READ-authority mismatch is denied at `binding.effect`, while its
-matched all-valid control is allowed.
-
-The main verifier reproduces 104/104 typed tuples, but the
-composition-level oracle shares its rule module and is therefore analytic.
-The non-analytic execution check is 104/104 re-executed per-layer outcomes.
-Stored-versus-rederived subject records and relational re-composition are
-same-programme plumbing/transcription checks, not independent validation.
+A frozen 104-transaction corpus contains eight witnesses in which all five
+component verifiers pass and the composition still denies at a named binding
+gate, each paired with a matched all-valid lookalike that is allowed. The
+motivating case — a correctly signed receipt reporting a WRITE effect where
+the valid delegation path grants only READ — is denied at `binding.effect`.
 Against the strict rule, point-only measurement, four-of-five majority, and
 artifact-validity ablations produce 2, 31, and 48 false allows on the designed
-corpus. Stronger partial subject joins that bind effect/resource only, add
-profile, or add time still leave 3, 2, and 1 false allows, respectively.
-These are coverage counts, not population rates.
+corpus; the majority count decomposes exactly into 23 single-fault denials
+plus the 8 cross-layer denials. Partial subject bindings that omit time or
+profile coordinates leave 1--3 false allows. A SAFE-metric metamorphic suite
+separates aggregation, measurement-profile identity, reference-set choice, and
+bootstrap-confidence semantics that a scalar score omits.
 
-The runtime upgrades test the rule's boundary mechanisms at two evidence
-levels. The retained seven-case frozen-vector check is supplemented by 104
-transaction-bound TPM2 quotes under eight independently initialized
-software-TPM roots (four RSA, four ECC). Native appraisal reproduces the
-source state classes 104/104, rejects 64/64 predeclared evidence mutations,
-and preserves all 104 recomposed decisions; a separately compiled Java path
-matches all 104 classes/gates and all 64 mutation outcomes. A
-process-isolated revocation
-laboratory separates status and effect services behind a durable
-transactional log and executes 372 cases. Its atomic guard has 0 false allows
-and 0 false denies, all 96 disconnect/retry or kill/restart cases recover
-without a duplicate effect, and each incomplete profile still exposes
-counterexamples. A five-container extension adds two effect instances and a
-fault proxy: 540 signed responses reverify, four transport faults recover
-through the second instance, and no duplicate decision or effect key appears.
-A public EATF
-decision-path result transfers into the same first-decisive-state
-representation: all 21 rows preserve their native codes across TypeScript and
-Python. A separately implemented SQLite path matches all 125 crosswalk rows and detects
-all 46 class mutations and 46 leave-one-out gaps. Boolean scalarization maps
-498 unordered within-corpus pairs of
-distinct rejection-code types to the same value
-($\binom{16}{2}+\binom{28}{2}$). A label-isomorphic 104-case external packet
-removes the known mnemonic leaks, re-signs its objects under a packet-specific
-key, and preserves all typed labels 104/104; it remains undispatched and is
-not counted as evidence.
+Companion laboratories strengthen the evidence classes at the rule's two
+runtime boundaries. Native appraisal re-derives every state decision from 104
+transaction-bound TPM2 (Trusted Platform Module) quotes under eight fresh
+software-TPM roots, rejecting 64/64 predeclared mutations, and an identified
+virtual-machine host exposing a Microsoft vTPM independently verifies 104/104
+live quotes and rejects 64/64 mutations. A process-isolated revocation
+laboratory with a durable transactional log executes 372 cases: the atomic
+status-and-effect guard has zero safety errors and zero duplicate effects,
+all 96 disconnect/retry and kill/restart cases recover without duplicates,
+and every read-based profile exposes stored counterexamples. A typed
+crosswalk transfers a public two-language artifact-verifier result while
+preserving all native rejection codes (21/21 rows; a separate SQLite path
+reproduces 125/125 rows and detects 46/46 mutation and 46/46 omission
+changes). Two hosted repetitions reproduce the sealed four-lane contract on
+x86_64 and ARM64 job VMs.
 
-The evidence ceiling remains strict. The native state overlay uses software
-TPMs on one x86_64 host. The durable revocation races separate services and
-instances and survive process and transport faults. The primary local
-process/container experiments remain within one x86_64 host, and each hosted
-replay remains within one job-VM trust domain; all use centralized SQLite
-rather than multi-host performance or Internet-scale evidence.
-Two complete GitHub-hosted four-lane repetitions verify the same sealed
-capsule, apply one hash-recorded portability overlay, and run on separate job
-VMs reporting x86_64 and ARM64. Both architecture jobs satisfy 20/20 semantic
-assertions and both cross-architecture comparisons satisfy 11/11 assertions.
-These runs establish cross-architecture portability of the policy replay,
-composed corpus, typed transfer, and process-isolated durable-revocation
-contract—not of every laboratory in the archive. They do not establish
-physical-host identity or outside-operator independence. A further run on the
-configured `zeus2` target identifies a distinct Ubuntu 24.04 x86_64 Hyper-V
-VM/OS instance exposing a Microsoft vTPM. It satisfies the four-lane 20/20
-contract, verifies 104/104 live transaction-bound TPM2 quotes, rejects 64/64
-predeclared mutations, and leaves no new transient or persistent TPM handle.
-This is live vTPM evidence, not a discrete hardware-TPM or underlying
-physical-host attestation.
-
-The crosswalk ontology remains an author-defined analytic adapter; we claim
-executable code preservation and mutation sensitivity, not community semantic
-consensus or protocol interoperability. Likewise, the corpus labels are
-author-defined outputs of the declared reference specification; we claim
-cross-implementation agreement on designed fixtures, not human agreement or
-deployed prevalence. External human labels would extend construct and external
-validity but are not an omitted observation from the scoped experiment. The
-supported result is an executable
-counterexample family, typed decision model, and benchmark seed: individual
-artifact validity cannot substitute for composition over the implemented
-effect, resource, report-time, and measurement-profile coordinates. Atomic
-revocation status/effect commit is supported separately by the bounded live
-companion.
+All counts are coverage on author-designed synthetic fixtures, not
+deployed-system rates, and composition-level expected labels are analytic by
+construction; the supported claim is an executable benchmark and systems
+result — local Boolean validity cannot substitute for typed composition over
+the implemented subject coordinates, and revocation status and effect require
+one commit boundary — not production validity, hardware-rooted attestation,
+or interoperability.
 
 **Keywords:** delegated AI; autonomous agents; norm monitoring;
 authorization; policy provenance; measurement uncertainty; SAFE AI; evidence
@@ -145,11 +94,10 @@ required measurement profile; the evidence artifact carries the effect,
 resource, and issue time actually reported; the authority artifact carries
 the terminal narrowed scope and the interval in which the whole delegation
 path is valid; the measurement artifact carries the profile the appraisal was
-actually run under. A predicate over all four has no local home. The previous
-revision of this article asserted that a mismatch between the canonical
-action and the receipt's reported effect would surface as an authority or evidence
-failure. That statement was false, and the artifact proved it false: neither
-layer can see both sides of the comparison.
+actually run under. A predicate over all four has no local home. The
+component interfaces cannot force a mismatch between the canonical action
+and the receipt's reported effect to surface as an authority or evidence
+failure: neither layer can see both sides of the comparison.
 
 Local validity may coexist with global denial. For example, a signed but
 superseded policy can be authentic; a replayed receipt can retain a valid
@@ -157,17 +105,16 @@ signature; a point estimate can exceed a threshold while its lower
 confidence bound does not; and an evidence receipt can validly report a WRITE
 effect when the valid delegation path permits only READ.
 
-That last case is this article's worked example, and it is worked in both
-directions. In the corpus the previous revision shipped, the composed
-verifier **allowed** it: a correctly Ed25519-signed evidence object with
+That last case is the worked example, evaluated in both directions. Under a
+composition of the five scalar layer verdicts alone, the verifier **allows**
+it: a correctly Ed25519-signed evidence object with
 effect `ledger.write` on resource `invoice-999` and an unseen nonce,
 evaluated under a policy whose required effect is `ledger.read` against an
 `ALLOW` delegation path whose terminal grant carries only `ledger.read` on
 `invoice-123`, returned policy `PASS`, evidence `PASS`, state `PASS`,
 authority `ALLOW`, measurement `PASS`, verdict `ALLOW`, and first rejecting
-gate `verified`. The composition thesis was asserted, not implemented. The
-present revision implements it with an explicit binding stage, and the same
-transaction now returns binding result `EFFECT_MISMATCH`, verdict `DENY`,
+gate `verified`. With the explicit binding stage, the same transaction
+returns binding result `EFFECT_MISMATCH`, verdict `DENY`,
 and first rejecting gate `binding.effect` — with all five component
 verifiers still passing, and with a matched lookalike that differs only in
 the reported subject fields still allowed at gate `verified`. A standalone
@@ -193,6 +140,18 @@ the policy, evidence, authority, and measurement artifacts. The current $B$
 does not bind a state/workload subject or the other omitted coordinates listed
 in Section 4.1. The conjunction is commutative; the *evaluation* order is
 fixed separately and places $B$ last (Section 4).
+
+The contribution is deliberately artifact-first. Theorem 1 frames the
+problem as an information limitation and is proved in one line; the advance
+this article claims is the executable instantiation — a typed
+decision-transaction model, a frozen counterexample corpus with matched
+lookalike controls, ablation identities, native state evidence, an atomic
+revocation boundary, and cross-implementation, cross-architecture replays —
+for the runtime accountability layer that delegated-agent deployments
+currently lack. In AI terms, the object is the seam that norm monitoring
+[30] and multi-agent plan diagnosis [37] study at the level of norms and
+plans, approached here at the level of the evidence one delegated action
+carries.
 
 The work has three objectives:
 
@@ -237,6 +196,23 @@ represented in the same first-decisive-state form without discarding native
 rejection codes, and how much diagnostic distinction would a Boolean
 valid/invalid projection erase?
 
+### Threat model and adversary assumptions
+
+The laboratories model an adversary who can present, substitute, replay,
+tamper with, or withhold individual artifacts: policies (missing, stale,
+substituted, re-signed after tampering), evidence objects (tampered
+payloads, replayed nonces, mismatched subject fields), attestation-result
+objects and TPM2 quote material (mutated messages, signatures, Platform
+Configuration Register (PCR) blobs, challenges, bindings), delegation paths (broken lineage, expired edges,
+amplified scope), measurement fixtures (substituted profiles), and
+revocation timing (races between status reads, revocation, and effect
+commit). The adversary cannot break Ed25519 signatures, corrupt the shared
+composition-rule module, or alter frozen corpora without changing recorded
+hashes. Key compromise, side channels, denial of service, and supply-chain
+attacks on the toolchain are out of scope. The corpus instantiates this
+adversary by construction; no claim is made about attacker prevalence in
+deployed systems.
+
 ### Claim ceiling
 
 The study may report exact observations from frozen artifacts. It does not
@@ -250,8 +226,7 @@ claim:
 - production interoperability or legal compliance;
 - sufficiency of the proposed passport fields for every environment.
 
-Three further non-claims are added in this revision, each traceable to the
-internal review of 2026-07-27:
+Three additional boundaries apply:
 
 - external independence of the expected labels: all labels are
   author-written within this research programme, and the composition-level
@@ -261,30 +236,29 @@ internal review of 2026-07-27:
 - cryptographic attestation in the **source corpus**: its original state
   predicate is a structural appraisal of a corpus-supplied
   attestation-result object, with no TPM, no Veraison, and no verification of
-  any runtime. The r5 overlay is a separate replacement execution: it supplies
-  transaction-bound TPM2 evidence for all 104 state decisions and recomposes
+  any runtime. A separate 104-transaction companion supplies
+  transaction-bound TPM2 evidence for every state decision and recomposes
   the complete tuples, but remains software-TPM evidence on one host rather
   than attestation of a deployed workload;
 - real-world false-allow rates: every false-allow count in this article is
   a count on a designed corpus, a corpus-coverage statistic, and must not
   be read as an estimate of prevalence anywhere.
 
-A fourth is added for the binding stage introduced in this revision. The
-binding stage is a deterministic string-agreement and interval-containment
-condition over subject fields read out of corpus-supplied artifacts. It
+A separate boundary applies to the binding stage. It is a deterministic
+string-agreement and interval-containment condition over subject fields read
+out of corpus-supplied artifacts. It
 verifies no signature, takes no measurement, contacts no attestation service,
 and does not upgrade any corpus-supplied flag into a cryptographic fact. The
 denials it produces are denials on a designed corpus, and the claim it
 supports is representability and localization, not detection performance.
 
-The retained r4 companions and the r5 replacement experiments introduce
-three further ceilings:
+The companion experiments introduce three further ceilings:
 
-- the retained seven-case native companion is one frozen `swtpm` vector; the
-  r5 replacement covers all 104 transactions under eight fresh software-TPM
+- the seven-case native companion is one frozen `swtpm` vector; the
+  104-transaction companion uses eight fresh software-TPM
   roots, but neither experiment supplies a hardware root, live attested
   workload, manufacturer endorsement, or independent-host evidence;
-- the retained 276-case service is one-process loopback; the r5 replacement
+- the 276-case service is one-process loopback; the durable service
   separates status, effect, and contender processes with durable
   linearization and recovery, and a five-container extension adds two
   interchangeable effect instances plus a deterministic fault proxy. Both
@@ -322,13 +296,30 @@ from one research group, so they are related lines of work rather than two
 independent bounds on novelty; either alone suffices to bound any claim
 about delegation primitives.
 
+A second adjacent family binds tokens and assertions to their intended
+subject or audience inside one credential system. The confused-deputy
+problem [38] names the underlying failure; OAuth 2.0 mitigates it with
+resource indicators [39], rich authorization requests [40], and
+sender-constrained tokens [41], and SAML audience restriction, XACML
+condition machinery [28], W3C Verifiable Credentials [42], and SPIFFE
+workload identities [43] each bind an assertion to a scope, condition, or
+workload. General-purpose policy engines such as Open Policy Agent evaluate
+one policy over an assembled request context [44]. These mechanisms
+constrain one artifact or centralize one decision; none of them composes
+five independently verified artifact families while preserving each native
+typed verdict and a first-decisive-gate localization. A single policy
+engine evaluating the full request context could encode the binding
+predicate $B$ — but it would then *be* the composer this article studies,
+and it would still need the typed inputs, the subject projections, and the
+witness corpus evaluated here. The contribution is the typed interface and
+the executable evidence, not a claim that no engine could host the rule.
+
 The remaining experimental seam is the join from a valid authorization path
 to the canonical action and effect described by evidence. Our authority
 layer asks whether the terminal action remains entailed after delegation,
 freshness, status, scope, and binding checks — but it asks that question
 only of the objects inside its own case file. The join across artifacts
-belongs to the composition, and that is where this revision places it
-(Sections 4 and 5.4).
+belongs to the composition and is implemented there (Sections 4 and 5.4).
 
 ### 3.3 Policy versioning and change impact
 
@@ -362,9 +353,10 @@ measurement, and effect relations are joined.
 
 ### 3.5 Attestation and transparent evidence
 
-RATS separates Evidence, Verifier appraisal policy, reference values, and
-Attestation Results [14]. SCITT distinguishes signed statements,
-transparency registration, receipts, and later audit [15]. A2A and MCP
+Remote ATtestation procedureS (RATS) separates Evidence, Verifier
+appraisal policy, reference values, and Attestation Results [14]. Supply Chain Integrity, Transparency, and Trust (SCITT) distinguishes
+signed statements, transparency registration, receipts, and later audit
+[15]. A2A and MCP
 define agent interaction and tool-facing authorization contexts [16, 17].
 NIST's software and AI agent identity initiative identifies authorization,
 auditing, and non-repudiation as active infrastructure problems [18].
@@ -407,10 +399,13 @@ as the closest technical precedents.
 
 ### 3.7 Typed verifier states and concurrent commit
 
-The public first-party EATF Agent Evidence Package toolkit supplies a
-two-language artifact-verification example with an author-defined
-decision-path oracle and native first-failure codes in TypeScript and Python
-[33]. We use
+The public first-party EATF (Agent Trust Framework) toolkit supplies a
+two-language Action Evidence Package (AEP) verification example with an
+author-defined decision-path oracle and native first-failure codes in
+TypeScript and Python [33]. The toolkit is published under the historical
+expansion "Agent Evidence Package"; this article uses the framework's
+current canonical expansion, "Action Evidence Package", for the same object
+model, and cites the published artifact under its own recorded title. We use
 that result only to test representational transfer: its codes remain native
 and are crosswalked to a coarse shared ontology for analysis.
 
@@ -425,15 +420,12 @@ software-TPM vector [35].
 
 ## 4. Decision-Transaction Model
 
-The previous revision of this section advertised a record carrying fields
-named `canonical_action` and `observed_effect`. No such fields existed: a
-search of the shipped artifact returned zero occurrences of either name, and
-the composition consumed five scalar layer results and nothing else. Both are
-now real record fields, written by the corpus builder, re-derived by the
-verifier through the shared `composition_rule.subjects_of` extractor, and read
-by the binding stage. This checks serialization and plumbing, not independent
-subject extraction. What follows is the record that actually ships, field for
-field:
+The implemented record makes the cross-artifact subjects explicit through
+`canonical_action` and `observed_effect`. Both fields are written by the
+corpus builder, re-derived by the verifier through the shared
+`composition_rule.subjects_of` extractor, and read by the binding stage. This
+checks serialization and plumbing, not independent subject extraction. The
+record is:
 
 ```text
 DecisionTransaction {
@@ -552,7 +544,10 @@ receipt. The theorem applies when a required global relation is not observable
 through $v(x)$ and a matched/mismatched pair exists; it does not automatically
 establish every omitted field. The executable 104-case result establishes only
 the four implemented relations. We use “subject-bound” below only in that
-bounded sense.
+bounded sense. The implemented model additionally assumes a nonempty,
+single, linear delegation path: the terminal-grant projection reads the
+final edge of one path, no zero-hop fixture exists, and branching or
+concurrent delegation graphs are out of scope.
 
 **Theorem 1 (local-verdict indistinguishability).** Suppose there are a
 matched transaction $x^+$ and a mismatched transaction $x^-$ such that
@@ -581,10 +576,13 @@ deployment-frequency estimate.
 refinement is proper whenever a witness $x^-$ from Theorem 1 exists. This
 follows directly from $C=L\land B$.
 
-**Proposition 2 (failure of compensating composition).** For any critical
-predicate $q$ omitted by a compensating rule, a transaction with
-$q(x)=0$ and all counted predicates equal to one is accepted by that rule and
-denied by $C$. On this corpus the four-of-five false-allow count is an
+**Proposition 2 (failure of compensating composition).** Call a rule
+*compensating* if it is a monotone function of a subset of the predicates
+that can accept while at least one required predicate is false — for
+example, any $k$-of-$n$ threshold with $k<n$, or any rule that omits a
+predicate entirely. For any critical predicate $q$ omitted or outvoted by
+such a rule, a transaction with $q(x)=0$ and all counted predicates equal
+to one is accepted by that rule and denied by $C$. On this corpus the four-of-five false-allow count is an
 algebraic identity:
 
 $$
@@ -609,8 +607,10 @@ $$
 
 where the first six components are the policy, evidence, state, authority,
 measurement, and binding appraisal instants and $t_C$ is the effect-commit
-instant. Each artifact contributes its own validity interval or freshness
-constraint. A revocation event has an effective instant $t_R$. Wall clocks,
+instant. The clock is expository notation: no shipped artifact computes
+$\kappa(x)$, and the live laboratories order events by the server-side
+linearization index $\ell$ alone. Each artifact contributes its own
+validity interval or freshness constraint. A revocation event has an effective instant $t_R$. Wall clocks,
 however, are insufficient to order concurrent requests reliably, so the live
 laboratory records a server-side linearization index $\ell$ for every status
 read, revocation, guarded commit, and unguarded effect.
@@ -644,7 +644,12 @@ shared all-pass vector; all 16 agreement states over effect, resource, time,
 and measurement profile; all six orders of one read, revoke, and commit; and
 all four topologically valid two-read schedules. This is
 implementation-diverse finite enumeration, not a proof of arbitrary programs
-or distributed systems.
+or distributed systems. For the revocation schedules, the checker's
+atomic-guard oracle encodes the guarded semantics by construction, so that
+branch documents the incomplete profiles' time-of-check-to-time-of-use
+(TOCTOU) witnesses rather than independently establishing atomicity; the
+atomicity evidence is the live, process-isolated, and containerized
+laboratories of Sections 5.6 and 6.4.
 
 ### 4.3 What a Boolean verdict destroys
 
@@ -658,15 +663,13 @@ $16(15)/2+28(27)/2=498$ within-corpus pairwise distinctions. The
 analytic crosswalk retains every native code and adds a coarse comparison
 class; it does not replace the code.
 
-![The composition rule. Each of the five predicate nodes is annotated with
-the mechanism that establishes it in this artifact packet and with how often
-that layer fails across the 104 frozen transactions; the sixth node is the
-binding stage, which is not a layer and is annotated instead with the number
-of transactions whose verdict it decided. The counts describe corpus
-composition, not any deployed system; the state mechanism is a structural
-appraisal of corpus-supplied objects, not cryptographic attestation, and the
-binding stage compares corpus-supplied subject strings and verifies no
-signature.](figures/figA-composition-five-predicates.png){ width=97% }
+![The composition rule. Each of the five predicate nodes is annotated
+with the mechanism that establishes it in this artifact packet and with how often that layer fails across the 104
+frozen transactions; the binding stage is not a layer and is annotated with
+the number of transactions whose verdict it decided. Counts describe corpus
+composition, not any deployed system; the state mechanism is structural
+appraisal, and the binding stage compares corpus-supplied subject strings
+(Section 2 ceiling).](figures/figA-composition-five-predicates.png){ width=97% }
 
 ## 5. Methods
 
@@ -681,11 +684,9 @@ question has one primary artifact, observation, and claim ceiling.
 
 ### 5.1 Policy-Version × Evidence Replay
 
-This laboratory was named "Policy--State Replay" in the previous draft. It
-is renamed here because "state" in that name denoted the policy and evidence
-condition (missing, stale, substituted), while the predicate $S$ in the
-decision rule denotes runtime state. In this article the word "state" is
-reserved for the runtime predicate.
+The name **Policy-Version × Evidence Replay** reserves "state" for the
+runtime predicate $S$ and distinguishes it from policy and evidence
+conditions such as missing, stale, substituted, tampered, and replayed.
 
 We generated a deterministic 16-vector corpus: the full factorial
 
@@ -695,7 +696,7 @@ $$
 \{\text{good, tampered, replayed}\},
 $$
 
-plus four gate-isolation vectors added in this revision, each carrying good
+plus four gate-isolation vectors, each carrying good
 evidence and failing exactly one strict policy gate:
 
 - **version-only:** correct policy, version 1, active interval;
@@ -704,13 +705,10 @@ evidence and failing exactly one strict policy gate:
   field changed and re-signed, so only the digest comparison rejects;
 - **invalid policy signature:** the policy object tampered after signing.
 
-The additions close three coverage defects of the previous corpus, in which
-the version and freshness gates were fused in a single stale vector, the
-digest branch was unreachable, and a policy `INVALID_SIGNATURE` never
-occurred. Each strict gate (signature, identity, version, time, digest) is
-now exercised in isolation by at least one vector, so the sentence "the
-strict verifier checks policy signature, identity, version, time, and
-digest" is true of the experiment and not only of the source code.
+The four isolation vectors separate the version and freshness gates, make
+the digest branch reachable, and exercise policy `INVALID_SIGNATURE`.
+Each strict gate (signature, identity, version, time, digest) is therefore
+exercised in isolation by at least one vector.
 
 Policies and evidence are signed with a deterministic Ed25519 test key. The
 key is public corpus material. The factorial vectors instantiate:
@@ -736,22 +734,15 @@ results emitted by the Python evaluator and re-derives only the conjunction
 and the first-rejecting-gate label; it does not reimplement Ed25519 and is
 not independent validation.
 
-The experiment is motivated by a previously recorded Veraison freshness run
+The experiment is motivated by a recorded Veraison freshness run
 in which Veraison correctly rejected a replay while the intended policy was
 active; the missing-policy and stale-policy fail-open cases occurred in this
 programme's own provisioning harness, not in Veraison. That record is an
 internal companion artifact; a public deposit is pending.
 
-![Typed strict verdicts for the 16-vector Policy-Version × Evidence Replay
-corpus: the 4 × 3 factorial and the four gate-isolation vectors. Expected
-labels are author-written; 16/16 agreement demonstrates reproduction of a
-frozen specification on designed vectors, not detection performance on any
-external workload.](figures/figB-policy-version-evidence-replay.png){ width=88% }
-
 ### 5.2 SAFE Metric Metamorphics
 
-This laboratory is frozen from the previous packet and is consumed
-read-only in this revision; none of its corpus, code, or results changed.
+This laboratory consumes a frozen corpus read-only.
 
 For positive vectors $a$, $b$, and $c$, we evaluated tensor means of:
 
@@ -814,10 +805,17 @@ replicates, NumPy PCG64 generators seeded per dataset at 101, 102, and 103,
 with the resampling unit being the row of the shared sample. The fixture
 sample sizes are n = 30 (supported), n = 18 (point-only boundary), n = 30
 (unsupported), and n = 30 (altered profile, which reuses the supported
-dataset). No bias-corrected or accelerated (BCa) interval was computed and
-no seed or replicate-count sensitivity sweep was run; both are limitations,
-and the percentile method's small-sample bias at n = 18 is exactly where
-the boundary fixture sits. Bootstrap validity is also dependence-sensitive
+dataset). No bias-corrected or accelerated (BCa) interval was computed — a
+limitation, and the percentile method's small-sample bias at n = 18 is
+exactly where the boundary fixture sits. A companion sensitivity sweep
+over five seeds and 2,000/5,000/10,000 replicates, using the same
+percentile bootstrap, leaves every fixture's confidence outcome unchanged
+at all 15 grid points (per-fixture lower-bound spread at most 0.0017) and
+preserves the overlap fixture's joint-versus-independent decision flip at
+15/15 grid points; the archived sweep is part of the artifact. The
+evaluator applies its gates in a fixed first-fail order symmetric with the
+binding ladder of Section 5.4: profile digest, then point threshold, then
+lower confidence bound. Bootstrap validity is also dependence-sensitive
 [22, 23, 24], which motivates the overlap fixture below. The fixtures were
 designed to test boundary behavior and are not measurements of a deployed
 model.
@@ -841,29 +839,19 @@ protocol-valid-but-unauthorized laboratory of this packet. It constructs
 - terminal action coverage;
 - effect time and action binding.
 
-The suite was extended in this revision from 12 to 16 typed cases. The four
-new cases each isolate one gate (`protocol.valid`, `edge.signature`,
-`effect.native_validity`, `effect.time_binding`) that was previously a dead
-branch in both the Python evaluator and the relational oracle.
+The suite contains 16 typed cases. Four isolate
+`protocol.valid`, `edge.signature`, `effect.native_validity`, and
+`effect.time_binding`, making each branch reachable in both the Python
+evaluator and the relational oracle.
 
-What those four cases establish must be stated exactly, because the previous
-revision overstated it. Three of them — `D1_protocol_invalid`,
-`D2_signature_invalid_second_edge`, and `D1_receipt_native_invalid` — work by
-setting to `false` the very corpus-supplied Boolean that the gate under test
-reads (`protocol_valid`, `edges.1.issuer_signature_valid`,
-`receipt.native_evidence_valid`). Flipping the input of a branch and
-observing that both implementations take the branch and localize it to the
-same edge identifier and index is *branch coverage*, and coverage of two
-implementations at once. It is not verification of the property the branch
-names: no signature is checked, no protocol run is validated, and nothing
-about the flag's truth is established. Saying that these cases "close the
-blind spot" would confuse a live branch with a verified property. What they
-close is the possibility that the branch is unreachable and therefore
-silently untested in both implementations at once — which is a real and
-previously open defect, and a smaller claim. Only the fourth case,
-`D1_receipt_effect_time_outside_window`, exercises a computed comparison: it
-moves the receipt's effect time outside the delegation window, and the
-evaluator performs the interval test rather than reading a Boolean.
+Three of them — `D1_protocol_invalid`, `D2_signature_invalid_second_edge`,
+and `D1_receipt_native_invalid` — flip the corpus-supplied Boolean the gate
+under test reads. That is *branch coverage* in two implementations at once,
+not verification of the property the branch names: no signature is checked
+and no protocol run is validated. What it rules out is a branch that is
+unreachable, and therefore silently untested, in both implementations.
+Only `D1_receipt_effect_time_outside_window` exercises a computed
+comparison, moving the receipt's effect time outside the delegation window.
 
 The suite reports 16/16 expected typed tuples, 13/13 first-invalid-stage
 matches on the negative cases, and 8/8 delegation-edge ID and index matches
@@ -874,10 +862,9 @@ and a seven-case hybrid adapter over recorded A2A evidence (7/7).
 The cryptographic component of this layer is stipulated, not computed: the
 fields `issuer_signature_valid`, `native_evidence_valid`, and
 `protocol_valid` are corpus-supplied experimental flags, and no
-cryptography executes anywhere in the authority laboratory. The shipped
-summary fields were renamed in this revision (for example
-`native_object_flags_true`) so the artifact says the same thing the prose
-does, and the disclaimer is embedded in the result JSON, not only here.
+cryptography executes anywhere in the authority laboratory. The result
+schema uses explicit coverage names such as `native_object_flags_true`, and
+the disclaimer is embedded in the result JSON, not only here.
 
 The delegation-path suite agrees 16/16 with an independent relational SQL
 implementation. We keep the word "independent" for this oracle alone, and
@@ -902,15 +889,11 @@ The composed corpus contains 104 transactions:
 | cross-layer joins | 30 | 10 layer pairs × 2 two-fault joins, 4 triples, 1 quadruple, 1 all-five failure, and 4 matched all-valid lookalike positives |
 | cross-layer binding | 14 | 8 transactions in which all five layers pass and the subject records disagree, each paired with a matched all-valid lookalike (6 distinct controls) |
 
-Two of these families are new relative to the 56-transaction predecessor, and
-they do two different jobs that the previous revision conflated under the
-word "join".
+The cross-layer-joins and cross-layer-binding families do two different jobs
+that must not be conflated under the word "join".
 
-The cross-layer-joins family populates the co-failure structure. The
-predecessor corpus was block-diagonal, with zero co-failures between
-authority and policy, authority and evidence, state and policy, and state
-and evidence, so no transaction exercised two layers failing at once across
-those pairs. The joins family fills every off-diagonal cell of the 5 × 5
+The cross-layer-joins family populates the co-failure structure. It fills
+every off-diagonal cell of the 5 × 5
 co-failure matrix, with a corpus-wide minimum off-diagonal count of 5, and
 its four matched all-valid lookalike positives ensure that universal refusal
 cannot masquerade as correctness. A populated co-failure cell is a
@@ -918,7 +901,7 @@ co-occurrence of two independently caused layer failures in one transaction.
 It is not a join in the relational sense, and it does not test whether the
 layers are describing the same action.
 
-The cross-layer-binding family, new in this revision, tests agreement over the
+The cross-layer-binding family tests agreement over the
 implemented effect, resource, report-time, and measurement-profile
 coordinates; it does not test the omitted state/workload, principal, model, or
 commit-receipt coordinates. Each of its 8 denials is a transaction in which
@@ -958,9 +941,8 @@ Each non-`PASS` outcome maps to the correspondingly named gate in the
 `binding.*` namespace. Timestamps are compared lexicographically, which is
 sound only because every timestamp in this artifact is fixed-width UTC `Z`
 form; both window boundaries are inclusive, matching the state adapter and
-the policy validity window. The time test is containment and never equality,
-and the reason is a real limitation that this revision reports rather than
-repairs: the three decision-relevant time constants in the artifact — the
+the policy validity window. The time test is containment and never equality.
+The three decision-relevant time constants in the artifact — the
 policy and state decision time 2026-07-25T21:30:00Z, the authority effect
 time 2026-07-25T20:00:00Z, and the evidence issue time 2026-07-25T21:29:30Z
 — are unrelated. The main corpus therefore cannot instantiate the decision
@@ -986,14 +968,10 @@ binding result is `EFFECT_MISMATCH`, that the verdict is `DENY` at gate
 `binding.effect`, and that the lookalike is `ALLOW` at gate `verified`.
 
 Two provenance properties are central and are declared inside the corpus
-and every generated summary. First, in the previous draft the five-layer
-precedence ladder existed as three same-author transcriptions (corpus
-builder, verifier, SQL oracle), so composition-level agreement could fail
-only if one transcription diverged from the others. This revision refactors
-the conjunction, the binding stage, and the first-rejecting-gate ladder into
-one shared composition-rule module imported by both the corpus builder and
-the verifier; the duplicated ladders were deleted. The consequence is stated
-where the numbers are reported: composition-level expected labels are
+and every generated summary. First, the conjunction, binding stage, and
+first-rejecting-gate ladder are centralized in one shared composition-rule
+module imported by both the corpus builder and verifier. Consequently,
+composition-level expected labels are
 generated by the same composition rule the verifier imports, so agreement at
 that level is analytic. Per-layer agreement is the non-analytic execution
 check; subject-record agreement is a same-function round trip. Second,
@@ -1013,7 +991,7 @@ runs as the first gate of the laboratory's entry point.
 Corpus construction records the SHA-256 of each source corpus. The composed
 verifier verifies those hashes and re-executes the three source evaluators
 per transaction through `importlib`; it does not copy stored verdicts. The
-SAFE source corpus is consumed read-only from the frozen previous packet.
+SAFE source corpus is consumed read-only from its frozen source.
 
 ### 5.5 Ablations
 
@@ -1034,8 +1012,8 @@ We compare the strict composition with:
 - **effect/resource + profile:** add measurement-profile agreement, but omit
   authorized-window containment.
 
-The two compensating ablations differ in what they remove, and this revision
-keeps that difference clean. The point-only profile replaces exactly one
+The two compensating ablations differ in what they remove. The point-only
+profile replaces exactly one
 thing, the measurement criterion, and retains the binding stage; that is what
 makes it an ablation of one thing, and it is why the binding function is
 evaluated for every transaction rather than only when the layers pass. The
@@ -1053,10 +1031,11 @@ functions of corpus design.
 
 ### 5.6 Companion evidence-class upgrades
 
-The main 104-transaction corpus retains corpus-supplied experimental
-authority-validity flags so that its revision lineage remains comparable.
-Eight companion laboratories change evidence class without silently
-reinterpreting that corpus.
+The main 104-transaction corpus treats its supplied experimental
+authority-validity flags as controlled factorial inputs. Nine companion
+laboratories change evidence class without silently reinterpreting that
+corpus; a tenth, the standalone finite model check, accompanies the formal
+apparatus (Section 4.2).
 
 **Native signed authority/effect adapter.** Eight deterministic fixtures use
 real Ed25519 verification for every delegation edge and the effect receipt.
@@ -1071,7 +1050,8 @@ conformance with WAVE, JEDI, OAuth, DID, or another external credential
 format.
 
 **Mutation-generated transactions.** Starting from one independently passing
-transaction, a deterministic builder applies 37 single faults, one at a time,
+transaction, a deterministic builder applies 37 single faults, one at a time
+(one baseline plus 37 generated cases, the 38 frozen pairs),
 across policy rules P1--P5, evidence rules E1--E2, state rules S1--S3,
 authority rules A0--A19, and measurement rules M1--M3. The transaction packet,
 both evaluator sources, and both unsealed outputs were hashed before comparison
@@ -1081,16 +1061,17 @@ cases. The freeze establishes ordering, not label truth: generator, oracle,
 and labels remain programme-internal.
 
 **Prospective signed-revocation races.** Thirteen scheduled event sequences
-place signed status snapshots before appraisal, between appraisal and commit,
-at the commit instant, and after commit, and add stale, lower-sequence replay,
-credential-substitution, status-unavailability, re-issuance, credential-window,
-and bad-signature cases. The strict rule verifies signed credential and status
+place signed status snapshots before appraisal, between appraisal and
+commit, at the commit instant, and after commit, adding stale, replayed,
+substituted, unavailable, re-issued, out-of-window, and bad-signature
+status cases. The strict rule verifies signed credential and status
 objects, uses the half-open credential window
-`valid_from <= t < valid_until`, requires fresh status at appraisal and commit,
-requires a non-decreasing signed sequence number, and treats revocation at the
-commit instant as effective. Independent Python and Node implementations
-evaluate the frozen packet. Three ablations omit commit rechecking, fail open
-on missing commit status, or ignore sequence monotonicity.
+`valid_from <= t < valid_until`, requires fresh status at appraisal and
+commit with a non-decreasing signed sequence number, and treats revocation
+at the commit instant as effective. Independent Python and Node
+implementations evaluate the frozen packet; three ablations omit commit
+rechecking, fail open on missing commit status, or ignore sequence
+monotonicity.
 
 **Native runtime-attestation appraisal.** The lab embeds the public frozen
 Tyche `aep-pcr16-vector` at commit
@@ -1114,21 +1095,18 @@ fresh-challenge replay, capsule substitution, declared-PCR substitution,
 quote-message tampering, and quote-signature tampering. The source vector was
 produced by `swtpm`; no hardware endorsement or live workload is inferred.
 
-**Live concurrent revocation service.** A `ThreadingHTTPServer` listens on an
-ephemeral loopback TCP port. Under one lock it linearizes signed status reads,
-revocations, guarded commits, and unguarded effects, assigning each operation
-an increasing index. Every status-bearing response is Ed25519-signed and
-verified by the client. Four profiles are crossed with
-revoke-before-appraisal, revoke-between-appraisal-and-commit, forced
-cache-expiry, revoke-after-final-read, and revoke-after-commit placements;
-each profile also receives 64 same-barrier revocation/commit trials.
-`ttl_cache` uses a real 50 ms cache-age check and refreshes after a forced
-75 ms delay; this deterministic case separates it from `single_read`.
-`atomic_guard` checks status and commits the effect
-within one locked operation. `double_read`, `single_read`, and `ttl_cache`
-make an unguarded effect after a fresh, appraisal-time, or cached status,
-respectively. A false allow is defined by the service record itself:
-the client accepted and the credential status at the effect's linearization
+**Live concurrent revocation service.** A `ThreadingHTTPServer` on an
+ephemeral loopback port linearizes signed status reads, revocations,
+guarded commits, and unguarded effects under one lock, assigning each
+operation an increasing index; every status-bearing response is
+Ed25519-signed and client-verified. Four profiles are crossed with five
+revocation placements plus 64 same-barrier revocation/commit trials each.
+`atomic_guard` checks status and commits the effect within one locked
+operation; `double_read`, `single_read`, and `ttl_cache` make an unguarded
+effect after a fresh, appraisal-time, or cached status (the 50 ms cache
+with a forced 75 ms expiry deterministically separates `ttl_cache` from
+`single_read`). A false allow is defined by the service record itself: the
+client accepted and the credential status at the effect's linearization
 point was revoked.
 
 **Native state transaction overlay.** The retained structural objects define
@@ -1138,7 +1116,7 @@ hash, transaction identifier, canonical action, and observed effect. PCR 16
 binds a transaction-specific runtime measurement, while qualifying data binds
 the capsule, measurement, signed validity interval, and unique 32-byte
 challenge. Eight freshly initialized `swtpm` roots issue 104 quotes: four RSA
-and four ECC AKs, thirteen transactions per root. After
+and four ECC attestation keys (AKs), thirteen transactions per root. After
 `tpm2_checkquote`, PCR, challenge, and subject checks, a frozen appraisal
 policy applies contraindication, signed-window, and reference-measurement
 rules in the same precedence as the source state vocabulary. The verifier
@@ -1172,77 +1150,54 @@ the effect table supplies the duplicate-effect oracle. The experiment remains
 same-host and uses SQLite as a centralized linearization mechanism.
 
 **Containerized durable-revocation replay.** A pinned offline image runs a
-status service, two interchangeable effect-service instances, a deterministic
-response-fault proxy, and the experiment runner as five distinct read-only
-containers over an internal bridge. A named-volume SQLite WAL store remains
-the centralized linearization mechanism. The proxy injects request loss
-before forwarding and response loss after durable commit. Recovery retries
-through the second effect instance and replays both allowed and denied
-idempotency keys. A separate saved-result verifier rechecks every signature,
-reconstructs the false-allow predicate from stored effect-time state, checks
-unique decision/effect keys, contiguous event identifiers, database integrity,
-and distinct signed service hostnames. It imports the service's canonical JSON
-serializer for signature preimages, so serialization is shared; the safety,
-idempotency, ordering, database, and hostname assertions are reconstructed
-separately. Container
-separation changes process, filesystem, network-namespace, and
-service-instance boundaries, but not the physical host, kernel, CPU, datastore
-trust domain, or operator.
+status service, two interchangeable effect-service instances, a
+deterministic response-fault proxy, and the runner as five read-only
+containers over an internal bridge, with a named-volume SQLite
+write-ahead-log store as the centralized linearization mechanism. The proxy
+injects request loss before forwarding and response loss after durable
+commit; recovery retries through the second effect instance and replays
+both allowed and denied idempotency keys. A separate saved-result verifier
+rechecks every signature, reconstructs the false-allow predicate from
+stored effect-time state, and checks unique decision/effect keys,
+contiguous event identifiers, database integrity, and distinct signed
+service hostnames. Container separation changes process, filesystem,
+network-namespace, and service-instance boundaries — not the physical
+host, kernel, datastore trust domain, or operator.
 
-**Cross-ecosystem typed transfer.** A pinned, field-minimized snapshot of the
-public EATF decision-path result supplies 21 rows: two accepts and 19 rejects
-covering 16 native rejection codes, with exact TypeScript/Python agreement.
-Every native code and every native first gate from the 104 transactions must
-appear in an explicit total crosswalk to eight coarse analytic classes. The
-builder exits non-zero on an unmapped code or a source-oracle mismatch. Native
-codes remain the primary result; the crosswalk is an analysis layer. A
-separate SQLite implementation consumes the frozen JSON mapping instead of the
-Python dictionaries and performs a leave-one-out plus wrong-class mutation for
-every mapping entry. This tests execution-path agreement, totality, and
-sensitivity, not the semantic correctness of the ontology.
+**Cross-ecosystem typed transfer.** A pinned, field-minimized snapshot of
+the public EATF decision-path result supplies 21 rows (two accepts, 19
+rejects covering 16 native rejection codes, exact TypeScript/Python
+agreement). Every native code and first gate from the 104 transactions
+must appear in an explicit total crosswalk to eight coarse analytic
+classes; the builder exits non-zero on an unmapped code or a source-oracle
+mismatch. Native codes remain the primary result. A separate SQLite
+implementation consumes the frozen JSON mapping and performs a
+leave-one-out plus wrong-class mutation for every entry, testing
+execution-path agreement, totality, and sensitivity — not the semantic
+correctness of the ontology.
 
 A separate blind semantic-validation kit converts the 46 native states into
-opaque mapping tasks, supplies nine class definitions (pass plus eight
-rejection classes), a `NO_FIT` response, and a schema, and excludes the author
-mapping and all result fields. The author
-mapping is hash-sealed outside the four-file annotator archive. A coordinator
-validator and analysis plan are frozen before dispatch. The r6 execution
-package additionally supplies a deterministic native-documentation bundle,
-two-response validation, unweighted-kappa analysis with a preregistered 0.60
-stop rule, independent adjudication schemas, and fail-closed checks for
-duplicate tasks, low agreement, residual `NO_FIT`, and unresolved
-`taxonomy-defect`. Its positive and negative self-tests pass while reporting
-`author_mapping_opened=false`. This closes the executable-study-design gap for
-semantic review, but the kit remains undispatched and therefore supplies no
-independent semantic evidence.
+opaque mapping tasks with nine class definitions, a `NO_FIT` option, and a
+response schema, excluding the author mapping (hash-sealed outside the
+archive) and all result fields. A coordinator validator, preregistered
+unweighted-kappa analysis with a 0.60 stop rule, and fail-closed checks for
+duplicates, low agreement, residual `NO_FIT`, and unresolved
+`taxonomy-defect` are frozen before any dispatch; its self-tests pass with
+`author_mapping_opened=false`. The kit remains undispatched and therefore
+supplies no independent semantic evidence.
 
-**Standalone finite composition model check.** A dependency-free Java program
-reconstructs the Boolean indistinguishability, four-coordinate binding, and
-bounded revocation models without importing the Python verifier, corpus
-builder, expected labels, SQL crosswalk, or saved verdicts. It checks both
-possible Boolean-composer outputs against a matched/mismatched pair, enumerates
-all 16 agreement vectors, and exhausts the six one-read and four
-topologically valid two-read revocation schedules. Its acceptance assertions
-are structural properties of those finite models; they do not extend the
-proof boundary to arbitrary implementation code, consensus, hardware, or
-deployed workloads.
-
-The human-labelling experiment is deliberately separate. Its 90-transaction
-predecessor packet was superseded by a label-isomorphic 104-case derivative.
-The builder replaces mnemonic transaction, nonce, policy, profile, and
-principal identifiers with opaque aliases; re-signs policy and evidence
-objects under a packet-specific deterministic Ed25519 key; preserves invalid
-signatures and replay membership; and re-evaluates every typed tuple. Its
-known-token audit reports no remaining mnemonic match and the transformation
-preserves 104/104 typed tuples. The response schema, sealed author labels, and
-adjudication protocol are prepared but the packet is undispatched. No external
-label, adjudicated result, or agreement statistic exists. The coordinator
-archive now contains a pre-registered analysis program that validates and
-hash-seals both responses, computes verdict kappa with a fixed 10,000-replicate
-paired bootstrap interval, preserves the uncollapsed gate confusion matrix,
-and enforces the 0.60 stop gate without opening author labels. Its synthetic
-self-test exercises both the continue and stop branches; it is pipeline
-evidence, not human-label evidence.
+The human-labelling experiment is deliberately separate. Its neutral packet
+is a label-isomorphic 104-case transformation of the composed corpus: the
+builder replaces mnemonic identifiers with opaque aliases, re-signs policy
+and evidence objects under a packet-specific deterministic Ed25519 key,
+preserves invalid signatures and replay membership, and re-evaluates every
+typed tuple (104/104 preserved; the known-token audit reports no remaining
+mnemonic match). The response schema, sealed author labels, adjudication
+protocol, and a pre-registered analysis program (verdict kappa with a fixed
+10,000-replicate paired bootstrap, an uncollapsed gate confusion matrix,
+and the 0.60 stop gate enforced without opening author labels) are
+prepared; the packet is undispatched, and no external label, adjudicated
+result, or agreement statistic exists.
 
 ## 6. Results
 
@@ -1256,8 +1211,8 @@ missing-policy fail-open profile matched 10/16 and additionally falsely
 allowed good evidence with no policy, six false allows in total. Both
 baselines still validate signatures, so the tampered-policy vector is
 denied by all three profiles. The SQL re-composition matched the Python
-verdict and rejecting gate 16/16, with the previously dead
-`policy.signature` branch now live.
+verdict and rejecting gate 16/16, including execution of the
+`policy.signature` branch.
 
 | Profile | Expected matches | False allows |
 | --- | ---: | ---: |
@@ -1267,23 +1222,17 @@ verdict and rejecting gate 16/16, with the previously dead
 
 All counts are counts on this designed corpus, and the 16/16 needs the same
 analytic/substantive split that Section 6.3 applies to the composed layer.
-The split was disclosed there and not here in the previous revision, which
-was inconsistent: the disclosure belongs at both levels or at neither. Each
-expected label in this laboratory has two parts. The typed policy and
-evidence results are hand-written from the declared vector condition — a
-vector declared `stale` is expected to yield policy `STALE` — and recovering
-that declared condition from the signed bytes is what the verifier has to do,
-so per-layer agreement is the substantive check. The expected `verdict` and
-the expected `first_rejecting_gate`, by contrast, are machine-generated by
-the corpus builder from a two-layer precedence ladder (policy before
-evidence, each typed result mapped to one gate label), and `run.py`
-re-implements that same ladder when it composes. Agreement on those two
-fields is therefore agreement between two transcriptions of one small
-function, and it can fail only if a transcription diverges. That is weaker
-than the composed laboratory, where a single shared module makes the
-corresponding agreement outright analytic, and it is stronger than nothing,
-because two transcriptions can in principle disagree. It is not evidence that
-the precedence order is correct.
+The typed per-layer results are hand-written from each declared vector
+condition, and recovering that condition from the signed bytes is what the
+verifier must do, so per-layer agreement is the substantive check. The
+expected `verdict` and `first_rejecting_gate`, by contrast, are
+machine-generated by a two-layer precedence ladder that `run.py`
+re-implements when it composes; agreement on those two fields is agreement
+between two transcriptions of one small function — weaker than the composed
+laboratory, where a single shared module makes the corresponding agreement
+outright analytic, and stronger than nothing, because two transcriptions
+can in principle disagree. It is not evidence that the precedence order is
+correct.
 
 ### 6.2 Metamorphic and confidence results
 
@@ -1320,11 +1269,6 @@ does not) and one profile-gate false allow (the altered-profile fixture,
 which the point-only gate admits because it never checks the profile
 digest).
 
-![The four confidence-aware measurement fixtures. Designed boundary cases
-with author-chosen thresholds; the values are not measurements of any
-deployed model, and the n = 18 fixture sits where percentile-bootstrap bias
-is not negligible.](figures/figC-measurement-fixtures.png){ width=90% }
-
 In the overlap boundary fixture the threshold 0.737 was chosen by
 construction to sit between the two computed bounds: joint resampling of
 the shared columns produced LCB 0.732088 while incorrectly resampling them
@@ -1343,12 +1287,6 @@ function that is stable in this fixture. Rank reversal under reference-set
 change is a known property of TOPSIS and of normalisation-based
 multi-criteria methods generally [19, 20, 21]; the fixture reproduces the
 phenomenon inside this evidence profile, it does not discover it.
-
-![TOPSIS closeness under the dynamic observed reference (left) and the
-fixed 0--1 reference (right), before and after adding alternative D. A
-constructed reproduction of a known reference-set sensitivity [19, 20, 21];
-the two schemes disagree on the base ranking, so neither is a control for
-the other.](figures/figD-topsis-reference-sets.png){ width=97% }
 
 ### 6.3 Integrated transaction results
 
@@ -1382,9 +1320,9 @@ extraction.
 | source-corpus hash closure | PASS |
 
 The cross-layer-denial row is the article's strongest single number, and it
-is new: in every earlier corpus it was not merely zero but *structurally*
-zero, because the composition rule took six scalar strings and had no
-cross-layer argument, so no such transaction could be represented at all. The
+is structural: a composition rule that consumes only the five scalar layer
+results has no cross-layer argument, so a transaction of this class cannot
+even be represented, let alone denied. The corpus populates the class. The
 8 transactions are:
 
 ```text
@@ -1406,17 +1344,15 @@ sibling `XLB_effect_write_two_hop` isolates the effect alone, on the
 authorized resource, and `XLB_effect_export_four_hop` reproduces the same
 seam at four hops, so the result is not a property of path length.
 
-![The cross-layer denial class. The 8 transactions in which every artifact
-verifier passes -- policy PASS, evidence PASS, state PASS, authority ALLOW,
-measurement PASS, and an empty failed-layer set -- and the composition still
-denies, each shown with the subject pair that disagrees and the typed binding
-result that fired. Beneath them the 6 matched lookalike controls of the same
-family, built the same way with agreeing subjects, all of which are allowed:
-without them the denials would be consistent with a verifier that refuses
-everything. Counts on a designed corpus with author-written expected labels;
-the binding stage verifies no signature, takes no measurement, and is not
-attestation of any
-runtime.](figures/figG-cross-layer-denials.png){ width=97% }
+![The cross-layer denial class: the 8 transactions in which every
+artifact verifier passes — policy PASS,
+evidence PASS, state PASS, authority ALLOW, measurement PASS, empty
+failed-layer set — and the composition still denies, each with the
+disagreeing subject pair and the typed binding result that fired; beneath
+them, the 6 matched lookalike controls of the same family, all allowed,
+without which the denials would be consistent with a verifier that refuses
+everything. Coverage counts on a designed corpus (Section 2
+ceiling).](figures/figG-cross-layer-denials.png){ width=97% }
 
 The relational re-composition rows are a second code path, not independent
 validation: the SQL oracle consumes the per-layer typed results and the
@@ -1469,46 +1405,21 @@ coverage supplied by the implemented time and profile coordinates on the
 designed witnesses; it does not establish that these are the only coordinates
 a deployed transaction must bind.
 
-![False allows under progressively stronger partial subject joins. Every
-profile already requires all five local verifiers and effect/resource
-agreement. The remaining 3, 2, and 1 false allows isolate the coordinates
-omitted by each partial schema; the full implemented
-effect/resource/time/profile binding catches all 14 designed binding cases.
-Counts are corpus coverage, not rates, and the full schema remains explicitly
-partial relative to a deployed transaction.](figures/figK-partial-binding-ablation.png){ width=90% }
+On the 90-transaction base subset, the artifact-validity and four-of-five
+ablations yield 40 and 23 false allows. The point-only ablation yields 2
+because the binding stage catches `F_correct_good_profile_mismatch` as
+`binding.measurement_profile`. The measurement evaluator's point-only result
+ignores the profile gate, while the binding stage rejects the
+profile-substituted appraisal. This follows from the ablation definition in
+Section 5.5: the point-only profile replaces the measurement criterion and
+keeps the binding stage.
 
-Every verdict, gate, and co-failure count over the 90 transactions carried
-forward from the previous revision is unchanged, as are their
-artifact-validity (40) and four-of-five (23) false allows. One pre-existing
-number did move, and we state it rather than bury it: point-only false allows
-over those 90 fall from 3 to 2. The transaction is
-`F_correct_good_profile_mismatch`. The measurement evaluator's point-only
-result ignores the profile gate, so the previous revision's point-only
-ablation allowed a profile-substituted appraisal; the binding stage now
-catches it as `binding.measurement_profile`. This follows from the ablation
-definition in Section 5.5 — the point-only profile replaces the measurement
-criterion and keeps the binding stage — and it is a consequence of making the
-seam executable, not a re-tuning of the corpus.
-
-The four-of-five column is still governed by an identity rather than a
-measurement, but it is no longer the identity the previous revision reported,
-and the failure of that identity is a result in itself:
-
-| | previous revision | this revision |
-| --- | ---: | ---: |
-| four-of-five false allows | 23 | 31 |
-| single-fault denies | 23 | 23 |
-| cross-layer denials | 0 (unrepresentable) | 8 |
-| four-of-five $=$ single-fault denies | holds | **false** |
-| four-of-five $=$ single-fault $\cup$ cross-layer | — | **holds** |
 
 A four-of-five majority allows a transaction if and only if at most one of
 the five artifact verifiers fails. Once denials with *zero* failing verifiers
 exist, its false allows are the single-fault denies **union** the cross-layer
 denials, 31 = 23 + 8, verified as exact set equality on transaction
-identifiers. Both statements are carried in the shipped summary, with the
-superseded one retained and explicitly marked as not holding rather than
-deleted. The single-fault layer distribution is unchanged: authority 14,
+identifiers. The single-fault layer distribution is authority 14,
 policy 3, measurement 3, evidence 2, state 1. All 8 cross-layer denials are
 majority false allows because a vote over the five artifact verifiers cannot
 represent them at all — there is nothing for it to vote against.
@@ -1522,31 +1433,18 @@ construction, that a compensating or incomplete rule cannot preserve a
 non-compensable specification, together with a corpus-coverage statistic; it
 is not a measurement of external systems.
 
-![False allows by ablation, stratified over all five corpus families. Proof
-by construction plus corpus coverage: the four-of-five total is the
-single-fault denies plus the cross-layer denials by identity, no bar is a
-rate or an estimate of behaviour in any deployed system, and the
-cross-layer-binding bars show that a majority over five artifact verifiers
-cannot represent a denial in which none of them
-failed.](figures/figF-stratified-false-allows.png){ width=95% }
-
 Layer failures and co-failures are disclosed in full, and are reported
 separately from cross-layer binding because they are separate properties.
 Failed-layer occurrences across the 89 denies are policy 39, evidence 36,
 state 17, authority 30, measurement 39; state remains the least-exercised
-layer, and we say so rather than leaving the reader to notice. The
-predecessor corpus was block-diagonal, with zero co-failures in the four
-cells joining authority or state with policy or evidence. In the present
-corpus every off-diagonal cell of the co-failure matrix is at least 5, and 22
-of the 31 possible non-empty failure subsets occur (previously 13). The
+layer, and we say so rather than leaving the reader to notice. Every
+off-diagonal cell of the co-failure matrix is at least 5, and 22 of the 31
+possible non-empty failure subsets occur. The
 cross-layer-binding family contributes nothing to any of these numbers, by
 construction: its 8 denials have no failed layer at all.
 
-What that matrix does and does not establish should be stated plainly,
-because the previous revision's abstract and this section claimed that
-populating it exercised "the authority-with-policy and
-authority-with-evidence joins that the composition thesis names". It does
-not. A populated off-diagonal cell means two layers failed in the same
+The matrix reports co-failure rather than cross-artifact binding. A populated
+off-diagonal cell means two layers failed in the same
 transaction for independent reasons; it is co-occurrence, and it says nothing
 about whether the two layers were describing the same action. Co-failure
 coverage and cross-layer binding are two different properties with two
@@ -1554,11 +1452,12 @@ different counts: the minimum off-diagonal co-failure cell is 5, and the
 number of cross-layer denials is 8. Neither number substitutes for the other,
 and only the second tests the seam.
 
-![Pairwise co-failure matrix over the 104 transactions. Counts on a designed
-corpus: the corpus was engineered so that no off-diagonal cell is zero, so
-cell magnitudes reflect corpus construction, not failure prevalence anywhere.
-Co-occurrence of two layer failures is not a join; the binding stage is not a
-layer and has no cell here.](figures/figE-cofailure-matrix.png){ width=72% }
+![Pairwise co-failure matrix over the 104 transactions, on a designed
+corpus engineered so that no
+off-diagonal cell is zero; cell magnitudes reflect corpus construction, not
+failure prevalence. Co-occurrence of two layer failures is not a join; the
+binding stage is not a layer and has no cell
+here.](figures/figE-cofailure-matrix.png){ width=72% }
 
 The typed binding vocabulary is exercised as follows. Because the binding
 function is pure over the subject records, it is computed for every
@@ -1583,11 +1482,9 @@ SAFE fixtures, including the unsupported fixture, exercised five times, which
 makes the `FAIL_POINT` composition branch live, plus the two profile variants
 this laboratory owns for the binding family, which the unmodified SAFE
 evaluator passes and which differ from each other only in profile identity.
-The state layer has three failure outcomes and a pass, and all four occur:
-`CONTRAINDICATED` 9, `STALE` 4, and `REFERENCE_MISMATCH` 4, against 87
-`PASS`. (The previous revision wrote "all four state failure outcomes"; there
-are three failure outcomes plus `PASS`.) Per-case usage tables are in the
-shipped summary.
+The state layer has three failure outcomes plus a pass, and all four states
+occur: `CONTRAINDICATED` 9, `STALE` 4, and `REFERENCE_MISMATCH` 4, against
+87 `PASS`. Per-case usage tables are in the result summary.
 
 ### 6.4 Companion evidence-class results
 
@@ -1601,14 +1498,14 @@ results:
 | multi-fault mutations | 12/12 oracle pairs; 180/180 Python/JS typed fields | 2--5 simultaneous faults; internally designed precedence cases |
 | prospective signed revocation | 13/13 oracle pairs; 13/13 exact Python/Node rows | scheduled sequences, not a live concurrent status service |
 | native runtime-attestation gate | 7/7 verdict-and-gate cases; four native + two binding negatives rejected | `tpm2_checkquote` over one frozen `swtpm` vector; no hardware or live workload |
-| identified zeus2 vTPM companion | four-lane contract 20/20; 104/104 live TPM2 quotes; 64/64 native mutation rejects; no new transient or persistent handle | distinct Hyper-V VM/OS and Microsoft vTPM; no physical-host identity, manufacturer-certified EK, or hardware-root claim |
+| identified vTPM VM companion | four-lane contract 20/20; 104/104 live TPM2 quotes; 64/64 native mutation rejects; no new transient or persistent handle | distinct Hyper-V VM/OS and Microsoft vTPM; no physical-host identity, manufacturer-certified EK, or hardware-root claim |
 | live revocation service | 276 traces, 890 persisted signed responses; atomic guard 0/0 safety errors | loopback HTTP and one process; safety result, not performance or multi-host evidence |
 | native state transaction overlay | 104/104 source classes and gates in Python and compiled Java; 64/64 mutation rejects and parity; 104/104 exact recompositions; Java 19/19 assertions; 8 distinct RSA/ECC AKs | cross-implementation native TPM2 evidence for the full corpus, but software TPM, shared packet, and one physical host |
 | process-isolated durable revocation | 372 cases; 1,478 durable events; 96/96 fault recoveries; 0 duplicates; atomic guard 0/0 | separate services/processes with restart and retry, but loopback and centralized SQLite on one host |
 | containerized durable revocation | five containers; 135 decisions, 537 events, 95 effects; 540 signed responses; 4/4 fault recoveries; atomic false allows 0; duplicate decisions/effects 0; verifier 15/15 | two effect instances and deterministic proxy, but one physical host and shared SQLite volume |
 | typed EATF transfer | 21/21 native-code rows plus 104/104 transaction rows mapped; SQL 125/125; 46/46 wrong-class and 46/46 omission detections; sealed blind 46-task semantic kit | analytic author-defined crosswalk; semantic kit undispatched; establishes no interoperability |
 | standalone finite model check | both Boolean outputs; 16/16 binding states; 6/6 one-read and 4/4 two-read schedules; zero atomic-oracle mismatches | implementation-diverse exhaustive check of declared finite models only |
-| isolated container re-execution | PASS for current 104-case corpus and the r3 evidence upgrades through scheduled revocation | different userland and interpreter; same host, kernel, CPU, and compiled NumPy/OpenSSL wheels |
+| isolated container re-execution | PASS for the 104-case corpus and companion evidence upgrades through scheduled revocation | different userland and interpreter; same host, kernel, CPU, and compiled NumPy/OpenSSL wheels |
 | optional external-label extension | **not executed and not counted** | neutral 104-case packet and blind analysis pipeline prepared; no claim of human agreement is made |
 
 The revocation strict profile has no false allow against its 13
@@ -1621,11 +1518,11 @@ lower-sequence replay. These values are intentionally case identifiers and
 coverage counts, not estimates of how frequently a deployed revocation
 service races.
 
-![Four temporal boundary placements in the signed revocation fixtures and
-false allows of three incomplete profiles. Revocation at the commit instant
-is effective under the strict profile; revocation after commit is not
-retroactive. Counts are over 13 designed scheduled sequences, not a rate or a
-live concurrency result.](figures/figH-revocation-races.png){ width=97% }
+![Four temporal boundary placements in the signed revocation fixtures,
+with false allows of three incomplete profiles.
+Revocation at the commit instant is effective under the strict profile;
+revocation after commit is not retroactive. Coverage counts over 13
+designed sequences.](figures/figH-revocation-races.png){ width=97% }
 
 The native runtime-attestation gate allows the unmodified vector and matches
 all seven hash-pinned author-written verdict-and-gate cases. Two negatives —
@@ -1633,8 +1530,7 @@ substituted outcome and altered declared PCR — stop at the explicit
 measurement-binding precheck before the native verifier is called.
 Fresh-challenge replay, capsule substitution, quote-message tampering, and
 quote-signature tampering produce non-zero `tpm2_checkquote` returns. This
-closes the r3 review request for a
-native verifier call in a bounded companion experiment; it does not upgrade
+supplies a native verifier call in a bounded companion experiment; it does not upgrade
 the structural state objects inside the 104 transactions by itself.
 
 The native state overlay supplies that missing corpus-wide upgrade. All 104
@@ -1674,12 +1570,15 @@ TOCTOU schedule independently of those counts.
 
 The process-isolated extension executes 93 cases per profile, 372 total,
 through separate status and effect service PIDs and separate contender
-processes. The durable log contains 1,478 events and 303 effects. All 372 case
-traces verify their signed responses. Across 96 response-loss/retry and
-kill/restart cases, 96 recover the original idempotent effect and none creates
-a duplicate. The atomic guard again has 0 false allows and 0 false denies;
-double-read, single-read, and TTL-cache expose 61, 66, and 63 false allows in
-this scheduling realization, with no false denies. Those three totals are
+processes. The durable log of the archived run contains 1,478 events and 301 effects.
+A case is one scheduled contender sequence against one credential; a
+recovery is a disconnected or killed-and-restarted commit whose retry
+returns the original idempotent effect. All 372 case traces verify their
+signed responses. Across 96 response-loss/retry and kill/restart cases, 96
+recover the original idempotent effect and none creates a duplicate. The
+atomic guard again has 0 false allows and 0 false denies; double-read,
+single-read, and TTL-cache expose 63, 67, and 66 false allows in that
+scheduling realization, with no false denies. Those three totals are
 not rates. The stronger observation is categorical: the atomic invariant and
 zero-duplicate invariant survive process separation, durable recovery, and
 ambiguous client outcomes, while every incomplete profile still has a stored
@@ -1696,16 +1595,15 @@ scheduled witness. Fourteen in-run assertions and 15 separate saved-result
 checks pass. These counts add cross-instance and network-fault evidence on one
 host; they are not distributed-system or rate estimates.
 
-![The executed five-container durable-revocation topology and saved outcomes.
-Panel (a) places the runner, deterministic fault proxy, status service, and
-two effect instances inside one dashed physical-host boundary; arrows show
-the solid initial request through the proxy to effect-a, the dashed direct
-runner retry to effect-b, and the shared SQLite WAL trust domain. Panel (b)
-reports zero
-atomic false allows, zero duplicate decision and effect keys, 36 designed
-prior-read counterexamples, 4/4 recoveries through the second effect instance,
-540/540 signature verifications, and 14/14 plus 15/15 assertion sets. The
-physical host and datastore remain deliberately visible ceilings.](figures/figM-containerized-revocation-boundaries.png){ width=98% }
+![The executed five-container durable-revocation topology and saved
+outcomes. Panel (a): runner, deterministic fault proxy, status service,
+and two effect instances inside one dashed physical-host boundary, with the initial
+request through the proxy to effect-a, the direct retry to effect-b, and
+the shared SQLite trust domain. Panel (b): zero atomic false allows, zero
+duplicate decision/effect keys, 36 designed prior-read counterexamples, 4/4
+recoveries through the second instance, 540/540 signature verifications.
+The physical host and datastore remain deliberately visible
+ceilings.](figures/figM-containerized-revocation-boundaries.png){ width=98% }
 
 The standalone Java checker accepts all of its finite assertions. For the
 shared all-pass local vector, each of the two possible Boolean-composer
@@ -1718,17 +1616,12 @@ topologically valid two-read schedules. The atomic oracle has zero
 mismatches; the incomplete profiles retain the canonical `R<X<C` and
 `R1<R2<X<C` false-allow witnesses.
 
-![The r5 evidence-class upgrades. Panel (a) reports the 104 native state
+![Companion evidence-class upgrades. Panel (a) reports the 104 native state
 classes. Panel (b) shows exact native-oracle agreement, mutation rejection,
 and recomposition. Panel (c) contrasts the atomic guard with incomplete
 revocation profiles over 93 cases each; all 96 injected fault cases recover
 and no duplicate effect occurs. Counts are designed same-host laboratory
 coverage, not rates.](figures/figL-evidence-class-upgrades.png){ width=97% }
-
-![Observed safety errors in 69 live concurrent cases per profile. The atomic
-status-and-effect guard has no error; profiles that separate status from
-effect expose false allows. Counts are one loopback run and not population
-rates or performance estimates.](figures/figI-live-revocation-service.png){ width=90% }
 
 The typed-transfer builder maps every native state and refuses partial
 crosswalks. The EATF result preserves 16 rejection codes across 21/21
@@ -1769,16 +1662,13 @@ container only the loopback interface existed, the route table was empty, and
 an outbound literal-IP TCP connection failed with `ENETUNREACH`. This closes
 the current **cross-environment** rerun, not the second-physical-host gate.
 
-One negative provenance result is retained. The earlier independent
-JavaScript evaluator was frozen against `LABELLING-SPEC.md` version 1.0. The
-labelling-packet audit then corrected genuine specification ambiguities and
-bumped that document to version 1.1. Its old freeze therefore fails a
-post-freeze integrity check against the current packet. The 90/90 output is
-useful as a determinacy and implementation-diversity observation about the
-old specification, but cannot be presented as a clean independent evaluation
-of version 1.1 and, in any case, is not an external-human label result. The
-new neutral 104-case packet supersedes it for future human labelling but has
-not been sent to anyone.
+One negative provenance result is retained. An independent JavaScript
+evaluator is frozen against `LABELLING-SPEC.md` version 1.0, whereas the
+neutral packet uses version 1.1. The freeze therefore fails the packet's
+integrity check. Its 90/90 output is a determinacy and implementation-diversity
+observation about version 1.0, not an independent evaluation of version 1.1
+and not an external-human label result. The neutral 104-case packet prepared
+for future human labelling has not been sent to anyone.
 
 ## 7. Discussion
 
@@ -1792,19 +1682,11 @@ gate-isolated variants remained authentic objects while being inapplicable
 to the intended decision, and the presence-oriented baselines admitted five
 and six of them.
 
-Two policy fields changed status in this revision, and the change is what
-converts the section title from a slogan into a statement about executable
-behaviour. The signed policy object has always carried `required_effect` and
-`required_measurement_profile`. Until this revision they were inert: written
-by the policy corpus builder, read by no evaluator anywhere in the artifact,
-and load-bearing only in the sense that they were part of the bytes the
-digest covered. Changing `required_effect` would change the policy digest and
-therefore make the policy layer report `SUBSTITUTED`, but nothing in the
-system ever compared it to what the agent actually did. The claim that policy
-is evidence *about the appraisal procedure* was, at that point, supported by
-payload bytes rather than by behaviour.
-
-Both fields are now read. `required_effect` is the source of
+Two signed policy fields are operational in the composition:
+`required_effect` and `required_measurement_profile`. Digest validation alone
+cannot establish that either agrees with the action actually reported or the
+measurement profile actually used. The binding stage therefore reads both.
+`required_effect` is the source of
 `canonical_action.effect` and is compared against the effect the signed
 evidence reports and against the terminal granted tools;
 `required_measurement_profile` is the source of
@@ -1821,10 +1703,11 @@ corpus-supplied strings; matching them establishes that two artifacts agree
 about a subject, not that either artifact is true. What changed is that a
 policy field now governs an outcome instead of decorating a hash.
 
-The result supports including policy identity, digest, activation evidence,
-required effect, required measurement profile, and appraisal time in a
-verifier execution passport. It motivates those fields but does not establish
-their completeness.
+The executed result supports including policy identity, digest, required
+effect, and required measurement profile in a verifier execution passport;
+activation evidence and appraisal time are motivated by the same argument
+but were not exercised by any gate in this corpus. Neither list is
+established to be complete.
 
 ### 7.2 Measurement support is not a scalar
 
@@ -1861,12 +1744,10 @@ purchase permission to ignore a failed critical predicate.
 
 ### 7.4 Exact verifier identity remains a dependency
 
-An earlier verifier-provenance differential, recorded in an internal
-companion report whose public deposit is pending, found 11/11 contract
-matches for the current TypeScript and Python entry points and 8/11 for an
-older unversioned demo entry point, with three false accepts; a
-tracked-commit rebuild reproduced the outcome matrix, so its lineage stands
-as outcome replication PASS; complete execution provenance INDETERMINATE.
+An internally recorded verifier-provenance differential (public deposit
+pending) found 11/11 contract matches for the current TypeScript and Python
+entry points but 8/11, with three false accepts, for an older unversioned
+demo entry point; a tracked-commit rebuild reproduced the outcome matrix.
 This article therefore treats exact source and corpus hashes as required
 artifact inputs and claims nothing further from that record.
 
@@ -2014,12 +1895,10 @@ then recomposes, but it does not make those author-written reference policies
 external ground truth or attest a deployed runtime. Its eight roots are
 software TPMs created on one physical host; no hardware root, manufacturer AK
 identity, protected trusted time, or remote workload exists. The measurement
-data are synthetic boundary fixtures. The binding stage compares
-corpus-supplied subject strings and contains an interval test; it verifies no
-signature, takes no measurement, contacts no attestation service, and does not
-upgrade any corpus-supplied flag into a cryptographic fact. A cross-layer
-denial on this corpus demonstrates that the seam is representable and
-localizable, not that any deployed system exhibits it.
+data are synthetic boundary fixtures. The binding-stage ceiling of
+Section 2 applies unchanged: a cross-layer denial on this corpus
+demonstrates that the seam is representable and localizable, not that any
+deployed system exhibits it.
 
 ### Internal validity
 
@@ -2043,14 +1922,19 @@ the corpus-supplied Boolean that branch reads, which is branch coverage in
 two implementations at once and not verification of the property the branch
 names (Section 5.3).
 
+The recorded Veraison freshness run motivating Section 5.1 and the
+verifier-provenance differential of Section 7.4 are internal companion
+artifacts of this research programme; public deposits are pending, and no
+load-bearing claim depends on either record.
+
 The mutation and revocation expectations are also author-written. A
 pre-oracle freeze prevents moving evaluator outputs after the mutation oracle
 is opened, but does not make that oracle independent or correct. The
 revocation implementations share the same frozen packet and internal
 expected labels. The independent-JavaScript freeze against the external-label
-packet no longer validates the current labelling specification because that
-specification was corrected from version 1.0 to 1.1 after the freeze; the
-drift is reported rather than repaired retrospectively.
+packet targets labelling specification 1.0, whereas the analysis uses
+specification 1.1; it therefore does not validate the active labelling
+specification.
 
 Both live services derive their oracle from the state stored by the same
 linearization mechanism that records the effect. This avoids client-clock
@@ -2066,12 +1950,12 @@ classes is an interpretive analysis rather than ground truth.
 
 The composed verifier imports source evaluator code. The corpus hash
 closure prevents silent source-corpus substitution within the run. A
-companion container run (Section 9) reproduced every then-current
-experimental quantity
+companion container run (Section 9) reproduced every reported experimental
+quantity
 under a different Linux distribution, CPython patch level, C library, and
 SQLite engine, but that container shared the host kernel, the host CPU, and
-the host's compiled NumPy and OpenSSL binaries. That earlier container
-evidence-upgrade rerun includes the current 104-transaction binding corpus,
+the host's compiled NumPy and OpenSSL binaries. The container run includes
+the 104-transaction binding corpus,
 native signed adapter, mutation corpora, and revocation corpus; its
 cross-environment claim remains a same-host claim (Section 9).
 
@@ -2084,14 +1968,14 @@ policy replay, composed-corpus evaluation, typed transfer, and
 process-isolated durable revocation. They do not execute the native-TPM
 overlay, one-process live service, Java/model-check, or five-container labs on
 ARM64; identify the underlying physical hosts; use a hardware TPM; or supply
-outside-operator independence. The native-TPM, live-service, neutral-packet,
-and typed-transfer additions in r4 were also rerun locally and hash-checked. The
-r5 source capsule now vendors the previously external SAFE and boundary-seal
-trees plus an offline amd64 wheelhouse. A hash-bound JSON result and full log
-record a successful clean temporary extraction on the same x86_64 host. The
-r6 workflow verifies that exact 210-member source capsule, applies the declared
+outside-operator independence. Local hash-checked runs also cover the
+native-TPM, live-service, neutral-packet, and typed-transfer companions. The
+source capsule vendors the SAFE and boundary-seal trees plus an offline amd64
+wheelhouse. A hash-bound JSON result and full log record a successful clean
+temporary extraction on the same x86_64 host. The hosted workflow verifies
+that exact 210-member source capsule, applies the declared
 overlay, installs the same pinned dependencies natively for each architecture,
-and has now completed its four-lane contract twice on both reported
+and completes its four-lane contract twice on both reported
 architectures.
 
 ### External validity
@@ -2111,7 +1995,9 @@ restart were executed; a five-container extension adds two effect instances,
 an internal bridge, and deterministic request/response loss, but shares one
 physical host and SQLite volume. No public or remote service, payment, robot,
 institutional workflow, distributed clock, network partition, or multi-host
-revocation event was exercised. The neutral external-label packet covers all
+revocation event was exercised, and no latency, throughput, or
+resource-cost characterization is reported for the live services: the
+study is correctness-scoped. The neutral external-label packet covers all
 104 cases, its blind analysis pipeline is executable, and it remains
 undispatched.
 
@@ -2119,9 +2005,10 @@ undispatched.
 
 Bootstrap and TOPSIS cases were constructed to expose boundary behavior.
 They show existence, not prevalence. The bootstrap uses the plain
-percentile method with n as small as 18, no BCa correction, and no seed or
-replicate sensitivity sweep; the boundary decision could move under a
-different estimator. Across NumPy 2.4.4, 2.4.6, 2.5.0, and 2.5.1 on one
+percentile method with n as small as 18 and no BCa correction; the
+companion seed/replicate sweep (Section 5.2) shows the reported outcomes
+are not seed or replicate-count artifacts, but the boundary decision could
+still move under a different estimator family. Across NumPy 2.4.4, 2.4.6, 2.5.0, and 2.5.1 on one
 processor the lower bounds did not move at all (Section 9), but that probe
 holds the CPU and its instruction dispatch fixed, so cross-build
 reproducibility of that third decimal is not established in general. The
@@ -2138,7 +2025,7 @@ orders and preserve exact event traces.
 
 ## 9. Reproducibility and Artifact Statement
 
-The revised entry points are:
+The laboratory entry points are:
 
 ```bash
 labs/policy-version-evidence-replay/run.sh
@@ -2157,327 +2044,201 @@ labs/cross-ecosystem-typed-transfer/build_transfer.py
 labs/cross-ecosystem-typed-transfer/verify_crosswalk_sql.py
 external-label-packet-neutral-104/build_neutral_packet.py
 external-label-packet-neutral-104/analyze_responses.py --self-test
-(
-  cd release-preparation-2026-07-28/crosswalk-semantic-validation
-  python3 validate_semantic_response.py --self-test
-)
+companions/native-signed-authority-adapters/verify_fixtures.py
+companions/thesis-v4-mutation-tests/evaluate_mutation_corpus.py
+companions/thesis-v4-multifault-tests/freeze_and_compare.py
 repro/verify_portable_source_capsule.py
 repro/run_clean_capsule_replay.py
-
-# companion trees retained in zeus-followup-2026-07-27
-native-signed-authority-adapters/{build_fixtures.py,verify_fixtures.py,compare_results.py}
-thesis-v4-mutation-tests/{evaluate_mutation_corpus.py,evaluate_mutation_corpus.mjs,compare_mutations.py}
-thesis-v4-multifault-tests/{run_python.py,run_js.mjs,freeze_and_compare.py}
 ```
 
 The composed laboratory's entry point runs, in order, the state-adapter
 self-test, the corpus build, the cross-layer binding acceptance test, the
 composed verifier, and the relational oracle, then verifies both checksum
-manifests from their owning directories. The acceptance test is a gate rather
-than a report: it exits non-zero if the Section 1 counterexample is allowed,
-if any of its five component verifiers fails on that transaction, if the
-binding result or gate is not `EFFECT_MISMATCH` / `binding.effect`, or if the
-matched lookalike is not allowed at gate `verified`.
+manifests. The acceptance test is a gate: it exits non-zero if the Section 1
+counterexample is allowed, if any of its five component verifiers fails on
+that transaction, if the binding result or gate is not `EFFECT_MISMATCH` /
+`binding.effect`, or if the matched lookalike is not allowed at gate
+`verified`. The native signed authority adapter, both mutation
+laboratories, and their input evaluator are committed under
+`companions/`; their packet and result digests (`09c868dc…`, `af226bac…`,
+`3ce82a8c…`, `5233577a…`, `8596cb1d…`) re-derive from the committed trees.
 
-The frozen previous packet's SAFE laboratory is consumed read-only by the
-working tree and vendored under its original relative path in the portable
-source capsule. Each run writes raw typed results, a summary, environment
-metadata where relevant, and a SHA-256 manifest with relative paths. The
-original corpus entry points and native TPM appraisal require no network. Both
-live-race entry points deliberately use HTTP bound only to `127.0.0.1`; the
-durable extension uses two listeners and a shared local SQLite file. They
-perform no external request. That the original source contains no network call is a
-declared property verified by inspection; that no external network was
-reachable during the r3 container re-execution is a measured property, and
-the two statements are not interchangeable.
+Each deterministic entry point was executed twice end to end against the
+corpus reported here: every regenerated result file and the complete
+standard output were byte-identical between runs, and all checksum
+manifests verified from their owning directories, including the pinned
+hashes of the frozen SAFE sources. The generated native overlay and both
+live-race results are intentionally not byte-stable, because fresh
+attestation-key material, TPM clock fields, operating-system scheduling,
+and process identity are evidence; their acceptance assertions are
+typed-class and recomposition parity, mutation rejection, atomic safety,
+idempotent recovery, signature verification, and exposure of at least one
+false allow in every incomplete profile. The live entry points bind only to
+`127.0.0.1` and perform no external request.
 
-On 2026-07-27 each deterministic r3 entry point was executed twice end to end
-against the corpus reported here: every regenerated result file and the
-complete standard output were byte-identical between the two runs, and all
-checksum manifests verified from their owning directories with relative
-paths, including the pinned hashes of the frozen SAFE sources. The
-frozen-vector native and typed-transfer labs are deterministic and
-manifest-checked. The generated native overlay, both live-race results, and
-service process identifiers are intentionally not byte-stable because fresh
-AK material, TPM clock fields, operating-system scheduling, and process
-identity are evidence. Their acceptance assertions are typed-class and
-recomposition parity, mutation rejection, atomic safety, idempotent recovery,
-signature verification, and exposure of at least one false allow in every
-incomplete profile.
+A companion container reproduction re-executed the entry points offline
+from a digest-pinned base image with no network namespace and a read-only
+root filesystem; it reproduced the composition counts (104 transactions,
+15 allows, 89 denies, 8 cross-layer denials), signed adapter 8/8,
+single-fault 38/38, multi-fault 12/12, and revocation 13/13, with all six
+regenerated artifact hashes equal to the host references. The container
+changes Linux userland, CPython patch level, glibc, and SQLite version
+while sharing the host kernel, CPU, and compiled NumPy/OpenSSL wheels, so
+it is cross-environment evidence only.
 
-A companion container reproduction re-executed the entry points offline from
-a base image pinned by digest, with no network namespace, a read-only root
-filesystem, read-only host mounts, and a writable tmpfs scratch copy. A first
-run documents the previous 90-transaction corpus and the expected
-environment-metadata divergences. A second run executes the current
-104-transaction corpus and the evidence upgrades. It reproduces the current
-composition counts (104 transactions, 15 allows, 89 denies, 8 cross-layer
-denials), signed adapter 8/8, single-fault mutations 38/38, multi-fault
-Python results against the frozen JavaScript typed fields for 12/12 cases,
-and revocation Python results against the frozen Node rows for 13/13 cases.
-The six regenerated artifact/result hashes printed by the container equal
-the host references. Inside the container the only interface was `lo`, the
-route table was empty, and a literal-IP outbound connection failed with
-`ENETUNREACH`.
-
-The pinned container changes Debian/Ubuntu userland, CPython 3.12.3 to
-3.12.13, glibc 2.39 to 2.41, and SQLite 3.45.1 to 3.46.1. It shares the host
-kernel, CPU, and the same compiled NumPy and OpenSSL wheels. A secondary probe
-under four NumPy releases found identical lower bounds for the four
-measurement fixtures; the frozen SAFE corpus generator produced eight
-one-unit-in-the-last-place source-data differences under NumPy 2.4.x, none of
-which reached a result file because the composed entry point consumes the
-packaged SAFE corpus. Both container runs are cross-environment evidence only;
-the separate hosted-runner repetitions below supply the cross-architecture
-execution evidence.
-
-A deterministic 22.1 MB portable source capsule now vendors the V4
-laboratories, the exact sibling SAFE and boundary-seal inputs their relative
-paths require, reproduction scripts, and an offline CPython 3.12 linux/amd64
-wheelhouse. The archive has 210 members: its embedded manifest covers 209
-payload entries and is itself the final member. Relative-path safety, payload
-digests, and the outer archive digest all verify. A clean temporary extraction
-on `redacted-local-host` reran the deterministic core, finite Java check, SQL
-crosswalk audit, 372-case durable service, saved five-container evidence
-verifier, and native overlay successfully with exit code 0. The archive and
-runner hashes, environment, pass sentinel, timestamps, exit code, and full
-stdout/stderr are frozen in a JSON result and companion log. That original
-record remains an honest same-host result. A declared release overlay
-subsequently ran the verified sealed capsule twice on GitHub-hosted x86_64 and
-ARM64 VMs. The overlay repairs execute bits on three archived run scripts and
-replaces one hard-coded `x86_64` claim-boundary label with
-`platform.machine()`; it changes no fixture, evaluator, event-processing rule,
-expected count, or pass/fail assertion. In the
-preferred repetition, both jobs verified 210/210 capsule members, satisfied
-20/20 architecture-neutral semantic assertions, and agreed on all 11/11
-cross-architecture comparison assertions. The exact result counts were
-identical: 16 policy vectors, 104 composed transactions, eight binding
-denials, 21 EATF rows, 104 transfer rows, 372 revocation cases, and 96 fault
-cases. A prior repetition also passed the same contracts. The runs install
-the same exact dependency versions into architecture-native environments
-instead of attempting to reuse the amd64 wheelhouse on ARM64.
-
-The preserved hosted durable-result field that says `same physical
-x86_64/aarch64 host` is a legacy same-execution-domain topology label inherited
-from the runner; it is not physical-host attestation. The accompanying
-environment and claim-boundary records control the interpretation: one job VM
-per execution, with underlying physical identity unknown.
-
-The preferred and repeat runs are bound by the following anchors:
-
-```text
-preferred source commit:
-  c85bc3aa5769a2e94386b2d43e40ef16fafe16ed
-preferred complete downloaded-evidence manifest:
-  8d2275f3fbbb60f98b3b36f7f514c1abdf48f313a4843d02e207cd510cf82c23
-preferred comparison JSON:
-  9e2ac18591a53c8a46fe73151aa7b1e681473b6eb32199380e98073225218b08
-repeat source commit:
-  428ce24b6d77b4b9691d5e42a94f0f39eacea918
-repeat complete downloaded-evidence manifest:
-  7b07c138f25083a46d46687522ad41afe91a596d133a06ac1782a8999a6dc62f
-```
-
-These records establish repeated hosted-VM and cross-architecture execution;
-they do not establish physical-host identity or outside-operator independence.
-
-The configured `zeus2` SSH target supplies a complementary execution domain.
-Hashed machine and boot identifiers distinguish an Ubuntu 24.04 x86_64
-Hyper-V VM/OS instance; DMI reports Microsoft Corporation / Virtual Machine /
-Hyper-V UEFI Release v4.1, and TPM fixed properties report manufacturer
-`MSFT`. The target verifies the deterministic public source archive, then
-satisfies the same four-lane contract: 16 policy vectors, 104 composed
+A deterministic 22.1 MB portable source capsule (210 members, embedded
+manifest, relative-path safety and payload digests verified) vendors the
+laboratories, their frozen sibling inputs, reproduction scripts, and an
+offline CPython 3.12 wheelhouse. A declared release overlay — which repairs
+execute bits on three archived run scripts and replaces one hard-coded
+architecture label with `platform.machine()`, changing no fixture,
+evaluator, expected count, or assertion — ran the verified sealed capsule
+twice on GitHub-hosted x86_64 and ARM64 job VMs. Both repetitions verified
+210/210 capsule members, satisfied 20/20 architecture-neutral semantic
+assertions per architecture, and agreed on all 11/11 cross-architecture
+comparisons, with identical result counts: 16 policy vectors, 104 composed
 transactions, eight binding denials, 21 EATF rows, 104 transfer rows, 372
-revocation cases, 96 fault cases, and 20/20 semantic assertions.
+revocation cases, and 96 fault cases. The runs install identical dependency
+versions natively per architecture. A preserved hosted field reading `same
+physical x86_64/aarch64 host` is a legacy topology label from the runner,
+not physical-host attestation: one job VM per execution, underlying
+physical identity unknown. The hosted anchors are source commits
+`c85bc3aa…` (preferred) and `428ce24b…` (repeat) with their complete
+downloaded-evidence manifests pinned in the artifact ledger. A direct
+public-tree matrix run over source commit `d605e8d…` returned 20/20 on the
+x86_64 job VM, 20/20 on the ARM64 job VM, and 8/8 in the cross-architecture
+comparison, and a further matrix run at source commit `62d5df8…`
+reproduced the same contract; the four lanes' code and fixtures are
+unchanged between those commits and the present manuscript source.
 
-The non-destructive TPM companion first passes 11/11 static/input checks and
-17/17 negative safety checks. The Microsoft vTPM rejects `tpm2_createak`
-below a generic transient endorsement primary with `TPM_RC_POLICY`; the
-failure occurs before any quote and is not hidden. A declared compatibility
-overlay instead creates an owner-hierarchy transient primary and an ordinary
-transient RSA signing key. Its encrypted private blob remains inside the
-temporary private directory. The final run verifies 104/104 quotes with
-`tpm2_checkquote`, one unique random challenge and qualifying-data digest per
-transaction, and rejects all 64 predeclared message, signature, PCR,
-challenge, transaction, corpus, capsule, and representation mutations. A
+A complementary execution domain is an identified Ubuntu 24.04 x86_64
+Hyper-V VM/OS instance exposing a Microsoft vTPM, recorded in the artifact
+under the host label `zeus2` and distinguished by hashed machine and boot
+identifiers, DMI strings, and TPM manufacturer properties (`MSFT`). The
+identified VM verifies the deterministic public source archive and then
+satisfies the same four-lane contract (16 policy vectors, 104 composed
+transactions, eight binding denials, 21 EATF rows, 104 transfer rows, 372
+revocation cases, 96 fault cases, 20/20 semantic assertions). Its
+non-destructive TPM companion first passes 11/11 static/input checks and
+17/17 negative safety checks; the vTPM rejects `tpm2_createak` below a
+generic transient endorsement primary with `TPM_RC_POLICY`, and a declared
+compatibility overlay instead creates an owner-hierarchy transient primary
+and an ordinary transient RSA signing key whose encrypted private blob
+never leaves the temporary private directory. The final run verifies
+104/104 quotes with `tpm2_checkquote`, one unique random challenge and
+qualifying-data digest per transaction, and rejects all 64 predeclared
+mutations. The identified VM's eight predeclared mutation classes follow
+the hardware-companion plan (quote message, signature, PCR blob, challenge,
+transaction substitution, source-corpus hash, capsule hash, and
+qualifying-data representation); this plan shares six classes with the
+native-overlay plan of Section 5.6 and replaces its measurement and
+signed-window classes with the capsule and representation classes. A
 read-only handle census returns zero new transient and zero persistent
-handles; the public bundle contains no `.ctx`, `.priv`, or PEM private key.
+handles, and the public bundle contains no `.ctx`, `.priv`, or PEM private
+key. This is live vTPM evidence on an identified VM/OS, not discrete
+hardware-TPM or physical-host attestation.
 
-```text
-zeus2 provenance:
-  8da49f87f6c0c589873d618786bee086f03d8030f3f360301118da07f51f86ed
-zeus2 evidence manifest:
-  ce20410880c05f4ef0a5a65c8fed9006e63217d5e482e4d1a8395c9ff8ef7dcd
-TPM run manifest:
-  9d0722edfcbd33cbc717995c224e8f0c8a55f663bd8ab212127e1cf23b33a7bc
-TPM preflight:
-  90ed2149c973f950aa3c3ce333c187143763f24cb2aa7a98dc1aab57c7048207
-```
+The execution domains and their contract counts are summarized below.
+Cells are deterministic contract checks on designed corpora, not
+deployed-system rates; the identified-VM row is a VM/OS with a Microsoft
+vTPM, not evidence of the underlying physical host or a hardware root of
+trust.
 
-![Execution-domain matrix for the four executable lanes and TPM companions.
-Cells report designed corpus sizes or native verification/rejection counts,
-not deployed-system rates. The zeus2 row is an identified VM/OS with a
-Microsoft vTPM; it is not evidence of the underlying physical host or a
-hardware root of trust.](figures/figN-execution-domain-evidence-matrix.png){ width=97% }
+| Execution domain | Policy | Corpus | Transfer | Revocation | Quotes | Mutations |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Local x86_64, software TPM (8 fresh `swtpm` roots; one physical host) | 16 | 104 | 104 | 372 | 104/104 | 64/64 |
+| Hosted x86_64 job VM (contract 20/20; physical host unknown) | 16 | 104 | 104 | 372 | — | — |
+| Hosted ARM64 job VM (contract 20/20; physical host unknown) | 16 | 104 | 104 | 372 | — | — |
+| Identified VM (`zeus2`), Hyper-V x86_64 (contract 20/20; Microsoft vTPM) | 16 | 104 | 104 | 372 | 104/104 | 64/64 |
 
-A separate blind-safe public artifact repository records Anton Sokolov as
-author, ORCID 0000-0003-2452-7096, and Tyche Institute as affiliation:
+The local software-TPM quote and mutation counts are verified
+independently by the Python and compiled Java implementations; the
+identified-VM counts are live Microsoft-vTPM verifications.
+
+A blind-safe public artifact repository records Anton Sokolov as author,
+ORCID 0000-0003-2452-7096, and Tyche Institute as affiliation:
 <https://github.com/tyche-institute/subject-bound-evidence-composition-artifact>.
 Original code and schemas carry Apache-2.0 terms; original prose, figures,
 synthetic corpora, fixtures, and generated research data carry CC-BY-4.0
-terms, with upstream notices preserved. Its `v0.2.0-rc2` release is built only
-from an exact allowlist and excludes the sealed capsule, expected labels,
-participant coordination, and internal review records. Thus
-authorship, licence grant, repository execution, hosted cross-architecture
-evidence, an identified second VM/OS run, and live Microsoft-vTPM evidence
-now exist. Physical-host and hardware-rooted attestation remain outside the
-claim, not missing support for a claim the paper makes.
+terms, with upstream notices preserved. The `v0.2.0-rc2` release is built
+by a deterministic fail-closed sanitizer from an exact allowlist over a
+clean source commit; two builds over the release-candidate tree and one
+from a clean clone produced byte-identical archives, and a fresh anonymous
+HTTPS clone of the public commit `212b2ff5…` independently verified the
+root manifest, regenerated all four lanes, and satisfied 20/20 semantic
+assertions and 4/4 replay-evidence manifest entries. Software Heritage
+completed a full archival visit of the release. The release anchors the
+code, corpora, and generated evidence, all unchanged in the range between
+its source commit and the present manuscript source; the preprint copy
+bundled inside the release is an earlier draft, so the manuscript of record
+is the journal submission, and a release recut at the submitted commit is
+planned as a separate, explicitly authorized step. A DOI is not asserted or required by
+the scoped reproducibility claim.
 
-A deterministic
-public-release sanitizer now accepts only a clean exact Git commit and a
-sorted 348-path allowlist, preserves component licences and notices, excludes
-blind/coordinator and unresolved toolchain material, and passes 11/11
-fail-closed secret, identifier, mnemonic, undeclared-path, and licence tests.
-Two builds over the release-candidate tree and one build from a clean clone of
-the exact source commit produced byte-identical 350-member archives. The
-extracted archive verified its 349-entry manifest and replayed its four
-included lanes with 20/20 semantic assertions. A direct public-tree PR-head
-matrix (GitHub Actions run 30349843070) independently returned 20/20 on the
-job VM reporting x86_64, 20/20 on the job VM reporting ARM64, and 8/8 in the
-cross-architecture comparison; the comparison records the exact checkout
-commit. These are release-engineering and hosted-VM results, not outside
-operator reproduction. The versioned GitHub release carries the deterministic
-archive and SHA-256 sidecar; the Git commit, tag, and archive digest are
-content anchors. A DOI is not asserted.
-
-The composed corpus records:
+The root content anchors are:
 
 ```text
-policy corpus SHA-256 (16 vectors, unchanged in this revision):
-  8d1925bfe0459dc9f42e554cf63d01adbe801b6c628ff61908bde5f9d9dd45da
-
-delegation-path corpus SHA-256 (16 cases, unchanged in this revision):
-  2b93fe67c3199e5e15f80254b3377411edeff4045aa8b8014519f2365baab45e
-
-SAFE corpus SHA-256 (frozen, unchanged):
-  e5a09eab9a7e48bb8060a73a26583c2ad0cd1fd0f13e15a86cb3e15d1b253689
-
-state-fixture corpus SHA-256 (unchanged in this revision):
-  86feb7501b432fefb2cc55abfd843c738693db4e91bc40a5334136f8ef7c0810
-
-composed transaction corpus SHA-256 (104 transactions, this revision):
+composed transaction corpus (104 transactions) SHA-256:
   1ba6d40d07e62a862b98ec52ab5c189eb491f19e4e1e69a411fba73bbb9a43a8
 
-  superseded 90-transaction corpus of the previous revision:
-  300fcf3e52f11c5c9083b725bb4027bd47a7e9bfe9e0d86c2ca43af81d9f0e7c
-
-shared composition-rule module SHA-256 (conjunction, binding stage, ladder):
+shared composition-rule module SHA-256:
   ac430575a00e0090434202d41c430e9fb9818924fc435ea766c64759fe93e61d
 
-native signed authority fixtures SHA-256 (8 cases):
-  09c868dc0efd4cad69f4c0cc569ca35f07d800cf0fabd745665a503e846583c8
+process-isolated durable revocation archived result SHA-256:
+  367f957503c3959acea1f1ee2ee9bebf506e2eed9878e4a0313423da47879358
 
-single-fault mutation packet SHA-256 (38 cases):
-  af226bac2a7223cb607a2eea075fc93831185c225c25dfcb2c717c99df2f63ab
-
-multi-fault mutation packet SHA-256 (12 cases):
-  5233577ad02101f17911cc646a30d5a02d910fc6e8588db212bf6ed7123efc0a
-
-prospective revocation-race corpus SHA-256 (13 cases):
-  33625c8dfd7b36da53a49b9306a0034b5529447a2e35e66d3a2c21eae385c563
-
-native software-TPM frozen vector / result SHA-256:
-  8b31e0f5081ca8b2cef47ad735daffb8aa0c5bfa7fda9c9c8a9f9ca82478bc57
-  70b73cd540434a192d64ed11e1c446a1857747326712fd87419f17e8777937b6
-
-native 104-transaction state overlay / summary SHA-256:
-  33d36515f7f73af046bb897eeb549cf8ea4ec35c871e41c556f1f63bde4f0406
-  c564cd44734bcdb4b5039ea5d13262c8658978bad796c20137f140fb1e08cf6a
-
-live revocation-service result SHA-256 (276 cases, this run):
-  f61af5b5be7fb2ba300dcd6cfe4ea3fadeacc137fac74843402dc6e465fc1dfa
-
-process-isolated durable revocation result SHA-256 (372 cases, this run):
-  1d3cb71b005d468309cdfaef9bacb46b2d3f47effc1d6aaebb8603fb7d4b1403
-
-containerized durable revocation result SHA-256 (135 cases, this run):
-  ca3afc42dac51cfb7d8d81a6d5bf9779cd7c622d9294f65f0e9c65f7783deada
-
-standalone finite model-check result SHA-256:
-  b51f28323c1cf01374433f3cc307d653e8462c969df3398afe7651cbc9e6aaab
-
-independent Java native verifier source / assertions SHA-256:
-  a5a674e4243fddbe063135a845f920f14a017ba3a96b42a875c6e20e649c10f6
-  88a9f136d24d5e548e742c3dc1a241ddd771ef4fb992ee9c3ac346b4a72dc31f
-
-cross-ecosystem typed-transfer result SHA-256:
-  7bb3896fdf324405917e2ff7d76d76dd22de2bf43240e7a17f4b63a8006e0c90
-
-separate SQL crosswalk audit SHA-256:
-  ea455ec857e7563781ee930004ca27e99b70fb20083e106ec81212a0211ca2ec
-
-neutral 104-case labelling packet / sealed labels SHA-256:
-  fe56e226687cf38f31c6c692efd75245ac2a9ea6f474135f082883668b3da5e9
-  23ae1a4b15f65a2cf75b5d56c758d9f9ed494cfe11a5333fa26e192ca2ccd0ea
-
-blind external-response analysis program SHA-256:
-  5ca8bbbdf1077ce8517c43aa0413aba081d22992db5d0db006e5d468f7f18bb7
-
-blind semantic-crosswalk annotator archive SHA-256 (undispatched):
-  9638bcbdde19bca574c753f0a7c12cefa5a9a099b10987c5516ae81f0d5328e5
-
-executed x64/ARM64 hosted-runner workflow SHA-256:
-  2ceccf8d290d8005362811d56e07218eeeb43d536ad7d044e83626f62ac06af9
-
-preferred hosted-run complete evidence manifest SHA-256:
-  8d2275f3fbbb60f98b3b36f7f514c1abdf48f313a4843d02e207cd510cf82c23
-
-preferred hosted-run cross-architecture comparison SHA-256:
-  9e2ac18591a53c8a46fe73151aa7b1e681473b6eb32199380e98073225218b08
-
-repeat hosted-run complete evidence manifest SHA-256:
-  7b07c138f25083a46d46687522ad41afe91a596d133a06ac1782a8999a6dc62f
-
-portable second-host source capsule SHA-256 (executed through declared
-x64/ARM64 release overlay):
+portable second-host source capsule SHA-256:
   8c8919f9826381da289b73dfd35721938ad5aafea5cd3687b23187589a2d0386
 
-same-host clean-capsule replay JSON SHA-256:
-  8b864fa0b314915272a74994f95f55381a2f2c924461fb6b0e3cdc04656701e4
+public release archive SHA-256:
+  9d3f2e38ad64fea29271c31d63ac1b57a35ce68e92152d36edcbda29ac8a867f
 
-same-host clean-capsule replay log SHA-256:
-  6234c7fb577ba6a6f44028f25d9e45ed80da96ab7abb03e8e75871b82aba63ed
+Software Heritage snapshot:
+  swh:1:snp:f04ffb15417761d510910aa98d75add6fda83599
 
-current evidence-upgrade container log SHA-256:
-  7accc59e8f325d03a3ba9a59f02b5a15b6daf2aa7108ff83237e703065689da6
+identified-VM provenance / evidence manifest SHA-256:
+  8da49f87f6c0c589873d618786bee086f03d8030f3f360301118da07f51f86ed
+  ce20410880c05f4ef0a5a65c8fed9006e63217d5e482e4d1a8395c9ff8ef7dcd
 ```
 
-The shared composition-rule module is hashed and recorded because it is the
-single implementation of the conjunction, the binding stage, and the gate
-ladder that both the corpus builder and the verifier import; its hash is what
-makes the analytic character of composition-level agreement checkable rather
-than merely asserted.
+Every other per-artifact digest quoted in Sections 5 and 6 — source
+corpora, mutation packets, native overlay and model-check results, hosted
+evidence manifests, and container logs — is recorded in the repository's
+checksum manifests (`SHA256SUMS`, per-laboratory manifests, and the
+artifact ledger), which the entry points verify as part of their runs. The
+shared composition-rule module is hashed because it is the single
+implementation of the conjunction, the binding stage, and the gate ladder
+imported by both the corpus builder and the verifier: its hash is what
+makes the analytic character of composition-level agreement checkable
+rather than merely asserted.
 
-The sanitized artifact repository is public. The source/coordinator repository
-and active double-blind materials remain private and undisclosed.
+The sanitized artifact repository is public. The source/coordinator
+repository and the blind-study coordination materials (sealed expected
+labels, annotator archives, participant coordination records) remain
+private so that the prepared external-labelling and semantic-validation
+studies stay blind.
 
 ## 10. Conclusion
+
+RQ1 is answered by the eight cross-layer denials and the ablation ladder of
+Section 6.3; RQ2 by the native state overlay and the atomic
+status-and-effect boundary of Section 6.4; RQ3 by the typed transfer result
+of Section 6.4, at the analytic-crosswalk ceiling stated there.
 
 The artifact study operationalizes a narrow proposition: individually valid
 or plausible artifacts are insufficient when a required global relation is
 absent from local verdicts. The executable result instantiates that proposition
 only for effect, resource, report time, and measurement profile; it does not
-bind the state/workload subject or prove one complete action identity. In the
-previous revision that proposition was
-asserted and the artifact could not express it; the composition consumed five
-scalar layer results, so no transaction in which all five passed and the
-transaction was still inadmissible under $C$ could be built. It can now, and 8 such
-transactions exist in the frozen corpus, each denied at a named binding gate
+bind the state/workload subject or prove one complete action identity. Five
+scalar layer results alone cannot represent a transaction in which all five
+pass but the transaction remains inadmissible under $C$. The binding stage
+represents this class, and 8 such transactions exist in the frozen corpus,
+each denied at a named binding gate
 with every component verifier passing, each paired with a matched all-valid
-lookalike that is allowed. The article's own opening counterexample — a
+lookalike that is allowed. The opening counterexample — a
 correctly signed receipt reporting a WRITE effect where the valid delegation
-path permits only READ — is one of them, and it was allowed by the verifier
-this article previously shipped.
+path permits only READ — is denied at `binding.effect`, while its matched
+lookalike is allowed.
 
 Across the frozen fixtures, exact policy appraisal avoided the five or six
 false allows created by weaker policy profiles on the 16-vector corpus.
@@ -2494,26 +2255,25 @@ composed verifier's 104/104 decomposes into an analytic composition-level
 component, 104/104 per-layer execution agreement, and a 104/104 same-function
 subject-record plumbing check, all stated in Section 6.3.
 
-The evidence boundary is now sharper. Native signed authority/effect
-credentials, mutation-generated single- and multi-fault transactions,
-scheduled revocation sequences, native offline appraisal of a frozen
-software-TPM quote, 104 transaction-bound quotes under eight fresh software
-roots with a separate compiled verifier, a standalone finite model check,
-process-isolated and five-container durable revocation races, and typed EATF
-transfer with a separate SQL sensitivity audit are all executable. The live
+ Every companion mechanism —
+native signed credentials, generated single- and multi-fault transactions,
+scheduled revocation sequences, native quote appraisal with a separately
+compiled verifier, the finite model check, process-isolated and
+five-container durable revocation races, and typed transfer with a separate
+SQL sensitivity audit — is executable from the committed trees. The live
 result isolates the systems requirement the scheduled fixtures only
-suggested: revocation status and effect need one linearization boundary, and
-the recovery result shows why that boundary also needs idempotent effects.
-The transfer result isolates one diagnostic cost of Booleanization: 498
-unordered within-corpus pairs of distinct rejection-code types collapse to
-the same Boolean value.
+suggested: revocation status and effect need one linearization boundary,
+and the recovery result shows why that boundary also needs idempotent
+effects. The transfer result isolates one diagnostic cost of
+Booleanization: 498 unordered within-corpus pairs of distinct
+rejection-code types collapse to the same Boolean value.
 
 The experimental ceiling is explicit rather than a queue of unearned future
 claims. The verified capsule plus declared overlay completes its four-lane
 contract twice on GitHub-hosted job VMs reporting x86_64 and ARM64, and once
-on the identified zeus2 Hyper-V VM/OS. The zeus2 Microsoft-vTPM companion
-adds 104/104 live quote verifications and 64/64 mutation rejections with a
-clean post-run handle census. These observations support portability across
+on the identified Hyper-V VM/OS. The identified VM's Microsoft-vTPM
+companion adds 104/104 live quote verifications and 64/64 mutation
+rejections with a clean post-run handle census. These observations support portability across
 the reported execution domains and a bounded vTPM evidence path. They do not
 identify an underlying physical host, attest a hardware root, measure
 multi-host consensus, or estimate deployed-system rates.
@@ -2529,12 +2289,29 @@ semantic consensus or interoperability claim is made. These two extensions
 may broaden external validity, but their absence does not invalidate the
 reported synthetic-benchmark result.
 
-The resulting r7 manuscript is therefore a submission candidate for the
+The manuscript is therefore a submission candidate for the
 narrow claim actually tested: local Boolean validity cannot substitute for
 typed composition over the implemented effect, resource, report-time, and
 measurement-profile coordinates, and revocation status and effect require
 one commit boundary in the implemented model. It remains a benchmark and
 systems result, not a claim of production validity.
+
+## Declarations
+
+**Funding.** This research received no external funding.
+
+**Competing interests.** The author declares no competing interests.
+
+**Generative-AI assistance.** The author used Anthropic Claude
+Code for unit testing, drafting and editing assistance, reference
+verification, and reproducibility checks. All claims, results, design
+decisions, and references are the author's own and verified by the
+author, who takes full responsibility. Reported per COPE and ICMJE
+recommendations.
+
+**Data and code availability.** The sanitized public artifact repository,
+deterministic release archive, and Software Heritage snapshot are
+identified in Section 9, together with the root content anchors.
 
 ## References
 
@@ -2671,10 +2448,13 @@ Side Effects of Autonomous Systems in the Open World." *Journal of
 Artificial Intelligence Research* 74, 143--177, 2022.
 <https://doi.org/10.1613/jair.1.13581>.
 
-[33] Tyche Institute. *EATF Agent Evidence Package Toolkit: Decision-Path
-Differential Experiment*. Version 0.3.0 candidate result at commit
-`1a6329495e6e1235c388f72d209f23eefa38fe38`, 2026.
-<https://github.com/tyche-institute/eatf-verifier>.
+[33] Tyche Institute. *EATF Agent Evidence Package Toolkit*. Version 0.3.0,
+2026; decision-path differential experiment, result commit
+`1a6329495e6e1235c388f72d209f23eefa38fe38`.
+<https://doi.org/10.5281/zenodo.21618887>;
+<https://github.com/tyche-institute/eatf-verifier>. Published under the
+historical expansion of AEP; the framework's current canonical expansion is
+Action Evidence Package.
 
 [34] M. P. Herlihy and J. M. Wing. "Linearizability: A Correctness
 Condition for Concurrent Objects." *ACM Transactions on Programming
@@ -2693,8 +2473,27 @@ Agent-Based Artifact Systems." *Journal of Artificial Intelligence Research*
 Multiagent Plans." *Journal of Artificial Intelligence Research* 51, 1--70,
 2014. <https://doi.org/10.1613/JAIR.4339>.
 
-*Note on internal companion artifacts.* The recorded Veraison freshness run
-motivating Section 5.1 and the verifier-provenance differential summarised
-in Section 7.4 are internal companion artifacts of this research programme;
-public deposits are pending, and no load-bearing claim in this article
-depends on either record.
+[38] N. Hardy. "The Confused Deputy (or why capabilities might have been
+invented)." *ACM SIGOPS Operating Systems Review* 22(4), 36--38, 1988.
+<https://doi.org/10.1145/54289.871709>.
+
+[39] B. Campbell, J. Bradley, and N. Sakimura. *Resource Indicators for
+OAuth 2.0*. RFC 8707, 2020. <https://www.rfc-editor.org/rfc/rfc8707>.
+
+[40] T. Lodderstedt, J. Richer, and B. Campbell. *OAuth 2.0 Rich
+Authorization Requests*. RFC 9396, 2023.
+<https://www.rfc-editor.org/rfc/rfc9396>.
+
+[41] D. Fett, B. Campbell, J. Bradley, T. Lodderstedt, M. Jones, and
+D. Waite. *OAuth 2.0 Demonstrating Proof of Possession (DPoP)*. RFC 9449,
+2023. <https://www.rfc-editor.org/rfc/rfc9449>.
+
+[42] W3C. *Verifiable Credentials Data Model v2.0*. W3C Recommendation,
+15 May 2025. <https://www.w3.org/TR/vc-data-model-2.0/>.
+
+[43] SPIFFE Project. *Secure Production Identity Framework for Everyone
+(SPIFFE) Standards*. Accessed 2026-07-31.
+<https://github.com/spiffe/spiffe>.
+
+[44] Open Policy Agent. *Policy Language (Rego)*. Documentation, accessed
+2026-07-31. <https://www.openpolicyagent.org/docs/latest/policy-language/>.

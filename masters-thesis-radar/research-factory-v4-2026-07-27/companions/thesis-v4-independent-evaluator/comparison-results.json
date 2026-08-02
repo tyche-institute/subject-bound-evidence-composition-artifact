@@ -1,0 +1,13 @@
+{
+  "claim_boundary": "This is a cross-implementation comparison against sealed author-written programme-internal labels. It is stronger than same-code reruns but remains internal designed-corpus evidence, not external ground truth or deployed-system validity.",
+  "fully_exact_transactions": 90,
+  "gate_matches": 90,
+  "layer_matches": 450,
+  "layer_total": 450,
+  "mismatch_count": 0,
+  "mismatches": [],
+  "precomparison_freeze_sha256": "95deef42fcb71a828384115f59524c09b186d2ba120b683ad20a222eed910348",
+  "sealed_labels_sha256_verified": "bbad96248530567e6b4148d08043530bad49467019f6ffb6702adf248ffdaee5",
+  "transactions": 90,
+  "verdict_matches": 90
+}

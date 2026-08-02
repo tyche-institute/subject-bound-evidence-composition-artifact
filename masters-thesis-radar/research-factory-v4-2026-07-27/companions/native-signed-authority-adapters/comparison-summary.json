@@ -1,0 +1,10 @@
+{
+  "cases": 8,
+  "claim_boundary": "Tyche experimental envelope profile with real Ed25519 verification; not WAVE, JEDI, A2A, DID, or any external standards conformance claim.",
+  "exact_verdict_and_gate": 8,
+  "fixtures_sha256": "09c868dc0efd4cad69f4c0cc569ca35f07d800cf0fabd745665a503e846583c8",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "profile": "tyche-native-signed-authority-fixtures-v0.1",
+  "verifier_sha256": "1b465ea38f3e28fcf76adee46bc4a3f62dee8ac9fa205b6a084809f25bceeae1"
+}

@@ -1,0 +1,139 @@
+[
+  {
+    "case_name": "policy-signature-plus-evidence-replay",
+    "expected_first_rejecting_gate": "policy.signature",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "policy_splice_p2",
+      "evidence_splice_e2"
+    ],
+    "transaction_id": "MF001"
+  },
+  {
+    "case_name": "policy-substitution-plus-state-negative",
+    "expected_first_rejecting_gate": "policy.substituted",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "policy_splice_p5",
+      "state_status_negative"
+    ],
+    "transaction_id": "MF002"
+  },
+  {
+    "case_name": "evidence-tamper-plus-state-stale",
+    "expected_first_rejecting_gate": "evidence.integrity",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "evidence_splice_e1",
+      "state_issued_after_decision"
+    ],
+    "transaction_id": "MF003"
+  },
+  {
+    "case_name": "evidence-replay-plus-protocol-invalid",
+    "expected_first_rejecting_gate": "evidence.replay",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "evidence_splice_e2",
+      "authority_protocol_invalid"
+    ],
+    "transaction_id": "MF004"
+  },
+  {
+    "case_name": "state-negative-plus-lineage-break",
+    "expected_first_rejecting_gate": "state.contraindicated",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "state_status_negative",
+      "authority_lineage_break"
+    ],
+    "transaction_id": "MF005"
+  },
+  {
+    "case_name": "state-reference-plus-measurement-point",
+    "expected_first_rejecting_gate": "state.reference",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "state_observed_digest_mismatch",
+      "measurement_point_below_threshold"
+    ],
+    "transaction_id": "MF006"
+  },
+  {
+    "case_name": "protocol-invalid-plus-profile-mismatch",
+    "expected_first_rejecting_gate": "protocol.valid",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "authority_protocol_invalid",
+      "measurement_profile_changed"
+    ],
+    "transaction_id": "MF007"
+  },
+  {
+    "case_name": "effect-invalid-plus-lcb-failure",
+    "expected_first_rejecting_gate": "effect.native_validity",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "authority_native_effect_invalid",
+      "measurement_lcb_below_threshold"
+    ],
+    "transaction_id": "MF008"
+  },
+  {
+    "case_name": "all-layer-faults",
+    "expected_first_rejecting_gate": "policy.stale",
+    "expected_verdict": "DENY",
+    "fault_count": 5,
+    "fault_operators": [
+      "policy_splice_p4",
+      "evidence_splice_e1",
+      "state_status_negative",
+      "authority_protocol_invalid",
+      "measurement_point_below_threshold"
+    ],
+    "transaction_id": "MF009"
+  },
+  {
+    "case_name": "four-later-layer-faults",
+    "expected_first_rejecting_gate": "evidence.replay",
+    "expected_verdict": "DENY",
+    "fault_count": 4,
+    "fault_operators": [
+      "evidence_splice_e2",
+      "state_issued_after_decision",
+      "authority_edge_revoked",
+      "measurement_profile_changed"
+    ],
+    "transaction_id": "MF010"
+  },
+  {
+    "case_name": "authority-signature-plus-scope-escalation",
+    "expected_first_rejecting_gate": "edge.signature",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "authority_issuer_signature_invalid",
+      "authority_scope_resources_widened"
+    ],
+    "transaction_id": "MF011"
+  },
+  {
+    "case_name": "measurement-profile-plus-point-failure",
+    "expected_first_rejecting_gate": "measurement.profile",
+    "expected_verdict": "DENY",
+    "fault_count": 2,
+    "fault_operators": [
+      "measurement_profile_changed",
+      "measurement_point_below_threshold"
+    ],
+    "transaction_id": "MF012"
+  }
+]

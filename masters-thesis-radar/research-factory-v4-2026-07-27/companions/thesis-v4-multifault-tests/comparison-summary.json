@@ -1,0 +1,13 @@
+{
+  "cases": 12,
+  "claim_boundary": "Internal deterministic multi-fault precedence evidence over a designed corpus, not external ground truth or deployed validity.",
+  "corpus_id": "thesis-v4-multifault-composition-v1",
+  "exact_verdict_and_first_gate": 12,
+  "fault_count_max": 5,
+  "fault_count_min": 2,
+  "freeze_sha256": "0f8bfc4aad168853b1a6e6c5feb16e93c77b8da743f42789394cebc8525114dd",
+  "js_python_layer_field_agreement": 180,
+  "js_python_layer_field_total": 180,
+  "mismatch_count": 0,
+  "mismatches": []
+}

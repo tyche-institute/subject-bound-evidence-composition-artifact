@@ -1,0 +1,20 @@
+{
+  "allows": 0,
+  "denies": 12,
+  "implementation": "multifault-python-v1",
+  "measurement_diagnostics": {
+    "dataset-01@0.05": {
+      "lcb": 0.73208839734107,
+      "point": 0.7645366504492257
+    },
+    "dataset-02@0.05": {
+      "lcb": 0.8115536419585401,
+      "point": 0.8253772595808534
+    },
+    "dataset-03@0.05": {
+      "lcb": 0.6658736155424182,
+      "point": 0.6822630893412698
+    }
+  },
+  "transactions": 12
+}

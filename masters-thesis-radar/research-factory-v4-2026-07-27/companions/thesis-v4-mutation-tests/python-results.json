@@ -1,0 +1,306 @@
+[
+  {
+    "transaction_id": "M001",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "ALLOW",
+    "first_rejecting_gate": "verified",
+    "confidence": 5,
+    "rationale": "All five typed layers pass under LABELLING-SPEC.md v1.0."
+  },
+  {
+    "transaction_id": "M002",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.missing",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at policy.missing."
+  },
+  {
+    "transaction_id": "M003",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.signature",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at policy.signature."
+  },
+  {
+    "transaction_id": "M004",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.substituted",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at policy.substituted."
+  },
+  {
+    "transaction_id": "M005",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.stale",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at policy.stale."
+  },
+  {
+    "transaction_id": "M006",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "policy.substituted",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at policy.substituted."
+  },
+  {
+    "transaction_id": "M007",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "evidence.integrity",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at evidence.integrity."
+  },
+  {
+    "transaction_id": "M008",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "evidence.replay",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at evidence.replay."
+  },
+  {
+    "transaction_id": "M009",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "state.contraindicated",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at state.contraindicated."
+  },
+  {
+    "transaction_id": "M010",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "state.stale",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at state.stale."
+  },
+  {
+    "transaction_id": "M011",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "state.reference",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at state.reference."
+  },
+  {
+    "transaction_id": "M012",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "protocol.valid",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at protocol.valid."
+  },
+  {
+    "transaction_id": "M013",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.lineage",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.lineage."
+  },
+  {
+    "transaction_id": "M014",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.signature",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.signature."
+  },
+  {
+    "transaction_id": "M015",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.parent_delegable",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.parent_delegable."
+  },
+  {
+    "transaction_id": "M016",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.role_transition",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.role_transition."
+  },
+  {
+    "transaction_id": "M017",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.status",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.status."
+  },
+  {
+    "transaction_id": "M018",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.freshness",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.freshness."
+  },
+  {
+    "transaction_id": "M019",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.operations",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.scope.operations."
+  },
+  {
+    "transaction_id": "M020",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.resources",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.scope.resources."
+  },
+  {
+    "transaction_id": "M021",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.tools",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.scope.tools."
+  },
+  {
+    "transaction_id": "M022",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.audiences",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.scope.audiences."
+  },
+  {
+    "transaction_id": "M023",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.purposes",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.scope.purposes."
+  },
+  {
+    "transaction_id": "M024",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.currency",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.scope.currency."
+  },
+  {
+    "transaction_id": "M025",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "edge.scope.amount_max",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at edge.scope.amount_max."
+  },
+  {
+    "transaction_id": "M026",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.subject_role",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at action.subject_role."
+  },
+  {
+    "transaction_id": "M027",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.operation",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at action.operation."
+  },
+  {
+    "transaction_id": "M028",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.resource",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at action.resource."
+  },
+  {
+    "transaction_id": "M029",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.tool",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at action.tool."
+  },
+  {
+    "transaction_id": "M030",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.audience",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at action.audience."
+  },
+  {
+    "transaction_id": "M031",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.purpose",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at action.purpose."
+  },
+  {
+    "transaction_id": "M032",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "action.amount_currency",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at action.amount_currency."
+  },
+  {
+    "transaction_id": "M033",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "effect.native_validity",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at effect.native_validity."
+  },
+  {
+    "transaction_id": "M034",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "effect.time_binding",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at effect.time_binding."
+  },
+  {
+    "transaction_id": "M035",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "effect.action_binding",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at effect.action_binding."
+  },
+  {
+    "transaction_id": "M036",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "measurement.profile",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at measurement.profile."
+  },
+  {
+    "transaction_id": "M037",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "measurement.point",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at measurement.point."
+  },
+  {
+    "transaction_id": "M038",
+    "labeller_id": "mutation-python-v1",
+    "verdict": "DENY",
+    "first_rejecting_gate": "measurement.confidence",
+    "confidence": 5,
+    "rationale": "The first failing layer in fixed composition order rejects at measurement.confidence."
+  }
+]

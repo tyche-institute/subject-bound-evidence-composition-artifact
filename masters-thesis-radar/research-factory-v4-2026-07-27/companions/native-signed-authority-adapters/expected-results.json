@@ -1,0 +1,50 @@
+[
+  {
+    "case_id": "NATIVE-001",
+    "expected_gate": "verified",
+    "expected_verdict": "ALLOW",
+    "operator": "baseline"
+  },
+  {
+    "case_id": "NATIVE-002",
+    "expected_gate": "native.edge.signature",
+    "expected_verdict": "DENY",
+    "operator": "bad_delegation_signature"
+  },
+  {
+    "case_id": "NATIVE-003",
+    "expected_gate": "native.effect.signature",
+    "expected_verdict": "DENY",
+    "operator": "bad_effect_signature"
+  },
+  {
+    "case_id": "NATIVE-004",
+    "expected_gate": "native.effect.action_binding",
+    "expected_verdict": "DENY",
+    "operator": "signed_but_different_receipt_action"
+  },
+  {
+    "case_id": "NATIVE-005",
+    "expected_gate": "native.edge.freshness",
+    "expected_verdict": "DENY",
+    "operator": "expired_signed_delegation"
+  },
+  {
+    "case_id": "NATIVE-006",
+    "expected_gate": "native.edge.lineage",
+    "expected_verdict": "DENY",
+    "operator": "valid_signature_wrong_lineage"
+  },
+  {
+    "case_id": "NATIVE-007",
+    "expected_gate": "native.edge.scope.resources",
+    "expected_verdict": "DENY",
+    "operator": "signed_scope_escalation"
+  },
+  {
+    "case_id": "NATIVE-008",
+    "expected_gate": "native.effect.time_binding",
+    "expected_verdict": "DENY",
+    "operator": "signed_effect_time_mismatch"
+  }
+]

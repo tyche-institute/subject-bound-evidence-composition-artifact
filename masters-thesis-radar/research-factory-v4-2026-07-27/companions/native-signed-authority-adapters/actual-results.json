@@ -1,0 +1,50 @@
+[
+  {
+    "case_id": "NATIVE-001",
+    "detail": "all native signed checks passed",
+    "first_rejecting_gate": "verified",
+    "verdict": "ALLOW"
+  },
+  {
+    "case_id": "NATIVE-002",
+    "detail": "edge=1",
+    "first_rejecting_gate": "native.edge.signature",
+    "verdict": "DENY"
+  },
+  {
+    "case_id": "NATIVE-003",
+    "detail": "receipt",
+    "first_rejecting_gate": "native.effect.signature",
+    "verdict": "DENY"
+  },
+  {
+    "case_id": "NATIVE-004",
+    "detail": "action",
+    "first_rejecting_gate": "native.effect.action_binding",
+    "verdict": "DENY"
+  },
+  {
+    "case_id": "NATIVE-005",
+    "detail": "edge=0",
+    "first_rejecting_gate": "native.edge.freshness",
+    "verdict": "DENY"
+  },
+  {
+    "case_id": "NATIVE-006",
+    "detail": "edge=1",
+    "first_rejecting_gate": "native.edge.lineage",
+    "verdict": "DENY"
+  },
+  {
+    "case_id": "NATIVE-007",
+    "detail": "edge=1",
+    "first_rejecting_gate": "native.edge.scope.resources",
+    "verdict": "DENY"
+  },
+  {
+    "case_id": "NATIVE-008",
+    "detail": "effect time",
+    "first_rejecting_gate": "native.effect.time_binding",
+    "verdict": "DENY"
+  }
+]

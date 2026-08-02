@@ -1,0 +1,59 @@
+{
+  "implementation": "mutation-js-v1",
+  "transactions": 38,
+  "allows": 1,
+  "denies": 37,
+  "gate_counts": {
+    "action.amount_currency": 1,
+    "action.audience": 1,
+    "action.operation": 1,
+    "action.purpose": 1,
+    "action.resource": 1,
+    "action.subject_role": 1,
+    "action.tool": 1,
+    "edge.freshness": 1,
+    "edge.lineage": 1,
+    "edge.parent_delegable": 1,
+    "edge.role_transition": 1,
+    "edge.scope.amount_max": 1,
+    "edge.scope.audiences": 1,
+    "edge.scope.currency": 1,
+    "edge.scope.operations": 1,
+    "edge.scope.purposes": 1,
+    "edge.scope.resources": 1,
+    "edge.scope.tools": 1,
+    "edge.signature": 1,
+    "edge.status": 1,
+    "effect.action_binding": 1,
+    "effect.native_validity": 1,
+    "effect.time_binding": 1,
+    "evidence.integrity": 1,
+    "evidence.replay": 1,
+    "measurement.confidence": 1,
+    "measurement.point": 1,
+    "measurement.profile": 1,
+    "policy.missing": 1,
+    "policy.signature": 1,
+    "policy.stale": 1,
+    "policy.substituted": 2,
+    "protocol.valid": 1,
+    "state.contraindicated": 1,
+    "state.reference": 1,
+    "state.stale": 1,
+    "verified": 1
+  },
+  "measurement_diagnostics": {
+    "dataset-02": {
+      "point": 0.8253772595808534,
+      "lcb": 0.8111117803875512
+    },
+    "dataset-03": {
+      "point": 0.6822630893412698,
+      "lcb": 0.6662807126011173
+    },
+    "dataset-01": {
+      "point": 0.7645366504492258,
+      "lcb": 0.733196749334449
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tyche.local/schema/native-signed-authority-v0.1.json",
+  "title": "Tyche experimental native signed authority fixtures v0.1",
+  "type": "object",
+  "required": ["profile", "case_count", "cases"],
+  "properties": {
+    "profile": {
+      "const": "tyche-native-signed-authority-fixtures-v0.1"
+    },
+    "case_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["case_id", "shared", "delegations", "action", "receipt"],
+        "properties": {
+          "case_id": {"type": "string"},
+          "shared": {"type": "object"},
+          "delegations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "profile",
+                "delegation_id",
+                "issuer",
+                "subject",
+                "from_role",
+                "to_role",
+                "grant",
+                "not_before",
+                "expires_at",
+                "status",
+                "parent_digest",
+                "signature"
+              ]
+            }
+          },
+          "action": {"type": "object"},
+          "receipt": {
+            "type": "object",
+            "required": [
+              "profile",
+              "receipt_id",
+              "issuer",
+              "effect_time",
+              "action",
+              "authority_chain_digest",
+              "signature"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

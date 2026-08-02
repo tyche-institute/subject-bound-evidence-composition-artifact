@@ -1,0 +1,33 @@
+{
+  "implementation": "multifault-js-v1",
+  "transactions": 12,
+  "allows": 0,
+  "denies": 12,
+  "gate_counts": {
+    "edge.signature": 1,
+    "effect.native_validity": 1,
+    "evidence.integrity": 1,
+    "evidence.replay": 2,
+    "measurement.profile": 1,
+    "policy.signature": 1,
+    "policy.stale": 1,
+    "policy.substituted": 1,
+    "protocol.valid": 1,
+    "state.contraindicated": 1,
+    "state.reference": 1
+  },
+  "measurement_diagnostics": {
+    "dataset-02": {
+      "point": 0.8253772595808534,
+      "lcb": 0.8111117803875512
+    },
+    "dataset-03": {
+      "point": 0.6822630893412698,
+      "lcb": 0.6662807126011173
+    },
+    "dataset-01": {
+      "point": 0.7645366504492258,
+      "lcb": 0.733196749334449
+    }
+  }
+}

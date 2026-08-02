@@ -1,5 +1,9 @@
 # Evidence maturity and exact five-of-five gates
 
+> **Historical r6 scorecard.** Superseded by
+> `CLOSURE-STATUS-R7-2026-07-30.md`. The scores and NO-GO decision below
+> describe the 2026-07-28 state and are not current.
+
 Date: 2026-07-28
 Status: executable readiness record; future actions never count as evidence
 

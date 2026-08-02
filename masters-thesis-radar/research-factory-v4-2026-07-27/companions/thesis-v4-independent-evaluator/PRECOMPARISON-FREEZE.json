@@ -1,0 +1,37 @@
+{
+  "claim_boundary": "The implementation consumed only the labeller-facing packet. No research-program evaluator, result file, or reference label was used before this freeze.",
+  "files": {
+    "implementation": {
+      "bytes": 13543,
+      "path": "${REDACTED_HOME}/tyche-research-vault/zeus-followup-2026-07-27/thesis-v4-independent-evaluator/evaluate.mjs",
+      "sha256": "a6bcf208c8568cbbe17086b6d0cf60a6059c15a5b4e8a1172ff94707bdede3e0"
+    },
+    "independent_answers": {
+      "bytes": 24053,
+      "path": "${REDACTED_HOME}/tyche-research-vault/zeus-followup-2026-07-27/thesis-v4-independent-evaluator/independent-results-unsealed.json",
+      "sha256": "c108931bed8242e75c2c0977098c4d135d64cc1b51116f2286aa843166e93ad6"
+    },
+    "independent_layer_results": {
+      "bytes": 80764,
+      "path": "${REDACTED_HOME}/tyche-research-vault/zeus-followup-2026-07-27/thesis-v4-independent-evaluator/independent-layer-results-unsealed.json",
+      "sha256": "af8efca9d3fb48fbb9fec0c77696b6d33c46fe0f5f8d9351709ef25e86688b2d"
+    },
+    "labelling_spec": {
+      "bytes": 16730,
+      "path": "${REDACTED_HOME}/tyche-research-vault/masters-thesis-radar/research-factory-v4-2026-07-27/external-label-packet/LABELLING-SPEC.md",
+      "sha256": "ae2087da1264377c7c18e3be95d4a00ebfa682cb43b7b265389467bed8b92369"
+    },
+    "response_schema": {
+      "bytes": 3167,
+      "path": "${REDACTED_HOME}/tyche-research-vault/masters-thesis-radar/research-factory-v4-2026-07-27/external-label-packet/RESPONSE-SCHEMA.json",
+      "sha256": "e68b3acf09f28a567671400f74b38679bb7ede94b76743a00fd596c5da97c13d"
+    },
+    "transactions_packet": {
+      "bytes": 455270,
+      "path": "${REDACTED_HOME}/tyche-research-vault/masters-thesis-radar/research-factory-v4-2026-07-27/external-label-packet/transactions-for-labelling.json",
+      "sha256": "6ade4b6ea6be5daa5cb6fd59a44dd0e7ec530bba21acb4ad7fc55f1508c46e67"
+    }
+  },
+  "frozen_at_utc": "2026-07-27T09:26:21.280315+00:00",
+  "implementation": "independent-js-v1"
+}
