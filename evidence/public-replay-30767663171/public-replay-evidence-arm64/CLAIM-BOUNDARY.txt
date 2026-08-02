@@ -1,0 +1,1 @@
+Execution boundary: one job VM or local OS instance; no physical-host identity.

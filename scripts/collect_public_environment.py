@@ -70,7 +70,7 @@ def main() -> int:
             "workflow_ref": os.environ.get("GITHUB_WORKFLOW_REF"),
         },
         "tool_versions": {
-            "uname": command("uname", "-a"),
+            "uname": command("uname", "-s", "-r", "-m"),
             "git": command("git", "--version"),
             "node": command("node", "--version"),
         },

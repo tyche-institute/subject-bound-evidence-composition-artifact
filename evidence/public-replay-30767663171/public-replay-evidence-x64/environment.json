@@ -1,0 +1,35 @@
+{
+  "cpu_count": 4,
+  "cryptography": "49.0.0",
+  "machine": "x86_64",
+  "numpy": "2.5.0",
+  "openssl": "OpenSSL 3.0.13 30 Jan 2024",
+  "phase": "before-execution",
+  "platform": "Linux-6.17.0-1020-azure-x86_64-with-glibc2.39",
+  "privacy_note": "hostname, network addresses, machine-id, account names, and environment variables outside the allowlist are not recorded",
+  "python": "3.12.13 (main, Jun 16 2026, 22:05:08) [GCC 13.3.0]",
+  "python_implementation": "CPython",
+  "release": "6.17.0-1020-azure",
+  "runner": {
+    "arch": "X64",
+    "environment": "github-hosted",
+    "image_os": "ubuntu24",
+    "image_version": "20260720.247.2",
+    "os": "Linux"
+  },
+  "sqlite": "3.45.1",
+  "system": "Linux",
+  "tool_versions": {
+    "git": "git version 2.54.0",
+    "node": "v22.23.1",
+    "uname": "Linux runnervmvrwv9 6.17.0-1020-azure #20~24.04.1-Ubuntu SMP Fri Jun 19 20:09:14 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux"
+  },
+  "workflow": {
+    "checkout_sha": "e172ea951e8e031b787f5b895436e76edde53bd6",
+    "repository": "tyche-institute/subject-bound-evidence-composition-artifact",
+    "run_attempt": "1",
+    "run_id": "30767663171",
+    "sha": "e172ea951e8e031b787f5b895436e76edde53bd6",
+    "workflow_ref": "tyche-institute/subject-bound-evidence-composition-artifact/.github/workflows/public-four-lane-replay.yml@refs/tags/v0.2.0-rc3"
+  }
+}

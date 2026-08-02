@@ -6,7 +6,7 @@ measurement, subject-binding, and commit-time revocation.
 
 ## Current state
 
-Version `0.2.0-rc3` is a **blind-preserving, sanitized public artifact
+Version `0.2.0-rc4` is a **blind-preserving, sanitized public artifact
 release**.
 The public artifact repository is
 <https://github.com/tyche-institute/subject-bound-evidence-composition-artifact>;
@@ -17,6 +17,14 @@ and can obtain fresh x86-64 and ARM64 hosted-runner evidence without
 publishing sealed expected labels before independent human studies. No DOI
 has been minted; the Git tag, release archive digest, and Software Heritage
 snapshot are the current content anchors.
+
+The submitted PDF's claim that the earlier `v0.2.0-rc2` release already
+contained all manuscript code and evidence was too broad: four companion
+trees and a bootstrap-sensitivity companion were made public only after
+submission. The exact PDF is preserved unchanged; see
+`SUBMISSION-ARTIFACT-CORRECTION-2026-08-02.md`. This release also commits the
+downloaded evidence from public replay run 30767663171 so that it does not
+depend only on workflow-artifact retention.
 
 The private hosted-evidence workflow uses the exact frozen r5 source package
 and its SAFE Metric Metamorphics dependency carried in:

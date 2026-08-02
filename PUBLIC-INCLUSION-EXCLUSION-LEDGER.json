@@ -25,10 +25,10 @@
       "mode": "0644",
       "path": "CITATION.cff",
       "public_bytes": 845,
-      "public_sha256": "483d9897caae73b07252f355b968b41f22ccc4c7e18c4516a503a4d0c502672f",
+      "public_sha256": "786514ddd18b122e7bb09559264f6f983239e464f081525c2b4d8028564461ef",
       "reason": "exact_public_allowlist",
       "source_bytes": 845,
-      "source_sha256": "483d9897caae73b07252f355b968b41f22ccc4c7e18c4516a503a4d0c502672f"
+      "source_sha256": "786514ddd18b122e7bb09559264f6f983239e464f081525c2b4d8028564461ef"
     },
     {
       "decision": "include_verbatim",
@@ -53,22 +53,42 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "PUBLIC-SOURCE-ALLOWLIST.txt",
-      "public_bytes": 39672,
-      "public_sha256": "a240433cd5c7f4b942dc799cfb8f0ab97aca326bbe32d2f0600fcd97953f4fa2",
+      "path": "PRIVACY-METADATA-CORRECTION-2026-08-02.md",
+      "public_bytes": 622,
+      "public_sha256": "f415cb84afd6d4eb1f3759bd88b6786a7ab4a3c12c67228b5e48cf88a63615b7",
       "reason": "exact_public_allowlist",
-      "source_bytes": 39672,
-      "source_sha256": "a240433cd5c7f4b942dc799cfb8f0ab97aca326bbe32d2f0600fcd97953f4fa2"
+      "source_bytes": 622,
+      "source_sha256": "f415cb84afd6d4eb1f3759bd88b6786a7ab4a3c12c67228b5e48cf88a63615b7"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "PUBLIC-SOURCE-ALLOWLIST.txt",
+      "public_bytes": 41424,
+      "public_sha256": "66df202fbf3ea9562f303ba90517c477e0a7b142e8babc7ecd62201d70830e1d",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 41424,
+      "source_sha256": "66df202fbf3ea9562f303ba90517c477e0a7b142e8babc7ecd62201d70830e1d"
     },
     {
       "decision": "include_verbatim",
       "mode": "0644",
       "path": "README.md",
-      "public_bytes": 5173,
-      "public_sha256": "0f4592839cb58fb90ef010ea851f65f0018220640818fb181f9ef48767c45cbd",
+      "public_bytes": 5642,
+      "public_sha256": "85ab76eebccdd935abdb2444a21d06222829be22a11a22922445932deec8e71c",
       "reason": "exact_public_allowlist",
-      "source_bytes": 5173,
-      "source_sha256": "0f4592839cb58fb90ef010ea851f65f0018220640818fb181f9ef48767c45cbd"
+      "source_bytes": 5642,
+      "source_sha256": "85ab76eebccdd935abdb2444a21d06222829be22a11a22922445932deec8e71c"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "SUBMISSION-ARTIFACT-CORRECTION-2026-08-02.md",
+      "public_bytes": 1700,
+      "public_sha256": "54982dd495d0c0adf3d68536ad6838e5110e56e1071ac1f8e9a436c26693efca",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 1700,
+      "source_sha256": "54982dd495d0c0adf3d68536ad6838e5110e56e1071ac1f8e9a436c26693efca"
     },
     {
       "decision": "include_verbatim",
@@ -105,10 +125,10 @@
       "mode": "0644",
       "path": "codemeta.json",
       "public_bytes": 1027,
-      "public_sha256": "262e2470c42fb876c5cae89e547f15b51204131948c8c5abb5c6cb6c7edccd1d",
+      "public_sha256": "f1efd72410640f8190a0e46a0a7ac204865c56a38b0880c2806fbdb4b0d281bd",
       "reason": "exact_public_allowlist",
       "source_bytes": 1027,
-      "source_sha256": "262e2470c42fb876c5cae89e547f15b51204131948c8c5abb5c6cb6c7edccd1d"
+      "source_sha256": "f1efd72410640f8190a0e46a0a7ac204865c56a38b0880c2806fbdb4b0d281bd"
     },
     {
       "decision": "include_verbatim",
@@ -649,6 +669,216 @@
       "reason": "exact_public_allowlist",
       "source_bytes": 3803,
       "source_sha256": "9e2ac18591a53c8a46fe73151aa7b1e681473b6eb32199380e98073225218b08"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/README.md",
+      "public_bytes": 1109,
+      "public_sha256": "f709e74f786daddceb056aa06cdca26279b4f6c749569121ae1ac48b2b0d814d",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 1109,
+      "source_sha256": "f709e74f786daddceb056aa06cdca26279b4f6c749569121ae1ac48b2b0d814d"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/SHA256SUMS",
+      "public_bytes": 2163,
+      "public_sha256": "e0dce645d7745cc658465a1ab5a70066ef63cd410dafd1622bb8a43f4cc2b6e2",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 2163,
+      "source_sha256": "e0dce645d7745cc658465a1ab5a70066ef63cd410dafd1622bb8a43f4cc2b6e2"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-arm64/CLAIM-BOUNDARY.txt",
+      "public_bytes": 80,
+      "public_sha256": "89aac37e2a0cb547ea9911b5249046096fdffbad9fb8a167173db8eba51b2fd0",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 80,
+      "source_sha256": "89aac37e2a0cb547ea9911b5249046096fdffbad9fb8a167173db8eba51b2fd0"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-arm64/EVIDENCE-SHA256SUMS",
+      "public_bytes": 341,
+      "public_sha256": "dbef2912a0d145dc5144ff1545d06305cfdaa54ee55802a09a0b767ba0d248bb",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 341,
+      "source_sha256": "dbef2912a0d145dc5144ff1545d06305cfdaa54ee55802a09a0b767ba0d248bb"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-arm64/composed-corpus.log",
+      "public_bytes": 20540,
+      "public_sha256": "458468f58d3d8698c610c82e26a78a104c7d06f55682c1046b6e5e4e5a908357",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 20540,
+      "source_sha256": "458468f58d3d8698c610c82e26a78a104c7d06f55682c1046b6e5e4e5a908357"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-arm64/durable-revocation.log",
+      "public_bytes": 1476,
+      "public_sha256": "d386cbafd0419777432a1aa43710e28192bb8ddb4e6e99cc414d934f22e980ca",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 1476,
+      "source_sha256": "d386cbafd0419777432a1aa43710e28192bb8ddb4e6e99cc414d934f22e980ca"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-arm64/environment.json",
+      "public_bytes": 1365,
+      "public_sha256": "6c436ab04efe2a6f58fc9b374cff20f99627abc5507b0d9ba6552f003efa6a64",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 1365,
+      "source_sha256": "6c436ab04efe2a6f58fc9b374cff20f99627abc5507b0d9ba6552f003efa6a64"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-arm64/policy-replay.log",
+      "public_bytes": 3000,
+      "public_sha256": "0bd864600dd914b1a93dc40653b2bf5c34d51e35eeb697d227710c813d0052f9",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 3000,
+      "source_sha256": "0bd864600dd914b1a93dc40653b2bf5c34d51e35eeb697d227710c813d0052f9"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-arm64/result-sha256.txt",
+      "public_bytes": 473,
+      "public_sha256": "f01b7c4b0fc6f8e7a6a45f8795916597536833c9e8c05560b2b041c03a0611be",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 473,
+      "source_sha256": "f01b7c4b0fc6f8e7a6a45f8795916597536833c9e8c05560b2b041c03a0611be"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-arm64/semantic-contract.json",
+      "public_bytes": 1844,
+      "public_sha256": "0a8fddde4210f357d532bce29a211c942f99f844160456ac8e2dc1ac31bfebb1",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 1844,
+      "source_sha256": "0a8fddde4210f357d532bce29a211c942f99f844160456ac8e2dc1ac31bfebb1"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-arm64/typed-transfer.log",
+      "public_bytes": 2597,
+      "public_sha256": "45d05b5167aa708797000e9e82dfbb913eac37c497e8901af940810a114999ec",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 2597,
+      "source_sha256": "45d05b5167aa708797000e9e82dfbb913eac37c497e8901af940810a114999ec"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-x64/CLAIM-BOUNDARY.txt",
+      "public_bytes": 80,
+      "public_sha256": "89aac37e2a0cb547ea9911b5249046096fdffbad9fb8a167173db8eba51b2fd0",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 80,
+      "source_sha256": "89aac37e2a0cb547ea9911b5249046096fdffbad9fb8a167173db8eba51b2fd0"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-x64/EVIDENCE-SHA256SUMS",
+      "public_bytes": 341,
+      "public_sha256": "9f99a48b39e0a0aae4ee7616c9044069a355ccd71121c7a474b2accd5902e194",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 341,
+      "source_sha256": "9f99a48b39e0a0aae4ee7616c9044069a355ccd71121c7a474b2accd5902e194"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-x64/composed-corpus.log",
+      "public_bytes": 20540,
+      "public_sha256": "458468f58d3d8698c610c82e26a78a104c7d06f55682c1046b6e5e4e5a908357",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 20540,
+      "source_sha256": "458468f58d3d8698c610c82e26a78a104c7d06f55682c1046b6e5e4e5a908357"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-x64/durable-revocation.log",
+      "public_bytes": 1475,
+      "public_sha256": "e6a73486b286f6d6a7ef9cfb8c199e3bf29c8106498d2bb552adfe90ada0b976",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 1475,
+      "source_sha256": "e6a73486b286f6d6a7ef9cfb8c199e3bf29c8106498d2bb552adfe90ada0b976"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-x64/environment.json",
+      "public_bytes": 1353,
+      "public_sha256": "7dc502b67def4719e1677ec299345914a9ccfdfbfc32b9285622f2a340537988",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 1353,
+      "source_sha256": "7dc502b67def4719e1677ec299345914a9ccfdfbfc32b9285622f2a340537988"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-x64/policy-replay.log",
+      "public_bytes": 3000,
+      "public_sha256": "0bd864600dd914b1a93dc40653b2bf5c34d51e35eeb697d227710c813d0052f9",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 3000,
+      "source_sha256": "0bd864600dd914b1a93dc40653b2bf5c34d51e35eeb697d227710c813d0052f9"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-x64/result-sha256.txt",
+      "public_bytes": 473,
+      "public_sha256": "fc2da19e4cb315c09ab676f8e294886ada4611b124b2e62c8bca277b314a22b6",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 473,
+      "source_sha256": "fc2da19e4cb315c09ab676f8e294886ada4611b124b2e62c8bca277b314a22b6"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-x64/semantic-contract.json",
+      "public_bytes": 1844,
+      "public_sha256": "4d900c95beebf65b3905504c884dcc570199da536bac9b2a3baff92595593384",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 1844,
+      "source_sha256": "4d900c95beebf65b3905504c884dcc570199da536bac9b2a3baff92595593384"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-evidence-x64/typed-transfer.log",
+      "public_bytes": 2597,
+      "public_sha256": "45d05b5167aa708797000e9e82dfbb913eac37c497e8901af940810a114999ec",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 2597,
+      "source_sha256": "45d05b5167aa708797000e9e82dfbb913eac37c497e8901af940810a114999ec"
+    },
+    {
+      "decision": "include_verbatim",
+      "mode": "0644",
+      "path": "evidence/public-replay-30767663171/public-replay-x64-arm64-comparison/comparison.json",
+      "public_bytes": 3784,
+      "public_sha256": "273d9fff25dea9dee1325b4a6d17a63ab4b2594f594a68517265d7f3a86f9e50",
+      "reason": "exact_public_allowlist",
+      "source_bytes": 3784,
+      "source_sha256": "273d9fff25dea9dee1325b4a6d17a63ab4b2594f594a68517265d7f3a86f9e50"
     },
     {
       "decision": "include_verbatim",
@@ -4474,11 +4704,11 @@
       "decision": "include_verbatim",
       "mode": "0755",
       "path": "scripts/collect_public_environment.py",
-      "public_bytes": 2809,
-      "public_sha256": "ed201eb80cc09c9604561dda593ad18e63b1f2bb4957333e37f9d3887b71eed0",
+      "public_bytes": 2821,
+      "public_sha256": "b5b9272d9142323d9e4d6e054ebb77f1f6cf187f99a62f1194d55ddc145b5568",
       "reason": "exact_public_allowlist",
-      "source_bytes": 2809,
-      "source_sha256": "ed201eb80cc09c9604561dda593ad18e63b1f2bb4957333e37f9d3887b71eed0"
+      "source_bytes": 2821,
+      "source_sha256": "b5b9272d9142323d9e4d6e054ebb77f1f6cf187f99a62f1194d55ddc145b5568"
     },
     {
       "decision": "include_verbatim",
@@ -4517,18 +4747,18 @@
     }
   ],
   "exact_allowlist_path": "PUBLIC-SOURCE-ALLOWLIST.txt",
-  "exact_allowlist_sha256": "a240433cd5c7f4b942dc799cfb8f0ab97aca326bbe32d2f0600fcd97953f4fa2",
+  "exact_allowlist_sha256": "66df202fbf3ea9562f303ba90517c477e0a7b142e8babc7ecd62201d70830e1d",
   "excluded_source_files": 71,
   "generated_public_files": [
     "PUBLIC-INCLUSION-EXCLUSION-LEDGER.json",
     "SHA256SUMS"
   ],
-  "included_source_files": 412,
+  "included_source_files": 435,
   "ledger": "tyche-public-inclusion-exclusion-ledger-v1",
-  "policy_sha256": "38ae808b8720f1b9945b06c123a5b83e16a211d2d6454538434cfce8513b4682",
-  "release_date": "2026-07-31",
+  "policy_sha256": "73d929b5b2fa4723d22c6811efbe701d52f0f968146340166d063751704eca87",
+  "release_date": "2026-08-02",
   "source_enumeration": "git ls-files at the exact clean commit",
-  "source_files_considered": 483,
-  "source_git_commit": "3607c40064bcbac0d8cf37f90a021864b8c516f7",
+  "source_files_considered": 506,
+  "source_git_commit": "3cf64ba429dd7ab2bd0b812b14965322bf0fad78",
   "source_root_label": "private-release-candidate"
 }
