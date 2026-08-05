@@ -2045,8 +2045,8 @@ labs/cross-ecosystem-typed-transfer/verify_crosswalk_sql.py
 external-label-packet-neutral-104/build_neutral_packet.py
 external-label-packet-neutral-104/analyze_responses.py --self-test
 companions/native-signed-authority-adapters/verify_fixtures.py
-companions/thesis-v4-mutation-tests/evaluate_mutation_corpus.py
-companions/thesis-v4-multifault-tests/freeze_and_compare.py
+companions/mutation-tests/evaluate_mutation_corpus.py
+companions/multifault-tests/freeze_and_compare.py
 repro/verify_portable_source_capsule.py
 repro/run_clean_capsule_replay.py
 ```
@@ -2113,7 +2113,7 @@ unchanged between those commits and the present manuscript source.
 
 A complementary execution domain is an identified Ubuntu 24.04 x86_64
 Hyper-V VM/OS instance exposing a Microsoft vTPM, recorded in the artifact
-under the host label `zeus2` and distinguished by hashed machine and boot
+under the host label `host-A` and distinguished by hashed machine and boot
 identifiers, DMI strings, and TPM manufacturer properties (`MSFT`). The
 identified VM verifies the deterministic public source archive and then
 satisfies the same four-lane contract (16 policy vectors, 104 composed
@@ -2149,7 +2149,7 @@ trust.
 | Local x86_64, software TPM (8 fresh `swtpm` roots; one physical host) | 16 | 104 | 104 | 372 | 104/104 | 64/64 |
 | Hosted x86_64 job VM (contract 20/20; physical host unknown) | 16 | 104 | 104 | 372 | — | — |
 | Hosted ARM64 job VM (contract 20/20; physical host unknown) | 16 | 104 | 104 | 372 | — | — |
-| Identified VM (`zeus2`), Hyper-V x86_64 (contract 20/20; Microsoft vTPM) | 16 | 104 | 104 | 372 | 104/104 | 64/64 |
+| Identified VM (`host-A`), Hyper-V x86_64 (contract 20/20; Microsoft vTPM) | 16 | 104 | 104 | 372 | 104/104 | 64/64 |
 
 The local software-TPM quote and mutation counts are verified
 independently by the Python and compiled Java implementations; the

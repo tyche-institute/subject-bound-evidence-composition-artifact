@@ -893,7 +893,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/LOCAL-VALIDATION.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/LOCAL-VALIDATION.json",
       "public_bytes": 878,
       "public_sha256": "b18c0ef421ce678be1f21c12a294132878513675f5c2e3993d75939208b869cf",
       "reason": "exact_public_allowlist",
@@ -903,7 +903,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/README.md",
+      "path": "evidence/host-A-vtpm-2026-07-30/README.md",
       "public_bytes": 2372,
       "public_sha256": "4513cc5e5eba99b1a225fb57575d43de2f9a7e8bdf2bf552cb2ad619d36747c8",
       "reason": "exact_public_allowlist",
@@ -913,7 +913,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/SHA256SUMS",
+      "path": "evidence/host-A-vtpm-2026-07-30/SHA256SUMS",
       "public_bytes": 3680,
       "public_sha256": "ce20410880c05f4ef0a5a65c8fed9006e63217d5e482e4d1a8395c9ff8ef7dcd",
       "reason": "exact_public_allowlist",
@@ -923,7 +923,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/ZEUS2-PROVENANCE.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/HOST-A-PROVENANCE.json",
       "public_bytes": 1677,
       "public_sha256": "8da49f87f6c0c589873d618786bee086f03d8030f3f360301118da07f51f86ed",
       "reason": "exact_public_allowlist",
@@ -933,7 +933,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/ZEUS2-RUN-OVERLAY.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/HOST-A-RUN-OVERLAY.json",
       "public_bytes": 1685,
       "public_sha256": "b778e54eb1b450e204823a5f691b7552835159071e8256ff7197f954913891b3",
       "reason": "exact_public_allowlist",
@@ -943,7 +943,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/archive-manifest-check.log",
+      "path": "evidence/host-A-vtpm-2026-07-30/archive-manifest-check.log",
       "public_bytes": 31014,
       "public_sha256": "b0e65f6b8c418255edafd1eb81601b1c1ad3cd5fe6ccea635f066374a874eaa5",
       "reason": "exact_public_allowlist",
@@ -953,7 +953,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane-console.log",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane-console.log",
       "public_bytes": 29536,
       "public_sha256": "02daeb5747f8d3c06f49e4adc0a2ef3fe4dceefcdc826709c83be38dff8f904f",
       "reason": "exact_public_allowlist",
@@ -963,7 +963,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane/CLAIM-BOUNDARY.txt",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane/CLAIM-BOUNDARY.txt",
       "public_bytes": 80,
       "public_sha256": "89aac37e2a0cb547ea9911b5249046096fdffbad9fb8a167173db8eba51b2fd0",
       "reason": "exact_public_allowlist",
@@ -973,7 +973,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane/EVIDENCE-SHA256SUMS",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane/EVIDENCE-SHA256SUMS",
       "public_bytes": 341,
       "public_sha256": "7756f7123c1c6da3b21ff16743aa1d7e4d5aa9e3cc51250c0a1c9eab6545aec6",
       "reason": "exact_public_allowlist",
@@ -983,7 +983,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane/composed-corpus.log",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane/composed-corpus.log",
       "public_bytes": 20540,
       "public_sha256": "458468f58d3d8698c610c82e26a78a104c7d06f55682c1046b6e5e4e5a908357",
       "reason": "exact_public_allowlist",
@@ -993,7 +993,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane/durable-revocation.log",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane/durable-revocation.log",
       "public_bytes": 1478,
       "public_sha256": "0719c3a02498c480c82b63bb791055d1aa960f62d4c4633489b2a37456646e45",
       "reason": "exact_public_allowlist",
@@ -1003,7 +1003,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane/environment.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane/environment.json",
       "public_bytes": 1142,
       "public_sha256": "cad300125abe1f9e7ef8f9ca433d1a8e3b5f0cb2ca717fed58553455a783b61e",
       "reason": "exact_public_allowlist",
@@ -1013,7 +1013,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane/policy-replay.log",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane/policy-replay.log",
       "public_bytes": 2984,
       "public_sha256": "705aa66d7b67c1db5ed4c67da8a6fd8f1be599ddbbd52c81f242170d2afb60f9",
       "reason": "exact_public_allowlist",
@@ -1023,7 +1023,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane/result-sha256.txt",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane/result-sha256.txt",
       "public_bytes": 473,
       "public_sha256": "5271fa8c4860b66ac10bd9023f75fbe0cc951e58909730bfe11dc1bd374661a4",
       "reason": "exact_public_allowlist",
@@ -1033,7 +1033,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane/semantic-contract.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane/semantic-contract.json",
       "public_bytes": 1844,
       "public_sha256": "262a8803e381cf6bff8d4d30b328176a4b5eb2885c45fbd64da93f3cfefe7f92",
       "reason": "exact_public_allowlist",
@@ -1043,7 +1043,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/four-lane/typed-transfer.log",
+      "path": "evidence/host-A-vtpm-2026-07-30/four-lane/typed-transfer.log",
       "public_bytes": 2597,
       "public_sha256": "45d05b5167aa708797000e9e82dfbb913eac37c497e8901af940810a114999ec",
       "reason": "exact_public_allowlist",
@@ -1053,7 +1053,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/post-run-transient-handles.txt",
+      "path": "evidence/host-A-vtpm-2026-07-30/post-run-transient-handles.txt",
       "public_bytes": 0,
       "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "reason": "exact_public_allowlist",
@@ -1063,7 +1063,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/tpm-final-preflight-console.log",
+      "path": "evidence/host-A-vtpm-2026-07-30/tpm-final-preflight-console.log",
       "public_bytes": 7314,
       "public_sha256": "3b214950e2643b3caa382f2a4e964cfdd765671298f98588d9b208d9790f1114",
       "reason": "exact_public_allowlist",
@@ -1073,7 +1073,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/tpm-final-preflight/SHA256SUMS",
+      "path": "evidence/host-A-vtpm-2026-07-30/tpm-final-preflight/SHA256SUMS",
       "public_bytes": 1099,
       "public_sha256": "e35335bc93381366fb0987e30bf4360858884be9212f02badacf81911a25acc3",
       "reason": "exact_public_allowlist",
@@ -1083,7 +1083,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/tpm-final-preflight/preflight-report.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/tpm-final-preflight/preflight-report.json",
       "public_bytes": 5576,
       "public_sha256": "90ed2149c973f950aa3c3ce333c187143763f24cb2aa7a98dc1aab57c7048207",
       "reason": "exact_public_allowlist",
@@ -1093,7 +1093,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final-console.log",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final-console.log",
       "public_bytes": 5267,
       "public_sha256": "83c27740094aacdd28860e279c03f6b0cc85eba585bf7a68bc67efdd6973f9f3",
       "reason": "exact_public_allowlist",
@@ -1103,7 +1103,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/SHA256SUMS",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/SHA256SUMS",
       "public_bytes": 1317,
       "public_sha256": "37c2ceb63ff4eca7bbe1942e633fae4eff51437459b0dfa8b01a7332a8fac093",
       "reason": "exact_public_allowlist",
@@ -1113,7 +1113,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/cleanup.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/cleanup.json",
       "public_bytes": 424,
       "public_sha256": "cd0e47cc6be6fe2c1fbcb25cea0b72c672c112b53360234f9d169e7d2e19ec19",
       "reason": "exact_public_allowlist",
@@ -1123,7 +1123,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/command-audit.jsonl",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/command-audit.jsonl",
       "public_bytes": 166366,
       "public_sha256": "d4d5fe319f81b13a2ad117e61eef0bce85a8ba30cd3fe033ee4e29ce3e5543e8",
       "reason": "exact_public_allowlist",
@@ -1133,7 +1133,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/environment.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/environment.json",
       "public_bytes": 614,
       "public_sha256": "f9b342c4ea67734b233cf2479744144139ca29801c81bcebd56ebfea71bb145d",
       "reason": "exact_public_allowlist",
@@ -1143,7 +1143,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/environment/properties-fixed.txt",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/environment/properties-fixed.txt",
       "public_bytes": 1668,
       "public_sha256": "359fc94bbe492ac4c907cdf253a90819004142697cce5574b8c5d185f4ace980",
       "reason": "exact_public_allowlist",
@@ -1153,7 +1153,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/environment/properties-variable.txt",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/environment/properties-variable.txt",
       "public_bytes": 987,
       "public_sha256": "2f222f1943826466d6f9170b571f0bb1ae137cc83267391f4352ac9d302f9601",
       "reason": "exact_public_allowlist",
@@ -1163,7 +1163,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/hardware-run-manifest.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/hardware-run-manifest.json",
       "public_bytes": 4410,
       "public_sha256": "9d0722edfcbd33cbc717995c224e8f0c8a55f663bd8ab212127e1cf23b33a7bc",
       "reason": "exact_public_allowlist",
@@ -1173,7 +1173,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/mutation-results.jsonl",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/mutation-results.jsonl",
       "public_bytes": 13728,
       "public_sha256": "c66f123517eac754048f4ab69178af1dfb601686b65096e5732d20beaeaf6933",
       "reason": "exact_public_allowlist",
@@ -1183,7 +1183,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/ak.name",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/ak.name",
       "public_bytes": 34,
       "public_sha256": "d8090eb9d72fe41d4ae4b527cb9868a94eadd684c005488d6411c9a6e7d37049",
       "reason": "exact_public_allowlist",
@@ -1193,7 +1193,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/ak.pem",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/ak.pem",
       "public_bytes": 451,
       "public_sha256": "791bd4c680ec819a613babfe6270f0054fd93dd8583e9990efd5d321a2a9364c",
       "reason": "exact_public_allowlist",
@@ -1203,7 +1203,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/ak.pub",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/ak.pub",
       "public_bytes": 282,
       "public_sha256": "ce2553eebb6b2daa980f4193dd85c0258a584411089fe414e5cd92986cb8694c",
       "reason": "exact_public_allowlist",
@@ -1213,7 +1213,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/transient-primary.name",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/transient-primary.name",
       "public_bytes": 34,
       "public_sha256": "3ed25b974ee979fd198d325d120de2714aa8cf81814740c1989007559ff6ee10",
       "reason": "exact_public_allowlist",
@@ -1223,7 +1223,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/transient-primary.pem",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/transient-primary.pem",
       "public_bytes": 451,
       "public_sha256": "ff82ca8b5972111a2f8d0e4022e61e164ef3bbc3f78e51b739e7324cad143da8",
       "reason": "exact_public_allowlist",
@@ -1233,7 +1233,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/transient-primary.pub",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/public/transient-primary.pub",
       "public_bytes": 284,
       "public_sha256": "3dc2705dbe3747c78764e5127839cc055295f0be74693319c4a207a3b37229c1",
       "reason": "exact_public_allowlist",
@@ -1243,7 +1243,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/summary.json",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/summary.json",
       "public_bytes": 245,
       "public_sha256": "5ef50ec566571382eb15eea08b55c6e1e6a14b312ed15449adce649f643ac54b",
       "reason": "exact_public_allowlist",
@@ -1253,7 +1253,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "evidence/zeus2-vtpm-2026-07-30/vtpm-run-owner-rsa-final/vectors.jsonl",
+      "path": "evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/vectors.jsonl",
       "public_bytes": 325856,
       "public_sha256": "dd5ffcd5f7e72d99090d430a72e204f5800afaa34874b7d0b93fd923499b240d",
       "reason": "exact_public_allowlist",
@@ -1603,7 +1603,7 @@
     {
       "decision": "include_sanitized",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-independent-evaluator/PRECOMPARISON-FREEZE.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/independent-evaluator/PRECOMPARISON-FREEZE.json",
       "public_bytes": 2011,
       "public_sha256": "9a3b585a6f861fd255d467abdd73dbd1b7c9206078332e3ab36a31415f75b31e",
       "reason": "exact_public_allowlist",
@@ -1621,7 +1621,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-independent-evaluator/REPORT.md",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/independent-evaluator/REPORT.md",
       "public_bytes": 734,
       "public_sha256": "81e5ef58aae498ea7b85c5059f63a46ffa6521939420cf14db90ed904be71a8a",
       "reason": "exact_public_allowlist",
@@ -1631,7 +1631,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-independent-evaluator/compare_after_freeze.py",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/independent-evaluator/compare_after_freeze.py",
       "public_bytes": 5774,
       "public_sha256": "c9807645f1f79a8f802a2836f0a33bbd1850e4c9fc2e04c26d51d0af2d29e96f",
       "reason": "exact_public_allowlist",
@@ -1641,7 +1641,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-independent-evaluator/comparison-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/independent-evaluator/comparison-results.json",
       "public_bytes": 660,
       "public_sha256": "322d52340ddee1b36e7404a89ddea3c13bc165ef52eaad9e10fd777c94647641",
       "reason": "exact_public_allowlist",
@@ -1651,7 +1651,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-independent-evaluator/evaluate.mjs",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/independent-evaluator/evaluate.mjs",
       "public_bytes": 13543,
       "public_sha256": "a6bcf208c8568cbbe17086b6d0cf60a6059c15a5b4e8a1172ff94707bdede3e0",
       "reason": "exact_public_allowlist",
@@ -1661,7 +1661,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-independent-evaluator/freeze_output.py",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/independent-evaluator/freeze_output.py",
       "public_bytes": 1893,
       "public_sha256": "e2fc9b372eb4bde7dcf16b203031706902b85d2595b2cb7e4c5a326c8b4b45f8",
       "reason": "exact_public_allowlist",
@@ -1671,7 +1671,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-independent-evaluator/independent-layer-results-unsealed.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/independent-evaluator/independent-layer-results-unsealed.json",
       "public_bytes": 80764,
       "public_sha256": "af8efca9d3fb48fbb9fec0c77696b6d33c46fe0f5f8d9351709ef25e86688b2d",
       "reason": "exact_public_allowlist",
@@ -1681,7 +1681,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-independent-evaluator/independent-results-unsealed.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/independent-evaluator/independent-results-unsealed.json",
       "public_bytes": 24053,
       "public_sha256": "c108931bed8242e75c2c0977098c4d135d64cc1b51116f2286aa843166e93ad6",
       "reason": "exact_public_allowlist",
@@ -1691,7 +1691,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/PREORACLE-FREEZE.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/PREORACLE-FREEZE.json",
       "public_bytes": 1112,
       "public_sha256": "0f8bfc4aad168853b1a6e6c5feb16e93c77b8da743f42789394cebc8525114dd",
       "reason": "exact_public_allowlist",
@@ -1701,7 +1701,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/REPORT.md",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/REPORT.md",
       "public_bytes": 464,
       "public_sha256": "9037130d16eda31d40d957f88cc02ddc2ea481795292a9022aaa08ab8947c8ba",
       "reason": "exact_public_allowlist",
@@ -1711,7 +1711,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/comparison-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/comparison-results.json",
       "public_bytes": 518,
       "public_sha256": "bacb3370d15f87f470d3350282cc1c2bf55300274b1e4a4bb203485458be04e7",
       "reason": "exact_public_allowlist",
@@ -1721,7 +1721,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/comparison-summary.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/comparison-summary.json",
       "public_bytes": 518,
       "public_sha256": "bacb3370d15f87f470d3350282cc1c2bf55300274b1e4a4bb203485458be04e7",
       "reason": "exact_public_allowlist",
@@ -1731,7 +1731,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/freeze_and_compare.py",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/freeze_and_compare.py",
       "public_bytes": 4794,
       "public_sha256": "92f43a9b2f63d1535fa06d079aaf74f01c7c5762c17205f655a4009bfd6933d1",
       "reason": "exact_public_allowlist",
@@ -1741,7 +1741,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/generate_multifault_corpus.py",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/generate_multifault_corpus.py",
       "public_bytes": 6027,
       "public_sha256": "fb2b8c26656168fd18244617d2faf57a84e55fef8547a624e40e546e8ff741ba",
       "reason": "exact_public_allowlist",
@@ -1751,7 +1751,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/generation-manifest.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/generation-manifest.json",
       "public_bytes": 470,
       "public_sha256": "61d139b96562ee528ee4551cfe1cbfea4bfd382e1058de964fa17286d0645833",
       "reason": "exact_public_allowlist",
@@ -1761,7 +1761,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/generation-summary.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/generation-summary.json",
       "public_bytes": 470,
       "public_sha256": "61d139b96562ee528ee4551cfe1cbfea4bfd382e1058de964fa17286d0645833",
       "reason": "exact_public_allowlist",
@@ -1771,7 +1771,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/js-layer-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/js-layer-results.json",
       "public_bytes": 10905,
       "public_sha256": "77776bf151f6cd82f8a499ec9897a790b106f2269b18a4dfdbb15eaf66f459a1",
       "reason": "exact_public_allowlist",
@@ -1781,7 +1781,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/js-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/js-results.json",
       "public_bytes": 3257,
       "public_sha256": "951405899e489542107264f7259ac6a7042c32743481fad882d6342f138d589f",
       "reason": "exact_public_allowlist",
@@ -1791,7 +1791,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/js-run-summary.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/js-run-summary.json",
       "public_bytes": 740,
       "public_sha256": "aa2cbf866f58251dc39200469ee83dd9a5dc542d6313552cd2ef3c4bbb1979f2",
       "reason": "exact_public_allowlist",
@@ -1801,7 +1801,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/multifault-oracle.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/multifault-oracle.json",
       "public_bytes": 3844,
       "public_sha256": "c10855928ed4662c14794cafc66e70b8115accd4027aa8136ed5f6a799f7d14e",
       "reason": "exact_public_allowlist",
@@ -1811,7 +1811,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/multifault-packet.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/multifault-packet.json",
       "public_bytes": 70397,
       "public_sha256": "5233577ad02101f17911cc646a30d5a02d910fc6e8588db212bf6ed7123efc0a",
       "reason": "exact_public_allowlist",
@@ -1821,7 +1821,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/python-layer-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/python-layer-results.json",
       "public_bytes": 10904,
       "public_sha256": "791c91823429d1a338d3fe08fe42e1131c1cfa2fb68c89e505b43ed4b25bd944",
       "reason": "exact_public_allowlist",
@@ -1831,7 +1831,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/python-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/python-results.json",
       "public_bytes": 3305,
       "public_sha256": "8596cb1d076875738f259e0f5bb405ec9bd17ab52b16635a1c81f5261d350541",
       "reason": "exact_public_allowlist",
@@ -1841,7 +1841,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/python-run-summary.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/python-run-summary.json",
       "public_bytes": 430,
       "public_sha256": "faeef8b21791e9352be9e6512f4fee5b58f5f75a2a81fa91a58722a852ea8a09",
       "reason": "exact_public_allowlist",
@@ -1851,7 +1851,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/run_js.mjs",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/run_js.mjs",
       "public_bytes": 860,
       "public_sha256": "272c7971aca13ac87a02e612ea1178bba8b1b80ff635e99bdaab6cbb9b536d66",
       "reason": "exact_public_allowlist",
@@ -1861,7 +1861,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-multifault-tests/run_python.py",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/multifault-tests/run_python.py",
       "public_bytes": 651,
       "public_sha256": "9f621e0aa99efc172513307bb57884efc3a4b7b8c3567bf70b41da64075a8592",
       "reason": "exact_public_allowlist",
@@ -1871,7 +1871,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/PREORACLE-FREEZE.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/PREORACLE-FREEZE.json",
       "public_bytes": 959,
       "public_sha256": "079957580ee3672da0c6872fd9c7712bfc12e6e799c9bd1555fb21249df6fdcb",
       "reason": "exact_public_allowlist",
@@ -1881,7 +1881,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/REPORT.md",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/REPORT.md",
       "public_bytes": 1083,
       "public_sha256": "d3b935417a7b1e1de3e2ce672a79fd727e84c3e6aa9bb121db3d159fe62e8e57",
       "reason": "exact_public_allowlist",
@@ -1891,7 +1891,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/compare_mutations.py",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/compare_mutations.py",
       "public_bytes": 5532,
       "public_sha256": "f690a79060bfc22df1f5f6c97293b34eba11f38acbe8f46d201d71480d9a8e95",
       "reason": "exact_public_allowlist",
@@ -1901,7 +1901,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/comparison-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/comparison-results.json",
       "public_bytes": 745,
       "public_sha256": "4d36b91503bf547323fc01b8859d8c7b1212695d5214ba909a5ea1abc3daa403",
       "reason": "exact_public_allowlist",
@@ -1911,7 +1911,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/comparison-summary.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/comparison-summary.json",
       "public_bytes": 745,
       "public_sha256": "4d36b91503bf547323fc01b8859d8c7b1212695d5214ba909a5ea1abc3daa403",
       "reason": "exact_public_allowlist",
@@ -1921,7 +1921,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/evaluate_mutation_corpus.mjs",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/evaluate_mutation_corpus.mjs",
       "public_bytes": 13482,
       "public_sha256": "66b06680cb3626f102e983822127dfa19b3fa3bd296ec9aeca1f44d5fe6c99ba",
       "reason": "exact_public_allowlist",
@@ -1931,7 +1931,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/evaluate_mutation_corpus.py",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/evaluate_mutation_corpus.py",
       "public_bytes": 13080,
       "public_sha256": "7f7ef74bfcb42390c310eb411a3b71fedc652e0c85a026697aafc0864c7c804a",
       "reason": "exact_public_allowlist",
@@ -1941,7 +1941,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/freeze-summary.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/freeze-summary.json",
       "public_bytes": 959,
       "public_sha256": "079957580ee3672da0c6872fd9c7712bfc12e6e799c9bd1555fb21249df6fdcb",
       "reason": "exact_public_allowlist",
@@ -1951,7 +1951,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/freeze_evaluations.py",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/freeze_evaluations.py",
       "public_bytes": 1151,
       "public_sha256": "d4cc6b7e888b27434611c16d52c9b5122a540a9808f8d76d52c0b0cf58a82a18",
       "reason": "exact_public_allowlist",
@@ -1961,7 +1961,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/generate_mutation_corpus.py",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/generate_mutation_corpus.py",
       "public_bytes": 12703,
       "public_sha256": "04f08e1bb4929d6981415abd8a6cb9e48d0ecc4be030554b5b10ea069b1df766",
       "reason": "exact_public_allowlist",
@@ -1971,7 +1971,7 @@
     {
       "decision": "include_sanitized",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/generation-manifest.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/generation-manifest.json",
       "public_bytes": 1001,
       "public_sha256": "6e45aaf167076de31c3da915055ad2ce827e13e0a107bb0f5215acc9fa5e69df",
       "reason": "exact_public_allowlist",
@@ -1989,7 +1989,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/js-layer-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/js-layer-results.json",
       "public_bytes": 33414,
       "public_sha256": "9d41785e953b21106621efe01334491932b941f57bf503cd874e212f7497a20e",
       "reason": "exact_public_allowlist",
@@ -1999,7 +1999,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/js-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/js-results.json",
       "public_bytes": 10199,
       "public_sha256": "a8370c9581e98ac75aec312a7f8357208d20f74354b93d85ff2a2e0c9eb10c2f",
       "reason": "exact_public_allowlist",
@@ -2009,7 +2009,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/js-run-summary.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/js-run-summary.json",
       "public_bytes": 1462,
       "public_sha256": "7c1f4e2999a2c7c1f543ea56c7cbb4ee7dbb9654c95d50ba908b521b1d494557",
       "reason": "exact_public_allowlist",
@@ -2019,7 +2019,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/mutation-operator-registry.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/mutation-operator-registry.json",
       "public_bytes": 10327,
       "public_sha256": "5c6bb5afb6b6b06ec4d068e2936f2423bb6bf66fffbffcd45f89ef1c3db10d36",
       "reason": "exact_public_allowlist",
@@ -2029,7 +2029,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/mutation-oracle.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/mutation-oracle.json",
       "public_bytes": 14369,
       "public_sha256": "9ae611a9101432364d1df5280cd5ab0ddf9e98b669a7b01571906591363bd10b",
       "reason": "exact_public_allowlist",
@@ -2039,7 +2039,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/mutation-packet.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/mutation-packet.json",
       "public_bytes": 197040,
       "public_sha256": "af226bac2a7223cb607a2eea075fc93831185c225c25dfcb2c717c99df2f63ab",
       "reason": "exact_public_allowlist",
@@ -2049,7 +2049,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/python-layer-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/python-layer-results.json",
       "public_bytes": 33413,
       "public_sha256": "57d2526c61440c90d22d848d4924b38ef9a3b8450673e102f9b3b614ed2d62f6",
       "reason": "exact_public_allowlist",
@@ -2059,7 +2059,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/python-results.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/python-results.json",
       "public_bytes": 10351,
       "public_sha256": "3ce82a8cdab121dd00b52d873e3f6bad7ec3a74bcbd1bd33fb526a38d53492e0",
       "reason": "exact_public_allowlist",
@@ -2069,7 +2069,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0644",
-      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/thesis-v4-mutation-tests/python-run-summary.json",
+      "path": "masters-thesis-radar/research-factory-v4-2026-07-27/companions/mutation-tests/python-run-summary.json",
       "public_bytes": 428,
       "public_sha256": "c21a7bd5a69789f2f115fc7ef3dbb16ee3835954b8c40f55af88c5ea028afdb2",
       "reason": "exact_public_allowlist",
@@ -4323,7 +4323,7 @@
     {
       "decision": "include_verbatim",
       "mode": "0755",
-      "path": "preprint/figures/make_zeus2_evidence_figure.py",
+      "path": "preprint/figures/make_host-A_evidence_figure.py",
       "public_bytes": 4328,
       "public_sha256": "128198efafbea5db8d37cb3c53d930fc1fd3ccea39b258b8a7e249de330df928",
       "reason": "exact_public_allowlist",

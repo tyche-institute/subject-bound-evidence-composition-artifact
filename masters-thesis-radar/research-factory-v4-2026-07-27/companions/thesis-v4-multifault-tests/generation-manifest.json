@@ -1,9 +1,0 @@
-{
-  "case_count": 12,
-  "corpus_id": "thesis-v4-multifault-composition-v1",
-  "oracle_sha256": "c10855928ed4662c14794cafc66e70b8115accd4027aa8136ed5f6a799f7d14e",
-  "packet_sha256": "5233577ad02101f17911cc646a30d5a02d910fc6e8588db212bf6ed7123efc0a",
-  "sealed_labels_used": false,
-  "source_oracle_sha256": "9ae611a9101432364d1df5280cd5ab0ddf9e98b669a7b01571906591363bd10b",
-  "source_packet_sha256": "af226bac2a7223cb607a2eea075fc93831185c225c25dfcb2c717c99df2f63ab"
-}
