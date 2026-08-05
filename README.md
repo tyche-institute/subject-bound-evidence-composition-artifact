@@ -57,12 +57,12 @@ contracts, and passes all 11 cross-architecture comparison checks. Downloaded
 logs, environment records, result hashes, and complete evidence manifests are
 preserved under `evidence/hosted-x64-arm64-2026-07-28/`.
 
-An additional run on the configured `zeus2` target identifies a distinct
+An additional run on the configured `host-A` target identifies a distinct
 Ubuntu 24.04 x86-64 Hyper-V VM/OS with a Microsoft vTPM. It passes the
 four-lane 20/20 contract, verifies 104/104 live transaction-bound TPM2 quotes,
 rejects 64/64 predeclared quote mutations, and leaves no new transient or
 persistent TPM handle. Its evidence and explicit non-hardware claim boundary
-are under `evidence/zeus2-vtpm-2026-07-30/`.
+are under `evidence/host-A-vtpm-2026-07-30/`.
 
 The r8 evidence manuscript and reproducibility/readiness records are under
 `preprint/`. The JAIR-formatted submitted PDF is 44 US-letter pages; it

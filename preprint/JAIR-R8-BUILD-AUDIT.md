@@ -16,7 +16,7 @@ Status: **SUBMITTED to JAIR 2026-08-01, submission ID 23967** (see SUBMISSION-RE
 - figures: 8 retained (A, E, G, H, J, L, M, N); B, C, D, F, I, K removed —
   each duplicated an adjacent table or prose count (referee rows 18/19);
 - figN regenerated with the disclosed host label
-  "identified VM (zeus2)" (deterministic salt updated);
+  "identified VM (host-A)" (deterministic salt updated);
 - refcheck: 18/18 DOIs clean (Crossref + Retraction Watch), including the
   seven new prior-art references [38]–[44];
 - AI-tell grep: PASS (combined limiting-register density 1.7/1k,
@@ -94,7 +94,7 @@ submission-candidate PDF
 6. Threat-model subsection added (§2); prior-art family (confused deputy,
    OAuth RFC 8707/9396/9449, SAML/VC/SPIFFE, OPA/Rego) and the
    "single policy engine" concession added (§3.2).
-7. Codename hygiene: `zeus2` appears only as the disclosed artifact host
+7. Codename hygiene: `host-A` appears only as the disclosed artifact host
    label (§9 first use, figN caption/label); `redacted-local-host` removed;
    §9 companion paths use the committed repository locations.
 8. "six scalar strings", "eight companion laboratories", §5.6-vs-§9

@@ -94,7 +94,7 @@ print(json.dumps({key: item[key] for key in keys}, sort_keys=True))
 PY
 
 echo "===== SINGLE-FAULT MUTATION CORPUS ====="
-single="$zeus/thesis-v4-mutation-tests"
+single="$zeus/mutation-tests"
 python "$single/evaluate_mutation_corpus.py" >/dev/null
 python "$single/compare_mutations.py" >/dev/null
 python - "$single/comparison-results.json" <<'PY'
@@ -113,7 +113,7 @@ print(json.dumps({key: item[key] for key in keys}, sort_keys=True))
 PY
 
 echo "===== MULTI-FAULT MUTATION CORPUS ====="
-multi="$zeus/thesis-v4-multifault-tests"
+multi="$zeus/multifault-tests"
 python "$multi/run_python.py" >/dev/null
 python - "$multi" <<'PY'
 import json, pathlib, sys

@@ -1,0 +1,18 @@
+{
+  "all_passed": true,
+  "checks": {
+    "four_lane_evidence_sha256s": true,
+    "hardware_run_manifest_draft_2020_12_schema": true,
+    "no_context_or_private_blob_file_in_public_run": true,
+    "no_pem_private_key_marker_in_public_run": true,
+    "post_run_transient_handle_file_empty": true,
+    "tpm_preflight_report_sha256": true,
+    "tpm_run_sha256s": true,
+    "host-A_overlay_matches_local_release_tool_sources": true
+  },
+  "notes": {
+    "preflight_relocation": "The original SHA256SUMS retains host-A-relative ../../extracted source paths. Its five source hashes equal the local overlay hashes recorded in HOST-A-RUN-OVERLAY.json; preflight-report.json retains SHA-256 90ed2149c973f950aa3c3ce333c187143763f24cb2aa7a98dc1aab57c7048207.",
+    "schema_validator": "Python jsonschema Draft202012Validator"
+  },
+  "schema": "tyche-relocated-host-A-evidence-validation-v1"
+}

@@ -1,0 +1,25 @@
+name: oidc-evidence
+on: [push, workflow_dispatch]
+permissions:
+  id-token: write
+  contents: read
+jobs:
+  emit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Request real OIDC token and evaluate the composition rule
+        run: |
+          RESP=$(curl -sS -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sbec-composition")
+          TOKEN=$(echo "$RESP" | jq -r '.value')
+          test -n "$TOKEN" -a "$TOKEN" != "null" || { echo "no token"; exit 1; }
+          python3 decode_claims.py "$TOKEN" > claims.json
+          echo "----- REAL OIDC CLAIMS (non-secret) -----"; cat claims.json
+          echo "----- COMPOSITION RULE ON REAL EVIDENCE -----"; python3 compose.py claims.json | tee transactions.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: oidc-composition-evidence
+          path: |
+            claims.json
+            transactions.json
