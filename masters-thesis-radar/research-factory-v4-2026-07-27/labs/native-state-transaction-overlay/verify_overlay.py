@@ -236,19 +236,27 @@ def main() -> int:
         f"Boundary: {summary['claim_boundary']}.\n",
         encoding="utf-8",
     )
-    manifest_files = (
-        HERE / "README.md",
-        HERE / "native_state_adapter.py",
-        HERE / "generate_vectors.py",
-        HERE / "verify_overlay.py",
-        HERE / "appraisal-policy.json",
-        HERE / "native-state-overlay.json",
-        HERE / "SUMMARY.md",
-        RESULTS / "run-metadata.json",
-        RESULTS / "verdicts.jsonl",
-        RESULTS / "mutation-verdicts.jsonl",
-        RESULTS / "composed-verdicts.jsonl",
-        RESULTS / "summary.json",
+    manifest_files = tuple(
+        path
+        for path in (
+            HERE / "README.md",
+            HERE / "native_state_adapter.py",
+            HERE / "generate_vectors.py",
+            HERE / "verify_overlay.py",
+            HERE / "appraisal-policy.json",
+            HERE / "native-state-overlay.json",
+            HERE / "SUMMARY.md",
+            # run-metadata.json is written by generate_vectors.py; the shipped
+            # public results directory deliberately excludes it (environment
+            # provenance is scrubbed from the deposit), so verifying the
+            # shipped vectors directly must not require it.
+            RESULTS / "run-metadata.json",
+            RESULTS / "verdicts.jsonl",
+            RESULTS / "mutation-verdicts.jsonl",
+            RESULTS / "composed-verdicts.jsonl",
+            RESULTS / "summary.json",
+        )
+        if path.name != "run-metadata.json" or path.exists()
     )
     (RESULTS / "SHA256SUMS").write_text(
         "".join(

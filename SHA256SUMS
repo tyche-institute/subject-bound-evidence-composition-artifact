@@ -29,7 +29,7 @@ cad300125abe1f9e7ef8f9ca433d1a8e3b5f0cb2ca717fed58553455a783b61e  evidence/host-
 45d05b5167aa708797000e9e82dfbb913eac37c497e8901af940810a114999ec  evidence/host-A-vtpm-2026-07-30/four-lane/typed-transfer.log
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  evidence/host-A-vtpm-2026-07-30/post-run-transient-handles.txt
 f017c1c6ebd7f3b67ea5a2ca4dab167257a22c77109712f63f1ea0953fdd4b06  evidence/host-A-vtpm-2026-07-30/tpm-final-preflight-console.log
-e35335bc93381366fb0987e30bf4360858884be9212f02badacf81911a25acc3  evidence/host-A-vtpm-2026-07-30/tpm-final-preflight/SHA256SUMS
+528fd0f24d30cbf8db3d8dc24c6ce1fad19dd45588bf7684738abc4c52a964db  evidence/host-A-vtpm-2026-07-30/tpm-final-preflight/SHA256SUMS
 90ed2149c973f950aa3c3ce333c187143763f24cb2aa7a98dc1aab57c7048207  evidence/host-A-vtpm-2026-07-30/tpm-final-preflight/preflight-report.json
 83c27740094aacdd28860e279c03f6b0cc85eba585bf7a68bc67efdd6973f9f3  evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final-console.log
 37c2ceb63ff4eca7bbe1942e633fae4eff51437459b0dfa8b01a7332a8fac093  evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/SHA256SUMS
@@ -49,6 +49,7 @@ ff82ca8b5972111a2f8d0e4022e61e164ef3bbc3f78e51b739e7324cad143da8  evidence/host-
 5ef50ec566571382eb15eea08b55c6e1e6a14b312ed15449adce649f643ac54b  evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/summary.json
 dd5ffcd5f7e72d99090d430a72e204f5800afaa34874b7d0b93fd923499b240d  evidence/host-A-vtpm-2026-07-30/vtpm-run-owner-rsa-final/vectors.jsonl
 3c916600d87594397231d9737a41f66c371ef7f744110e584455cfbac70596c4  evidence/hosted-x64-arm64-2026-07-28/LEGACY-CLAIM-CORRECTION.md
+e1be41e396d4cf9a278ee4f3f3c37b22ad15fc35767fac485cf9ef6eba0b9576  PACKAGING-CORRECTION-2026-08-17.md
 ef5183c32a0e2a2842d5c0fb560e4383a92189b35b305e899737d870ea20b082  evidence/hosted-x64-arm64-2026-07-28/README.md
 7b07c138f25083a46d46687522ad41afe91a596d133a06ac1782a8999a6dc62f  evidence/hosted-x64-arm64-2026-07-28/github-run-30346942512/SHA256SUMS-ALL
 46fc63c6c46302bc652f3b89ce4294383fb9640e00aaa6bb0bc6dca4b970521d  evidence/hosted-x64-arm64-2026-07-28/github-run-30346942512/second-host-evidence-arm64/CLAIM-BOUNDARY.txt
@@ -345,7 +346,7 @@ b7678eb39bf422143c10206edf628f1d7d99e905088626704d848ae8c8602c06  masters-thesis
 c564cd44734bcdb4b5039ea5d13262c8658978bad796c20137f140fb1e08cf6a  masters-thesis-radar/research-factory-v4-2026-07-27/labs/native-state-transaction-overlay/results/summary.json
 4f522bd5961678d84458fe0f3221a42971dd9d403128de0decb5c1d1f526a7ff  masters-thesis-radar/research-factory-v4-2026-07-27/labs/native-state-transaction-overlay/results/verdicts.jsonl
 d5153f31e680f0c38802edcc72e5f0bb864b11587699c954b41e3aab1bbdc2fd  masters-thesis-radar/research-factory-v4-2026-07-27/labs/native-state-transaction-overlay/run.sh
-a906ff3e36f274cb88e97108732b4bad722a15b71931368f8bc32eb9c3818faa  masters-thesis-radar/research-factory-v4-2026-07-27/labs/native-state-transaction-overlay/verify_overlay.py
+daa8f6c7f07d93064de86af31ceaa0858f028ba9618cd5d71a32b4c3f80689f3  masters-thesis-radar/research-factory-v4-2026-07-27/labs/native-state-transaction-overlay/verify_overlay.py
 940cd6d79478c1eb23934ce925946dff1c0de693168e834b5b5bc54567749fee  masters-thesis-radar/research-factory-v4-2026-07-27/labs/policy-version-evidence-replay/README.md
 a95628f8e803a3c8ff1dfff65067d2de37350865b9610f658e145fe627b6b51d  masters-thesis-radar/research-factory-v4-2026-07-27/labs/policy-version-evidence-replay/build_corpus.py
 8d1925bfe0459dc9f42e554cf63d01adbe801b6c628ff61908bde5f9d9dd45da  masters-thesis-radar/research-factory-v4-2026-07-27/labs/policy-version-evidence-replay/corpus.json
