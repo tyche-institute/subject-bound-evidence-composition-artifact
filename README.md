@@ -6,7 +6,22 @@ measurement, subject-binding, and commit-time revocation.
 
 ## Current state
 
-Version `0.2.0-rc5` is a **blind-preserving, sanitized public artifact
+Release `v0.3.0` (31 August 2026) is the current anchor. It tags commit
+`1b2e4a43bf4f660fe7a9a6db04907c0d09cb6015`, public on `main` since 17 August
+2026, and publishes no new material; its release notes say why it replaces
+`v0.2.0-rc5`. Software Heritage snapshot
+`swh:1:snp:12d62330ac1de86a8c1fcbd5e078f6e02df929bc` (visit of 31 August
+2026) carries `refs/tags/v0.3.0` at that commit. No DOI has been minted for
+this repository; the tag, the commit and the snapshot are its content anchors.
+
+The external real-defect replay of the composition rule, on 19 real defects,
+is a separate deposit. Its protocol, codebook and oracle, frozen on
+29 October 2026, are on Zenodo under DOI 10.5281/zenodo.23763708; version 2.0.1
+(DOI 10.5281/zenodo.23878165) adds the exclusion list and the replay records.
+
+## Release history: `v0.2.0-rc5` (2 August 2026)
+
+Version `0.2.0-rc5` was a **blind-preserving, sanitized public artifact
 release**.
 The public artifact repository is
 <https://github.com/tyche-institute/subject-bound-evidence-composition-artifact>;
